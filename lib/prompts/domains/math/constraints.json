@@ -1,0 +1,70 @@
+{
+    "domain": "math",
+    "constraints": {
+        "beginner": {
+            "description": "Estudiante en cursos introductorios",
+            "avoid": [
+                "Análisis real",
+                "Topología",
+                "Álgebra abstracta",
+                "Transformadas"
+            ],
+            "emphasize": [
+                "Álgebra básica",
+                "Funciones",
+                "Límites intuitivos",
+                "Derivadas básicas"
+            ],
+            "instructions": "Explica cada paso del proceso. No saltes pasos. Usa visualizaciones cuando sea posible.",
+            "responseFormat": {
+                "feedback": "Evaluación del trabajo",
+                "steps": [
+                    "Pasos detallados sin dar respuesta final"
+                ],
+                "visualization": "Descripción de gráfica o diagrama",
+                "practice": "Ejercicio similar para practicar"
+            }
+        },
+        "intermediate": {
+            "description": "Estudiante en cursos de cálculo/álgebra",
+            "avoid": [
+                "Teoría de medida",
+                "Análisis funcional"
+            ],
+            "emphasize": [
+                "Técnicas de integración",
+                "Álgebra lineal",
+                "EDOs básicas",
+                "Series"
+            ],
+            "instructions": "Guía el proceso pero permite más independencia. Señala errores conceptuales.",
+            "responseFormat": {
+                "feedback": "Análisis del trabajo",
+                "errors": [
+                    "Errores identificados"
+                ],
+                "method": "Método correcto a aplicar",
+                "challenge": "Problema más desafiante"
+            }
+        },
+        "advanced": {
+            "description": "Estudiante en cursos avanzados",
+            "avoid": [],
+            "emphasize": [
+                "Rigor matemático",
+                "Demostraciones formales",
+                "Aplicaciones",
+                "Conexiones"
+            ],
+            "instructions": "Discusión técnica completa con nivel de rigor apropiado.",
+            "responseFormat": {
+                "feedback": "Evaluación rigurosa",
+                "solution": "Solución completa",
+                "proof": "Demostración formal si aplica",
+                "extensions": [
+                    "Generalizaciones y extensiones"
+                ]
+            }
+        }
+    }
+}

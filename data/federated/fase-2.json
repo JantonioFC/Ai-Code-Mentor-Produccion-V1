@@ -1,0 +1,1406 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:10:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 25-44"
+  },
+  "fase": {
+    "numero": 2,
+    "titulo": "Desarrollo Web Frontend",
+    "duracion": "5 meses",
+    "semanaInicio": 25,
+    "semanaFin": 44,
+    "totalSemanas": 20,
+    "proposito": "Construir la capacidad de crear interfaces de usuario interactivas, modernas y responsivas, traduciendo diseños y datos en experiencias de usuario efectivas.",
+    "competenciasClave": [
+      "Maquetación de interfaces complejas y adaptables (Responsive Design)",
+      "Manipulación del DOM y manejo de eventos",
+      "Desarrollo basado en componentes con React",
+      "Consumo de APIs externas y gestión de estado asíncrono",
+      "Optimización de performance frontend"
+    ],
+    "proyectoIntegrador": "Creación de una Single-Page Application (SPA) interactiva y compleja (ej. un dashboard de analíticas)."
+  },
+  "modulos": [
+    {
+      "numero": 3,
+      "titulo": "Fundamentos Web",
+      "semanas": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "proposito": "Establecer los cimientos indispensables de la web. Dominio profundo de HTML, CSS y JavaScript antes de introducir frameworks.",
+      "competencias": [
+        "HTML5 semántico y accesibilidad",
+        "CSS3 avanzado con Flexbox y Grid",
+        "JavaScript moderno y manipulación del DOM",
+        "Diseño responsivo y mobile-first",
+        "Optimización y debugging frontend"
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Frameworks Modernos",
+      "semanas": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "proposito": "Desarrollo con React y Next.js, gestión de estado, y construcción de aplicaciones complejas.",
+      "competencias": [
+        "Desarrollo basado en componentes",
+        "Gestión de estado con hooks",
+        "Routing y navegación",
+        "Optimización de performance",
+        "Integración con APIs"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 25,
+      "titulo": "HTML5 Semántico y Accesibilidad - Parte 1",
+      "modulo": 3,
+      "objetivos": [
+        "Estructurar contenido web de forma correcta, semántica y accesible."
+      ],
+      "tematica": "Elementos semánticos (<main>, <nav>, <article>), formularios avanzados, multimedia.",
+      "actividades": [
+        "Recrear la estructura de una página web compleja usando solo HTML semántico.",
+        "Auditar un sitio existente en busca de problemas de accesibilidad."
+      ],
+      "entregables": "Proyecto de currículum vitae o portfolio personal en HTML puro, validado como semánticamente correcto.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Encapsulación en POO",
+          "pomodoros": [
+            "Pomodoro 1: Estudiar principios de encapsulación y ocultamiento de datos",
+            "Pomodoro 2: Revisar clases anteriores identificando problemas de acceso directo",
+            "Pomodoro 3: Implementar atributos privados usando convención de guión bajo",
+            "Pomodoro 4: Crear primeros métodos de acceso controlado (getters básicos)"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Implementación de Getters y Setters",
+          "pomodoros": [
+            "Pomodoro 1: Dominar sintaxis de @property para getters en Python",
+            "Pomodoro 2: Implementar setters con @nombre.setter para validación",
+            "Pomodoro 3: Crear validaciones robustas en setters (tipos, rangos, formatos)",
+            "Pomodoro 4: Refactorizar clase Persona con getters/setters completos"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Métodos Públicos vs Privados",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar convención de métodos privados con doble guión bajo",
+            "Pomodoro 2: Diseñar interfaz pública clara definiendo métodos expuestos",
+            "Pomodoro 3: Implementar métodos privados auxiliares para lógica interna",
+            "Pomodoro 4: Crear clase BankAccount con operaciones encapsuladas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Refactorización de Clases Existentes",
+          "pomodoros": [
+            "Pomodoro 1: Auditar todas las clases creadas previamente",
+            "Pomodoro 2: Aplicar encapsulación a clase Coche del módulo anterior",
+            "Pomodoro 3: Refactorizar clase gestor de tareas con principios POO",
+            "Pomodoro 4: Documentar cambios y beneficios de la encapsulación aplicada"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Proyecto Integrador - Sistema Encapsulado",
+          "pomodoros": [
+            "Pomodoro 1: Diseñar clase Student con atributos encapsulados completos",
+            "Pomodoro 2: Implementar validaciones avanzadas y métodos de acceso",
+            "Pomodoro 3: Crear conjunto de clases que demuestren encapsulación correcta",
+            "Pomodoro 4: Probar y documentar todas las clases refactorizadas"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 26,
+      "titulo": "HTML5 Semántico y Accesibilidad - Parte 2",
+      "modulo": 3,
+      "objetivos": [
+        "Completar el dominio de HTML semántico y principios de accesibilidad."
+      ],
+      "tematica": "Principios de accesibilidad (WCAG), formularios avanzados, multimedia.",
+      "actividades": [
+        "Implementar formularios complejos con validación HTML5.",
+        "Optimizar accesibilidad con ARIA labels y roles."
+      ],
+      "entregables": "Informe de accesibilidad completo del proyecto de portfolio.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Programación Orientada a Objetos - Herencia",
+          "pomodoros": [
+            "Estudiar conceptos teóricos y sintaxis del lenguaje",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre programación orientada a objetos - herencia",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Crear una jerarquía de clases (ej.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Sistema de clases con herencia funcional.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 27,
+      "titulo": "CSS3 Avanzado - Layout y Modelo de Caja - Parte 1",
+      "modulo": 3,
+      "objetivos": [
+        "Dominar el posicionamiento y la maquetación de elementos en la página."
+      ],
+      "tematica": "Modelo de caja (box model), position, display, Flexbox.",
+      "actividades": [
+        "Estilizar el proyecto de CV/portfolio.",
+        "Resolver desafíos de maquetación específicos en plataformas como CSS Battle."
+      ],
+      "entregables": "Proyecto de CV/portfolio con layout básico usando Flexbox.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Programación Orientada a Objetos - Proyecto Integrador",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre programación orientada a objetos - proyecto integrador",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Diseñar e implementar un sistema completo usando POO (ej.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Proyecto POO completo que demuestre dominio de todos los conceptos.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 28,
+      "titulo": "CSS3 Avanzado - Layout y Modelo de Caja - Parte 2",
+      "modulo": 3,
+      "objetivos": [
+        "Completar el dominio de layouts complejos con CSS."
+      ],
+      "tematica": "Flexbox avanzado, posicionamiento complejo, pseudo-elementos.",
+      "actividades": [
+        "Completar estilización avanzada del portfolio.",
+        "Implementar efectos CSS complejos."
+      ],
+      "entregables": "Portfolio completamente estilizado con un layout complejo usando Flexbox.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Módulos, Paquetes y Entornos Virtuales",
+          "pomodoros": [
+            "Revisar materiales teóricos y recursos clave",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre módulos, paquetes y entornos virtuales",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Reestructurar el proyecto de POO en un paquete modular.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Proyecto de POO refactorizado como un paquete instalable con un archivo requirements.txt.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 29,
+      "titulo": "Diseño Responsivo y CSS Grid - Parte 1",
+      "modulo": 3,
+      "objetivos": [
+        "Crear diseños que se adapten fluidamente a cualquier tamaño de pantalla."
+      ],
+      "tematica": "CSS Grid, media queries, enfoque Mobile-First.",
+      "actividades": [
+        "Hacer que el proyecto de CV/portfolio sea completamente responsivo.",
+        "Recrear layouts de revista usando CSS Grid."
+      ],
+      "entregables": "Portfolio responsivo básico con CSS Grid.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Testing y Debugging",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre testing y debugging",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Escribir tests para las funciones y clases de proyectos anteriores.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Suite de tests completa para el proyecto principal.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 30,
+      "titulo": "Diseño Responsivo y CSS Grid - Parte 2",
+      "modulo": 3,
+      "objetivos": [
+        "Completar el dominio del diseño responsivo avanzado."
+      ],
+      "tematica": "CSS Grid avanzado, responsive images, performance CSS.",
+      "actividades": [
+        "Optimizar el portfolio para múltiples dispositivos.",
+        "Implementar técnicas avanzadas de responsive design."
+      ],
+      "entregables": "Sitio web de una página (landing page) totalmente responsivo, utilizando Flexbox y Grid apropiadamente.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de APIs y Librería estándar",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre apis y librería estándar",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Crear un programa que consuma una API pública (ej.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Aplicación que integre múltiples módulos de la librería estándar y consuma una API externa.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 31,
+      "titulo": "JavaScript Fundamental - Parte 1",
+      "modulo": 3,
+      "objetivos": [
+        "Añadir interactividad a las páginas web.",
+        "Entender cómo JavaScript interactúa con el navegador."
+      ],
+      "tematica": "Variables (let, const), tipos de datos, funciones, condicionales, bucles.",
+      "actividades": [
+        "Construir una calculadora web interactiva.",
+        "Implementar validación básica de formularios."
+      ],
+      "entregables": "Calculadora web básica funcionando con JavaScript puro.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase - Planificación",
+          "pomodoros": [
+            "Revisar materiales teóricos y recursos clave",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre proyecto integrador de fase - planificación",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Elegir y definir un proyecto integrador complejo.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Documento de especificación técnica y plan de desarrollo detallado.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 32,
+      "titulo": "JavaScript Fundamental - Parte 2",
+      "modulo": 3,
+      "objetivos": [
+        "Dominar conceptos fundamentales de JavaScript."
+      ],
+      "tematica": "Objetos, arrays, métodos, scope, hoisting.",
+      "actividades": [
+        "Expandir la calculadora con funciones avanzadas.",
+        "Implementar juegos simples en JavaScript."
+      ],
+      "entregables": "Calculadora avanzada con historial y operaciones complejas.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase - Desarrollo",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre proyecto integrador de fase - desarrollo",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Desarrollar el proyecto integrador siguiendo el plan establecido.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Proyecto Integrador de Fase 1: Una aplicación de línea de comandos (CLI) robusta y con tests completos que demuestre dom...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 33,
+      "titulo": "Manipulación del DOM - Parte 1",
+      "modulo": 3,
+      "objetivos": [
+        "Dominar la selección y manipulación de elementos del DOM."
+      ],
+      "tematica": "Selección de elementos del DOM, manipulación de clases y estilos, manejo de eventos.",
+      "actividades": [
+        "Implementar un carrusel de imágenes simple.",
+        "Crear efectos interactivos en el portfolio."
+      ],
+      "entregables": "Portfolio con elementos interactivos básicos.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de HTML5 Semántico y Accesibilidad",
+          "pomodoros": [
+            "Pomodoro 1: Recrear la estructura de una página web compleja (ej. Wikipedia, un blog de noticias) usando solo HTML semántico.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre html5 semántico y accesibilidad",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Auditar un sitio existente en busca de problemas de accesibilidad.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un proyecto de currículum vitae o portfolio personal en HTML puro, validado como semánticamente correcto y con un informe de accesibilidad.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 34,
+      "titulo": "Manipulación del DOM - Parte 2",
+      "modulo": 3,
+      "objetivos": [
+        "Completar el dominio de manipulación del DOM y eventos."
+      ],
+      "tematica": "Eventos avanzados, event delegation, performance DOM.",
+      "actividades": [
+        "Construir una aplicación To-Do interactiva.",
+        "Implementar drag & drop básico."
+      ],
+      "entregables": "Aplicación web interactiva de 'lista de tareas' (To-Do App) creada con JavaScript puro.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de HTML5 Semántico - Profundización",
+          "pomodoros": [
+            "Pomodoro 1: Crear formularios complejos con validación HTML5.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre html5 semántico - profundización",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar multimedia accesible.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sitio web completamente accesible con formularios avanzados.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 35,
+      "titulo": "Introducción a React - Fundamentos",
+      "modulo": 4,
+      "objetivos": [
+        "Comprender los conceptos fundamentales de React.",
+        "Crear los primeros componentes React."
+      ],
+      "tematica": "JSX, componentes, props, estado básico.",
+      "actividades": [
+        "Configurar entorno de desarrollo React.",
+        "Crear componentes básicos reutilizables."
+      ],
+      "entregables": "Primera aplicación React con componentes básicos.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de CSS3 Avanzado - Layout y Modelo de Caja",
+          "pomodoros": [
+            "Pomodoro 1: Estilizar el proyecto de CV/portfolio.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre css3 avanzado - layout y modelo de caja",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Resolver desafíos de maquetación específicos (ej. centrado vertical y horizontal, layouts de tarjetas) en plataformas como CSS Battle.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: El proyecto de CV/portfolio completamente estilizado con un layout complejo usando Flexbox.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 36,
+      "titulo": "React - Estado y Eventos",
+      "modulo": 4,
+      "objetivos": [
+        "Dominar la gestión de estado local y manejo de eventos en React."
+      ],
+      "tematica": "useState hook, manejo de eventos, formularios controlados.",
+      "actividades": [
+        "Recrear la aplicación To-Do en React.",
+        "Implementar formularios con validación."
+      ],
+      "entregables": "Aplicación To-Do en React con estado local.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Diseño Responsivo y CSS Grid",
+          "pomodoros": [
+            "Pomodoro 1: Hacer que el proyecto de CV/portfolio sea completamente responsivo.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre diseño responsivo y css grid",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Recrear el layout de una revista o periódico digital usando CSS Grid.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un sitio web de una página (landing page) totalmente responsivo, que utilice tanto Flexbox como Grid de manera apropiada.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 37,
+      "titulo": "React - Hooks Avanzados",
+      "modulo": 4,
+      "objetivos": [
+        "Dominar hooks avanzados de React."
+      ],
+      "tematica": "useEffect, useContext, useReducer, custom hooks.",
+      "actividades": [
+        "Implementar efectos secundarios en aplicaciones.",
+        "Crear hooks personalizados reutilizables."
+      ],
+      "entregables": "Aplicación React con múltiples hooks y efectos.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de JavaScript Fundamental - Sintaxis y Conceptos Básicos",
+          "pomodoros": [
+            "Pomodoro 1: Resolver ejercicios de lógica en JavaScript.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre javascript fundamental - sintaxis y conceptos básicos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar algoritmos básicos en JavaScript.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Conjunto de ejercicios JavaScript que demuestren dominio de la sintaxis básica.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 38,
+      "titulo": "React - Comunicación entre Componentes",
+      "modulo": 4,
+      "objetivos": [
+        "Dominar patrones de comunicación entre componentes."
+      ],
+      "tematica": "Props drilling, context API, lifting state up.",
+      "actividades": [
+        "Construir aplicación con múltiples niveles de componentes.",
+        "Implementar Context API para estado global."
+      ],
+      "entregables": "Aplicación React compleja con gestión de estado global.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de JavaScript y Manipulación del DOM",
+          "pomodoros": [
+            "Pomodoro 1: Construir una calculadora web interactiva.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre javascript y manipulación del dom",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar la validación de un formulario en el lado del cliente.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una aplicación web interactiva de 'lista de tareas' (To-Do App) creada con JavaScript puro.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 39,
+      "titulo": "React Router y Navegación",
+      "modulo": 4,
+      "objetivos": [
+        "Implementar navegación en aplicaciones React."
+      ],
+      "tematica": "React Router, rutas dinámicas, navegación programática.",
+      "actividades": [
+        "Convertir aplicación en SPA con múltiples páginas.",
+        "Implementar rutas protegidas y parámetros."
+      ],
+      "entregables": "SPA con navegación completa y rutas dinámicas.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de JavaScript Avanzado - Asincronía y APIs",
+          "pomodoros": [
+            "Pomodoro 1: Crear una aplicación que consuma una API pública.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre javascript avanzado - asincronía y apis",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar manejo de estados de carga y error.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación web que consuma múltiples APIs y maneje la asincronía correctamente.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 40,
+      "titulo": "Consumo de APIs en React",
+      "modulo": 4,
+      "objetivos": [
+        "Integrar aplicaciones React con APIs externas."
+      ],
+      "tematica": "Fetch API, axios, manejo de estados de carga y error.",
+      "actividades": [
+        "Conectar aplicación con API REST pública.",
+        "Implementar estados de carga y manejo de errores."
+      ],
+      "entregables": "Aplicación React que consume datos de API externa.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de JavaScript Moderno - ES6+ y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Refactorizar proyectos anteriores usando sintaxis ES6+.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre javascript moderno - es6+ y herramientas",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Configurar un entorno de desarrollo con herramientas modernas.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto JavaScript moderno con sintaxis ES6+ y herramientas de build.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 41,
+      "titulo": "Optimización y Performance",
+      "modulo": 4,
+      "objetivos": [
+        "Optimizar el rendimiento de aplicaciones React."
+      ],
+      "tematica": "React.memo, useMemo, useCallback, lazy loading.",
+      "actividades": [
+        "Auditar y optimizar performance de aplicación.",
+        "Implementar lazy loading de componentes."
+      ],
+      "entregables": "Aplicación React optimizada con métricas de performance.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Introducción a React - Componentes y JSX",
+          "pomodoros": [
+            "Pomodoro 1: Crear los primeros componentes React.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre introducción a react - componentes y jsx",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Construir una aplicación simple con múltiples componentes.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación React básica con componentes reutilizables.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 42,
+      "titulo": "Styling Avanzado en React",
+      "modulo": 4,
+      "objetivos": [
+        "Dominar diferentes enfoques de styling en React."
+      ],
+      "tematica": "CSS Modules, styled-components, Tailwind CSS.",
+      "actividades": [
+        "Implementar diferentes sistemas de styling.",
+        "Crear design system básico."
+      ],
+      "entregables": "Aplicación React con sistema de diseño coherente.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de React - Estado y Interactividad",
+          "pomodoros": [
+            "Pomodoro 1: Crear componentes con estado complejo.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre react - estado y interactividad",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar formularios interactivos.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación React interactiva con manejo completo de estado.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 43,
+      "titulo": "Testing en React",
+      "modulo": 4,
+      "objetivos": [
+        "Implementar testing en aplicaciones React."
+      ],
+      "tematica": "React Testing Library, unit tests, integration tests.",
+      "actividades": [
+        "Escribir tests para componentes React.",
+        "Implementar tests de integración."
+      ],
+      "entregables": "Suite de tests completa para aplicación React.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de React - Hooks y Efectos",
+          "pomodoros": [
+            "Pomodoro 1: Implementar efectos para APIs y suscripciones.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre react - hooks y efectos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear hooks personalizados reutilizables.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación React con hooks avanzados y efectos secundarios.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 44,
+      "titulo": "Proyecto Integrador Frontend",
+      "modulo": 4,
+      "objetivos": [
+        "Aplicar todos los conocimientos en un proyecto integral."
+      ],
+      "tematica": "Desarrollo completo de SPA, deployment, documentación.",
+      "actividades": [
+        "Desarrollar dashboard complejo desde cero.",
+        "Implementar todas las mejores prácticas aprendidas."
+      ],
+      "entregables": "Proyecto Integrador de Fase 2: Single-Page Application (SPA) interactiva y compleja completamente funcional, desplegada y documentada.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de React - Gestión de Estado Avanzada",
+          "pomodoros": [
+            "Pomodoro 1: Implementar un reducer complejo.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre react - gestión de estado avanzada",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear un sistema de gestión de estado global.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación React con gestión de estado global usando Context API.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}

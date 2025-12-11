@@ -1,0 +1,8 @@
+{
+  "entity": "Array.prototype.map",
+  "url": "https://devdocs.io/javascript/array/map",
+  "title": "Array.prototype.map()",
+  "path": "array/map",
+  "content": "### Array.prototype.map()\n\nEl método **map()** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.\n\n#### Sintaxis\n\n```javascript\narray.map(function(currentValue, index, array) {\n  // return element for newArray, after executing something\n})\n```\n\n#### Parámetros\n\n- **callback**: Función que produce un elemento del nuevo Array\n  - **currentValue**: El elemento actual que está siendo procesado en el array\n  - **index** (Opcional): El índice del elemento actual que está siendo procesado en el array\n  - **array** (Opcional): El array sobre el que se llamó map\n- **thisArg** (Opcional): Valor a usar como this cuando se ejecuta callback\n\n#### Valor de retorno\n\nUn nuevo array con cada elemento siendo el resultado de la función callback.\n\n#### Ejemplos\n\n```javascript\nconst numbers = [1, 4, 9, 16];\nconst doubles = numbers.map(x => x * 2);\nconsole.log(doubles); // [2, 8, 18, 32]\n```\n\n#### Notas importantes\n\n- map() **no modifica** el array original\n- map() **siempre retorna** un nuevo array del mismo tamaño\n- Si no necesitas un nuevo array, considera usar forEach()\n\n**Fuente:** Documentación local sincronizada desde DevDocs.io",
+  "syncedAt": "2025-09-27T10:00:00.000Z"
+}

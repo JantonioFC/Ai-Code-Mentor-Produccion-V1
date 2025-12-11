@@ -1,0 +1,82 @@
+{
+  "version": "8.1.0",
+  "description": "Índice maestro para arquitectura de datos federada v8.1 - CORREGIDO con distribución real",
+  "totalPhases": 8,
+  "totalWeeks": 100,
+  "generatedAt": "2025-09-21T20:45:00.000Z",
+  "correctionNote": "Distribución corregida para alinearse con curriculum_rag_v4.json y fuentes de verdad",
+  "phaseMapping": [
+    {
+      "fase": 0,
+      "fileName": "fase-0.json",
+      "startWeek": 1,
+      "endWeek": 9,
+      "totalWeeks": 9,
+      "description": "La Cimentación del Arquitecto",
+      "durationMonths": "3-4 meses"
+    },
+    {
+      "fase": 1,
+      "fileName": "fase-1.json",
+      "startWeek": 10,
+      "endWeek": 24,
+      "totalWeeks": 15,
+      "description": "Fundamentos de Programación y Metodología",
+      "durationMonths": "6 meses"
+    },
+    {
+      "fase": 2,
+      "fileName": "fase-2.json",
+      "startWeek": 25,
+      "endWeek": 44,
+      "totalWeeks": 20,
+      "description": "Desarrollo Web Frontend",
+      "durationMonths": "5 meses"
+    },
+    {
+      "fase": 3,
+      "fileName": "fase-3.json",
+      "startWeek": 45,
+      "endWeek": 64,
+      "totalWeeks": 20,
+      "description": "Desarrollo Backend Profesional",
+      "durationMonths": "5 meses"
+    },
+    {
+      "fase": 4,
+      "fileName": "fase-4.json",
+      "startWeek": 65,
+      "endWeek": 80,
+      "totalWeeks": 16,
+      "description": "DevOps y Cloud Computing",
+      "durationMonths": "4 meses"
+    },
+    {
+      "fase": 5,
+      "fileName": "fase-5.json",
+      "startWeek": 81,
+      "endWeek": 88,
+      "totalWeeks": 8,
+      "description": "Ciencia de Datos e Inteligencia Artificial",
+      "durationMonths": "2 meses"
+    },
+    {
+      "fase": 6,
+      "fileName": "fase-6.json",
+      "startWeek": 89,
+      "endWeek": 96,
+      "totalWeeks": 8,
+      "description": "Integración y Preparación Profesional",
+      "durationMonths": "2 meses"
+    },
+    {
+      "fase": 7,
+      "fileName": "fase-7.json",
+      "startWeek": 97,
+      "endWeek": 100,
+      "totalWeeks": 4,
+      "description": "Profesionalización y Crecimiento Continuo",
+      "durationMonths": "1 mes"
+    }
+  ]
+}

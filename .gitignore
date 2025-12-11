@@ -1,0 +1,81 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Playwright E2E Testing
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+e2e-results.xml
+*.har
+*.webp
+test-results/
+playwright-report/
+
+# SQLite Database - Temporary Files
+# Estos archivos son generados automáticamente por SQLite durante operaciones
+# y no deben ser versionados para evitar conflictos y corrupción de datos
+*.db-shm
+*.db-wal
+
+# Performance Logs - Generados automáticamente durante testing
+/performance-logs/*.json
+/performance-logs/*.log
+
+# Local validation scripts and analyzers
+GATE3-VALIDATION-PROTOCOL.md
+run-gate3-validation.js
+fix-race-condition.js
+analyze/
+
+# Microservicio IRP - Prisma Generated Files (Misión 259)
+# Estos archivos son generados automáticamente y no deben versionarse
+microservicio-irp/node_modules/.prisma/
+
+# Mission Reports and Internal Documentation
+# Reportes de trabajo interno que no deben ser versionados
+MISION_230/
+
+# Microservicio IRP - Node Modules (no versionar dependencias)
+microservicio-irp/node_modules/
+
+# Development Scripts - Temporary security audit scripts
+*.ps1
+audit-report.json
+
+# Development temporary files
+DEPENDABOT_INVESTIGATION_README.md

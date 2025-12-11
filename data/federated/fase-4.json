@@ -1,0 +1,1064 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:18:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 65-80"
+  },
+  "fase": {
+    "numero": 4,
+    "titulo": "DevOps y Cloud Computing",
+    "duracion": "4 meses",
+    "semanaInicio": 65,
+    "semanaFin": 80,
+    "totalSemanas": 16,
+    "proposito": "Automatizar el ciclo de vida del desarrollo de software, desde la integración del código hasta el despliegue y la operación de aplicaciones escalables en la nube.",
+    "competenciasClave": [
+      "Creación de imágenes de aplicaciones con Docker",
+      "Configuración de pipelines de Integración Continua y Despliegue Continuo (CI/CD)",
+      "Orquestación de contenedores con Kubernetes",
+      "Despliegue y gestión de servicios en una plataforma cloud",
+      "Monitoreo y observabilidad de aplicaciones"
+    ],
+    "proyectoIntegrador": "Construcción de un pipeline automatizado que testea, empaqueta y despliega una aplicación multi-servicio en un entorno cloud."
+  },
+  "modulos": [
+    {
+      "numero": 7,
+      "titulo": "Containerización y CI/CD",
+      "semanas": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "proposito": "Dominar Docker, containerización de aplicaciones y pipelines de CI/CD.",
+      "competencias": [
+        "Docker containers y images",
+        "Docker Compose para aplicaciones multi-container",
+        "GitHub Actions para CI/CD",
+        "Testing automatizado en pipelines",
+        "Deployment automation"
+      ]
+    },
+    {
+      "numero": 8,
+      "titulo": "Orquestación y Cloud",
+      "semanas": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "proposito": "Kubernetes, cloud computing y operación de aplicaciones en producción.",
+      "competencias": [
+        "Kubernetes fundamentals",
+        "Cloud platforms (AWS/GCP/Azure)",
+        "Infrastructure as Code",
+        "Monitoring y logging",
+        "Security y best practices"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 65,
+      "titulo": "Introducción a Docker",
+      "modulo": 7,
+      "objetivos": [
+        "Dominar fundamentos de containerización"
+      ],
+      "tematica": "Docker basics, containers vs VMs, Dockerfile",
+      "entregables": "Aplicación web containerizada con Docker",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Docker",
+          "pomodoros": [
+            "Pomodoro 1: Escribir un Dockerfile para la API de Backend de la Fase 3.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de docker",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear una imagen optimizada (multi-stage build).",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un Dockerfile optimizado para producción para el proyecto de la Fase 3, junto con un DDE que justifique las decisiones tomadas (ej. elección de la imagen base).",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 66,
+      "titulo": "Docker Images y Registry",
+      "modulo": 7,
+      "objetivos": [
+        "Crear y gestionar imágenes Docker"
+      ],
+      "tematica": "Multi-stage builds, Docker Hub, image optimization",
+      "entregables": "Imágenes optimizadas publicadas en registry",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Docker Avanzado y Redes",
+          "pomodoros": [
+            "Pomodoro 1: Configurar redes personalizadas para contenedores.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre docker avanzado y redes",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Optimizar imágenes Docker para producción.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sistema de contenedores con redes configuradas y optimizaciones de seguridad implementadas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 67,
+      "titulo": "Docker Compose",
+      "modulo": 7,
+      "objetivos": [
+        "Orquestar aplicaciones multi-container"
+      ],
+      "tematica": "Docker Compose, servicios, networks, volumes",
+      "entregables": "Aplicación full-stack con Docker Compose",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Orquestación Local con Docker Compose",
+          "pomodoros": [
+            "Pomodoro 1: Crear un archivo docker-compose.yml para levantar todo el stack de tu aplicación Full-Stack (Frontend de Fase 2 + Backend de Fase 3 + una base de datos PostgreSQL).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre orquestación local con docker compose",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un archivo docker-compose.yml que permita a cualquier desarrollador clonar tu proyecto y levantarlo completamente con un solo comando: docker-compose up.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 68,
+      "titulo": "Introducción a CI/CD",
+      "modulo": 7,
+      "objetivos": [
+        "Entender conceptos de CI/CD"
+      ],
+      "tematica": "CI/CD principles, GitHub Actions basics",
+      "entregables": "Pipeline básico de CI con GitHub Actions",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Docker Compose Avanzado y Entornos",
+          "pomodoros": [
+            "Pomodoro 1: Crear configuraciones separadas para desarrollo, testing y producción.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre docker compose avanzado y entornos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar manejo seguro de secretos.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sistema de Docker Compose con múltiples entornos y manejo seguro de configuraciones.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 69,
+      "titulo": "GitHub Actions - CI Pipeline",
+      "modulo": 7,
+      "objetivos": [
+        "Implementar integración continua"
+      ],
+      "tematica": "Automated testing, code quality checks, workflows",
+      "entregables": "Pipeline de CI completo con tests automatizados",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Integración Continua (CI) con GitHub Actions",
+          "pomodoros": [
+            "Pomodoro 1: Configurar un workflow de GitHub Actions que se active en cada push o pull request.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre integración continua (ci) con github actions",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: El workflow debe instalar dependencias, ejecutar los tests del backend y del frontend, y reportar el éxito o fracaso.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un pipeline de CI funcional en tu repositorio de GitHub, visible a través de los 'checks' de los pull requests.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 70,
+      "titulo": "GitHub Actions - CD Pipeline",
+      "modulo": 7,
+      "objetivos": [
+        "Implementar despliegue continuo"
+      ],
+      "tematica": "Deployment automation, environments, secrets",
+      "entregables": "Pipeline de CD con despliegue automatizado",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de CI Avanzado y Quality Gates",
+          "pomodoros": [
+            "Pomodoro 1: Configurar reportes de coverage automáticos.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre ci avanzado y quality gates",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar análisis de calidad de código.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Pipeline de CI completo con quality gates, reportes de coverage y security scanning.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 71,
+      "titulo": "Testing en Pipelines",
+      "modulo": 7,
+      "objetivos": [
+        "Integrar testing en CI/CD"
+      ],
+      "tematica": "Unit tests, integration tests, E2E tests in pipelines",
+      "entregables": "Pipeline con testing completo automatizado",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Despliegue Continuo (CD) y Monitoreo Básico",
+          "pomodoros": [
+            "Pomodoro 1: Extender el workflow de CI para que, tras pasar los tests en la rama principal, construya y publique las imágenes de Docker en un registro.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre despliegue continuo (cd) y monitoreo básico",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un pipeline de CI/CD que automáticamente testea y empaqueta la aplicación, dejándola lista para el despliegue.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 72,
+      "titulo": "Security en DevOps",
+      "modulo": 7,
+      "objetivos": [
+        "Implementar seguridad en pipelines"
+      ],
+      "tematica": "DevSecOps, vulnerability scanning, secrets management",
+      "entregables": "Pipeline con security scanning y best practices",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de CD Avanzado y Estrategias de Despliegue",
+          "pomodoros": [
+            "Pomodoro 1: Implementar una estrategia de blue-green deployment.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre cd avanzado y estrategias de despliegue",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Configurar rollbacks automáticos en caso de fallos.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sistema de CD con estrategias avanzadas de despliegue y rollback automático.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 73,
+      "titulo": "Introducción a Kubernetes",
+      "modulo": 8,
+      "objetivos": [
+        "Entender orquestación de containers"
+      ],
+      "tematica": "Kubernetes basics, pods, services, deployments",
+      "entregables": "Aplicación desplegada en cluster Kubernetes local",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Kubernetes (K8s)",
+          "pomodoros": [
+            "Pomodoro 1: Instalar un clúster local de K8s (ej. Minikube, k3d).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de kubernetes (k8s)",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Desplegar la aplicación containerizada en el clúster local.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Archivos de manifiesto (.yaml) para desplegar tu aplicación en Kubernetes.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 74,
+      "titulo": "Kubernetes - Deployments y Services",
+      "modulo": 8,
+      "objetivos": [
+        "Gestionar aplicaciones en Kubernetes"
+      ],
+      "tematica": "Deployments, services, ingress, load balancing",
+      "entregables": "Aplicación web escalable en Kubernetes",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Kubernetes Avanzado",
+          "pomodoros": [
+            "Pomodoro 1: Configurar ConfigMaps y Secrets para la aplicación.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre kubernetes avanzado",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar Ingress para routing avanzado.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación desplegada en Kubernetes con configuración avanzada y almacenamiento persistente.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 75,
+      "titulo": "Kubernetes - Storage y ConfigMaps",
+      "modulo": 8,
+      "objetivos": [
+        "Manejar persistencia y configuración"
+      ],
+      "tematica": "Persistent volumes, ConfigMaps, Secrets",
+      "entregables": "Aplicación con persistencia y configuración externa",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Cloud Computing (AWS/GCP)",
+          "pomodoros": [
+            "Pomodoro 1: Crear una cuenta en un proveedor cloud (aprovechando la capa gratuita).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de cloud computing (aws/gcp)",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Desplegar la API de backend en una máquina virtual.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una guía paso a paso en tu repositorio sobre cómo desplegar tu aplicación en el proveedor de nube elegido, incluyendo consideraciones de seguridad y costos.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 76,
+      "titulo": "Cloud Platforms - AWS/GCP Basics",
+      "modulo": 8,
+      "objetivos": [
+        "Desplegar en cloud público"
+      ],
+      "tematica": "Cloud basics, compute services, managed databases",
+      "entregables": "Aplicación desplegada en plataforma cloud",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Cloud Services Avanzados",
+          "pomodoros": [
+            "Pomodoro 1: Configurar load balancing para alta disponibilidad.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre cloud services avanzados",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar auto-scaling para la aplicación.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación desplegada con servicios cloud avanzados y alta disponibilidad.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 77,
+      "titulo": "Infrastructure as Code",
+      "modulo": 8,
+      "objetivos": [
+        "Automatizar infraestructura"
+      ],
+      "tematica": "Terraform basics, cloud resource management",
+      "entregables": "Infraestructura definida como código",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Arquitecturas Modernas: Serverless y Microservicios",
+          "pomodoros": [
+            "Pomodoro 1: Refactorizar un endpoint de tu API para que funcione como una función serverless.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre arquitecturas modernas: serverless y microservicios",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Diseñar (teóricamente) cómo se podría descomponer tu aplicación monolítica en microservicios.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una función serverless funcional y un documento de diseño arquitectónico (en el DDE) que explore la migración a microservicios.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 78,
+      "titulo": "Monitoring y Logging",
+      "modulo": 8,
+      "objetivos": [
+        "Implementar observabilidad"
+      ],
+      "tematica": "Prometheus, Grafana, centralized logging",
+      "entregables": "Sistema de monitoring y alertas",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Microservicios y Service Mesh",
+          "pomodoros": [
+            "Pomodoro 1: Descomponer la aplicación monolítica en 2-3 microservicios.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre microservicios y service mesh",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar comunicación entre servicios.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Arquitectura de microservicios funcional con comunicación entre servicios.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 79,
+      "titulo": "Cloud Security y Best Practices",
+      "modulo": 8,
+      "objetivos": [
+        "Implementar seguridad cloud"
+      ],
+      "tematica": "Cloud security, IAM, network security",
+      "entregables": "Deployment seguro con best practices",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Infraestructura como Código (IaC)",
+          "pomodoros": [
+            "Pomodoro 1: Crear configuraciones Terraform para la infraestructura.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre infraestructura como código (iac)",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Automatizar el despliegue de recursos cloud.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Infraestructura completamente definida como código con Terraform.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 80,
+      "titulo": "Proyecto Integrador DevOps",
+      "modulo": 8,
+      "objetivos": [
+        "Integrar todos los conocimientos DevOps"
+      ],
+      "tematica": "Pipeline completo con deploy a cloud",
+      "entregables": "Proyecto Integrador de Fase 4: Pipeline automatizado completo que testea, empaqueta y despliega aplicación multi-servicio en cloud",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase",
+          "pomodoros": [
+            "Pomodoro 1: Crear un pipeline completo que tome tu aplicación multi-servicio, la testee, la empaquete en contenedores, y la despliegue automáticamente en un clúster de Kubernetes en la nube.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre proyecto integrador de fase",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto Integrador de Fase 4: Un repositorio que contenga una aplicación Full-Stack y toda la configuración necesaria (Dockerfiles, GitHub Actions workflows, manifiestos de K8s) para que se despliegue y opere de forma automatizada.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+    "domain": "logic",
+    "displayName": "Lógica Proposicional y Predicados",
+    "description": "Asistencia en lógica matemática, tablas de verdad, demostraciones formales",
+    "icon": "🧠",
+    "topics": [
+        "Lógica proposicional",
+        "Tablas de verdad",
+        "Conectivos lógicos",
+        "Lógica de predicados",
+        "Cuantificadores",
+        "Demostraciones formales",
+        "Reglas de inferencia",
+        "Álgebra booleana"
+    ],
+    "systemPrompt": "Eres un tutor de Lógica Matemática con enfoque pedagógico. Tu rol es guiar al estudiante en el razonamiento lógico formal, ayudándole a entender los fundamentos de la lógica proposicional y de predicados. Siempre explica el 'por qué' detrás de cada paso en las demostraciones.",
+    "analysisTypes": {
+        "truthTable": "Validar y explicar tablas de verdad",
+        "proof": "Revisar demostraciones formales paso a paso",
+        "symbolization": "Traducir lenguaje natural a lógica formal",
+        "inference": "Aplicar reglas de inferencia correctamente"
+    }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "javascript",
+  "name": "JavaScript",
+  "version": "latest",
+  "entries": [
+    {
+      "name": "Array.prototype.map",
+      "path": "array/map",
+      "type": "Method"
+    },
+    {
+      "name": "Array.prototype.filter",
+      "path": "array/filter",
+      "type": "Method"
+    },
+    {
+      "name": "Array.prototype.reduce",
+      "path": "array/reduce",
+      "type": "Method"
+    },
+    {
+      "name": "Array.prototype.forEach",
+      "path": "array/forEach",
+      "type": "Method"
+    },
+    {
+      "name": "Object.keys",
+      "path": "object/keys",
+      "type": "Method"
+    },
+    {
+      "name": "Object.values",
+      "path": "object/values",
+      "type": "Method"
+    },
+    {
+      "name": "Object.entries",
+      "path": "object/entries",
+      "type": "Method"
+    },
+    {
+      "name": "Promise",
+      "path": "promise",
+      "type": "Constructor"
+    },
+    {
+      "name": "console.log",
+      "path": "console/log",
+      "type": "Method"
+    },
+    {
+      "name": "document.getElementById",
+      "path": "document/getElementById",
+      "type": "Method"
+    },
+    {
+      "name": "document.querySelector",
+      "path": "document/querySelector",
+      "type": "Method"
+    }
+  ],
+  "syncedAt": "2025-09-27T10:00:00.000Z"
+}

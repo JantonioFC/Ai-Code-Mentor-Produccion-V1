@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:25:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 97-100"
+  },
+  "fase": {
+    "numero": 7,
+    "titulo": "Profesionalización y Crecimiento Continuo",
+    "duracion": "1 mes",
+    "semanaInicio": 97,
+    "semanaFin": 100,
+    "totalSemanas": 4,
+    "proposito": "Estructurar la transición del entorno de aprendizaje a la práctica profesional, enfocándose en la gestión de proyectos personales, la observabilidad de aplicaciones en producción y el desarrollo de habilidades estratégicas de carrera.",
+    "competenciasClave": [
+      "Aplicación de metodologías ágiles (Kanban) para la gestión de proyectos personales",
+      "Implementación de monitoreo básico y prácticas de observabilidad en aplicaciones desplegadas",
+      "Desarrollo de una estrategia de networking y preparación para la negociación salarial",
+      "Contribución a la comunidad de software a través de proyectos de código abierto",
+      "Establecimiento de un plan de crecimiento profesional continuo"
+    ],
+    "proyectoIntegrador": "Creación de un portfolio de artefactos profesionales que incluye: un tablero de proyecto activo, un manual de operaciones para la aplicación Capstone, una estrategia de carrera documentada y la primera contribución a un proyecto de código abierto."
+  },
+  "modulos": [
+    {
+      "numero": 13,
+      "titulo": "Gestión y Operación de Proyectos",
+      "semanas": [
+        97,
+        98
+      ],
+      "proposito": "Aplicar prácticas profesionales al mantenimiento y evolución del proyecto Capstone.",
+      "competencias": [
+        "Gestión de proyectos con metodologías ágiles",
+        "Monitoreo y observabilidad de aplicaciones",
+        "Operación y mantenimiento de software",
+        "Documentación de procesos operacionales"
+      ]
+    },
+    {
+      "numero": 14,
+      "titulo": "Estrategia de Carrera y Desarrollo Continuo",
+      "semanas": [
+        99,
+        100
+      ],
+      "proposito": "Desarrollar habilidades no técnicas cruciales para el crecimiento profesional.",
+      "competencias": [
+        "Networking estratégico y negociación",
+        "Contribución a código abierto",
+        "Planificación de carrera profesional",
+        "Establecimiento de red profesional"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 97,
+      "titulo": "Gestión de Proyecto y Metodologías Ágiles Personales",
+      "modulo": 13,
+      "objetivos": [
+        "Aplicar un marco de gestión de proyectos para el mantenimiento del Capstone",
+        "Establecer metodologías ágiles personales"
+      ],
+      "tematica": "Metodologías ágiles (Kanban personal), gestión de backlog, priorización de tareas, retrospectivas y mejora continua",
+      "actividades": [
+        "Crear un tablero Kanban en GitHub Projects para el proyecto Capstone",
+        "Poblar el backlog con mejoras identificadas, feedback recibido y bugs menores",
+        "Planificar el primer 'sprint' de mantenimiento de una semana"
+      ],
+      "entregables": "Un tablero Kanban público y activo para el proyecto Capstone. Una entrada en el DDE documentando la primera retrospectiva del proceso de autogestión.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Gestión de Proyecto y Metodologías Ágiles Personales",
+          "pomodoros": [
+            "Pomodoro 1: Crear un tablero Kanban en GitHub Projects para el proyecto Capstone.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre gestión de proyecto y metodologías ágiles personales",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Poblar el backlog con mejoras identificadas, feedback recibido y bugs menores.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un tablero Kanban público y activo para tu proyecto Capstone. Una entrada en el DDE documentando la primera retrospectiva del proceso de autogestión.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 98,
+      "titulo": "Monitoreo Post-Despliegue y Ownership",
+      "modulo": 13,
+      "objetivos": [
+        "Implementar prácticas de observabilidad para la aplicación desplegada",
+        "Asegurar la salud y el rendimiento de la aplicación"
+      ],
+      "tematica": "Monitoreo de disponibilidad (uptime), centralización de logs, métricas básicas de rendimiento (APM), configuración de alertas",
+      "actividades": [
+        "Configurar un servicio de monitoreo externo (ej. UptimeRobot) para la URL pública del Capstone",
+        "Canalizar los logs de la aplicación a un servicio de gestión",
+        "Configurar una alerta básica (ej. si el uso de CPU supera el 80%)"
+      ],
+      "entregables": "Un OPERATIONS_RUNBOOK.md en el repositorio del Capstone, detallando cómo monitorear la aplicación, dónde encontrar los logs y qué hacer en caso de una alerta.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Monitoreo Post-Despliegue y Ownership",
+          "pomodoros": [
+            "Pomodoro 1: Configurar un servicio de monitoreo externo (ej. UptimeRobot) para la URL pública del Capstone.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre monitoreo post-despliegue y ownership",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Canalizar los logs de la aplicación a un servicio de gestión (ej. la consola del proveedor cloud).",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un OPERATIONS_RUNBOOK.md en el repositorio del Capstone, detallando cómo monitorear la aplicación, dónde encontrar los logs y qué hacer en caso de una alerta.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 99,
+      "titulo": "Estrategias de Networking y Negociación",
+      "modulo": 14,
+      "objetivos": [
+        "Desarrollar un plan proactivo para construir una red de contactos profesionales",
+        "Prepararse para la negociación salarial"
+      ],
+      "tematica": "Networking estratégico, propuesta de valor personal, investigación de mercado salarial, técnicas de negociación",
+      "actividades": [
+        "Crear un plan de networking a 3 meses",
+        "Identificar 5 empresas objetivo y profesionales clave en LinkedIn",
+        "Investigar y documentar los rangos salariales para roles de desarrollador junior/mid en Uruguay y LATAM"
+      ],
+      "entregables": "Un documento CAREER_STRATEGY.md con el plan de networking, objetivos salariales y estrategia de negociación. Al menos 3 conexiones profesionales nuevas establecidas.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Estrategias de Networking y Negociación",
+          "pomodoros": [
+            "Pomodoro 1: Crear un plan de networking a 3 meses.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre estrategias de networking y negociación",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Identificar 5 empresas objetivo y profesionales clave en LinkedIn.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un plan de networking estructurado y una guía de negociación salarial personalizada con datos de mercado específicos para tu ubicación y nivel de experiencia.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 100,
+      "titulo": "Contribución Open Source y Planificación Futura",
+      "modulo": 14,
+      "objetivos": [
+        "Realizar la primera contribución significativa a un proyecto de código abierto",
+        "Establecer un plan de crecimiento profesional continuo"
+      ],
+      "tematica": "Contribución a open source, identificación de proyectos, creación de PRs, planificación de carrera a largo plazo",
+      "actividades": [
+        "Identificar un proyecto de código abierto alineado con intereses técnicos",
+        "Realizar una contribución (issue, documentación, código o tests)",
+        "Documentar un plan de aprendizaje continuo para los próximos 12 meses"
+      ],
+      "entregables": "Proyecto Integrador de Fase 7: Portfolio completo de artefactos profesionales incluyendo tablero de proyecto activo, manual de operaciones del Capstone, estrategia de carrera documentada, primera contribución open source y plan de crecimiento profesional.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Contribución Open Source y Crecimiento Continuo",
+          "pomodoros": [
+            "Pomodoro 1: Identificar y hacer tu primera contribución a un proyecto de código abierto (puede ser documentación, bug fix, o nueva funcionalidad).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre contribución open source y crecimiento continuo",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear un plan de aprendizaje continuo para los próximos 12 meses.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Portfolio de artefactos profesionales finales que incluye: un tablero de proyecto activo, un manual de operaciones para la aplicación Capstone, una estrategia de carrera documentada y la primera contribución a un proyecto de código abierto. Plan de crecimiento profesional para los próximos 12 meses.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}

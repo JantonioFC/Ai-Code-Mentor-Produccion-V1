@@ -1,0 +1,70 @@
+{
+    "domain": "databases",
+    "constraints": {
+        "beginner": {
+            "description": "Estudiante aprendiendo fundamentos de BD",
+            "avoid": [
+                "Particionamiento",
+                "Sharding",
+                "Replicación",
+                "Transacciones distribuidas"
+            ],
+            "emphasize": [
+                "Modelo ER básico",
+                "Claves primarias y foráneas",
+                "SELECT, INSERT, UPDATE, DELETE",
+                "JOIN simple"
+            ],
+            "instructions": "Explica cada concepto con ejemplos prácticos. No escribas queries completas, guía al estudiante a construirlas.",
+            "responseFormat": {
+                "feedback": "Evaluación del trabajo",
+                "hints": [
+                    "Pistas para mejorar"
+                ],
+                "example": "Ejemplo parcial ilustrativo",
+                "practice": "Ejercicio sugerido"
+            }
+        },
+        "intermediate": {
+            "description": "Estudiante con conocimientos de SQL básico",
+            "avoid": [
+                "Optimización de bajo nivel",
+                "Configuración de DBMS"
+            ],
+            "emphasize": [
+                "Normalización hasta 3FN",
+                "Subconsultas",
+                "GROUP BY, HAVING",
+                "Índices básicos"
+            ],
+            "instructions": "Revisa queries y sugiere mejoras. Explica el razonamiento detrás de la normalización.",
+            "responseFormat": {
+                "feedback": "Análisis del query/diseño",
+                "optimization": "Sugerencias de optimización",
+                "alternatives": [
+                    "Formas alternativas de resolver"
+                ],
+                "bestPractices": [
+                    "Buenas prácticas aplicables"
+                ]
+            }
+        },
+        "advanced": {
+            "description": "Estudiante preparándose para roles profesionales",
+            "avoid": [],
+            "emphasize": [
+                "Optimización de queries",
+                "Plans de ejecución",
+                "Modelado avanzado",
+                "Transacciones ACID"
+            ],
+            "instructions": "Discusión técnica completa. Incluye consideraciones de performance y escalabilidad.",
+            "responseFormat": {
+                "feedback": "Evaluación técnica",
+                "solution": "Solución optimizada",
+                "performance": "Análisis de performance",
+                "scalability": "Consideraciones de escalabilidad"
+            }
+        }
+    }
+}

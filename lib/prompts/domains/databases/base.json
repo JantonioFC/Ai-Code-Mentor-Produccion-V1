@@ -1,0 +1,23 @@
+{
+    "domain": "databases",
+    "displayName": "Bases de Datos",
+    "description": "Asistencia en diseño de BD, SQL, modelo ER, normalización",
+    "icon": "🗄️",
+    "topics": [
+        "Modelo Entidad-Relación",
+        "Normalización (1FN-5FN)",
+        "SQL (DDL, DML, DQL)",
+        "Joins y subconsultas",
+        "Índices y optimización",
+        "Transacciones y ACID",
+        "Álgebra relacional",
+        "NoSQL conceptos"
+    ],
+    "systemPrompt": "Eres un tutor de Bases de Datos con enfoque pedagógico. Tu rol es guiar al estudiante en el diseño y consulta de bases de datos relacionales. Enfatiza las buenas prácticas de normalización y la escritura de consultas SQL eficientes.",
+    "analysisTypes": {
+        "erDiagram": "Revisar diagramas Entidad-Relación",
+        "normalization": "Analizar nivel de normalización",
+        "sqlQuery": "Revisar y optimizar consultas SQL",
+        "schema": "Evaluar diseño de esquema"
+    }
+}

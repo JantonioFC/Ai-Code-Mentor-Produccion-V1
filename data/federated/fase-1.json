@@ -1,0 +1,1090 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:05:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 10-24"
+  },
+  "fase": {
+    "numero": 1,
+    "titulo": "Fundamentos de Programación y Metodología",
+    "duracion": "6 meses",
+    "semanaInicio": 10,
+    "semanaFin": 24,
+    "totalSemanas": 15,
+    "proposito": "Forjar una base sólida en pensamiento computacional, dominio de Python y establecer las metodologías de trabajo (Git, IA Crítica) para todo el programa.",
+    "competenciasClave": [
+      "Resolución de problemas algorítmicos",
+      "Dominio del control de versiones con Git",
+      "Desarrollo de software modular y bien documentado",
+      "Uso efectivo de la IA como herramienta de aprendizaje",
+      "Programación orientada a objetos en Python",
+      "Testing y debugging sistemático"
+    ]
+  },
+  "modulos": [
+    {
+      "numero": 1,
+      "titulo": "Arquitectura del Aprendizaje y Metodología",
+      "semanas": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "proposito": "Configurar el entorno y la mentalidad. Aprender a aprender de forma estructurada y profesional.",
+      "competencias": [
+        "Configuración de entorno de desarrollo",
+        "Pensamiento computacional y abstracción",
+        "Interacción crítica con IA",
+        "Control de versiones con Git",
+        "Documentación y reflexión metacognitiva"
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Programación Fundamental con Python",
+      "semanas": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "proposito": "Inmersión profunda en programación. Pasar de la teoría a la implementación práctica con Python.",
+      "competencias": [
+        "Sintaxis y estructuras básicas de Python",
+        "Programación orientada a objetos",
+        "Manejo de archivos y excepciones",
+        "Testing automatizado",
+        "Organización de proyectos y módulos"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 10,
+      "titulo": "Configuración del Entorno y Metodología",
+      "modulo": 1,
+      "objetivos": [
+        "Establecer el flujo de trabajo semanal.",
+        "Dominar las herramientas de productividad y configuración del entorno de desarrollo."
+      ],
+      "tematica": "Configuración de VS Code, Git/GitHub, Discord, y herramientas de gestión de conocimiento.",
+      "actividades": [
+        "Instalación y personalización de software.",
+        "Creación de cuenta en GitHub y primer repositorio.",
+        "Configuración del entorno de desarrollo local."
+      ],
+      "entregables": "Repositorio Ecosistema360 inicializado en GitHub. Entorno de desarrollo completamente configurado y documentado en la primera entrada del DMA.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Configuración del Entorno y Metodología",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre configuración del entorno y metodología",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Instalación y personalización de software.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Repositorio Ecosistema360 inicializado en GitHub. Entorno de desarrollo completamente configurado y documentado en la pr...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 11,
+      "titulo": "Pensamiento Computacional y Git Básico",
+      "modulo": 1,
+      "objetivos": [
+        "Aprender a descomponer problemas complejos en pasos lógicos (algoritmos).",
+        "Dominar el ciclo básico de control de versiones."
+      ],
+      "tematica": "Descomposición de problemas, abstracción, pseudocódigo. Comandos git init, add, commit, push, pull.",
+      "actividades": [
+        "Resolver problemas de lógica tipo 'lápiz y papel'.",
+        "Practicar el flujo de trabajo de Git con el repositorio personal.",
+        "Crear una estructura de directorios estándar para los proyectos."
+      ],
+      "entregables": "Serie de ejercicios de pseudocódigo versionados en GitHub. Estructura de proyecto documentada en el README.md.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Pensamiento Computacional y Git Básico",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre pensamiento computacional y git básico",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Resolver problemas de lógica tipo 'lápiz y papel'.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Serie de ejercicios de pseudocódigo versionados en GitHub. Estructura de proyecto documentada en el README.md.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 12,
+      "titulo": "Alfabetización Crítica en Inteligencia Artificial",
+      "modulo": 1,
+      "objetivos": [
+        "Entender el funcionamiento, sesgos y limitaciones de los LLMs.",
+        "Aprender a formular prompts efectivos para maximizar la IA como herramienta de aprendizaje."
+      ],
+      "tematica": "Ingeniería de prompts, verificación de respuestas, principios de IA responsable.",
+      "actividades": [
+        "Realizar ejercicios de formulación de prompts con objetivos específicos.",
+        "Analizar críticamente las respuestas de la IA."
+      ],
+      "entregables": "Documento IA_PROTOCOLO.md en el repositorio, definiendo mejores prácticas para interactuar con el Tutor IA.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Alfabetización Crítica en Inteligencia Artificial",
+          "pomodoros": [
+            "Revisar materiales teóricos y recursos clave",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre alfabetización crítica en inteligencia artificial",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Realizar ejercicios de formulación de prompts con objetivos específicos (explicación, refactorización, debugging).",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Un documento IA_PROTOCOLO.md en el repositorio, definiendo tus propias mejores prácticas para interactuar con el Tutor I...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 13,
+      "titulo": "Consolidación y Conexión",
+      "modulo": 1,
+      "objetivos": [
+        "Integrar todas las habilidades metodológicas adquiridas en un mini-proyecto.",
+        "Iniciar formalmente el Diario de Decisiones de Ingeniería (DDE)."
+      ],
+      "tematica": "Aplicación del flujo de trabajo completo: Planificación, pseudocódigo, versionado y documentación.",
+      "actividades": [
+        "Desarrollar una calculadora simple en pseudocódigo.",
+        "Documentar las decisiones de diseño en el primer DDE.",
+        "Versionar cada paso con Git."
+      ],
+      "entregables": "Mini-proyecto de calculadora (en pseudocódigo) completamente documentado y versionado en GitHub. Primera entrada formal del DDE.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Consolidación y Conexión",
+          "pomodoros": [
+            "Revisar materiales teóricos y recursos clave",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre consolidación y conexión",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Desarrollar una calculadora simple en pseudocódigo.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Mini-proyecto de calculadora (en pseudocódigo) completamente documentado y versionado en GitHub. Primera entrada formal ...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 14,
+      "titulo": "Fundamentos de Python",
+      "modulo": 2,
+      "objetivos": [
+        "Dominar la sintaxis básica, variables, tipos de datos y operadores de Python."
+      ],
+      "tematica": "Variables, tipos (int, float, str, bool), operadores aritméticos y lógicos, entrada/salida, comentarios.",
+      "actividades": [
+        "Resolver ejercicios de programación básicos en plataformas como HackerRank o Codewars.",
+        "Escribir scripts simples (ej. conversor de unidades)."
+      ],
+      "entregables": "Un mínimo de 10 ejercicios de código resueltos y subidos al repositorio, cada uno en su propio archivo.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Python",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre fundamentos de python",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Resolver ejercicios de programación básicos en plataformas como HackerRank o Codewars.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Un mínimo de 10 ejercicios de código resueltos y subidos al repositorio, cada uno en su propio archivo.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 15,
+      "titulo": "Fundamentos de Python - Continuación",
+      "modulo": 2,
+      "objetivos": [
+        "Consolidar el dominio de la sintaxis básica de Python.",
+        "Práctica intensiva con operadores y tipos de datos."
+      ],
+      "tematica": "Profundización en tipos de datos, operadores avanzados, formateo de strings.",
+      "actividades": [
+        "Resolver más ejercicios de programación básicos.",
+        "Crear programas más complejos que combinen múltiples conceptos."
+      ],
+      "entregables": "Conjunto adicional de 10 ejercicios resueltos, demostrando dominio sólido de los fundamentos.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Python - Continuación",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre fundamentos de python - continuación",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Resolver más ejercicios de programación básicos.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Conjunto adicional de 10 ejercicios resueltos, demostrando dominio sólido de los fundamentos.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 16,
+      "titulo": "Estructuras de Control",
+      "modulo": 2,
+      "objetivos": [
+        "Implementar lógica en los programas utilizando condicionales y bucles."
+      ],
+      "tematica": "if/elif/else, bucles for y while, break, continue.",
+      "actividades": [
+        "Crear un juego de 'adivina el número'.",
+        "Escribir un programa que valide la entrada del usuario.",
+        "Generar patrones simples usando bucles anidados."
+      ],
+      "entregables": "3 mini-proyectos que demuestren el dominio de las estructuras de control.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Condicionales - if/elif/else",
+          "pomodoros": [
+            "Pomodoro 1: Estudiar sintaxis y lógica de condicionales en Python",
+            "Pomodoro 2: Practicar con ejercicios simples de toma de decisiones",
+            "Pomodoro 3: Implementar validador básico de entrada de usuario",
+            "Pomodoro 4: Crear programa que clasifique números (par/impar, positivo/negativo)"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Bucles for - Iteración Controlada",
+          "pomodoros": [
+            "Pomodoro 1: Dominar sintaxis del bucle for con range() y secuencias",
+            "Pomodoro 2: Resolver ejercicios de suma/multiplicación con bucles for",
+            "Pomodoro 3: Generar patrones visuales simples usando bucles for",
+            "Pomodoro 4: Crear programa que procese listas de datos con for"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Bucles while - Iteración Condicional",
+          "pomodoros": [
+            "Pomodoro 1: Estudiar bucles while y prevención de loops infinitos",
+            "Pomodoro 2: Implementar menús interactivos con validación de entrada",
+            "Pomodoro 3: Comenzar desarrollo del juego 'Adivina el Número'",
+            "Pomodoro 4: Usar break y continue para controlar flujo de bucles"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Bucles Anidados y Patrones Complejos",
+          "pomodoros": [
+            "Pomodoro 1: Dominar bucles anidados para crear patrones 2D",
+            "Pomodoro 2: Generar tablas de multiplicar y patrones geométricos",
+            "Pomodoro 3: Completar juego 'Adivina el Número' con características avanzadas",
+            "Pomodoro 4: Optimizar programas eliminando bucles innecesarios"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Proyecto Integrador - Validador Avanzado",
+          "pomodoros": [
+            "Pomodoro 1: Diseñar sistema complejo de validación de entrada de usuario",
+            "Pomodoro 2: Implementar validación con múltiples tipos de datos y rangos",
+            "Pomodoro 3: Integrar todos los conceptos en un programa robusto",
+            "Pomodoro 4: Documentar y probar los 3 mini-proyectos de la semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 17,
+      "titulo": "Estructuras de Control - Práctica Avanzada",
+      "modulo": 2,
+      "objetivos": [
+        "Dominar el uso avanzado de estructuras de control.",
+        "Implementar algoritmos más complejos."
+      ],
+      "tematica": "Bucles anidados, lógica compleja con múltiples condiciones.",
+      "actividades": [
+        "Resolver problemas algorítmicos que requieran estructuras de control complejas.",
+        "Implementar algoritmos de búsqueda básicos."
+      ],
+      "entregables": "Conjunto de programas que demuestren manejo avanzado de estructuras de control.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Estructuras de Control - Práctica Avanzada",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre estructuras de control - práctica avanzada",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Resolver problemas algorítmicos que requieran estructuras de control complejas.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Conjunto de programas que demuestren manejo avanzado de estructuras de control.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 18,
+      "titulo": "Funciones y Modularidad",
+      "modulo": 2,
+      "objetivos": [
+        "Escribir código limpio, reutilizable y organizado a través de funciones."
+      ],
+      "tematica": "Definición de funciones (def), parámetros, argumentos, valores de retorno (return), scope de variables.",
+      "actividades": [
+        "Refactorizar el código de los mini-proyectos anteriores para usar funciones.",
+        "Crear una pequeña biblioteca de funciones de utilidad."
+      ],
+      "entregables": "Una biblioteca personal (utils.py) con al menos 5 funciones bien documentadas (usando docstrings).",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Funciones y Modularidad",
+          "pomodoros": [
+            "Revisar materiales teóricos y recursos clave",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre funciones y modularidad",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Refactorizar el código de los mini-proyectos anteriores para usar funciones.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Una biblioteca personal (utils.py) con al menos 5 funciones bien documentadas (usando docstrings).",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 19,
+      "titulo": "Funciones Avanzadas",
+      "modulo": 2,
+      "objetivos": [
+        "Dominar conceptos avanzados de funciones en Python."
+      ],
+      "tematica": "Funciones lambda, argumentos *args y **kwargs, decoradores básicos.",
+      "actividades": [
+        "Implementar funciones de orden superior.",
+        "Crear y usar decoradores simples."
+      ],
+      "entregables": "Biblioteca de funciones expandida con ejemplos de uso de conceptos avanzados.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Funciones Avanzadas",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre funciones avanzadas",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Implementar funciones de orden superior.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Biblioteca de funciones expandida con ejemplos de uso de conceptos avanzados.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 20,
+      "titulo": "Estructuras de Datos",
+      "modulo": 2,
+      "objetivos": [
+        "Aprender a almacenar y manipular colecciones de datos de manera eficiente."
+      ],
+      "tematica": "Listas, tuplas, diccionarios y sets. Métodos asociados, iteración y list/dict comprehensions.",
+      "actividades": [
+        "Construir un gestor de contactos simple usando un diccionario.",
+        "Realizar un análisis básico de texto (contar palabras) usando listas y diccionarios."
+      ],
+      "entregables": "Un proyecto de gestor de tareas en la terminal que permita agregar, eliminar y listar tareas.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Estructuras de Datos",
+          "pomodoros": [
+            "Estudiar modelos de datos y diseño de esquemas",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre estructuras de datos",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Construir un gestor de contactos simple usando un diccionario.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Un proyecto de gestor de tareas en la terminal que permita agregar, eliminar y listar tareas.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 21,
+      "titulo": "Estructuras de Datos - Práctica Avanzada",
+      "modulo": 2,
+      "objetivos": [
+        "Dominar el uso avanzado de estructuras de datos.",
+        "Implementar algoritmos de procesamiento de datos."
+      ],
+      "tematica": "Comprehensions avanzadas, itertools, collections.",
+      "actividades": [
+        "Resolver problemas complejos de manipulación de datos.",
+        "Optimizar algoritmos usando estructuras de datos apropiadas."
+      ],
+      "entregables": "Conjunto de programas que demuestren dominio avanzado de estructuras de datos.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Estructuras de Datos Avanzadas",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre estructuras de datos avanzadas",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Resolver problemas que requieran manipulación avanzada de estructuras de datos.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Proyecto avanzado que demuestre dominio de estructuras de datos complejas.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 22,
+      "titulo": "Manejo de Archivos y Excepciones",
+      "modulo": 2,
+      "objetivos": [
+        "Aprender a leer y escribir datos en archivos para persistencia.",
+        "Manejar errores de forma robusta."
+      ],
+      "tematica": "Lectura y escritura de archivos (open, read, write, with). Bloques try/except/finally para el manejo de errores.",
+      "actividades": [
+        "Modificar el gestor de tareas para que guarde y cargue las tareas desde un archivo de texto o JSON.",
+        "Implementar manejo de errores para entradas inválidas."
+      ],
+      "entregables": "Versión mejorada del gestor de tareas con persistencia de datos y manejo de excepciones.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Manejo de Archivos y Excepciones",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre manejo de archivos y excepciones",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Modificar el gestor de tareas para que guarde y cargue las tareas desde un archivo de texto o JSON.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Versión mejorada del gestor de tareas con persistencia de datos y manejo de excepciones.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 23,
+      "titulo": "Programación Orientada a Objetos",
+      "modulo": 2,
+      "objetivos": [
+        "Aprender a modelar problemas del mundo real utilizando el paradigma de POO."
+      ],
+      "tematica": "Clases, objetos, atributos, métodos. Principios de encapsulación, herencia y polimorfismo.",
+      "actividades": [
+        "Modelar un sistema simple usando clases.",
+        "Crear un pequeño juego de texto basado en objetos."
+      ],
+      "entregables": "Un proyecto que modele un sistema coherente usando múltiples clases que interactúan entre sí.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Manejo Avanzado de Archivos",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre manejo avanzado de archivos",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Implementar importación y exportación de datos en múltiples formatos.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Sistema de gestión de datos con soporte para múltiples formatos.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 24,
+      "titulo": "Testing, Módulos y Proyecto Integrador",
+      "modulo": 2,
+      "objetivos": [
+        "Organizar proyectos en múltiples archivos.",
+        "Escribir tests automatizados.",
+        "Aplicar todos los conceptos en un proyecto integral."
+      ],
+      "tematica": "Testing unitario, módulos y paquetes, entornos virtuales, proyecto CLI completo.",
+      "actividades": [
+        "Escribir tests para funciones y clases.",
+        "Desarrollar una aplicación CLI robusta.",
+        "Organizar código en paquetes modulares."
+      ],
+      "entregables": "Proyecto Integrador de Fase 1: Una aplicación CLI completa, con tests, documentación profesional y DDE detallado.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Programación Orientada a Objetos - Introducción",
+          "pomodoros": [
+            "Estudiar conceptos teóricos y sintaxis del lenguaje",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre programación orientada a objetos - introducción",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Crear una clase simple (ej.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Conjunto de clases básicas con documentación de uso.",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    }
+  ]
+}

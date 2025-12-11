@@ -1,0 +1,102 @@
+[
+  {
+    "id": "entry_daily_reflection_1755914617122",
+    "entry_type": "daily_reflection",
+    "date": "2025-08-23T02:03:37.123Z",
+    "content": "Hoy completé el módulo de React Hooks. Me siento más confiado con useState y useEffect. Mañana planeo practicar con useReducer.",
+    "template_used": "daily_reflection_template",
+    "module_reference": null,
+    "metadata": "{\"mood\":\"confident\",\"hours_studied\":3,\"focus_level\":8}",
+    "created_at": "2025-08-23T02:03:37.127Z"
+  },
+  {
+    "id": "entry_weekly_review_1755914617132",
+    "entry_type": "weekly_review",
+    "date": "2025-08-23T02:03:37.132Z",
+    "content": "Esta semana logré completar 3 módulos de React. Mis objetivos se cumplieron al 80%. Necesito mejorar en el testing de componentes.",
+    "template_used": "weekly_review_template",
+    "module_reference": null,
+    "metadata": "{\"goals_completed\":4,\"goals_total\":5,\"satisfaction\":7}",
+    "created_at": "2025-08-23T02:03:37.132Z"
+  },
+  {
+    "id": "entry_dde_entry_1755914617135",
+    "entry_type": "dde_entry",
+    "date": "2025-08-23T02:03:37.135Z",
+    "content": "Decisión: Usar useState vs useReducer para state complejo. Elegí useReducer porque el state tiene múltiples sub-valores y las transiciones son complejas.",
+    "template_used": "dde_template",
+    "module_reference": null,
+    "metadata": "{\"decision_complexity\":\"medium\",\"alternatives_considered\":2}",
+    "created_at": "2025-08-23T02:03:37.135Z"
+  },
+  {
+    "id": "entry_weekly_action_plan_1755914617138",
+    "entry_type": "weekly_action_plan",
+    "date": "2025-08-23T02:03:37.138Z",
+    "content": "Semana 3 - Meta Principal: Dominar React Hooks. Objetivos: 1) Completar módulo React Hooks, 2) Implementar 2 componentes prácticos, 3) Hacer testing básico.",
+    "template_used": "pas_template",
+    "module_reference": null,
+    "metadata": "{\"week_number\":3,\"main_objectives\":3,\"estimated_hours\":25,\"phase\":\"Fase 2 - Frontend Frameworks\"}",
+    "created_at": "2025-08-23T02:03:37.138Z"
+  },
+  {
+    "id": "entry_quality_checklist_precommit_1755914617142",
+    "entry_type": "quality_checklist_precommit",
+    "date": "2025-08-23T02:03:37.142Z",
+    "content": "Checklist Pre-Commit completado: ✅ Código funciona como se espera, ✅ No hay console.log de depuración, ✅ Variables tienen nombres descriptivos, ✅ Todos los tests pasan, ✅ Linter ejecutado.",
+    "template_used": "quality_checklist_template",
+    "module_reference": null,
+    "metadata": "{\"checklist_type\":\"precommit\",\"items_checked\":14,\"items_total\":14,\"completion_rate\":100}",
+    "created_at": "2025-08-23T02:03:37.142Z"
+  },
+  {
+    "id": "entry_quality_checklist_project_1755914617147",
+    "entry_type": "quality_checklist_project",
+    "date": "2025-08-23T02:03:37.147Z",
+    "content": "Checklist Proyecto Completo: ✅ Cumple todos los requisitos funcionales, ✅ Maneja errores elegantemente, ✅ Tiene validación de entradas, ✅ README.md completo, ✅ Tests con cobertura >80%.",
+    "template_used": "quality_checklist_template",
+    "module_reference": null,
+    "metadata": "{\"checklist_type\":\"project_complete\",\"items_checked\":17,\"items_total\":18,\"completion_rate\":94}",
+    "created_at": "2025-08-23T02:03:37.147Z"
+  },
+  {
+    "id": "entry_quality_checklist_weekly_1755914617151",
+    "entry_type": "quality_checklist_weekly",
+    "date": "2025-08-23T02:03:37.151Z",
+    "content": "Checklist Revisión Semanal: ✅ Completé los entregables planeados, ✅ Cumplí el objetivo de horas, ✅ Mi código mejoró respecto a la semana anterior, ✅ DDE y diario actualizados.",
+    "template_used": "quality_checklist_template",
+    "module_reference": null,
+    "metadata": "{\"checklist_type\":\"weekly_review\",\"items_checked\":7,\"items_total\":8,\"completion_rate\":87}",
+    "created_at": "2025-08-23T02:03:37.151Z"
+  },
+  {
+    "id": "entry_project_documentation_1755914617153",
+    "entry_type": "project_documentation",
+    "date": "2025-08-23T02:03:37.153Z",
+    "content": "Documentación del proyecto AI Code Mentor actualizada: README.md profesional completo, instrucciones claras de instalación, características principales documentadas, badges agregados.",
+    "template_used": "project_documentation_template",
+    "module_reference": null,
+    "metadata": "{\"sections_completed\":[\"README\",\"Installation\",\"Features\",\"Usage\",\"Demo\",\"Technologies\"],\"documentation_quality\":\"professional\",\"estimated_reading_time\":\"5 minutes\",\"badges_included\":true}",
+    "created_at": "2025-08-23T02:03:37.153Z"
+  },
+  {
+    "id": "entry_technical_documentation_1755914617156",
+    "entry_type": "technical_documentation",
+    "date": "2025-08-23T02:03:37.156Z",
+    "content": "Documentación técnica actualizada: Arquitectura del sistema detallada, componentes principales documentados, flujo de datos explicado, esquema de base de datos completo.",
+    "template_used": "technical_documentation_template",
+    "module_reference": null,
+    "metadata": "{\"architecture_sections\":[\"Overview\",\"Components\",\"Data Flow\",\"Database Schema\",\"API Endpoints\"],\"detail_level\":\"comprehensive\",\"target_audience\":\"developers\",\"diagrams_included\":true}",
+    "created_at": "2025-08-23T02:03:37.156Z"
+  },
+  {
+    "id": "entry_unified_tracking_log_1755914617158",
+    "entry_type": "unified_tracking_log",
+    "date": "2025-08-23T02:03:37.158Z",
+    "content": "Log unificado del ecosistema: Proyecto AI Code Mentor, 25 horas dedicadas, tecnologías React+Node.js+SQLite, aprendizajes clave en state management y database design.",
+    "template_used": "unified_tracking_template",
+    "module_reference": null,
+    "metadata": "{\"project_name\":\"AI Code Mentor\",\"hours_dedicated\":25,\"technologies_used\":[\"React\",\"Node.js\",\"SQLite\",\"Next.js\",\"Gemini Flash\"],\"key_learnings\":[\"Database Design\",\"State Management\",\"API Design\"],\"personal_rating\":9}",
+    "created_at": "2025-08-23T02:03:37.158Z"
+  }
+]

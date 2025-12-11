@@ -1,0 +1,223 @@
+{
+  "version": "4.2",
+  "description": "Manifiesto de Fuentes Canónicas - AI Code Mentor V4.2 Biblioteca Viva",
+  "last_updated": "2024-12-28T10:00:00Z",
+  "curriculum": {
+    "javascript": {
+      "fundamentals": {
+        "variables-and-data-types": {
+          "title": "Variables y Tipos de Datos en JavaScript",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+          "topics": ["variables", "let", "const", "var", "data-types", "primitives"],
+          "difficulty": "beginner", 
+          "estimated_time": "45 minutos"
+        },
+        "functions": {
+          "title": "Funciones en JavaScript",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+          "topics": ["functions", "arrow-functions", "parameters", "scope", "closures"],
+          "difficulty": "intermediate",
+          "estimated_time": "60 minutos"
+        },
+        "objects-and-arrays": {
+          "title": "Objetos y Arrays",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
+          "topics": ["objects", "arrays", "methods", "destructuring", "spread-operator"],
+          "difficulty": "intermediate",
+          "estimated_time": "50 minutos"
+        },
+        "async-programming": {
+          "title": "Programación Asíncrona",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises", 
+          "topics": ["promises", "async-await", "callbacks", "event-loop", "asynchronous"],
+          "difficulty": "advanced",
+          "estimated_time": "75 minutos"
+        }
+      },
+      "dom-manipulation": {
+        "selecting-elements": {
+          "title": "Selección de Elementos DOM",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+          "topics": ["DOM", "querySelector", "getElementById", "getElementsByClassName"],
+          "difficulty": "beginner",
+          "estimated_time": "40 minutos"
+        },
+        "event-handling": {
+          "title": "Manejo de Eventos",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+          "topics": ["events", "event-listeners", "event-delegation", "event-bubbling"],
+          "difficulty": "intermediate", 
+          "estimated_time": "55 minutos"
+        }
+      },
+      "es6-features": {
+        "arrow-functions": {
+          "title": "Arrow Functions y Alcance",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+          "topics": ["arrow-functions", "this-binding", "lexical-scope"],
+          "difficulty": "intermediate",
+          "estimated_time": "45 minutos"
+        },
+        "destructuring": {
+          "title": "Destructuring Assignment",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment",
+          "topics": ["destructuring", "array-destructuring", "object-destructuring", "default-values"],
+          "difficulty": "intermediate",
+          "estimated_time": "40 minutos"
+        },
+        "modules": {
+          "title": "Módulos ES6",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+          "topics": ["modules", "import", "export", "default-export", "named-export"],
+          "difficulty": "intermediate",
+          "estimated_time": "50 minutos"
+        }
+      }
+    },
+    "react": {
+      "components": {
+        "functional-components": {
+          "title": "Componentes Funcionales",
+          "source_url": "https://react.dev/learn/your-first-component",
+          "topics": ["functional-components", "JSX", "props", "rendering"],
+          "difficulty": "beginner",
+          "estimated_time": "50 minutos"
+        },
+        "props-and-state": {
+          "title": "Props y State",
+          "source_url": "https://react.dev/learn/passing-props-to-a-component",
+          "topics": ["props", "state", "useState", "component-communication"],
+          "difficulty": "beginner",
+          "estimated_time": "60 minutos"
+        },
+        "event-handling": {
+          "title": "Manejo de Eventos en React",
+          "source_url": "https://react.dev/learn/responding-to-events",
+          "topics": ["event-handling", "synthetic-events", "event-listeners"],
+          "difficulty": "beginner",
+          "estimated_time": "45 minutos"
+        }
+      },
+      "hooks": {
+        "useState": {
+          "title": "Hook useState",
+          "source_url": "https://react.dev/reference/react/useState",
+          "topics": ["useState", "state-management", "functional-updates", "state-batching"],
+          "difficulty": "intermediate",
+          "estimated_time": "55 minutos"
+        },
+        "useEffect": {
+          "title": "Hook useEffect", 
+          "source_url": "https://react.dev/reference/react/useEffect",
+          "topics": ["useEffect", "side-effects", "cleanup", "dependencies", "lifecycle"],
+          "difficulty": "intermediate",
+          "estimated_time": "70 minutos"
+        },
+        "custom-hooks": {
+          "title": "Custom Hooks",
+          "source_url": "https://react.dev/learn/reusing-logic-with-custom-hooks",
+          "topics": ["custom-hooks", "reusability", "logic-sharing", "hook-rules"],
+          "difficulty": "advanced",
+          "estimated_time": "65 minutos"
+        }
+      },
+      "advanced": {
+        "context-api": {
+          "title": "Context API",
+          "source_url": "https://react.dev/learn/passing-data-deeply-with-context",
+          "topics": ["context", "useContext", "provider", "global-state"],
+          "difficulty": "advanced",
+          "estimated_time": "80 minutos"
+        },
+        "performance": {
+          "title": "Optimización de Performance",
+          "source_url": "https://react.dev/learn/render-and-commit",
+          "topics": ["performance", "memoization", "useMemo", "useCallback", "React.memo"],
+          "difficulty": "advanced", 
+          "estimated_time": "90 minutos"
+        }
+      }
+    },
+    "python": {
+      "basics": {
+        "data-types": {
+          "title": "Tipos de Datos en Python",
+          "source_url": "https://docs.python.org/3/library/stdtypes.html",
+          "topics": ["data-types", "strings", "numbers", "booleans", "lists", "dictionaries"],
+          "difficulty": "beginner",
+          "estimated_time": "50 minutos"
+        },
+        "control-flow": {
+          "title": "Control de Flujo",
+          "source_url": "https://docs.python.org/3/tutorial/controlflow.html",
+          "topics": ["if-statements", "loops", "for", "while", "break", "continue"],
+          "difficulty": "beginner", 
+          "estimated_time": "45 minutos"
+        },
+        "functions": {
+          "title": "Funciones en Python",
+          "source_url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+          "topics": ["functions", "parameters", "return", "lambda", "scope"],
+          "difficulty": "intermediate",
+          "estimated_time": "55 minutos"
+        }
+      },
+      "oop": {
+        "classes-objects": {
+          "title": "Clases y Objetos",
+          "source_url": "https://docs.python.org/3/tutorial/classes.html",
+          "topics": ["classes", "objects", "methods", "attributes", "constructors"],
+          "difficulty": "intermediate",
+          "estimated_time": "70 minutos"
+        },
+        "inheritance": {
+          "title": "Herencia",
+          "source_url": "https://docs.python.org/3/tutorial/classes.html#inheritance",
+          "topics": ["inheritance", "super", "method-overriding", "multiple-inheritance"],
+          "difficulty": "advanced",
+          "estimated_time": "65 minutos"
+        }
+      },
+      "libraries": {
+        "pandas": {
+          "title": "Análisis de Datos con Pandas",
+          "source_url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+          "topics": ["pandas", "dataframes", "data-analysis", "data-manipulation"],
+          "difficulty": "intermediate",
+          "estimated_time": "85 minutos"
+        },
+        "numpy": {
+          "title": "Computación Numérica con NumPy", 
+          "source_url": "https://numpy.org/doc/stable/user/quickstart.html",
+          "topics": ["numpy", "arrays", "mathematical-operations", "linear-algebra"],
+          "difficulty": "intermediate",
+          "estimated_time": "75 minutos"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "total_lessons": 25,
+    "supported_languages": ["javascript", "react", "python"],
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "last_audit": null,
+    "auto_update": {
+      "enabled": true,
+      "frequency": "weekly",
+      "last_check": null
+    }
+  },
+  "content_policies": {
+    "source_requirements": [
+      "Fuentes oficiales únicamente (MDN, React.dev, Python.org)",
+      "Documentación mantenida activamente",
+      "URLs estables y canónicas"
+    ],
+    "quality_standards": [
+      "Contenido universitario profundo",
+      "Ejercicios ejecutables integrados", 
+      "Contexto histórico y evolución tecnológica",
+      "Conexión teoría-práctica profesional"
+    ]
+  }
+}

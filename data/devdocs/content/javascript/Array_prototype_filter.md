@@ -1,0 +1,8 @@
+{
+  "entity": "Array.prototype.filter",
+  "url": "https://devdocs.io/javascript/array/filter",
+  "title": "Array.prototype.filter()",
+  "path": "array/filter",
+  "content": "### Array.prototype.filter()\n\nEl método **filter()** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.\n\n#### Sintaxis\n\n```javascript\narray.filter(function(element, index, array) {\n  // return true to keep the element, false otherwise\n})\n```\n\n#### Parámetros\n\n- **callback**: Función de prueba para cada elemento del array\n  - **element**: El elemento actual del array\n  - **index** (Opcional): El índice del elemento actual\n  - **array** (Opcional): El array sobre el que se llamó filter\n- **thisArg** (Opcional): Valor a usar como this al ejecutar callback\n\n#### Valor de retorno\n\nUn nuevo array con los elementos que cumplan la condición. Si ningún elemento cumple la condición, se devuelve un array vacío.\n\n#### Ejemplos\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst evenNumbers = numbers.filter(num => num % 2 === 0);\nconsole.log(evenNumbers); // [2, 4, 6]\n\nconst words = ['apple', 'banana', 'cherry', 'date'];\nconst longWords = words.filter(word => word.length > 5);\nconsole.log(longWords); // ['banana', 'cherry']\n```\n\n#### Notas importantes\n\n- filter() **no modifica** el array original\n- filter() **puede retornar** un array más pequeño que el original\n- La función de callback debe retornar un valor booleano\n\n**Fuente:** Documentación local sincronizada desde DevDocs.io",
+  "syncedAt": "2025-09-27T10:00:00.000Z"
+}

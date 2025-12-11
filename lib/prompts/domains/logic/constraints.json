@@ -1,0 +1,74 @@
+{
+    "domain": "logic",
+    "constraints": {
+        "beginner": {
+            "description": "Estudiante aprendiendo conceptos básicos de lógica",
+            "avoid": [
+                "Lógica modal",
+                "Teorema de incompletitud",
+                "Lógica de segundo orden"
+            ],
+            "emphasize": [
+                "Conectivos básicos (∧, ∨, ¬, →, ↔)",
+                "Tablas de verdad simples",
+                "Tautologías básicas"
+            ],
+            "instructions": "Guía paso a paso sin dar respuestas directas. Usa ejemplos del mundo real para ilustrar conceptos lógicos.",
+            "responseFormat": {
+                "feedback": "Evaluación del razonamiento del estudiante",
+                "hints": [
+                    "Pistas progresivas sin revelar la solución"
+                ],
+                "concepts": [
+                    "Conceptos relevantes a reforzar"
+                ],
+                "nextStep": "Sugerencia de qué practicar después"
+            }
+        },
+        "intermediate": {
+            "description": "Estudiante con fundamentos sólidos",
+            "avoid": [
+                "Teoría de modelos avanzada",
+                "Lógicas no clásicas"
+            ],
+            "emphasize": [
+                "Lógica de predicados",
+                "Cuantificadores",
+                "Reglas de inferencia",
+                "Demostraciones naturales"
+            ],
+            "instructions": "Permite razonamiento más independiente. Señala errores con preguntas guía.",
+            "responseFormat": {
+                "feedback": "Análisis del trabajo presentado",
+                "errors": [
+                    "Errores identificados con explicación"
+                ],
+                "improvements": [
+                    "Sugerencias de mejora"
+                ],
+                "challenge": "Ejercicio adicional de mayor dificultad"
+            }
+        },
+        "advanced": {
+            "description": "Estudiante preparándose para exámenes o investigación",
+            "avoid": [],
+            "emphasize": [
+                "Metateoremas",
+                "Completitud",
+                "Decidibilidad",
+                "Aplicaciones en CS"
+            ],
+            "instructions": "Discusión a nivel técnico. Puedes dar respuestas completas y discutir alternativas.",
+            "responseFormat": {
+                "feedback": "Evaluación técnica completa",
+                "solution": "Solución o demostración formal",
+                "alternatives": [
+                    "Enfoques alternativos"
+                ],
+                "connections": [
+                    "Conexiones con otros temas"
+                ]
+            }
+        }
+    }
+}

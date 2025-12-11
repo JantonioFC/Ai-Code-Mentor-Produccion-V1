@@ -1,0 +1,1316 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:15:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 45-64"
+  },
+  "fase": {
+    "numero": 3,
+    "titulo": "Desarrollo Backend Profesional",
+    "duracion": "5 meses",
+    "semanaInicio": 45,
+    "semanaFin": 64,
+    "totalSemanas": 20,
+    "proposito": "Diseñar y construir el 'cerebro' de las aplicaciones: servidores robustos, APIs seguras y bases de datos eficientes que gestionen la lógica de negocio y la persistencia de datos.",
+    "competenciasClave": [
+      "Diseño e implementación de APIs RESTful",
+      "Modelado de datos relacionales y consultas SQL complejas",
+      "Implementación de sistemas de autenticación seguros (JWT)",
+      "Escritura de tests para el backend (unitarios y de integración)",
+      "Arquitectura de software y patrones de diseño"
+    ],
+    "proyectoIntegrador": "Desarrollo de una API RESTful completa, documentada y segura para una aplicación Full-Stack."
+  },
+  "modulos": [
+    {
+      "numero": 5,
+      "titulo": "APIs y Bases de Datos",
+      "semanas": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "proposito": "Dominar Node.js, Express, bases de datos SQL y construcción de APIs robustas.",
+      "competencias": [
+        "Desarrollo con Node.js y Express",
+        "Diseño y modelado de bases de datos",
+        "APIs RESTful y CRUD operations",
+        "Autenticación y autorización",
+        "Middleware y manejo de errores"
+      ]
+    },
+    {
+      "numero": 6,
+      "titulo": "Arquitectura y Seguridad",
+      "semanas": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "proposito": "Arquitectura de software limpia, testing backend y seguridad avanzada.",
+      "competencias": [
+        "Patrones de diseño y arquitectura limpia",
+        "Testing automatizado backend",
+        "Seguridad OWASP Top 10",
+        "Optimización y caching",
+        "Documentación de APIs"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 45,
+      "titulo": "Introducción a Node.js y Express",
+      "modulo": 5,
+      "objetivos": [
+        "Dominar fundamentos de desarrollo backend con Node.js"
+      ],
+      "tematica": "Node.js runtime, Express framework, middleware básico",
+      "entregables": "Servidor Express básico con rutas y middleware",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Routing y Frameworks de Estilos",
+          "pomodoros": [
+            "Pomodoro 1: Convertir la aplicación de React en una SPA con varias rutas/páginas.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre routing y frameworks de estilos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Re-estilizar un proyecto anterior utilizando Tailwind CSS.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una aplicación multi-página con navegación del lado del cliente y estilizada profesionalmente con Tailwind CSS.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 46,
+      "titulo": "Fundamentos de Bases de Datos SQL",
+      "modulo": 5,
+      "objetivos": [
+        "Dominar SQL y diseño de bases de datos relacionales"
+      ],
+      "tematica": "PostgreSQL, diseño de esquemas, consultas SQL avanzadas",
+      "entregables": "Base de datos diseñada y consultas SQL complejas",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Optimización y Performance",
+          "pomodoros": [
+            "Pomodoro 1: Optimizar una aplicación React existente.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre optimización y performance",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar code splitting y lazy loading.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación React optimizada con métricas de performance mejoradas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 47,
+      "titulo": "ORMs y Prisma",
+      "modulo": 5,
+      "objetivos": [
+        "Integrar bases de datos con aplicaciones Node.js"
+      ],
+      "tematica": "Prisma ORM, migrations, relaciones entre tablas",
+      "entregables": "API con ORM conectada a base de datos",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Testing en React",
+          "pomodoros": [
+            "Pomodoro 1: Escribir tests unitarios para componentes.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre testing en react",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar tests de integración.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Suite de tests completa para aplicación React.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 48,
+      "titulo": "APIs RESTful - Fundamentos",
+      "modulo": 5,
+      "objetivos": [
+        "Diseñar e implementar APIs REST"
+      ],
+      "tematica": "Principios REST, diseño de endpoints, códigos de estado HTTP",
+      "entregables": "API RESTful básica con operaciones CRUD",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase y Next.js",
+          "pomodoros": [
+            "Pomodoro 1: Planificar, diseñar y desarrollar una aplicación web interactiva y compleja desde cero.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre proyecto integrador de fase y next.js",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto Integrador de Fase 2: Una Single-Page Application (SPA) compleja (ej. un dashboard de analíticas, un clon básico de Trello) construida con React/Next.js, desplegada y públicamente accesible.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 49,
+      "titulo": "APIs RESTful - Operaciones CRUD",
+      "modulo": 5,
+      "objetivos": [
+        "Implementar operaciones CRUD completas"
+      ],
+      "tematica": "Create, Read, Update, Delete con validación",
+      "entregables": "API con CRUD completo para múltiples entidades",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Node.js y Express",
+          "pomodoros": [
+            "Pomodoro 1: Construir un servidor 'Hola Mundo'.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de node.js y express",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear una API simple con rutas para diferentes métodos HTTP (GET, POST).",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una API REST básica con varios endpoints que devuelven datos estáticos en formato JSON.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 50,
+      "titulo": "Validación y Manejo de Errores",
+      "modulo": 5,
+      "objetivos": [
+        "Implementar validación robusta y manejo de errores"
+      ],
+      "tematica": "Joi/Zod validation, error middleware, logging",
+      "entregables": "API con validación completa y manejo de errores",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Node.js - Profundización",
+          "pomodoros": [
+            "Pomodoro 1: Crear módulos Node.js personalizados.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de node.js - profundización",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar middleware de autenticación básico.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: API REST con middleware personalizado y manejo de archivos.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 51,
+      "titulo": "Paginación y Filtrado",
+      "modulo": 5,
+      "objetivos": [
+        "Optimizar APIs para grandes volúmenes de datos"
+      ],
+      "tematica": "Pagination, filtering, sorting, query optimization",
+      "entregables": "API optimizada con paginación y filtros avanzados",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Bases de Datos Relacionales (SQL)",
+          "pomodoros": [
+            "Pomodoro 1: Diseñar el esquema de base de datos para una aplicación de blog.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de bases de datos relacionales (sql)",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Practicar consultas SQL complejas en una plataforma como SQLZoo o PGExercises.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un esquema de base de datos para un proyecto (ej. e-commerce, red social) normalizado, con un script SQL para crear las tablas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 52,
+      "titulo": "Relaciones y Consultas Complejas",
+      "modulo": 5,
+      "objetivos": [
+        "Manejar relaciones complejas entre entidades"
+      ],
+      "tematica": "Joins, agregaciones, consultas optimizadas",
+      "entregables": "API con relaciones complejas y consultas optimizadas",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Consultas SQL Avanzadas",
+          "pomodoros": [
+            "Pomodoro 1: Resolver problemas complejos de consultas SQL.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre consultas sql avanzadas",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Optimizar consultas existentes.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Conjunto de consultas SQL optimizadas para diferentes casos de uso.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 53,
+      "titulo": "Autenticación - JWT y Sessions",
+      "modulo": 5,
+      "objetivos": [
+        "Implementar sistemas de autenticación seguros"
+      ],
+      "tematica": "JWT tokens, sessions, password hashing",
+      "entregables": "Sistema de autenticación completo con JWT",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de APIs RESTful y Conexión a Base de Datos",
+          "pomodoros": [
+            "Pomodoro 1: Conectar la API de Express a la base de datos PostgreSQL.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre apis restful y conexión a base de datos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar todos los endpoints CRUD para una entidad (ej. 'Productos' o 'Usuarios').",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una API RESTful funcional que permite realizar operaciones CRUD completas sobre una entidad, interactuando con una base de datos.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 54,
+      "titulo": "Autorización y Roles",
+      "modulo": 5,
+      "objetivos": [
+        "Implementar autorización basada en roles"
+      ],
+      "tematica": "RBAC, middleware de autorización, permisos",
+      "entregables": "Sistema de autorización con roles y permisos",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de APIs RESTful Avanzadas",
+          "pomodoros": [
+            "Pomodoro 1: Implementar relaciones uno-a-muchos y muchos-a-muchos.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre apis restful avanzadas",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Añadir paginación y filtros a los endpoints.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: API REST completa con relaciones entre entidades y funcionalidades avanzadas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 55,
+      "titulo": "Middleware Avanzado",
+      "modulo": 5,
+      "objetivos": [
+        "Desarrollar middleware personalizado"
+      ],
+      "tematica": "Custom middleware, rate limiting, CORS",
+      "entregables": "API con middleware avanzado de seguridad",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Autenticación y Autorización",
+          "pomodoros": [
+            "Pomodoro 1: Añadir endpoints de registro (/register) y login (/login) a la API.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre autenticación y autorización",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear un middleware de autenticación para proteger ciertas rutas.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: La API REST con un sistema de autenticación completo. Rutas públicas y privadas, donde las privadas solo son accesibles con un JWT válido.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 56,
+      "titulo": "File Upload y Storage",
+      "modulo": 5,
+      "objetivos": [
+        "Manejar upload de archivos y almacenamiento"
+      ],
+      "tematica": "Multer, cloud storage, image processing",
+      "entregables": "API con capacidades de upload de archivos",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Autenticación Avanzada y Seguridad",
+          "pomodoros": [
+            "Pomodoro 1: Implementar OAuth con un proveedor externo (Google, GitHub).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre autenticación avanzada y seguridad",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Añadir rate limiting y validación de inputs.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sistema de autenticación completo con OAuth y medidas de seguridad avanzadas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 57,
+      "titulo": "Arquitectura de Software - MVC",
+      "modulo": 6,
+      "objetivos": [
+        "Estructurar código backend de forma escalable"
+      ],
+      "tematica": "Patrón MVC, separación de responsabilidades, clean architecture",
+      "entregables": "API refactorizada con arquitectura MVC limpia",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Arquitectura de Software y Patrones de Diseño",
+          "pomodoros": [
+            "Pomodoro 1: Refactorizar la API existente para seguir una estructura de carpetas y un patrón arquitectónico claro (ej. separar controladores, servicios y repositorios).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre arquitectura de software y patrones de diseño",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: El código de la API completamente refactorizado, demostrando una clara separación de responsabilidades y una estructura mantenible.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 58,
+      "titulo": "Patrones de Diseño Backend",
+      "modulo": 6,
+      "objetivos": [
+        "Aplicar patrones de diseño en backend"
+      ],
+      "tematica": "Repository pattern, Service layer, Dependency injection",
+      "entregables": "API con patrones de diseño implementados",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Patrones de Diseño Avanzados",
+          "pomodoros": [
+            "Pomodoro 1: Implementar diferentes patrones de diseño en la aplicación.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre patrones de diseño avanzados",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Refactorizar código existente usando patrones apropiados.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Aplicación refactorizada con múltiples patrones de diseño implementados correctamente.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 59,
+      "titulo": "Testing Backend - Unit Tests",
+      "modulo": 6,
+      "objetivos": [
+        "Escribir tests unitarios para backend"
+      ],
+      "tematica": "Jest, unit testing, mocking, test coverage",
+      "entregables": "Suite de tests unitarios con alta cobertura",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Testing de Backend",
+          "pomodoros": [
+            "Pomodoro 1: Escribir tests unitarios para la lógica de negocio (servicios).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre testing de backend",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Escribir tests de integración para los endpoints de la API, interactuando con una base de datos de prueba.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una suite de tests completa para la API, con una cobertura de código mínima del 80%.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 60,
+      "titulo": "Testing Backend - Integration Tests",
+      "modulo": 6,
+      "objetivos": [
+        "Implementar tests de integración"
+      ],
+      "tematica": "Integration testing, database testing, API testing",
+      "entregables": "Tests de integración completos para API",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Testing Avanzado y TDD",
+          "pomodoros": [
+            "Pomodoro 1: Desarrollar nuevas funcionalidades usando TDD.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre testing avanzado y tdd",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar tests de performance y carga.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Funcionalidad desarrollada completamente con TDD y tests de performance implementados.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 61,
+      "titulo": "Seguridad OWASP Top 10",
+      "modulo": 6,
+      "objetivos": [
+        "Implementar seguridad avanzada"
+      ],
+      "tematica": "OWASP Top 10, SQL injection prevention, XSS protection",
+      "entregables": "API con auditoría de seguridad completa",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Seguridad Avanzada y Optimización",
+          "pomodoros": [
+            "Pomodoro 1: Realizar una auditoría de seguridad en la API.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre seguridad avanzada y optimización",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar validación de datos en todos los endpoints.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una API securizada y optimizada, con mecanismos de protección implementados y, opcionalmente, una capa de caché para los endpoints de lectura frecuente.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 62,
+      "titulo": "Performance y Caching",
+      "modulo": 6,
+      "objetivos": [
+        "Optimizar performance de APIs"
+      ],
+      "tematica": "Redis caching, query optimization, performance monitoring",
+      "entregables": "API optimizada con caching estratégico",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Monitoreo y Observabilidad",
+          "pomodoros": [
+            "Pomodoro 1: Implementar logging estructurado con Winston.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre monitoreo y observabilidad",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Configurar métricas y health checks.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Sistema de monitoreo completo con logging, métricas y alertas configuradas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 63,
+      "titulo": "Documentación de APIs",
+      "modulo": 6,
+      "objetivos": [
+        "Documentar APIs profesionalmente"
+      ],
+      "tematica": "OpenAPI/Swagger, API documentation best practices",
+      "entregables": "API completamente documentada con Swagger",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase - Planificación",
+          "pomodoros": [
+            "Pomodoro 1: Diseñar una API RESTful completa para un dominio específico.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre proyecto integrador de fase - planificación",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear especificaciones técnicas detalladas.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Documento de arquitectura y especificación completa de la API a desarrollar.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 64,
+      "titulo": "Proyecto Integrador Backend",
+      "modulo": 6,
+      "objetivos": [
+        "Construir API completa de nivel profesional"
+      ],
+      "tematica": "API completa con todas las mejores prácticas",
+      "entregables": "Proyecto Integrador de Fase 3: API RESTful completa, documentada, segura y testeada",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase y Documentación",
+          "pomodoros": [
+            "Pomodoro 1: Planificar, diseñar e implementar una nueva API RESTful desde cero, aplicando todos los principios de arquitectura, seguridad y testing aprendidos.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre proyecto integrador de fase y documentación",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar ejercicios básicos y experimentación",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto Integrador de Fase 3: Una API RESTful completa, documentada profesionalmente con Swagger, testeada y segura, lista para ser consumida por una aplicación Frontend.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}

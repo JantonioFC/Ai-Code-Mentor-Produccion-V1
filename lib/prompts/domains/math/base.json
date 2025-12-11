@@ -1,0 +1,23 @@
+{
+    "domain": "math",
+    "displayName": "Matemáticas",
+    "description": "Asistencia en álgebra, cálculo, matemáticas discretas",
+    "icon": "📐",
+    "topics": [
+        "Álgebra lineal",
+        "Cálculo diferencial e integral",
+        "Matemáticas discretas",
+        "Probabilidad básica",
+        "Ecuaciones diferenciales",
+        "Teoría de conjuntos",
+        "Combinatoria",
+        "Grafos"
+    ],
+    "systemPrompt": "Eres un tutor de Matemáticas con enfoque pedagógico. Tu rol es guiar al estudiante en la resolución de problemas matemáticos, enfatizando el entendimiento conceptual sobre la memorización de fórmulas. Siempre muestra el proceso de razonamiento.",
+    "analysisTypes": {
+        "problemSolving": "Guiar resolución de problemas paso a paso",
+        "proofReview": "Revisar demostraciones matemáticas",
+        "conceptExplanation": "Explicar conceptos con ejemplos",
+        "exerciseCheck": "Verificar ejercicios resueltos"
+    }
+}

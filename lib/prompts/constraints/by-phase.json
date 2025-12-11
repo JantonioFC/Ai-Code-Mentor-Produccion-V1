@@ -1,0 +1,263 @@
+{
+    "fase-0": {
+        "maxComplexitySuggestions": 1,
+        "avoidConcepts": [
+            "async",
+            "promises",
+            "classes",
+            "OOP",
+            "recursion"
+        ],
+        "encourageConcepts": [
+            "variables",
+            "functions",
+            "loops",
+            "conditionals"
+        ],
+        "instructions": [
+            "Usa lenguaje muy simple y ejemplos visuales",
+            "No asumas conocimiento previo de programación",
+            "Celebra cada pequeño logro"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "nextSteps": [
+                "string"
+            ]
+        }
+    },
+    "fase-1": {
+        "maxComplexitySuggestions": 2,
+        "avoidConcepts": [
+            "design patterns",
+            "architecture",
+            "microservices"
+        ],
+        "encourageConcepts": [
+            "functions",
+            "arrays",
+            "objects",
+            "basic algorithms"
+        ],
+        "instructions": [
+            "Enfócate en buenas prácticas de código limpio",
+            "Introduce debugging strategies",
+            "Explica el razonamiento detrás de las sugerencias"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number"
+        }
+    },
+    "fase-2": {
+        "maxComplexitySuggestions": 3,
+        "avoidConcepts": [
+            "microservices",
+            "distributed systems"
+        ],
+        "encourageConcepts": [
+            "DOM manipulation",
+            "events",
+            "CSS",
+            "responsive design"
+        ],
+        "instructions": [
+            "Evalúa estructura HTML semántica",
+            "Sugiere mejoras de accesibilidad básicas",
+            "Introduce conceptos de UX"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number"
+        }
+    },
+    "fase-3": {
+        "maxComplexitySuggestions": 4,
+        "avoidConcepts": [
+            "microservices"
+        ],
+        "encourageConcepts": [
+            "React",
+            "state management",
+            "components",
+            "hooks"
+        ],
+        "instructions": [
+            "Evalúa arquitectura de componentes",
+            "Sugiere optimizaciones de render",
+            "Revisa manejo de estado"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number"
+        }
+    },
+    "fase-4": {
+        "maxComplexitySuggestions": 4,
+        "avoidConcepts": [],
+        "encourageConcepts": [
+            "APIs",
+            "databases",
+            "authentication",
+            "security"
+        ],
+        "instructions": [
+            "Evalúa seguridad del código",
+            "Revisa manejo de errores en backend",
+            "Sugiere validaciones de datos"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number",
+            "securityNotes": "string"
+        }
+    },
+    "fase-5": {
+        "maxComplexitySuggestions": 5,
+        "avoidConcepts": [],
+        "encourageConcepts": [
+            "architecture",
+            "design patterns",
+            "testing",
+            "scalability",
+            "DevOps"
+        ],
+        "instructions": [
+            "Haz code review de nivel profesional",
+            "Sugiere patrones de diseño cuando sean apropiados",
+            "Considera performance y mantenibilidad"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number",
+            "architecturalNotes": "string"
+        }
+    },
+    "fase-6": {
+        "maxComplexitySuggestions": 5,
+        "avoidConcepts": [],
+        "encourageConcepts": [
+            "machine learning",
+            "data pipelines",
+            "AI integration"
+        ],
+        "instructions": [
+            "Evalúa uso de librerías de ML",
+            "Revisa manejo de datos",
+            "Sugiere optimizaciones de modelos"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number"
+        }
+    },
+    "fase-7": {
+        "maxComplexitySuggestions": 5,
+        "avoidConcepts": [],
+        "encourageConcepts": [
+            "full-stack",
+            "deployment",
+            "CI/CD",
+            "monitoring"
+        ],
+        "instructions": [
+            "Evalúa el proyecto de forma integral",
+            "Considera trade-offs de arquitectura",
+            "Prepara para producción"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ],
+            "examples": [
+                "string"
+            ],
+            "score": "number",
+            "deploymentNotes": "string"
+        }
+    },
+    "default": {
+        "maxComplexitySuggestions": 3,
+        "avoidConcepts": [],
+        "encourageConcepts": [
+            "clean code",
+            "best practices"
+        ],
+        "instructions": [
+            "Proporciona feedback balanceado y constructivo"
+        ],
+        "responseFormat": {
+            "feedback": "string",
+            "strengths": [
+                "string"
+            ],
+            "improvements": [
+                "string"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1450 @@
+{
+  "curriculum": [
+    {
+      "fase": 1,
+      "tituloFase": "Fundamentos de Programación y Metodología",
+      "duracionMeses": "6 Meses",
+      "proposito": "Forjar una base sólida en pensamiento computacional, dominio de un lenguaje de programación versátil (Python), y establecer las metodologías de trabajo (Git, IA Crítica) que se utilizarán durante todo el programa.",
+      "modulos": [
+        {
+          "modulo": 1,
+          "tituloModulo": "Arquitectura del Aprendizaje y Metodología",
+          "semanas": [
+            {
+              "semana": 1,
+              "tituloSemana": "Configuración del Entorno y Metodología",
+              "objetivos": [
+                "Establecer el flujo de trabajo semanal",
+                "Dominar las herramientas de productividad y configuración del entorno de desarrollo"
+              ],
+              "tematica": "Configuración de VS Code, Git/GitHub, Discord, y la herramienta de gestión de conocimiento (Notion/Obsidian).",
+              "actividades": [
+                "Instalación y personalización de software",
+                "Creación de cuenta en GitHub y primer repositorio",
+                "Configuración del entorno de desarrollo local"
+              ],
+              "entregables": "Repositorio Ecosistema360 inicializado en GitHub. Entorno de desarrollo completamente configurado y documentado en la primera entrada del DMA."
+            },
+            {
+              "semana": 2,
+              "tituloSemana": "Pensamiento Computacional y Git Básico",
+              "objetivos": [
+                "Aprender a descomponer problemas complejos en pasos lógicos (algoritmos)",
+                "Dominar el ciclo básico de control de versiones"
+              ],
+              "tematica": "Descomposición de problemas, abstracción, pseudocódigo. Comandos git init, add, commit, push, pull.",
+              "actividades": [
+                "Resolver problemas de lógica tipo 'lápiz y papel'",
+                "Practicar el flujo de trabajo de Git con el repositorio personal",
+                "Crear una estructura de directorios estándar para los proyectos"
+              ],
+              "entregables": "Serie de ejercicios de pseudocódigo versionados en GitHub. Estructura de proyecto documentada en el README.md."
+            },
+            {
+              "semana": 3,
+              "tituloSemana": "Alfabetización Crítica en Inteligencia Artificial",
+              "objetivos": [
+                "Entender el funcionamiento, sesgos y limitaciones de los LLMs",
+                "Aprender a formular prompts efectivos para maximizar la IA como herramienta de aprendizaje"
+              ],
+              "tematica": "Ingeniería de prompts, verificación de respuestas, principios de IA responsable.",
+              "actividades": [
+                "Realizar ejercicios de formulación de prompts con objetivos específicos",
+                "Analizar críticamente las respuestas de la IA"
+              ],
+              "entregables": "Un documento IA_PROTOCOLO.md en el repositorio, definiendo tus propias mejores prácticas para interactuar con el Tutor IA."
+            },
+            {
+              "semana": 4,
+              "tituloSemana": "Consolidación y Conexión",
+              "objetivos": [
+                "Integrar todas las habilidades metodológicas adquiridas en un mini-proyecto",
+                "Iniciar formalmente el Diario de Decisiones de Ingeniería (DDE)"
+              ],
+              "tematica": "Aplicación del flujo de trabajo completo: Planificación, pseudocódigo, versionado y documentación.",
+              "actividades": [
+                "Desarrollar una calculadora simple en pseudocódigo",
+                "Documentar las decisiones de diseño en el primer DDE",
+                "Versionar cada paso con Git"
+              ],
+              "entregables": "Mini-proyecto de calculadora (en pseudocódigo) completamente documentado y versionado en GitHub. Primera entrada formal del DDE."
+            }
+          ]
+        },
+        {
+          "modulo": 2,
+          "tituloModulo": "Programación Fundamental con Python",
+          "semanas": [
+            {
+              "semana": 5,
+              "tituloSemana": "Fundamentos de Python - Parte 1",
+              "objetivos": [
+                "Dominar la sintaxis básica, variables, tipos de datos y operadores de Python"
+              ],
+              "tematica": "Variables, tipos (int, float, str, bool), operadores aritméticos y lógicos, entrada/salida (input(), print()), comentarios.",
+              "actividades": [
+                "Resolver ejercicios de programación básicos en plataformas como HackerRank o Codewars",
+                "Escribir scripts simples (ej. conversor de unidades)"
+              ],
+              "entregables": "Un mínimo de 5 ejercicios de código resueltos y subidos al repositorio, cada uno en su propio archivo."
+            },
+            {
+              "semana": 6,
+              "tituloSemana": "Fundamentos de Python - Parte 2",
+              "objetivos": [
+                "Consolidar la sintaxis básica y operadores de Python"
+              ],
+              "tematica": "Variables, tipos (int, float, str, bool), operadores aritméticos y lógicos, entrada/salida (input(), print()), comentarios.",
+              "actividades": [
+                "Resolver ejercicios de programación básicos en plataformas como HackerRank o Codewars",
+                "Escribir scripts simples (ej. conversor de unidades)"
+              ],
+              "entregables": "Un mínimo de 5 ejercicios adicionales de código resueltos y subidos al repositorio."
+            },
+            {
+              "semana": 7,
+              "tituloSemana": "Estructuras de Control - Parte 1",
+              "objetivos": [
+                "Implementar lógica en los programas utilizando condicionales y bucles"
+              ],
+              "tematica": "if/elif/else, bucles for y while, break, continue.",
+              "actividades": [
+                "Crear un juego de 'adivina el número'",
+                "Escribir un programa que valide la entrada del usuario",
+                "Generar patrones simples usando bucles anidados"
+              ],
+              "entregables": "1-2 mini-proyectos que demuestren el dominio de las estructuras de control."
+            },
+            {
+              "semana": 8,
+              "tituloSemana": "Estructuras de Control - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de condicionales y bucles"
+              ],
+              "tematica": "if/elif/else, bucles for y while, break, continue.",
+              "actividades": [
+                "Crear un juego de 'adivina el número'",
+                "Escribir un programa que valide la entrada del usuario",
+                "Generar patrones simples usando bucles anidados"
+              ],
+              "entregables": "1-2 mini-proyectos adicionales que demuestren el dominio de las estructuras de control."
+            },
+            {
+              "semana": 9,
+              "tituloSemana": "Funciones y Modularidad - Parte 1",
+              "objetivos": [
+                "Escribir código limpio, reutilizable y organizado a través de funciones"
+              ],
+              "tematica": "Definición de funciones (def), parámetros, argumentos, valores de retorno (return), scope (ámbito) de variables.",
+              "actividades": [
+                "Refactorizar el código de los mini-proyectos anteriores para usar funciones",
+                "Crear una pequeña biblioteca de funciones de utilidad"
+              ],
+              "entregables": "Una biblioteca personal (utils.py) con al menos 3 funciones bien documentadas (usando docstrings)."
+            },
+            {
+              "semana": 10,
+              "tituloSemana": "Funciones y Modularidad - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de funciones y modularidad"
+              ],
+              "tematica": "Definición de funciones (def), parámetros, argumentos, valores de retorno (return), scope (ámbito) de variables.",
+              "actividades": [
+                "Refactorizar el código de los mini-proyectos anteriores para usar funciones",
+                "Ampliar la biblioteca de funciones de utilidad"
+              ],
+              "entregables": "Una biblioteca personal (utils.py) completada con al menos 5 funciones bien documentadas (usando docstrings)."
+            },
+            {
+              "semana": 11,
+              "tituloSemana": "Estructuras de Datos - Parte 1",
+              "objetivos": [
+                "Aprender a almacenar y manipular colecciones de datos de manera eficiente"
+              ],
+              "tematica": "Listas, tuplas, diccionarios y sets. Métodos asociados, iteración y list/dict comprehensions.",
+              "actividades": [
+                "Construir un gestor de contactos simple usando un diccionario",
+                "Realizar un análisis básico de texto (contar palabras) usando listas y diccionarios"
+              ],
+              "entregables": "Un proyecto de gestor de tareas en la terminal que permita agregar, eliminar y listar tareas."
+            },
+            {
+              "semana": 12,
+              "tituloSemana": "Estructuras de Datos - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de estructuras de datos"
+              ],
+              "tematica": "Listas, tuplas, diccionarios y sets. Métodos asociados, iteración y list/dict comprehensions.",
+              "actividades": [
+                "Mejorar el gestor de contactos con funcionalidades adicionales",
+                "Realizar análisis más complejos usando comprehensions"
+              ],
+              "entregables": "Mejoras al proyecto de gestor de tareas con funcionalidades adicionales."
+            },
+            {
+              "semana": 13,
+              "tituloSemana": "Manejo de Archivos y Excepciones - Parte 1",
+              "objetivos": [
+                "Aprender a leer y escribir datos en archivos para persistencia",
+                "Manejar errores de forma robusta"
+              ],
+              "tematica": "Lectura y escritura de archivos (open, read, write, with). Bloques try/except/finally para el manejo de errores.",
+              "actividades": [
+                "Modificar el gestor de tareas para que guarde y cargue las tareas desde un archivo de texto o JSON",
+                "Implementar manejo de errores para entradas inválidas"
+              ],
+              "entregables": "Versión mejorada del gestor de tareas con persistencia de datos y manejo de excepciones."
+            },
+            {
+              "semana": 14,
+              "tituloSemana": "Manejo de Archivos y Excepciones - Parte 2",
+              "objetivos": [
+                "Consolidar el manejo de archivos y excepciones"
+              ],
+              "tematica": "Lectura y escritura de archivos (open, read, write, with). Bloques try/except/finally para el manejo de errores.",
+              "actividades": [
+                "Agregar funcionalidades adicionales al gestor de tareas",
+                "Mejorar el manejo de errores y validación de datos"
+              ],
+              "entregables": "Versión final del gestor de tareas con funcionalidades completas."
+            },
+            {
+              "semana": 15,
+              "tituloSemana": "Programación Orientada a Objetos - Parte 1",
+              "objetivos": [
+                "Aprender a modelar problemas del mundo real utilizando el paradigma de POO"
+              ],
+              "tematica": "Clases, objetos, atributos, métodos. Principios de encapsulación, herencia y polimorfismo.",
+              "actividades": [
+                "Modelar un sistema simple usando clases",
+                "Crear un pequeño juego de texto basado en objetos"
+              ],
+              "entregables": "Un proyecto que modele un sistema coherente usando múltiples clases que interactúan entre sí."
+            },
+            {
+              "semana": 16,
+              "tituloSemana": "Programación Orientada a Objetos - Parte 2",
+              "objetivos": [
+                "Consolidar conceptos de POO y herencia"
+              ],
+              "tematica": "Clases, objetos, atributos, métodos. Principios de encapsulación, herencia y polimorfismo.",
+              "actividades": [
+                "Ampliar el sistema de clases con herencia",
+                "Implementar polimorfismo en el proyecto"
+              ],
+              "entregables": "Versión ampliada del proyecto POO con herencia y polimorfismo."
+            },
+            {
+              "semana": 17,
+              "tituloSemana": "Programación Orientada a Objetos - Parte 3",
+              "objetivos": [
+                "Aplicar todos los conceptos de POO en un proyecto integrador"
+              ],
+              "tematica": "Clases, objetos, atributos, métodos. Principios de encapsulación, herencia y polimorfismo.",
+              "actividades": [
+                "Desarrollar un proyecto más complejo usando POO",
+                "Aplicar principios de diseño orientado a objetos"
+              ],
+              "entregables": "Proyecto POO completo y bien estructurado."
+            },
+            {
+              "semana": 18,
+              "tituloSemana": "Programación Orientada a Objetos - Parte 4",
+              "objetivos": [
+                "Finalizar y documentar el proyecto POO"
+              ],
+              "tematica": "Clases, objetos, atributos, métodos. Principios de encapsulación, herencia y polimorfismo.",
+              "actividades": [
+                "Finalizar el proyecto POO",
+                "Documentar el código y las decisiones de diseño"
+              ],
+              "entregables": "Proyecto POO finalizado con documentación completa."
+            },
+            {
+              "semana": 19,
+              "tituloSemana": "Módulos, Paquetes y Entornos Virtuales - Parte 1",
+              "objetivos": [
+                "Organizar un proyecto grande en múltiples archivos",
+                "Gestionar dependencias de forma profesional"
+              ],
+              "tematica": "import, creación de módulos y paquetes (__init__.py). Uso de pip y venv.",
+              "actividades": [
+                "Reestructurar el proyecto de POO en un paquete modular",
+                "Instalar y utilizar librerías externas"
+              ],
+              "entregables": "Proyecto de POO refactorizado como un paquete instalable con un archivo requirements.txt."
+            },
+            {
+              "semana": 20,
+              "tituloSemana": "Módulos, Paquetes y Entornos Virtuales - Parte 2",
+              "objetivos": [
+                "Consolidar la organización modular y gestión de dependencias"
+              ],
+              "tematica": "import, creación de módulos y paquetes (__init__.py). Uso de pip y venv.",
+              "actividades": [
+                "Mejorar la estructura del paquete",
+                "Implementar funcionalidades adicionales usando librerías externas"
+              ],
+              "entregables": "Paquete mejorado con funcionalidades adicionales y mejor estructura."
+            },
+            {
+              "semana": 21,
+              "tituloSemana": "Testing y Debugging - Parte 1",
+              "objetivos": [
+                "Aprender a escribir tests automatizados para garantizar la calidad del código",
+                "Encontrar y corregir errores de forma sistemática"
+              ],
+              "tematica": "Fundamentos de testing unitario con unittest o pytest. Técnicas de debugging con VS Code.",
+              "actividades": [
+                "Escribir tests para las funciones y clases de proyectos anteriores",
+                "Practicar el debugging paso a paso en un código con errores deliberados"
+              ],
+              "entregables": "Una suite de tests que cubra las funcionalidades críticas del proyecto de POO, alcanzando un mínimo de 80% de cobertura de código."
+            },
+            {
+              "semana": 22,
+              "tituloSemana": "Testing y Debugging - Parte 2",
+              "objetivos": [
+                "Consolidar las técnicas de testing y debugging"
+              ],
+              "tematica": "Fundamentos de testing unitario con unittest o pytest. Técnicas de debugging con VS Code.",
+              "actividades": [
+                "Ampliar la suite de tests",
+                "Implementar tests de integración básicos"
+              ],
+              "entregables": "Suite de tests completa con cobertura mejorada."
+            },
+            {
+              "semana": 23,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 1",
+              "objetivos": [
+                "Aplicar todos los conceptos aprendidos en la fase para construir una aplicación CLI completa desde cero"
+              ],
+              "tematica": "Diseño, implementación, testing y documentación de un proyecto integral.",
+              "actividades": [
+                "Planificar y desarrollar una aplicación de línea de comandos robusta",
+                "Aplicar metodologías de desarrollo aprendidas"
+              ],
+              "entregables": "Proyecto Integrador de Fase 1 en desarrollo: Una aplicación CLI completa, con tests, documentación profesional (README.md) y un DDE detallado."
+            },
+            {
+              "semana": 24,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 2",
+              "objetivos": [
+                "Finalizar y documentar el proyecto integrador de la fase"
+              ],
+              "tematica": "Diseño, implementación, testing y documentación de un proyecto integral.",
+              "actividades": [
+                "Finalizar la aplicación CLI",
+                "Completar la documentación y testing"
+              ],
+              "entregables": "Proyecto Integrador de Fase 1 completado: Una aplicación CLI completa, con tests, documentación profesional (README.md) y un DDE detallado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "tituloFase": "Desarrollo Web Frontend",
+      "duracionMeses": "5 Meses",
+      "proposito": "Construir la capacidad de crear interfaces de usuario interactivas, modernas y responsivas, traduciendo diseños y datos en experiencias de usuario efectivas.",
+      "modulos": [
+        {
+          "modulo": 3,
+          "tituloModulo": "Fundamentos Web",
+          "semanas": [
+            {
+              "semana": 25,
+              "tituloSemana": "HTML5 Semántico y Accesibilidad - Parte 1",
+              "objetivos": [
+                "Estructurar contenido web de forma correcta, semántica y accesible"
+              ],
+              "tematica": "Elementos semánticos (<main>, <nav>, <article>), formularios avanzados, multimedia, principios de accesibilidad (WCAG).",
+              "actividades": [
+                "Recrear la estructura de una página web compleja usando solo HTML semántico",
+                "Auditar un sitio existente en busca de problemas de accesibilidad"
+              ],
+              "entregables": "Un proyecto de currículum vitae o portfolio personal en HTML puro, validado como semánticamente correcto y con un informe de accesibilidad."
+            },
+            {
+              "semana": 26,
+              "tituloSemana": "HTML5 Semántico y Accesibilidad - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de HTML semántico y principios de accesibilidad"
+              ],
+              "tematica": "Elementos semánticos (<main>, <nav>, <article>), formularios avanzados, multimedia, principios de accesibilidad (WCAG).",
+              "actividades": [
+                "Mejorar el proyecto de portfolio con elementos semánticos adicionales",
+                "Implementar mejoras de accesibilidad"
+              ],
+              "entregables": "Portfolio mejorado con HTML semántico completo y accesibilidad implementada."
+            },
+            {
+              "semana": 27,
+              "tituloSemana": "CSS3 Avanzado - Layout y Modelo de Caja - Parte 1",
+              "objetivos": [
+                "Dominar el posicionamiento y la maquetación de elementos en la página"
+              ],
+              "tematica": "Modelo de caja (box model), position, display, Flexbox.",
+              "actividades": [
+                "Estilizar el proyecto de CV/portfolio",
+                "Resolver desafíos de maquetación específicos usando Flexbox"
+              ],
+              "entregables": "El proyecto de CV/portfolio completamente estilizado con un layout complejo usando Flexbox."
+            },
+            {
+              "semana": 28,
+              "tituloSemana": "CSS3 Avanzado - Layout y Modelo de Caja - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de Flexbox y modelos de caja"
+              ],
+              "tematica": "Modelo de caja (box model), position, display, Flexbox.",
+              "actividades": [
+                "Resolver desafíos de maquetación en plataformas como CSS Battle",
+                "Mejorar el layout del portfolio"
+              ],
+              "entregables": "Portfolio con layout avanzado y maquetación compleja implementada."
+            },
+            {
+              "semana": 29,
+              "tituloSemana": "Diseño Responsivo y CSS Grid - Parte 1",
+              "objetivos": [
+                "Crear diseños que se adapten fluidamente a cualquier tamaño de pantalla"
+              ],
+              "tematica": "CSS Grid, media queries, enfoque Mobile-First.",
+              "actividades": [
+                "Hacer que el proyecto de CV/portfolio sea completamente responsivo",
+                "Recrear el layout de una revista o periódico digital usando CSS Grid"
+              ],
+              "entregables": "Un sitio web de una página (landing page) totalmente responsivo, que utilice tanto Flexbox como Grid de manera apropiada."
+            },
+            {
+              "semana": 30,
+              "tituloSemana": "Diseño Responsivo y CSS Grid - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de CSS Grid y diseño responsivo"
+              ],
+              "tematica": "CSS Grid, media queries, enfoque Mobile-First.",
+              "actividades": [
+                "Mejorar el diseño responsivo del portfolio",
+                "Implementar layouts complejos con Grid"
+              ],
+              "entregables": "Portfolio completamente responsivo con layouts avanzados usando Grid."
+            },
+            {
+              "semana": 31,
+              "tituloSemana": "JavaScript Fundamental y Manipulación del DOM - Parte 1",
+              "objetivos": [
+                "Añadir interactividad a las páginas web",
+                "Entender cómo JavaScript interactúa con el navegador"
+              ],
+              "tematica": "Variables (let, const), tipos de datos, funciones, condicionales, bucles. Selección de elementos del DOM, manipulación de clases y estilos, manejo de eventos.",
+              "actividades": [
+                "Construir una calculadora web interactiva",
+                "Implementar la validación de un formulario en el lado del cliente"
+              ],
+              "entregables": "Una aplicación web interactiva de 'lista de tareas' (To-Do App) creada con JavaScript puro."
+            },
+            {
+              "semana": 32,
+              "tituloSemana": "JavaScript Fundamental y Manipulación del DOM - Parte 2",
+              "objetivos": [
+                "Consolidar la manipulación del DOM y eventos"
+              ],
+              "tematica": "Variables (let, const), tipos de datos, funciones, condicionales, bucles. Selección de elementos del DOM, manipulación de clases y estilos, manejo de eventos.",
+              "actividades": [
+                "Crear un carrusel de imágenes simple",
+                "Mejorar la To-Do App con funcionalidades adicionales"
+              ],
+              "entregables": "To-Do App mejorada con funcionalidades avanzadas de manipulación del DOM."
+            }
+          ]
+        },
+        {
+          "modulo": 4,
+          "tituloModulo": "Frameworks Modernos",
+          "semanas": [
+            {
+              "semana": 35,
+              "tituloSemana": "JavaScript Moderno (ES6+) y Asincronía - Parte 1",
+              "objetivos": [
+                "Dominar las características modernas de JavaScript que son prerrequisito para los frameworks actuales"
+              ],
+              "tematica": "Funciones de flecha, desestructuración, módulos (import/export), promesas, async/await, API fetch.",
+              "actividades": [
+                "Refactorizar el código de la 'To-Do App' para usar sintaxis ES6+",
+                "Crear una aplicación que consuma datos de una API pública"
+              ],
+              "entregables": "Una galería de imágenes o un buscador que obtiene sus datos de una API externa de forma asíncrona."
+            },
+            {
+              "semana": 36,
+              "tituloSemana": "JavaScript Moderno (ES6+) y Asincronía - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de JavaScript moderno y asincronía"
+              ],
+              "tematica": "Funciones de flecha, desestructuración, módulos (import/export), promesas, async/await, API fetch.",
+              "actividades": [
+                "Mejorar la aplicación con manejo de errores asíncronos",
+                "Implementar funcionalidades adicionales usando APIs"
+              ],
+              "entregables": "Aplicación mejorada con manejo robusto de asincronía y APIs."
+            },
+            {
+              "semana": 37,
+              "tituloSemana": "Introducción a React y JSX - Parte 1",
+              "objetivos": [
+                "Entender el paradigma de desarrollo basado en componentes y el Virtual DOM"
+              ],
+              "tematica": "JSX, componentes funcionales, props, state (Hook useState).",
+              "actividades": [
+                "Reconstruir la 'To-Do App' utilizando React",
+                "Crear componentes reutilizables (ej. botones, inputs, tarjetas)"
+              ],
+              "entregables": "La primera aplicación en React, demostrando la composición de componentes y el manejo de estado local."
+            },
+            {
+              "semana": 38,
+              "tituloSemana": "Introducción a React y JSX - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de React y componentes"
+              ],
+              "tematica": "JSX, componentes funcionales, props, state (Hook useState).",
+              "actividades": [
+                "Ampliar la aplicación React con más componentes",
+                "Implementar comunicación entre componentes"
+              ],
+              "entregables": "Aplicación React mejorada con arquitectura de componentes bien estructurada."
+            },
+            {
+              "semana": 39,
+              "tituloSemana": "Hooks Avanzados y Ciclo de Vida - Parte 1",
+              "objetivos": [
+                "Gestionar efectos secundarios y estados complejos en componentes funcionales"
+              ],
+              "tematica": "Hooks useEffect, useContext, useReducer. Creación de Custom Hooks.",
+              "actividades": [
+                "Añadir funcionalidades a la 'To-Do App' de React que requieran efectos secundarios",
+                "Crear un Custom Hook para la lógica de un formulario"
+              ],
+              "entregables": "Una aplicación que utilice useEffect para interactuar con APIs y useContext para gestionar un estado global simple."
+            },
+            {
+              "semana": 40,
+              "tituloSemana": "Hooks Avanzados y Ciclo de Vida - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de hooks avanzados"
+              ],
+              "tematica": "Hooks useEffect, useContext, useReducer. Creación de Custom Hooks.",
+              "actividades": [
+                "Implementar useReducer para estado complejo",
+                "Crear custom hooks adicionales"
+              ],
+              "entregables": "Aplicación con manejo avanzado de estado usando hooks personalizados."
+            },
+            {
+              "semana": 41,
+              "tituloSemana": "Routing y Frameworks de Estilos - Parte 1",
+              "objetivos": [
+                "Crear aplicaciones de múltiples páginas (SPAs) y aprender a integrar librerías de UI"
+              ],
+              "tematica": "React Router. Introducción a un framework de CSS como Tailwind CSS.",
+              "actividades": [
+                "Convertir la aplicación de React en una SPA con varias rutas/páginas",
+                "Re-estilizar un proyecto anterior utilizando Tailwind CSS"
+              ],
+              "entregables": "Una aplicación multi-página con navegación del lado del cliente y estilizada profesionalmente con Tailwind CSS."
+            },
+            {
+              "semana": 42,
+              "tituloSemana": "Routing y Frameworks de Estilos - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de routing y frameworks de estilos"
+              ],
+              "tematica": "React Router. Introducción a un framework de CSS como Tailwind CSS.",
+              "actividades": [
+                "Implementar routing avanzado y protección de rutas",
+                "Mejorar el diseño con Tailwind CSS"
+              ],
+              "entregables": "SPA completa con routing avanzado y diseño profesional."
+            },
+            {
+              "semana": 43,
+              "tituloSemana": "Proyecto Integrador de Fase y Next.js - Parte 1",
+              "objetivos": [
+                "Consolidar todo el conocimiento de Frontend en un proyecto complejo",
+                "Introducir conceptos de renderizado en el servidor (SSR) y generación de sitios estáticos (SSG)"
+              ],
+              "tematica": "Introducción a Next.js. Diseño de arquitectura Frontend. Despliegue en plataformas como Vercel o Netlify.",
+              "actividades": [
+                "Planificar, diseñar y desarrollar una aplicación web interactiva y compleja desde cero"
+              ],
+              "entregables": "Proyecto Integrador de Fase 2 en desarrollo: Una Single-Page Application (SPA) compleja construida con React/Next.js."
+            },
+            {
+              "semana": 44,
+              "tituloSemana": "Proyecto Integrador de Fase y Next.js - Parte 2",
+              "objetivos": [
+                "Finalizar y desplegar el proyecto integrador de frontend"
+              ],
+              "tematica": "Introducción a Next.js. Diseño de arquitectura Frontend. Despliegue en plataformas como Vercel o Netlify.",
+              "actividades": [
+                "Finalizar la aplicación SPA",
+                "Desplegar la aplicación"
+              ],
+              "entregables": "Proyecto Integrador de Fase 2 completado: Una Single-Page Application (SPA) compleja desplegada y públicamente accesible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "tituloFase": "Desarrollo Backend Profesional",
+      "duracionMeses": "5 Meses",
+      "proposito": "Diseñar y construir el 'cerebro' de las aplicaciones: servidores robustos, APIs seguras y bases de datos eficientes que gestionen la lógica de negocio y la persistencia de datos.",
+      "modulos": [
+        {
+          "modulo": 5,
+          "tituloModulo": "APIs y Bases de Datos",
+          "semanas": [
+            {
+              "semana": 45,
+              "tituloSemana": "Fundamentos de Node.js y Express - Parte 1",
+              "objetivos": [
+                "Entender el entorno de ejecución de Node.js y crear un servidor web básico"
+              ],
+              "tematica": "El Event Loop, I/O no bloqueante, módulos de Node.js. Creación de un servidor con Express, manejo de rutas y middleware.",
+              "actividades": [
+                "Construir un servidor 'Hola Mundo'",
+                "Crear una API simple con rutas para diferentes métodos HTTP",
+                "Implementar un middleware para logging de peticiones"
+              ],
+              "entregables": "Una API REST básica con varios endpoints que devuelven datos estáticos en formato JSON."
+            },
+            {
+              "semana": 46,
+              "tituloSemana": "Fundamentos de Node.js y Express - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de Node.js y Express"
+              ],
+              "tematica": "El Event Loop, I/O no bloqueante, módulos de Node.js. Creación de un servidor con Express, manejo de rutas y middleware.",
+              "actividades": [
+                "Ampliar la API con más endpoints",
+                "Implementar middleware avanzado",
+                "Manejar diferentes tipos de respuestas"
+              ],
+              "entregables": "API REST ampliada con múltiples endpoints y middleware avanzado."
+            },
+            {
+              "semana": 47,
+              "tituloSemana": "Fundamentos de Bases de Datos Relacionales (SQL) - Parte 1",
+              "objetivos": [
+                "Aprender a diseñar esquemas de bases de datos y a manipular datos usando SQL"
+              ],
+              "tematica": "Modelado de datos (entidades, relaciones, claves primarias/foráneas). Comandos SQL (SELECT, INSERT, UPDATE, DELETE). JOINs para combinar datos de múltiples tablas.",
+              "actividades": [
+                "Diseñar el esquema de base de datos para una aplicación de blog",
+                "Practicar consultas SQL complejas en una plataforma como SQLZoo"
+              ],
+              "entregables": "Un esquema de base de datos para un proyecto normalizado, con un script SQL para crear las tablas."
+            },
+            {
+              "semana": 48,
+              "tituloSemana": "Fundamentos de Bases de Datos Relacionales (SQL) - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de SQL y diseño de bases de datos"
+              ],
+              "tematica": "Modelado de datos (entidades, relaciones, claves primarias/foráneas). Comandos SQL (SELECT, INSERT, UPDATE, DELETE). JOINs para combinar datos de múltiples tablas.",
+              "actividades": [
+                "Implementar consultas complejas con JOINs",
+                "Optimizar esquemas de base de datos"
+              ],
+              "entregables": "Esquema de base de datos optimizado con consultas SQL complejas implementadas."
+            },
+            {
+              "semana": 49,
+              "tituloSemana": "APIs RESTful y Conexión a Base de Datos - Parte 1",
+              "objetivos": [
+                "Conectar la API de Express a una base de datos PostgreSQL y construir endpoints CRUD completos"
+              ],
+              "tematica": "Principios REST. Conexión a PostgreSQL desde Node.js. Uso de un ORM como Prisma o Sequelize para abstraer las consultas SQL.",
+              "actividades": [
+                "Conectar la API de Express a la base de datos PostgreSQL",
+                "Implementar endpoints CRUD para una entidad"
+              ],
+              "entregables": "Una API RESTful funcional que permite realizar operaciones CRUD completas sobre una entidad, interactuando con una base de datos."
+            },
+            {
+              "semana": 50,
+              "tituloSemana": "APIs RESTful y Conexión a Base de Datos - Parte 2",
+              "objetivos": [
+                "Ampliar la API con múltiples entidades y relaciones"
+              ],
+              "tematica": "Principios REST. Conexión a PostgreSQL desde Node.js. Uso de un ORM como Prisma o Sequelize para abstraer las consultas SQL.",
+              "actividades": [
+                "Implementar relaciones entre entidades",
+                "Crear endpoints para operaciones complejas"
+              ],
+              "entregables": "API RESTful ampliada con múltiples entidades y relaciones."
+            },
+            {
+              "semana": 51,
+              "tituloSemana": "APIs RESTful y Conexión a Base de Datos - Parte 3",
+              "objetivos": [
+                "Implementar validación y manejo de errores"
+              ],
+              "tematica": "Principios REST. Conexión a PostgreSQL desde Node.js. Uso de un ORM como Prisma o Sequelize para abstraer las consultas SQL.",
+              "actividades": [
+                "Implementar validación de datos de entrada",
+                "Mejorar el manejo de errores de la API"
+              ],
+              "entregables": "API con validación robusta y manejo de errores profesional."
+            },
+            {
+              "semana": 52,
+              "tituloSemana": "APIs RESTful y Conexión a Base de Datos - Parte 4",
+              "objetivos": [
+                "Finalizar la API con documentación y testing básico"
+              ],
+              "tematica": "Principios REST. Conexión a PostgreSQL desde Node.js. Uso de un ORM como Prisma o Sequelize para abstraer las consultas SQL.",
+              "actividades": [
+                "Documentar la API",
+                "Implementar tests básicos"
+              ],
+              "entregables": "API RESTful completa con documentación y tests básicos."
+            },
+            {
+              "semana": 53,
+              "tituloSemana": "Autenticación y Autorización - Parte 1",
+              "objetivos": [
+                "Implementar sistemas para verificar la identidad de los usuarios y controlar su acceso a los recursos"
+              ],
+              "tematica": "Hashing de contraseñas (bcrypt). Autenticación basada en tokens con JSON Web Tokens (JWT). Protección de rutas. Roles y permisos.",
+              "actividades": [
+                "Implementar registro y login de usuarios",
+                "Configurar hashing de contraseñas"
+              ],
+              "entregables": "Sistema de autenticación básico con registro y login."
+            },
+            {
+              "semana": 54,
+              "tituloSemana": "Autenticación y Autorización - Parte 2",
+              "objetivos": [
+                "Implementar JWT y protección de rutas"
+              ],
+              "tematica": "Hashing de contraseñas (bcrypt). Autenticación basada en tokens con JSON Web Tokens (JWT). Protección de rutas. Roles y permisos.",
+              "actividades": [
+                "Implementar JWT para autenticación",
+                "Proteger rutas de la API"
+              ],
+              "entregables": "API con autenticación JWT y rutas protegidas."
+            },
+            {
+              "semana": 55,
+              "tituloSemana": "Autenticación y Autorización - Parte 3",
+              "objetivos": [
+                "Implementar sistema de roles y permisos"
+              ],
+              "tematica": "Hashing de contraseñas (bcrypt). Autenticación basada en tokens con JSON Web Tokens (JWT). Protección de rutas. Roles y permisos.",
+              "actividades": [
+                "Implementar sistema de roles",
+                "Configurar permisos por rol"
+              ],
+              "entregables": "Sistema de autorización completo con roles y permisos."
+            },
+            {
+              "semana": 56,
+              "tituloSemana": "Autenticación y Autorización - Parte 4",
+              "objetivos": [
+                "Finalizar y testear el sistema de autenticación y autorización"
+              ],
+              "tematica": "Hashing de contraseñas (bcrypt). Autenticación basada en tokens con JSON Web Tokens (JWT). Protección de rutas. Roles y permisos.",
+              "actividades": [
+                "Testear el sistema de autenticación",
+                "Implementar middleware de autorización"
+              ],
+              "entregables": "Sistema de autenticación y autorización completo y testeado."
+            }
+          ]
+        },
+        {
+          "modulo": 6,
+          "tituloModulo": "Arquitectura y Seguridad",
+          "semanas": [
+            {
+              "semana": 57,
+              "tituloSemana": "Testing del Backend - Parte 1",
+              "objetivos": [
+                "Escribir tests unitarios y de integración para garantizar la robustez de la API"
+              ],
+              "tematica": "Testing unitario con Jest. Tests de integración para endpoints. Mocking de dependencias externas. Cobertura de código.",
+              "actividades": [
+                "Escribir tests unitarios para las funciones de negocio",
+                "Implementar tests de integración para los endpoints principales"
+              ],
+              "entregables": "Suite de tests que cubra al menos el 70% del código del backend, con tests tanto unitarios como de integración."
+            },
+            {
+              "semana": 58,
+              "tituloSemana": "Testing del Backend - Parte 2",
+              "objetivos": [
+                "Ampliar la cobertura de tests y implementar testing avanzado"
+              ],
+              "tematica": "Testing unitario con Jest. Tests de integración para endpoints. Mocking de dependencias externas. Cobertura de código.",
+              "actividades": [
+                "Implementar mocking de dependencias",
+                "Ampliar la cobertura de tests"
+              ],
+              "entregables": "Suite de tests completa con cobertura superior al 80%."
+            },
+            {
+              "semana": 59,
+              "tituloSemana": "Documentación de API con Swagger - Parte 1",
+              "objetivos": [
+                "Crear documentación profesional para la API usando herramientas estándar de la industria"
+              ],
+              "tematica": "OpenAPI/Swagger para documentación automática. Herramientas como swagger-ui-express. Mejores prácticas de documentación de APIs.",
+              "actividades": [
+                "Configurar Swagger en la API",
+                "Documentar endpoints principales"
+              ],
+              "entregables": "API completamente documentada con Swagger, accesible a través de una interfaz web interactiva."
+            },
+            {
+              "semana": 60,
+              "tituloSemana": "Documentación de API con Swagger - Parte 2",
+              "objetivos": [
+                "Completar la documentación de la API y implementar mejores prácticas"
+              ],
+              "tematica": "OpenAPI/Swagger para documentación automática. Herramientas como swagger-ui-express. Mejores prácticas de documentación de APIs.",
+              "actividades": [
+                "Completar la documentación de todos los endpoints",
+                "Implementar ejemplos y casos de uso"
+              ],
+              "entregables": "Documentación completa y profesional de la API con ejemplos."
+            },
+            {
+              "semana": 61,
+              "tituloSemana": "Seguridad Avanzada y Optimización - Parte 1",
+              "objetivos": [
+                "Identificar y mitigar vulnerabilidades de seguridad comunes",
+                "Optimizar el rendimiento de la API"
+              ],
+              "tematica": "OWASP Top 10 (XSS, Inyección SQL, etc.). Validación de entradas. CORS. Rate limiting. Estrategias de caché (caching) con herramientas como Redis.",
+              "actividades": [
+                "Realizar una auditoría de seguridad en la API",
+                "Implementar validación de datos en todos los endpoints"
+              ],
+              "entregables": "Una API securizada y optimizada, con mecanismos de protección implementados."
+            },
+            {
+              "semana": 62,
+              "tituloSemana": "Seguridad Avanzada y Optimización - Parte 2",
+              "objetivos": [
+                "Implementar rate limiting y caché para optimización"
+              ],
+              "tematica": "OWASP Top 10 (XSS, Inyección SQL, etc.). Validación de entradas. CORS. Rate limiting. Estrategias de caché (caching) con herramientas como Redis.",
+              "actividades": [
+                "Añadir rate limiting para prevenir abusos",
+                "Implementar una capa de caché con Redis"
+              ],
+              "entregables": "API optimizada con rate limiting y caching implementados."
+            },
+            {
+              "semana": 63,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 1",
+              "objetivos": [
+                "Consolidar todo el conocimiento de backend en un proyecto completo y documentarlo profesionalmente"
+              ],
+              "tematica": "Diseño de API desde cero. Documentación de API con herramientas como Swagger/OpenAPI.",
+              "actividades": [
+                "Planificar, diseñar e implementar una nueva API RESTful desde cero",
+                "Aplicar todos los principios de arquitectura, seguridad y testing aprendidos"
+              ],
+              "entregables": "Proyecto Integrador de Fase 3 en desarrollo: Una API RESTful completa, documentada profesionalmente con Swagger, testeada y segura."
+            },
+            {
+              "semana": 64,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 2",
+              "objetivos": [
+                "Finalizar el proyecto integrador de backend"
+              ],
+              "tematica": "Diseño de API desde cero. Documentación de API con herramientas como Swagger/OpenAPI.",
+              "actividades": [
+                "Finalizar la implementación de la API",
+                "Completar la documentación y testing"
+              ],
+              "entregables": "Proyecto Integrador de Fase 3 completado: Una API RESTful completa, documentada profesionalmente con Swagger, testeada y segura, lista para ser consumida por una aplicación Frontend."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 4,
+      "tituloFase": "DevOps y Cloud Computing",
+      "duracionMeses": "4 Meses",
+      "proposito": "Automatizar el ciclo de vida del desarrollo de software, desde la integración del código hasta el despliegue y la operación de aplicaciones escalables en la nube.",
+      "modulos": [
+        {
+          "modulo": 7,
+          "tituloModulo": "Containerización y CI/CD",
+          "semanas": [
+            {
+              "semana": 65,
+              "tituloSemana": "Fundamentos de Docker - Parte 1",
+              "objetivos": [
+                "Aprender a empaquetar aplicaciones y sus dependencias en contenedores portátiles y aislados"
+              ],
+              "tematica": "Imágenes vs. Contenedores, Dockerfile, Docker Hub, volúmenes para persistencia.",
+              "actividades": [
+                "Escribir un Dockerfile para la API de Backend de la Fase 3",
+                "Crear una imagen optimizada (multi-stage build)",
+                "Gestionar el ciclo de vida de los contenedores"
+              ],
+              "entregables": "Un Dockerfile optimizado para producción para el proyecto de la Fase 3, junto con un DDE que justifique las decisiones tomadas."
+            },
+            {
+              "semana": 66,
+              "tituloSemana": "Fundamentos de Docker - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de Docker y optimización de contenedores"
+              ],
+              "tematica": "Imágenes vs. Contenedores, Dockerfile, Docker Hub, volúmenes para persistencia.",
+              "actividades": [
+                "Optimizar el Dockerfile con multi-stage builds",
+                "Implementar volúmenes para persistencia de datos",
+                "Publicar imágenes en Docker Hub"
+              ],
+              "entregables": "Imágenes Docker optimizadas y publicadas en Docker Hub."
+            },
+            {
+              "semana": 67,
+              "tituloSemana": "Orquestación Local con Docker Compose - Parte 1",
+              "objetivos": [
+                "Definir y ejecutar aplicaciones multi-contenedor con un solo comando"
+              ],
+              "tematica": "docker-compose.yml, servicios, redes (networks), volúmenes (volumes).",
+              "actividades": [
+                "Crear un archivo docker-compose.yml para levantar todo el stack de tu aplicación Full-Stack",
+                "Configurar redes y volúmenes"
+              ],
+              "entregables": "Un archivo docker-compose.yml que permita a cualquier desarrollador clonar tu proyecto y levantarlo completamente con docker-compose up."
+            },
+            {
+              "semana": 68,
+              "tituloSemana": "Orquestación Local con Docker Compose - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de Docker Compose y configuraciones avanzadas"
+              ],
+              "tematica": "docker-compose.yml, servicios, redes (networks), volúmenes (volumes).",
+              "actividades": [
+                "Implementar configuraciones para diferentes entornos",
+                "Configurar servicios adicionales (Redis, reverse proxy)"
+              ],
+              "entregables": "Stack completo con Docker Compose incluyendo servicios adicionales."
+            },
+            {
+              "semana": 69,
+              "tituloSemana": "Integración Continua (CI) con GitHub Actions - Parte 1",
+              "objetivos": [
+                "Automatizar el proceso de testing y validación de código cada vez que se realiza un cambio"
+              ],
+              "tematica": "Conceptos de CI/CD. Creación de workflows en GitHub Actions. Ejecución de tests automatizados. Linters y formateo de código.",
+              "actividades": [
+                "Configurar un workflow de GitHub Actions que se active en cada push o pull request",
+                "El workflow debe instalar dependencias, ejecutar los tests del backend y del frontend"
+              ],
+              "entregables": "Un pipeline de CI funcional en tu repositorio de GitHub, visible a través de los 'checks' de los pull requests."
+            },
+            {
+              "semana": 70,
+              "tituloSemana": "Integración Continua (CI) con GitHub Actions - Parte 2",
+              "objetivos": [
+                "Ampliar el pipeline de CI con linting y quality gates"
+              ],
+              "tematica": "Conceptos de CI/CD. Creación de workflows en GitHub Actions. Ejecución de tests automatizados. Linters y formateo de código.",
+              "actividades": [
+                "Implementar linting y formateo automático",
+                "Configurar quality gates y coverage reports"
+              ],
+              "entregables": "Pipeline de CI completo con linting, testing y quality gates."
+            },
+            {
+              "semana": 71,
+              "tituloSemana": "Despliegue Continuo (CD) y Monitoreo Básico - Parte 1",
+              "objetivos": [
+                "Automatizar el despliegue de la aplicación a un entorno de staging o producción",
+                "Introducir la observabilidad"
+              ],
+              "tematica": "Secret management en GitHub Actions. Despliegue de contenedores a un registro. Estrategias de logging. Monitoreo de salud de la aplicación.",
+              "actividades": [
+                "Extender el workflow de CI para que construya y publique las imágenes de Docker en un registro"
+              ],
+              "entregables": "Un pipeline de CI/CD que automáticamente testea y empaqueta la aplicación, dejándola lista para el despliegue."
+            },
+            {
+              "semana": 72,
+              "tituloSemana": "Despliegue Continuo (CD) y Monitoreo Básico - Parte 2",
+              "objetivos": [
+                "Implementar monitoreo y logging para aplicaciones desplegadas"
+              ],
+              "tematica": "Secret management en GitHub Actions. Despliegue de contenedores a un registro. Estrategias de logging. Monitoreo de salud de la aplicación.",
+              "actividades": [
+                "Implementar logging centralizado",
+                "Configurar health checks y monitoreo básico"
+              ],
+              "entregables": "Sistema de monitoreo y logging implementado para aplicaciones en producción."
+            }
+          ]
+        },
+        {
+          "modulo": 8,
+          "tituloModulo": "Orquestación y Cloud",
+          "semanas": [
+            {
+              "semana": 73,
+              "tituloSemana": "Fundamentos de Kubernetes (K8s) - Parte 1",
+              "objetivos": [
+                "Entender los conceptos básicos del orquestador de contenedores líder en la industria para gestionar aplicaciones a escala"
+              ],
+              "tematica": "Arquitectura de K8s. Objetos: Pods, Services, Deployments. kubectl.",
+              "actividades": [
+                "Instalar un clúster local de K8s (ej. Minikube, k3d)",
+                "Desplegar la aplicación containerizada en el clúster local"
+              ],
+              "entregables": "Archivos de manifiesto (.yaml) para desplegar tu aplicación en Kubernetes."
+            },
+            {
+              "semana": 74,
+              "tituloSemana": "Fundamentos de Kubernetes (K8s) - Parte 2",
+              "objetivos": [
+                "Consolidar el uso de Kubernetes y implementar configuraciones avanzadas"
+              ],
+              "tematica": "Arquitectura de K8s. Objetos: Pods, Services, Deployments. kubectl.",
+              "actividades": [
+                "Exponer la aplicación al exterior usando un Service",
+                "Implementar ConfigMaps y Secrets"
+              ],
+              "entregables": "Aplicación completamente desplegada en Kubernetes con configuraciones avanzadas."
+            },
+            {
+              "semana": 75,
+              "tituloSemana": "Fundamentos de Cloud Computing (AWS/GCP) - Parte 1",
+              "objetivos": [
+                "Comprender los servicios fundamentales de un proveedor de nube y desplegar una aplicación simple"
+              ],
+              "tematica": "Servicios IaaS, PaaS, SaaS. Cómputo (EC2/Compute Engine), Almacenamiento (S3/Cloud Storage), Bases de Datos gestionadas (RDS/Cloud SQL).",
+              "actividades": [
+                "Crear una cuenta en un proveedor cloud (aprovechando la capa gratuita)",
+                "Desplegar la API de backend en una máquina virtual"
+              ],
+              "entregables": "Una guía paso a paso en tu repositorio sobre cómo desplegar tu aplicación en el proveedor de nube elegido."
+            },
+            {
+              "semana": 76,
+              "tituloSemana": "Fundamentos de Cloud Computing (AWS/GCP) - Parte 2",
+              "objetivos": [
+                "Implementar bases de datos gestionadas y servicios de almacenamiento"
+              ],
+              "tematica": "Servicios IaaS, PaaS, SaaS. Cómputo (EC2/Compute Engine), Almacenamiento (S3/Cloud Storage), Bases de Datos gestionadas (RDS/Cloud SQL).",
+              "actividades": [
+                "Configurar una base de datos gestionada",
+                "Implementar almacenamiento en la nube"
+              ],
+              "entregables": "Aplicación desplegada en la nube con servicios gestionados, incluyendo consideraciones de seguridad y costos."
+            },
+            {
+              "semana": 77,
+              "tituloSemana": "Arquitecturas Modernas: Serverless y Microservicios - Parte 1",
+              "objetivos": [
+                "Explorar arquitecturas alternativas para construir aplicaciones más resilientes y escalables"
+              ],
+              "tematica": "Funciones como Servicio (FaaS) con AWS Lambda o Google Cloud Functions. API Gateway. Patrones básicos de microservicios.",
+              "actividades": [
+                "Refactorizar un endpoint de tu API para que funcione como una función serverless",
+                "Diseñar teóricamente cómo se podría descomponer tu aplicación monolítica en microservicios"
+              ],
+              "entregables": "Una función serverless funcional y un documento de diseño arquitectónico que explore la migración a microservicios."
+            },
+            {
+              "semana": 78,
+              "tituloSemana": "Arquitecturas Modernas: Serverless y Microservicios - Parte 2",
+              "objetivos": [
+                "Consolidar conceptos de arquitecturas modernas y serverless"
+              ],
+              "tematica": "Funciones como Servicio (FaaS) con AWS Lambda o Google Cloud Functions. API Gateway. Patrones básicos de microservicios.",
+              "actividades": [
+                "Implementar API Gateway para funciones serverless",
+                "Desarrollar una estrategia de migración a microservicios"
+              ],
+              "entregables": "Implementación serverless completa con API Gateway y estrategia de microservicios documentada."
+            },
+            {
+              "semana": 79,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 1",
+              "objetivos": [
+                "Consolidar todo el conocimiento de DevOps y Cloud en un pipeline completo y profesional"
+              ],
+              "tematica": "Infraestructura como Código (IaC) con Terraform (introducción). Pipeline GitOps (opcional).",
+              "actividades": [
+                "Crear un pipeline completo que tome tu aplicación multi-servicio, la testee, la empaquete en contenedores, y la despliegue automáticamente en un clúster de Kubernetes en la nube"
+              ],
+              "entregables": "Proyecto Integrador de Fase 4 en desarrollo: Un repositorio que contenga una aplicación Full-Stack y toda la configuración necesaria para despliegue automatizado."
+            },
+            {
+              "semana": 80,
+              "tituloSemana": "Proyecto Integrador de Fase - Parte 2",
+              "objetivos": [
+                "Finalizar el proyecto integrador de DevOps"
+              ],
+              "tematica": "Infraestructura como Código (IaC) con Terraform (introducción). Pipeline GitOps (opcional).",
+              "actividades": [
+                "Finalizar la configuración de DevOps",
+                "Documentar el proceso completo de despliegue"
+              ],
+              "entregables": "Proyecto Integrador de Fase 4 completado: Un repositorio que contenga una aplicación Full-Stack y toda la configuración necesaria (Dockerfiles, GitHub Actions workflows, manifiestos de K8s) para que se despliegue y opere de forma automatizada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 5,
+      "tituloFase": "Ciencia de Datos e Inteligencia Artificial",
+      "duracionMeses": "2 Meses",
+      "proposito": "Introducir las competencias para extraer valor de los datos y aplicar modelos de Machine Learning para crear funcionalidades inteligentes dentro de las aplicaciones.",
+      "modulos": [
+        {
+          "modulo": 9,
+          "tituloModulo": "Análisis de Datos",
+          "semanas": [
+            {
+              "semana": 81,
+              "tituloSemana": "Fundamentos de Análisis de Datos con Python",
+              "objetivos": [
+                "Configurar el entorno de Data Science y familiarizarse con las librerías fundamentales para el análisis de datos"
+              ],
+              "tematica": "Introducción a Jupyter Notebooks. NumPy para cálculos numéricos. Pandas para manipulación de datos. Carga, exploración y limpieza básica de datasets.",
+              "actividades": [
+                "Configurar un entorno de Data Science con Anaconda",
+                "Realizar un análisis exploratorio de datos (EDA) de un dataset público",
+                "Limpiar y preparar datos para análisis"
+              ],
+              "entregables": "Un Jupyter Notebook que documente un EDA completo de un dataset, incluyendo limpieza de datos y estadísticas descriptivas."
+            },
+            {
+              "semana": 82,
+              "tituloSemana": "Manipulación y Transformación de Datos",
+              "objetivos": [
+                "Dominar técnicas avanzadas de manipulación de datos y preprocesamiento"
+              ],
+              "tematica": "Operaciones avanzadas con Pandas (groupby, merge, pivot). Manejo de datos faltantes. Normalización y escalado de datos. Ingeniería de características (feature engineering).",
+              "actividades": [
+                "Realizar análisis de datos complejos con operaciones de agrupación",
+                "Implementar estrategias para datos faltantes",
+                "Crear nuevas características a partir de datos existentes"
+              ],
+              "entregables": "Notebook con análisis avanzado de datos que demuestre manipulación compleja y ingeniería de características."
+            },
+            {
+              "semana": 83,
+              "tituloSemana": "Visualización de Datos",
+              "objetivos": [
+                "Crear visualizaciones efectivas para comunicar insights de los datos"
+              ],
+              "tematica": "Matplotlib para gráficos básicos. Seaborn para visualizaciones estadísticas. Plotly para gráficos interactivos. Principios de diseño de visualizaciones.",
+              "actividades": [
+                "Crear un dashboard de visualizaciones con diferentes tipos de gráficos",
+                "Desarrollar visualizaciones interactivas con Plotly",
+                "Aplicar principios de diseño para comunicación efectiva"
+              ],
+              "entregables": "Un conjunto de visualizaciones que cuente una historia coherente con los datos, incluyendo al menos un gráfico interactivo."
+            },
+            {
+              "semana": 84,
+              "tituloSemana": "Proyecto de Análisis de Datos",
+              "objetivos": [
+                "Consolidar las habilidades de análisis de datos en un proyecto completo"
+              ],
+              "tematica": "Metodología de análisis de datos. Formulación de preguntas de negocio. Análisis estadístico. Presentación de resultados.",
+              "actividades": [
+                "Seleccionar y analizar un dataset relevante",
+                "Formular y responder preguntas de negocio con datos",
+                "Crear un reporte ejecutivo con visualizaciones"
+              ],
+              "entregables": "Un proyecto completo de análisis de datos con notebook detallado y presentación ejecutiva de resultados."
+            }
+          ]
+        },
+        {
+          "modulo": 10,
+          "tituloModulo": "Machine Learning",
+          "semanas": [
+            {
+              "semana": 85,
+              "tituloSemana": "Fundamentos de Machine Learning - Parte 1",
+              "objetivos": [
+                "Comprender el flujo de trabajo del ML y entrenar los primeros modelos de clasificación y regresión"
+              ],
+              "tematica": "Aprendizaje supervisado vs. no supervisado. Scikit-learn como framework principal. División de datos (train/test split), entrenamiento de modelos (.fit()), predicción (.predict()). Métricas de evaluación (accuracy, precision, recall, RMSE).",
+              "actividades": [
+                "Entrenar un modelo de regresión para predecir el precio de una vivienda",
+                "Entrenar un modelo de clasificación para predecir la supervivencia en el Titanic"
+              ],
+              "entregables": "Un Jupyter Notebook que documente el proceso completo de entrenamiento y evaluación de al menos un modelo de clasificación y uno de regresión."
+            },
+            {
+              "semana": 86,
+              "tituloSemana": "Fundamentos de Machine Learning - Parte 2",
+              "objetivos": [
+                "Consolidar conceptos de ML y comparar diferentes algoritmos"
+              ],
+              "tematica": "Aprendizaje supervisado vs. no supervisado. Scikit-learn como framework principal. División de datos (train/test split), entrenamiento de modelos (.fit()), predicción (.predict()). Métricas de evaluación (accuracy, precision, recall, RMSE).",
+              "actividades": [
+                "Evaluar y comparar el rendimiento de diferentes algoritmos",
+                "Implementar validación cruzada y optimización de hiperparámetros"
+              ],
+              "entregables": "Análisis comparativo de múltiples algoritmos de ML con métricas de evaluación completas."
+            },
+            {
+              "semana": 87,
+              "tituloSemana": "Proyecto Integrador de Fase e Integración de Modelos - Parte 1",
+              "objetivos": [
+                "Consolidar el conocimiento de la fase construyendo una aplicación web simple que consuma un modelo de ML propio"
+              ],
+              "tematica": "'Servir' un modelo de ML a través de una API. Creación de una API simple con FastAPI o Flask para exponer el modelo. Integración con una interfaz de Frontend básica.",
+              "actividades": [
+                "Guardar (serializar) un modelo entrenado",
+                "Construir una API con un endpoint /predict que reciba datos y devuelva una predicción del modelo"
+              ],
+              "entregables": "Proyecto Integrador de Fase 5 en desarrollo: Una aplicación web funcional que permita al usuario introducir datos, enviarlos a una API de ML, y recibir y mostrar la predicción del modelo en la interfaz."
+            },
+            {
+              "semana": 88,
+              "tituloSemana": "Proyecto Integrador de Fase e Integración de Modelos - Parte 2",
+              "objetivos": [
+                "Finalizar la integración del modelo ML con la aplicación web"
+              ],
+              "tematica": "'Servir' un modelo de ML a través de una API. Creación de una API simple con FastAPI o Flask para exponer el modelo. Integración con una interfaz de Frontend básica.",
+              "actividades": [
+                "Conectar la API a la aplicación Frontend de la Fase 2",
+                "Implementar validación de datos y manejo de errores"
+              ],
+              "entregables": "Proyecto Integrador de Fase 5 completado: Una aplicación web funcional que permita al usuario introducir datos, enviarlos a una API de ML, y recibir y mostrar la predicción del modelo en la interfaz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 6,
+      "tituloFase": "Integración y Preparación Profesional",
+      "duracionMeses": "2 Meses",
+      "proposito": "Consolidar todo el conocimiento adquirido en un proyecto a gran escala (Capstone) que demuestre la totalidad de las competencias, y preparar activamente la inserción en el mercado laboral.",
+      "modulos": [
+        {
+          "modulo": 11,
+          "tituloModulo": "Proyecto Capstone Full-Stack",
+          "semanas": [
+            {
+              "semana": 89,
+              "tituloSemana": "Diseño de Arquitectura y Planificación - Parte 1",
+              "objetivos": [
+                "Definir el alcance del proyecto",
+                "Diseñar una arquitectura de sistema robusta y escalable",
+                "Planificar el desarrollo"
+              ],
+              "tematica": "Requerimientos funcionales y no funcionales. Diseño de arquitectura (monolito vs. microservicios). Modelado de datos avanzado. Elección del stack tecnológico. Planificación de proyecto (sprints, hitos).",
+              "actividades": [
+                "Escribir un documento de especificaciones del proyecto",
+                "Crear diagramas de arquitectura (C4 model, diagramas de secuencia)",
+                "Diseñar el esquema completo de la base de datos"
+              ],
+              "entregables": "Un documento de diseño de arquitectura (ARCHITECTURE.md) y un plan de proyecto detallado en el DDE. Repositorio del proyecto inicializado con el pipeline de CI básico."
+            },
+            {
+              "semana": 90,
+              "tituloSemana": "Diseño de Arquitectura y Planificación - Parte 2",
+              "objetivos": [
+                "Finalizar la planificación y configurar el entorno del proyecto"
+              ],
+              "tematica": "Requerimientos funcionales y no funcionales. Diseño de arquitectura (monolito vs. microservicios). Modelado de datos avanzado. Elección del stack tecnológico. Planificación de proyecto (sprints, hitos).",
+              "actividades": [
+                "Configurar el entorno del proyecto (repositorios, CI/CD inicial)",
+                "Finalizar la documentación de arquitectura"
+              ],
+              "entregables": "Proyecto completamente planificado con documentación técnica y entorno configurado."
+            },
+            {
+              "semana": 91,
+              "tituloSemana": "Implementación del Core y Backend - Parte 1",
+              "objetivos": [
+                "Desarrollar el núcleo de la funcionalidad del backend, incluyendo la API principal y la lógica de negocio"
+              ],
+              "tematica": "Implementación de la API siguiendo el diseño arquitectónico. Lógica de negocio compleja. Testing exhaustivo (unitario y de integración).",
+              "actividades": [
+                "Construir los endpoints principales de la API",
+                "Implementar la lógica de autenticación y autorización"
+              ],
+              "entregables": "Un MVP (Producto Mínimo Viable) del backend, completamente testeado y funcional."
+            },
+            {
+              "semana": 92,
+              "tituloSemana": "Implementación del Core y Backend - Parte 2",
+              "objetivos": [
+                "Finalizar el backend con testing exhaustivo"
+              ],
+              "tematica": "Implementación de la API siguiendo el diseño arquitectónico. Lógica de negocio compleja. Testing exhaustivo (unitario y de integración).",
+              "actividades": [
+                "Escribir tests para todos los servicios y controladores",
+                "Implementar funcionalidades avanzadas del backend"
+              ],
+              "entregables": "Backend completamente funcional con cobertura de tests superior al 80%."
+            },
+            {
+              "semana": 93,
+              "tituloSemana": "Implementación del Frontend e Integración - Parte 1",
+              "objetivos": [
+                "Construir la interfaz de usuario y conectarla de forma segura y eficiente con el backend"
+              ],
+              "tematica": "Desarrollo de componentes complejos en React/Next.js. Gestión de estado avanzada. Integración Full-Stack. Estrategias de manejo de errores.",
+              "actividades": [
+                "Desarrollar las vistas principales de la aplicación",
+                "Conectar los componentes del frontend a la API del backend"
+              ],
+              "entregables": "Una aplicación Full-Stack funcional, donde el frontend y el backend están completamente integrados."
+            },
+            {
+              "semana": 94,
+              "tituloSemana": "Implementación del Frontend e Integración - Parte 2",
+              "objetivos": [
+                "Finalizar la integración y implementar funcionalidades avanzadas"
+              ],
+              "tematica": "Desarrollo de componentes complejos en React/Next.js. Gestión de estado avanzada. Integración Full-Stack. Estrategias de manejo de errores.",
+              "actividades": [
+                "Implementar un flujo de usuario completo (ej. registro, login, acción principal)",
+                "Optimizar la experiencia de usuario"
+              ],
+              "entregables": "Aplicación Full-Stack completamente integrada con flujos de usuario completos."
+            }
+          ]
+        },
+        {
+          "modulo": 12,
+          "tituloModulo": "Optimización y Preparación Profesional",
+          "semanas": [
+            {
+              "semana": 95,
+              "tituloSemana": "Pulido, Despliegue y Documentación",
+              "objetivos": [
+                "Optimizar el rendimiento, desplegar la aplicación en un entorno de producción y crear documentación profesional"
+              ],
+              "tematica": "Optimización de rendimiento (frontend y backend). Despliegue en la nube (usando conocimientos de la Fase 4). Documentación para usuarios y desarrolladores.",
+              "actividades": [
+                "Realizar pruebas de carga y optimizar cuellos de botella",
+                "Desplegar la aplicación completa en un proveedor cloud",
+                "Escribir un README.md de alta calidad y documentación de la API (Swagger)"
+              ],
+              "entregables": "El proyecto Capstone desplegado en una URL pública. Documentación completa y profesional en el repositorio."
+            },
+            {
+              "semana": 96,
+              "tituloSemana": "Optimización de Portfolio y Preparación para Entrevistas",
+              "objetivos": [
+                "Consolidar tu marca personal como desarrollador",
+                "Prepararte intensivamente para los desafíos de las entrevistas técnicas"
+              ],
+              "tematica": "Curación de portfolio en GitHub. Optimización de perfil de LinkedIn y CV. Práctica de desafíos de algoritmos (LeetCode/HackerRank). Preguntas de diseño de sistemas. Entrevistas conductuales (método STAR).",
+              "actividades": [
+                "Seleccionar y pulir los 3-5 mejores proyectos para tu portfolio",
+                "Realizar simulacros de entrevistas técnicas",
+                "Preparar respuestas para preguntas conductuales comunes"
+              ],
+              "entregables": "Proyecto Final del Ecosistema 360: Un perfil profesional completo y listo para el mercado, que incluye un CV pulido, un perfil de LinkedIn optimizado y un portfolio en GitHub que demuestra de manera concluyente tus habilidades como desarrollador Full-Stack."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fase": 7,
+      "tituloFase": "Profesionalización y Crecimiento Continuo",
+      "duracionMeses": "1 Mes",
+      "proposito": "Estructurar la transición del entorno de aprendizaje a la práctica profesional, enfocándose en la gestión de proyectos personales, la observabilidad de aplicaciones en producción y el desarrollo de habilidades estratégicas de carrera.",
+      "modulos": [
+        {
+          "modulo": 13,
+          "tituloModulo": "Gestión y Operación de Proyectos",
+          "semanas": [
+            {
+              "semana": 97,
+              "tituloSemana": "Gestión de Proyecto y Metodologías Ágiles Personales",
+              "objetivos": [
+                "Aplicar un marco de gestión de proyectos para el mantenimiento del Capstone y futuros proyectos personales"
+              ],
+              "tematica": "Metodologías ágiles (Kanban personal). Gestión de backlog, priorización de tareas. Retrospectivas y mejora continua.",
+              "actividades": [
+                "Crear un tablero Kanban en GitHub Projects para el proyecto Capstone",
+                "Poblar el backlog con mejoras identificadas, feedback recibido y bugs menores",
+                "Planificar el primer 'sprint' de mantenimiento de una semana"
+              ],
+              "entregables": "Un tablero Kanban público y activo para tu proyecto Capstone. Una entrada en el DDE documentando la primera retrospectiva del proceso de autogestión."
+            },
+            {
+              "semana": 98,
+              "tituloSemana": "Monitoreo Post-Despliegue y Ownership",
+              "objetivos": [
+                "Implementar prácticas de observabilidad para asegurar la salud y el rendimiento de la aplicación desplegada"
+              ],
+              "tematica": "Monitoreo de disponibilidad (uptime). Centralización de logs. Métricas básicas de rendimiento de la aplicación (APM). Configuración de alertas.",
+              "actividades": [
+                "Configurar un servicio de monitoreo externo para la URL pública del Capstone",
+                "Canalizar los logs de la aplicación a un servicio de gestión",
+                "Configurar una alerta básica (ej. si el uso de CPU supera el 80%)"
+              ],
+              "entregables": "Un OPERATIONS_RUNBOOK.md en el repositorio del Capstone, detallando cómo monitorear la aplicación, dónde encontrar los logs y qué hacer en caso de una alerta."
+            }
+          ]
+        },
+        {
+          "modulo": 14,
+          "tituloModulo": "Estrategia de Carrera y Desarrollo Continuo",
+          "semanas": [
+            {
+              "semana": 99,
+              "tituloSemana": "Estrategias de Networking y Negociación",
+              "objetivos": [
+                "Desarrollar un plan proactivo para construir una red de contactos profesionales y prepararse para la negociación salarial"
+              ],
+              "tematica": "Networking estratégico. Propuesta de valor personal. Investigación de mercado salarial. Técnicas de negociación.",
+              "actividades": [
+                "Crear un plan de networking a 3 meses",
+                "Identificar 5 empresas objetivo y profesionales clave en LinkedIn",
+                "Investigar y documentar los rangos salariales para roles de desarrollador junior/mid en Uruguay y LATAM",
+                "Preparar un guion con tus expectativas y justificaciones"
+              ],
+              "entregables": "Un documento CAREER_STRATEGY.md privado, que contenga tu plan de networking y tu investigación salarial."
+            },
+            {
+              "semana": 100,
+              "tituloSemana": "Plan de Aprendizaje Continuo y Contribución Open Source",
+              "objetivos": [
+                "Establecer un sistema sostenible para el aprendizaje a largo plazo y realizar la primera contribución a un proyecto de código abierto"
+              ],
+              "tematica": "Identificación de áreas de especialización. Búsqueda de proyectos open source para principiantes (good first issue). El ciclo de contribución (fork, pull request).",
+              "actividades": [
+                "Definir 2-3 áreas tecnológicas para profundizar en los próximos 6 meses",
+                "Identificar un proyecto de código abierto de interés y resolver un issue simple",
+                "Crear un plan de desarrollo profesional a 6 meses"
+              ],
+              "entregables": "Un plan de desarrollo profesional a 6 meses documentado. El enlace a tu primera Pull Request enviada a un proyecto de código abierto."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T20:55:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 1-9"
+  },
+  "fase": {
+    "numero": 0,
+    "titulo": "La Cimentación del Arquitecto",
+    "duracion": "3-4 meses",
+    "semanaInicio": 1,
+    "semanaFin": 9,
+    "totalSemanas": 9,
+    "proposito": "Adquirir una competencia mínima viable en los tres pilares del desarrollo moderno: Pensamiento Computacional, Interacción Crítica con IA, y Fundamentos del Entorno de Desarrollo.",
+    "competenciasClave": [
+      "Interacción crítica con sistemas de IA",
+      "Fundamentos de pensamiento computacional",
+      "Resolución de problemas algorítmicos básicos",
+      "Configuración de entorno de desarrollo profesional",
+      "Metodología de documentación y reflexión metacognitiva"
+    ]
+  },
+  "modulos": [
+    {
+      "numero": 1,
+      "titulo": "Fundamentos de la Interacción con IA",
+      "semanas": [
+        1,
+        2
+      ],
+      "proposito": "Construir el vocabulario y marco mental para interactuar con IA de forma crítica.",
+      "competencias": [
+        "Comprensión de fundamentos, sesgos y limitaciones de LLMs",
+        "Diseño de prompts efectivos",
+        "Principios de IA responsable"
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Pensamiento Computacional y Fundamentos de Programación",
+      "semanas": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "proposito": "Forjar la habilidad de resolver problemas a través del código usando CS50.",
+      "competencias": [
+        "Pensamiento computacional básico",
+        "Programación fundamental en C",
+        "Estructuras de control y algoritmos",
+        "Gestión de memoria y punteros",
+        "Estructuras de datos básicas"
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Construcción del Entorno de Desarrollo 'Génesis'",
+      "semanas": [
+        9
+      ],
+      "proposito": "Construir la estación de desarrollo profesional desde cero.",
+      "competencias": [
+        "Instalación y configuración de Linux",
+        "Configuración de herramientas de desarrollo",
+        "Gestión de repositorios y control de versiones"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 1,
+      "titulo": "Teoría y Ética de IA",
+      "modulo": 1,
+      "objetivos": [
+        "Construir el vocabulario y marco mental para interactuar con IA de forma crítica.",
+        "Comprender los fundamentos, sesgos y limitaciones de los LLMs."
+      ],
+      "tematica": "Cursos Google Cloud Skills Boost: Introduction to Generative AI, Introduction to Large Language Models, Introduction to Responsible AI.",
+      "actividades": [
+        "Completar los tres micro-cursos de fundamentos de IA de Google.",
+        "Estudiar los 7 principios de IA responsable de Google."
+      ],
+      "entregables": "Primera entrada en el DMA resumiendo conceptos clave y reflexionando sobre cómo los principios de IA deben influir en el diseño del Tutor Soberano del Ecosistema 360.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Inteligencia Artificial Generativa",
+          "pomodoros": [
+            "Pomodoro 1: Completar Introduction to Generative AI - Google Cloud Skills Boost",
+            "Pomodoro 2: Tomar notas detalladas sobre conceptos clave de IA generativa",
+            "Pomodoro 3: Reflexionar y escribir sobre aplicaciones de IA generativa en educación",
+            "Pomodoro 4: Documentar primeras impresiones para el DMA del Ecosistema 360"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Large Language Models - Arquitectura y Limitaciones",
+          "pomodoros": [
+            "Pomodoro 1: Completar Introduction to Large Language Models - Google Cloud",
+            "Pomodoro 2: Estudiar arquitectura de transformadores y mecanismos de atención",
+            "Pomodoro 3: Investigar casos de sesgos y limitaciones de LLMs actuales",
+            "Pomodoro 4: Crear mapa mental de fortalezas/debilidades de LLMs"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Principios de IA Responsable",
+          "pomodoros": [
+            "Pomodoro 1: Completar Introduction to Responsible AI - Google Cloud",
+            "Pomodoro 2: Estudiar los 7 principios de IA responsable de Google en profundidad",
+            "Pomodoro 3: Analizar casos reales de aplicación de principios éticos en IA",
+            "Pomodoro 4: Evaluar implicaciones éticas para el Tutor Soberano"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Consolidación Teórica y Evaluación",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el material teórico de la semana",
+            "Pomodoro 2: Completar evaluaciones finales de los tres micro-cursos",
+            "Pomodoro 3: Sintetizar conexiones entre IA generativa, LLMs y ética",
+            "Pomodoro 4: Preparar esquema para entrada del DMA del viernes"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Reflexión Metacognitiva y Diseño del Tutor",
+          "pomodoros": [
+            "Pomodoro 1: Escribir reflexión personal sobre el impacto de la IA en la educación",
+            "Pomodoro 2: Redactar entrada completa del DMA sobre conceptos clave aprendidos",
+            "Pomodoro 3: Diseñar principios éticos para el Tutor Soberano del Ecosistema 360",
+            "Pomodoro 4: Revisar, editar y finalizar la primera entrada del DMA"
+          ]
+        }
+      ],
+      "recursos": [
+        {
+          "nombre": "Principios de IA Responsable de Google",
+          "url": "https://ai.google/responsibility/principles/"
+        }
+      ],
+      "official_sources": [
+        "https://www.cloudskillsboost.google/course_templates/536",
+        "https://www.cloudskillsboost.google/course_templates/539",
+        "https://www.cloudskillsboost.google/course_templates/554"
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Práctica de Diseño de Prompts",
+      "modulo": 1,
+      "objetivos": [
+        "Dominar la formulación de prompts efectivos para maximizar la IA como herramienta de aprendizaje.",
+        "Experimentar con el SDK de Python para IA."
+      ],
+      "tematica": "Curso 'Diseño de instrucciones en Vertex AI' con laboratorios prácticos y SDK de Python.",
+      "actividades": [
+        "Completar los 3 laboratorios prácticos guiados del curso.",
+        "Completar el Lab de desafío para obtener la insignia.",
+        "Observar la estructura del SDK de Python (función que toma prompt y devuelve respuesta)."
+      ],
+      "entregables": "Segunda entrada en el DMA analizando la experiencia práctica, la transición de GUI al código, y lecciones de diseño para el Tutor IA.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Prompt Engineering",
+          "pomodoros": [
+            "Pomodoro 1: Iniciar curso Diseño de instrucciones en Vertex AI - módulos teóricos",
+            "Pomodoro 2: Estudiar principios de construcción de prompts efectivos",
+            "Pomodoro 3: Experimentar con diferentes tipos de prompts en Vertex AI Studio",
+            "Pomodoro 4: Documentar patrones de prompts efectivos vs inefectivos"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Laboratorios Prácticos Guiados",
+          "pomodoros": [
+            "Pomodoro 1: Completar Laboratorio Práctico #1 - Prompts básicos",
+            "Pomodoro 2: Completar Laboratorio Práctico #2 - Few-shot prompting",
+            "Pomodoro 3: Analizar resultados y optimizar prompts del Lab #1 y #2",
+            "Pomodoro 4: Documentar insights sobre técnicas de prompting efectivas"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Técnicas Avanzadas de Prompting",
+          "pomodoros": [
+            "Pomodoro 1: Completar Laboratorio Práctico #3 - Chain-of-thought prompting",
+            "Pomodoro 2: Experimentar con role prompting y context setting",
+            "Pomodoro 3: Comparar efectividad de diferentes técnicas en tareas específicas",
+            "Pomodoro 4: Crear biblioteca personal de templates de prompts efectivos"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Introducción al SDK de Python",
+          "pomodoros": [
+            "Pomodoro 1: Estudiar la estructura del SDK de Python para Vertex AI",
+            "Pomodoro 2: Analizar el patrón función(prompt) → respuesta en código",
+            "Pomodoro 3: Completar Lab de desafío para obtener la insignia",
+            "Pomodoro 4: Experimentar con llamadas básicas al SDK desde código Python"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Transición GUI → Código y Diseño del Tutor",
+          "pomodoros": [
+            "Pomodoro 1: Comparar experiencia GUI vs programática en el uso de IA",
+            "Pomodoro 2: Identificar ventajas y limitaciones de cada enfoque",
+            "Pomodoro 3: Diseñar lecciones de prompt engineering para el Tutor IA",
+            "Pomodoro 4: Redactar entrada completa del DMA sobre la experiencia práctica"
+          ]
+        }
+      ],
+      "official_sources": [
+        "https://www.cloudskillsboost.google/course_templates/937"
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "CS50 - Semana 0: Introducción",
+      "modulo": 2,
+      "objetivos": [
+        "Forjar la habilidad de resolver problemas a través del código.",
+        "Introducirse al pensamiento computacional y Scratch."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 0: Scratch y pensamiento computacional.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 0 de CS50.",
+        "Resolver el Problem Set 0 (proyecto en Scratch)."
+      ],
+      "entregables": "Tercera entrada del DMA centrada en el proceso de resolución del Problem Set 0, bloqueos encontrados y lecciones aprendidas.",
+      "recursos": [
+        {
+          "nombre": "Documentación oficial de Scratch",
+          "url": "https://scratch.mit.edu/ideas"
+        }
+      ],
+      "ejercicios": [
+        {
+          "nombre": "Problem Set 0 - CS50 en edX",
+          "url": "https://cs50.harvard.edu/x/2024/psets/0/"
+        }
+      ],
+      "official_sources": [
+        "https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science"
+      ],
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Introducción al Pensamiento Computacional",
+          "pomodoros": [
+            "Pomodoro 1: Ver Lecture 0 de CS50 - Pensamiento computacional y abstracción",
+            "Pomodoro 2: Estudiar conceptos de algoritmos, input/output y representación",
+            "Pomodoro 3: Practicar descomposición de problemas cotidianos en pasos",
+            "Pomodoro 4: Crear ejemplos propios de algoritmos para tareas simples"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Fundamentos de Scratch - Interfaz y Conceptos",
+          "pomodoros": [
+            "Pomodoro 1: Explorar la interfaz de Scratch y sus componentes principales",
+            "Pomodoro 2: Estudiar sprites, stage, scripts y los diferentes tipos de blocks",
+            "Pomodoro 3: Crear primeros programas simples: mover un sprite, cambiar colores",
+            "Pomodoro 4: Experimentar con eventos, sonidos y efectos visuales básicos"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Programación Visual - Lógica y Control",
+          "pomodoros": [
+            "Pomodoro 1: Dominar estructuras de control: loops, conditionals en Scratch",
+            "Pomodoro 2: Implementar interacción del usuario con teclado y mouse",
+            "Pomodoro 3: Crear programa interactivo que combine múltiples conceptos",
+            "Pomodoro 4: Depurar y optimizar programas Scratch creados"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Desarrollo del Problem Set 0",
+          "pomodoros": [
+            "Pomodoro 1: Leer y analizar los requisitos del Problem Set 0 de CS50",
+            "Pomodoro 2: Planificar y diseñar la estructura del proyecto personal",
+            "Pomodoro 3: Comenzar implementación del proyecto en Scratch",
+            "Pomodoro 4: Documentar decisiones de diseño y primeros bloqueos encontrados"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Finalización y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Completar y pulir el proyecto del Problem Set 0",
+            "Pomodoro 2: Probar exhaustivamente el programa y corregir bugs",
+            "Pomodoro 3: Reflexionar sobre el proceso de resolución de problemas",
+            "Pomodoro 4: Redactar entrada del DMA sobre bloqueos y lecciones aprendidas"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "CS50 - Semana 1: C",
+      "modulo": 2,
+      "objetivos": [
+        "Introducción al lenguaje C y programación de bajo nivel.",
+        "Dominar conceptos de variables, tipos de datos y funciones básicas."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 1: Lenguaje C, variables, funciones.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 1 de CS50.",
+        "Resolver el Problem Set 1 (ejercicios en C)."
+      ],
+      "entregables": "Cuarta entrada del DMA documentando la experiencia con C y el Problem Set 1.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Introducción al Lenguaje C y Compilación",
+          "pomodoros": [
+            "Pomodoro 1: Ver Lecture 1 de CS50 - Introducción al lenguaje C",
+            "Pomodoro 2: Configurar entorno de desarrollo para C (VS Code, compilador)",
+            "Pomodoro 3: Escribir y compilar primer programa 'Hello, World!' en C",
+            "Pomodoro 4: Entender proceso de compilación y diferencias con lenguajes interpretados"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Variables, Tipos de Datos y E/S Básica",
+          "pomodoros": [
+            "Pomodoro 1: Dominar tipos de datos primitivos en C (int, float, char, string)",
+            "Pomodoro 2: Implementar entrada de usuario con scanf() y validación básica",
+            "Pomodoro 3: Practicar formateo de salida con printf() y especificadores",
+            "Pomodoro 4: Crear programa interactivo que use múltiples tipos de datos"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Funciones y Parámetros en C",
+          "pomodoros": [
+            "Pomodoro 1: Entender sintaxis de funciones en C y prototipos",
+            "Pomodoro 2: Implementar funciones con parámetros y valores de retorno",
+            "Pomodoro 3: Practicar scope de variables locales vs globales",
+            "Pomodoro 4: Refactorizar programa anterior usando funciones modulares"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Desarrollo del Problem Set 1",
+          "pomodoros": [
+            "Pomodoro 1: Leer y analizar requisitos del Problem Set 1 de CS50",
+            "Pomodoro 2: Planificar solución y pseudocódigo para ejercicios asignados",
+            "Pomodoro 3: Implementar primera parte del Problem Set en C",
+            "Pomodoro 4: Depurar código y manejar errores de compilación"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Completar Problem Set y Reflexión",
+          "pomodoros": [
+            "Pomodoro 1: Finalizar y optimizar soluciones del Problem Set 1",
+            "Pomodoro 2: Probar exhaustivamente todos los casos edge",
+            "Pomodoro 3: Reflexionar sobre diferencias entre C y lenguajes de alto nivel",
+            "Pomodoro 4: Redactar entrada del DMA sobre experiencia con programación de bajo nivel"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 5,
+      "titulo": "CS50 - Semana 2: Arrays",
+      "modulo": 2,
+      "objetivos": [
+        "Comprender arrays, strings y manipulación de datos en C.",
+        "Dominar la iteración y manipulación de estructuras de datos básicas."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 2: Arrays, strings, criptografía básica.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 2 de CS50.",
+        "Resolver el Problem Set 2 (ej. Caesar cipher, Readability)."
+      ],
+      "entregables": "Quinta entrada del DMA sobre arrays y manipulación de strings.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Arrays en C",
+          "pomodoros": [
+            "Pomodoro 1: Ver Lecture 2 de CS50 - Arrays y memoria contigua",
+            "Pomodoro 2: Declarar y inicializar arrays de diferentes tipos en C",
+            "Pomodoro 3: Practicar acceso por índice y recorrido con loops",
+            "Pomodoro 4: Implementar programa que procese array de números enteros"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Strings como Arrays de Caracteres",
+          "pomodoros": [
+            "Pomodoro 1: Entender strings como arrays terminados en null en C",
+            "Pomodoro 2: Dominar funciones de string.h (strlen, strcpy, strcmp)",
+            "Pomodoro 3: Implementar manipulación básica de strings character por character",
+            "Pomodoro 4: Crear programa que convierta strings a mayúsculas/minúsculas"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Algoritmos de Procesamiento de Arrays",
+          "pomodoros": [
+            "Pomodoro 1: Implementar algoritmos de búsqueda lineal en arrays",
+            "Pomodoro 2: Crear funciones para encontrar máximo, mínimo y promedio",
+            "Pomodoro 3: Practicar iteración bidireccional y manipulación de índices",
+            "Pomodoro 4: Implementar contador de frecuencia de caracteres en strings"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Desarrollo del Problem Set 2",
+          "pomodoros": [
+            "Pomodoro 1: Analizar requisitos del Problem Set 2 (Caesar, Readability)",
+            "Pomodoro 2: Planificar algoritmo para cifrado Caesar paso a paso",
+            "Pomodoro 3: Implementar primera parte del Problem Set con arrays",
+            "Pomodoro 4: Depurar y optimizar manipulación de strings y caracteres"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Completar Criptografía y Reflexión",
+          "pomodoros": [
+            "Pomodoro 1: Finalizar implementación completa del Problem Set 2",
+            "Pomodoro 2: Probar con múltiples casos de prueba y edge cases",
+            "Pomodoro 3: Reflexionar sobre complejidad de manipulación de strings en C",
+            "Pomodoro 4: Redactar entrada del DMA sobre arrays y su impacto educativo"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 6,
+      "titulo": "CS50 - Semana 3: Algoritmos",
+      "modulo": 2,
+      "objetivos": [
+        "Entender algoritmos de búsqueda y ordenamiento.",
+        "Comprender la eficiencia algorítmica y notación Big O."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 3: Algoritmos de búsqueda y ordenamiento, eficiencia.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 3 de CS50.",
+        "Resolver el Problem Set 3 (algoritmos de ordenamiento)."
+      ],
+      "entregables": "Sexta entrada del DMA documentando la lucha con algoritmos y eficiencia.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Introducción a Algoritmos y Eficiencia",
+          "pomodoros": [
+            "Pomodoro 1: Ver Lecture 3 de CS50 - Algoritmos y notación Big O",
+            "Pomodoro 2: Entender conceptos de mejor, peor y caso promedio",
+            "Pomodoro 3: Analizar eficiencia de algoritmos simples (búsqueda lineal)",
+            "Pomodoro 4: Practicar cálculo de complejidad temporal en ejercicios básicos"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Algoritmos de Búsqueda",
+          "pomodoros": [
+            "Pomodoro 1: Implementar búsqueda lineal paso a paso en C",
+            "Pomodoro 2: Dominar búsqueda binaria y sus pre-condiciones (array ordenado)",
+            "Pomodoro 3: Comparar eficiencia práctica entre ambos enfoques",
+            "Pomodoro 4: Crear visualización mental del proceso de búsqueda binaria"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Algoritmos de Ordenamiento Básicos",
+          "pomodoros": [
+            "Pomodoro 1: Implementar Bubble Sort entendiendo cada intercambio",
+            "Pomodoro 2: Crear Selection Sort identificando mínimos secuenciales",
+            "Pomodoro 3: Comparar comportamiento de ambos algoritmos con arrays pequeños",
+            "Pomodoro 4: Medir tiempo de ejecución empírica en diferentes tamaños"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Desarrollo del Problem Set 3",
+          "pomodoros": [
+            "Pomodoro 1: Analizar requisitos del Problem Set 3 (algoritmos de ordenamiento)",
+            "Pomodoro 2: Elegir algoritmo apropiado según especificaciones del problema",
+            "Pomodoro 3: Implementar solución optimizada del Problem Set",
+            "Pomodoro 4: Depurar y verificar correctitud con casos edge"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Optimización y Reflexión Algorítmica",
+          "pomodoros": [
+            "Pomodoro 1: Finalizar y optimizar Problem Set 3 completamente",
+            "Pomodoro 2: Experimentar con tamaños grandes para observar diferencias",
+            "Pomodoro 3: Reflexionar sobre importancia de elección de algoritmos",
+            "Pomodoro 4: Redactar entrada del DMA sobre complejidad y enseñanza"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 7,
+      "titulo": "CS50 - Semana 4: Memoria",
+      "modulo": 2,
+      "objetivos": [
+        "Comprender el manejo de memoria, punteros y estructuras de datos dinámicas.",
+        "Dominar conceptos de stack, heap y gestión manual de memoria."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 4: Punteros, memoria dinámica, estructuras.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 4 de CS50.",
+        "Resolver el Problem Set 4 (manipulación de imágenes, recovery)."
+      ],
+      "entregables": "Séptima entrada del DMA sobre la experiencia con punteros y memoria.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Introducción a la Gestión de Memoria",
+          "pomodoros": [
+            "Pomodoro 1: Ver Lecture 4 de CS50 - Memoria, punteros y dirección",
+            "Pomodoro 2: Entender diferencia entre stack y heap en gestión de memoria",
+            "Pomodoro 3: Visualizar layout de memoria de un programa en ejecución",
+            "Pomodoro 4: Practicar con herramientas de debugging para inspección de memoria"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Fundamentos de Punteros",
+          "pomodoros": [
+            "Pomodoro 1: Dominar sintaxis de declaración y desreferenciación de punteros",
+            "Pomodoro 2: Practicar operador & (dirección) y * (desreferencia)",
+            "Pomodoro 3: Implementar intercambio de variables usando punteros",
+            "Pomodoro 4: Crear funciones que modifiquen parámetros por referencia"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Memoria Dinámica y Malloc",
+          "pomodoros": [
+            "Pomodoro 1: Entender malloc(), free() y su importancia en gestión dinámica",
+            "Pomodoro 2: Implementar arrays dinámicos con asignación manual",
+            "Pomodoro 3: Practicar detección y prevención de memory leaks",
+            "Pomodoro 4: Crear programa que redimensione arrays dinámicamente"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Desarrollo del Problem Set 4",
+          "pomodoros": [
+            "Pomodoro 1: Analizar requisitos del Problem Set 4 (manipulación de imágenes)",
+            "Pomodoro 2: Entender estructuras de datos para archivos BMP",
+            "Pomodoro 3: Implementar lógica de procesamiento pixel por pixel",
+            "Pomodoro 4: Depurar problemas de acceso a memoria y punteros"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Recuperación de Datos y Reflexión",
+          "pomodoros": [
+            "Pomodoro 1: Completar ejercicio de recovery de archivos eliminados",
+            "Pomodoro 2: Entender forense digital básico y estructura de filesystems",
+            "Pomodoro 3: Reflexionar sobre complejidad de programación de sistemas",
+            "Pomodoro 4: Redactar entrada del DMA sobre punteros y su relevancia educativa"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 8,
+      "titulo": "CS50 - Semana 5: Estructuras de Datos",
+      "modulo": 2,
+      "objetivos": [
+        "Implementar estructuras de datos complejas: listas enlazadas, árboles, hash tables.",
+        "Comprender trade-offs entre diferentes estructuras de datos."
+      ],
+      "tematica": "CS50's Introduction to Computer Science - Semana 5: Listas enlazadas, árboles, hash tables.",
+      "actividades": [
+        "Completar las clases y materiales de la Semana 5 de CS50.",
+        "Resolver el Problem Set 5 (spell checker con hash table)."
+      ],
+      "entregables": "Octava entrada del DMA documentando el proceso de implementar estructuras de datos complejas.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de CS50 - Semana 5: Estructuras de Datos",
+          "pomodoros": [
+            "Estudiar modelos de datos y diseño de esquemas",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre cs50 - semana 5: estructuras de datos",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Completar las clases y materiales de la Semana 5 de CS50.",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Octava entrada del DMA documentando el proceso de implementar estructuras de datos complejas. Análisis de cómo esta expe...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    },
+    {
+      "numero": 9,
+      "titulo": "Migración a Linux y Configuración del Laboratorio",
+      "modulo": 3,
+      "objetivos": [
+        "Aplicar los nuevos conocimientos para construir la propia estación de desarrollo profesional desde cero.",
+        "Dominar el entorno Linux y las herramientas de desarrollo."
+      ],
+      "tematica": "Montaje físico, instalación de Linux Mint XFCE, configuración completa del entorno de desarrollo según el Manifiesto de Software.",
+      "actividades": [
+        "Montaje físico de la estación de trabajo (Mini PC + periféricos).",
+        "Creación del USB booteable con Linux Mint XFCE.",
+        "Instalación limpia y actualización completa del sistema operativo.",
+        "Instalación de todo el software del Manifiesto de Software.",
+        "Clonación de repositorios Ecosistema360 y mis-estudios-bachillerato desde GitHub."
+      ],
+      "entregables": "Entrada final del DMA de Fase 0: 'Proyecto Génesis: Construcción del Laboratorio de Desarrollo Linux', documentando cada paso, problema, solución y lección aprendida durante el proceso completo.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Migración a Linux y Configuración del Laboratorio",
+          "pomodoros": [
+            "Estudiar sintaxis y conceptos fundamentales de JavaScript",
+            "Revisar materiales teóricos y recursos clave",
+            "Tomar notas detalladas sobre migración a linux y configuración del laboratorio",
+            "Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Explorar herramientas y entorno de trabajo",
+            "Montaje físico de la estación de trabajo (Mini PC + periféricos).",
+            "Practicar con ejemplos guiados paso a paso",
+            "Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Aplicar metodología específica del tema",
+            "Resolver problemas de complejidad intermedia",
+            "Experimentar con técnicas avanzadas",
+            "Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Planificar y diseñar proyecto semanal",
+            "Implementar primera parte del proyecto",
+            "Desarrollar funcionalidades principales",
+            "Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Revisar y consolidar todo el aprendizaje de la semana",
+            "Completar entregables: Entrada final del DMA de Fase 0: 'Proyecto Génesis: Construcción del Laboratorio de Desarrollo Linux', documentando cada...",
+            "Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ],
+      "official_sources": []
+    }
+  ]
+}

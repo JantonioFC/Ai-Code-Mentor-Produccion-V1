@@ -1,0 +1,730 @@
+// AI CODE MENTOR - Sandbox Lesson Generation Endpoint 
+// MISIÓN 147 FASE 1: Corrige estructura de quizzes para eliminación de pre-resolución
+// MISIÓN 146.5 FASE 2: Genera lecciones con persistencia en Supabase
+// MISIÓN 147.6 COMPLETADA: Sistema de Prompts Contextuales - Meta-Prompts especializados por contexto pedagógico
+// MISIÓN 147.9 COMPLETADA: Reparación del Motor de Contexto Curricular
+// MISIÓN 147.12 COMPLETADA: Protocolo de Refuerzo de Directivas - Reglas No Negociables implementadas
+// MISIÓN 147.13 COMPLETADA: Corrección de Sintaxis en Meta-Prompts - Template Literals corregidos
+// MISIÓN 147.14 COMPLETADA: Reparación de la Lógica de Reemplazo de Plantillas - Reemplazo global implementado
+// 🚀 MISIÓN 154 COMPLETADA: INTEGRACIÓN DEL NÚCLEO RAG - Motor RAG completamente integrado
+//   ✅ retrieve_sources() integrado como primera operación del endpoint
+//   ✅ Prompt Augmentation con contexto curricular completo y autoritativo
+//   ✅ Reemplazo completo de lógica heredada curriculumMap por Motor RAG
+//   ✅ Meta-prompts enriquecidos con información curricular detallada
+//   ✅ Logging RAG específico para observabilidad completa
+//   ✅ Retrocompatibilidad preservada para casos sin parámetros de contexto
+// 🚀 MISIÓN 166 COMPLETADA: INTEGRACIÓN ARM EXTERNO - ARM completamente funcional
+//   ✅ ARM (Módulo de Recuperación Activa) integrado con Motor RAG
+//   ✅ Cache Hit/Cache Miss → Recuperador → Extractor → Caché implementado
+//   ✅ Fuentes externas oficiales (URLs) enriquecen contexto curricular
+//   ✅ Meta-prompts ARM-Enhanced con contenido de URLs oficiales
+//   ✅ Tabla source_content_cache para persistencia de contenido externo
+//   ✅ Fallback resiliente: ARM falla → contexto básico RAG se mantiene
+
+import { withOptionalAuth } from '../../utils/authMiddleware';
+import { getAuthenticatedSupabaseFromRequest } from '../../lib/supabaseServerAuth.js';
+// 🚀 MISIÓN 154: INTEGRACIÓN MOTOR RAG
+import { retrieve_sources } from '../../lib/rag/retrieve-sources.js';
+
+// MISIÓN 154: FUNCIÓN DEPRECADA - Reemplazada por Motor RAG retrieve_sources()
+// Mantenida solo para retrocompatibilidad en casos sin parámetros de contexto
+const getCurriculumInfoLegacy = (semanaId) => {
+  console.warn(`⚠️ [LEGACY] Usando curriculumMap estático para semana ${semanaId} (sin contexto RAG)`);
+  
+  // Mapeo básico heredado - Solo para fallback
+  const curriculumMap = {
+    1: { tema: "Teoría y Ética de IA", fase: "Fase 0: Cimentación del Arquitecto" },
+    2: { tema: "Práctica de Diseño de Prompts", fase: "Fase 0: Cimentación del Arquitecto" },
+    3: { tema: "CS50 - Semana 0: Introducción", fase: "Fase 0: Cimentación del Arquitecto" },
+    25: { tema: "Programación Orientada a Objetos - Conceptos Fundamentales", fase: "Fase 1: Fundamentos de Programación" },
+    50: { tema: "Fundamentos de Node.js - Profundización", fase: "Fase 3: Desarrollo Backend Profesional" },
+    75: { tema: "Fundamentos de Cloud Computing (AWS/GCP)", fase: "Fase 4: DevOps y Cloud Computing" },
+    100: { tema: "Contribución Open Source y Crecimiento Continuo", fase: "Fase 7: Profesionalización y Crecimiento Continuo" },
+    default: { tema: "Desarrollo de Software", fase: "Ecosistema 360" }
+  };
+
+  return curriculumMap[semanaId] || curriculumMap.default;
+};
+
+// MISIÓN 154 + 166: FUNCIÓN RAG + ARM EXTERNO - Obtiene contexto curricular con fuentes externas
+const getCurriculumInfoRAG = async (semanaId) => {
+  try {
+    console.log(`🔍 [RAG+ARM] Recuperando contexto curricular con fuentes externas para semana ${semanaId}...`);
+    
+    // PRIMERA OPERACIÓN: Invocar Motor RAG + ARM Externo (includeExternalSources = true)
+    const ragContext = await retrieve_sources(semanaId, true);
+    
+    console.log(`✅ [RAG+ARM] Contexto recuperado exitosamente:`);
+    console.log(`   📚 Título: "${ragContext.weekTitle}"`);
+    console.log(`   🎯 Fase: ${ragContext.phase} - ${ragContext.phaseTitle}`);
+    console.log(`   📘 Módulo: ${ragContext.module} - ${ragContext.moduleTitle}`);
+    console.log(`   🏷️ Enfoque Pedagógico: ${ragContext.pedagogicalApproach}`);
+    console.log(`   📊 Nivel Dificultad: ${ragContext.difficultyLevel}`);
+    console.log(`   📋 Objetivos: ${ragContext.objectives.length}`);
+    console.log(`   📦 Recursos: ${ragContext.resources.length}`);
+    console.log(`   🎓 Prerequisitos: ${ragContext.prerequisites.length}`);
+    
+    // MISIÓN 166: Logging ARM específico
+    if (ragContext.armStatus === 'enriched' && ragContext.externalSources?.length > 0) {
+      console.log(`   🌐 [ARM] Fuentes externas: ${ragContext.externalSources.length} procesadas`);
+      console.log(`   ⚡ [ARM] Cache hits: ${ragContext.armMetadata.cacheHits}/${ragContext.armMetadata.totalUrls}`);
+      console.log(`   🕐 [ARM] Tiempo total: ${ragContext.armMetadata.totalProcessTimeMs}ms`);
+      
+      ragContext.externalSources.forEach((source, index) => {
+        console.log(`      ${index + 1}. ${source.type}: ${source.name} (${source.fromCache ? 'cached' : 'fresh'})`);
+      });
+    } else if (ragContext.armStatus === 'no-external-sources') {
+      console.log(`   ℹ️ [ARM] No hay fuentes externas para esta semana`);
+    } else if (ragContext.armStatus === 'error') {
+      console.warn(`   ⚠️ [ARM] Error procesando fuentes externas: ${ragContext.armError}`);
+    }
+    
+    // Devolver formato compatible con función legacy
+    return {
+      tema: ragContext.weekTitle,
+      fase: `Fase ${ragContext.phase}: ${ragContext.phaseTitle.replace(/^Fase \d+: /, '')}`,
+      // Contexto RAG enriquecido adicional
+      ragContext: ragContext
+    };
+    
+  } catch (error) {
+    console.error(`❌ [RAG ERROR] Error recuperando contexto para semana ${semanaId}:`, error.message);
+    
+    // Fallback a función legacy en caso de error RAG
+    console.warn(`🔄 [FALLBACK] Usando curriculumMap legacy para semana ${semanaId}`);
+    return getCurriculumInfoLegacy(semanaId);
+  }
+};
+
+// Función para obtener propósito del pomodoro según su índice
+const getPomodoroContext = (pomodoroIndex) => {
+  // Mapeo basado en la estructura del WeeklySchedule
+  const pomodoroContextMap = {
+    0: {
+      tipo: "teorico",
+      proposito: "Estudio del concepto teórico del día - Adquisición de conocimiento fundamental"
+    },
+    1: {
+      tipo: "teorico", 
+      proposito: "Práctica guiada y experimentación con el código - Consolidación teórica"
+    },
+    2: {
+      tipo: "evaluativo",
+      proposito: "Resolución de ejercicios nuevos - Aplicación práctica de conocimientos"
+    },
+    3: {
+      tipo: "evaluativo",
+      proposito: "Continuación de problemas y revisión - Integración y evaluación"
+    }
+  };
+
+  return pomodoroContextMap[pomodoroIndex] || pomodoroContextMap[0];
+};
+
+// MISIÓN 154: META-PROMPT TEÓRICO RAG-ENHANCED v2.0 - Para pomodoros 0 y 1 (Adquisición de Conocimiento)
+// Enriquecido con contexto curricular completo del Motor RAG
+const META_PROMPT_TEORICO_RAG = `
+Actúa como un mentor y arquitecto de sistemas senior del "Ecosistema 360".
+Tu tarea es generar el contenido para un micro-módulo de estudio.
+
+**CONTEXTO CURRICULAR AUTORITATIVO (Motor RAG):**
+Semana {SEMANA_ID}: {TEMA_DE_LA_SEMANA}
+Fase Curricular: {FASE_CURRICULAR} 
+Módulo: {MODULO_TITULO}
+Enfoque Pedagógico: {ENFOQUE_PEDAGOGICO}
+Nivel de Dificultad: {NIVEL_DIFICULTAD}
+Objetivo Específico de este Bloque: {PROPOSITO_DEL_POMODORO}
+
+**OBJETIVOS PEDAGÓGICOS DE LA SEMANA:**
+{OBJETIVOS_SEMANA}
+
+**TEMÁTICA ESPECÍFICA:**
+{TEMATICA_DETALLADA}
+
+**ACTIVIDADES PROGRAMADAS:**
+{ACTIVIDADES_SEMANA}
+
+**PREREQUISITOS CURRICULARES:**
+{PREREQUISITOS_CONTEXTO}
+
+**FUENTES OFICIALES EXTERNAS (ARM):**
+{FUENTES_EXTERNAS_ARM}
+
+**Reglas No Negociables:**
+1.  **RESTRICCIÓN DE TEMA:** Todo el contenido que generes, tanto la lección como los ejercicios, debe estar **estricta y exclusivamente** relacionado con el **"Tema Principal de la Semana"** (\`{TEMA_DE_LA_SEMANA}\`).
+2.  **ALINEACIÓN CURRICULAR:** El contenido debe alinearse perfectamente con los objetivos pedagógicos, el nivel de dificultad ({NIVEL_DIFICULTAD}) y el enfoque ({ENFOQUE_PEDAGOGICO}) especificados.
+3.  **COHERENCIA DE PREREQUISITOS:** Considera los prerequisitos curriculares mencionados para asegurar progresión pedagógica apropiada.
+4.  **PROHIBICIÓN DE TEMAS EXTERNOS:** Queda terminantemente prohibido introducir o generar contenido sobre cualquier otro tema, aunque esté vagamente relacionado.
+5.  **VALIDACIÓN:** Antes de responder, verifica internamente que tu contenido cumple al 100% con todas las restricciones.
+
+**TAREA PRINCIPAL:**
+
+1. Genera el "Contenido de la Lección":
+Crea un contenido sustancial que cumpla estrictamente con el Objetivo Específico y los objetivos pedagógicos de la semana.
+- Profundidad: El contenido debe ser adecuado para 45 minutos de estudio (500-700 palabras), ajustado al nivel de dificultad {NIVEL_DIFICULTAD}.
+- Estructura: Organízalo con subtítulos claros que reflejen el enfoque {ENFOQUE_PEDAGOGICO}.
+- Componentes Obligatorios: Debe incluir explicaciones conceptuales alineadas con la temática, al menos dos ejemplos prácticos específicos al tema (código si aplica), y una analogía que facilite la comprensión.
+- Contexto Pedagógico: Integra sutilmente referencias a los prerequisitos cuando sea apropiado.
+
+2. Genera los "Ejercicios de Práctica":
+A continuación, genera un quiz de 3 preguntas de opción múltiple para evaluar la comprensión del contenido, adaptadas al nivel de dificultad especificado.
+
+Formato de Salida Obligatorio: Devuelve un único objeto JSON. La lección en 'content.lesson' y el quiz en 'content.quiz'. El quiz debe seguir la estructura: [{ "question": "...", "options": [...], "correctAnswerIndex": N, "explanation": "..." }].
+`;
+
+// MISIÓN 154: META-PROMPT EVALUATIVO RAG-ENHANCED v2.0 - Para pomodoros 2 y 3 (Aplicación y Resolución de Problemas)  
+// Enriquecido con contexto curricular completo del Motor RAG
+const META_PROMPT_EVALUATIVO_RAG = `
+Actúa como un examinador que diseña evaluaciones para validar la comprensión y aplicación del conocimiento dentro del "Ecosistema 360".
+
+**CONTEXTO CURRICULAR AUTORITATIVO (Motor RAG):**
+Semana {SEMANA_ID}: {TEMA_DE_LA_SEMANA}
+Fase Curricular: {FASE_CURRICULAR}
+Módulo: {MODULO_TITULO}
+Enfoque Pedagógico: {ENFOQUE_PEDAGOGICO}
+Nivel de Dificultad: {NIVEL_DIFICULTAD}
+Objetivo Específico de este Bloque: {PROPOSITO_DEL_POMODORO}
+
+**OBJETIVOS PEDAGÓGICOS DE LA SEMANA:**
+{OBJETIVOS_SEMANA}
+
+**TEMÁTICA ESPECÍFICA:**
+{TEMATICA_DETALLADA}
+
+**ENTREGABLES ESPERADOS:**
+{ENTREGABLES_SEMANA}
+
+**PREREQUISITOS CURRICULARES:**
+{PREREQUISITOS_CONTEXTO}
+
+**Reglas No Negociables:**
+1.  **RESTRICCIÓN DE TEMA:** Todo el contenido que generes, tanto la lección como los ejercicios, debe estar **estricta y exclusivamente** relacionado con el **"Tema Principal de la Semana"** (\`{TEMA_DE_LA_SEMANA}\`).
+2.  **EVALUACIÓN CONTEXTUAL:** Las preguntas deben evaluar específicamente los objetivos pedagógicos definidos para esta semana.
+3.  **NIVEL APROPIADO:** La complejidad debe corresponder exactamente al nivel de dificultad {NIVEL_DIFICULTAD} y enfoque {ENFOQUE_PEDAGOGICO}.
+4.  **APLICACIÓN REAL:** Incluye escenarios que reflejen los entregables esperados de la semana.
+5.  **PROGRESIÓN CURRICULAR:** Considera los prerequisitos para crear preguntas que demuestren progresión apropiada.
+6.  **VALIDACIÓN:** Antes de responder, verifica internamente que tu contenido cumple al 100% con todas las restricciones.
+
+**TAREA PRINCIPAL:**
+
+Tu tarea es generar exclusivamente una sección de "Ejercicios de Práctica".
+Genera un quiz de 3 preguntas de opción múltiple sobre el tema principal, específicamente diseñadas para evaluar los objetivos pedagógicos de la semana. Estas preguntas deben evaluar diferentes niveles de comprensión, siguiendo la Taxonomía de Bloom y adaptadas al nivel {NIVEL_DIFICULTAD}:
+
+1.  Una pregunta de 'Recordar' - enfocada en conceptos clave del tema principal.
+2.  Una pregunta de 'Comprender' - que evalúe la comprensión profunda de los objetivos pedagógicos.
+3.  Una pregunta de 'Aplicar' o 'Analizar' - presentando un escenario realista relacionado con los entregables esperados.
+
+Para cada pregunta, las opciones incorrectas (distractores) deben ser plausibles y relacionarse con errores comunes en este nivel de dificultad, considerando el contexto de prerequisitos.
+
+Formato de Salida Obligatorio: Devuelve un único objeto JSON. El quiz en 'content.quiz' y el campo 'content.lesson' debe contener un texto breve que introduzca los ejercicios en el contexto curricular apropiado. El quiz debe seguir la estructura: [{ "question": "...", "options": [...], "correctAnswerIndex": N, "explanation": "..." }].
+`;
+
+// MISIÓN 154: FUNCIÓN PRINCIPAL RAG-ENHANCED - Genera prompt con contexto curricular completo
+const generateContextualPromptRAG = async (semanaId, pomodoroIndex, inputText) => {
+  console.log(`🚀 [RAG PROMPT] Iniciando generación de prompt contextual para semana ${semanaId}, pomodoro ${pomodoroIndex}`);
+  
+  try {
+    // PASO 1: Obtener contexto curricular completo del Motor RAG
+    const curriculumInfo = await getCurriculumInfoRAG(semanaId);
+    const pomodoroContext = getPomodoroContext(pomodoroIndex);
+    
+    // PASO 2: Seleccionar plantilla RAG-Enhanced según pomodoroIndex
+    let selectedPrompt;
+    if (pomodoroIndex === 0 || pomodoroIndex === 1) {
+      selectedPrompt = META_PROMPT_TEORICO_RAG;
+      console.log(`🎯 [RAG] Prompt seleccionado: META_PROMPT_TEORICO_RAG para pomodoro ${pomodoroIndex} (Adquisición de Conocimiento)`);
+    } else if (pomodoroIndex === 2 || pomodoroIndex === 3) {
+      selectedPrompt = META_PROMPT_EVALUATIVO_RAG;
+      console.log(`🎯 [RAG] Prompt seleccionado: META_PROMPT_EVALUATIVO_RAG para pomodoro ${pomodoroIndex} (Aplicación y Resolución de Problemas)`);
+    } else {
+      selectedPrompt = META_PROMPT_TEORICO_RAG;
+      console.warn(`⚠️ [RAG] pomodoroIndex ${pomodoroIndex} fuera de rango, usando META_PROMPT_TEORICO_RAG por defecto`);
+    }
+    
+    // PASO 3: Construir contexto enriquecido si tenemos información RAG
+    let enrichedPrompt;
+    if (curriculumInfo.ragContext) {
+      const ragCtx = curriculumInfo.ragContext;
+      
+      // Construir strings contextuales para el prompt
+      const objetivosText = ragCtx.objectives && ragCtx.objectives.length > 0 
+        ? ragCtx.objectives.map((obj, i) => `${i + 1}. ${obj}`).join('\n')
+        : 'Objetivos específicos definidos en el currículum para esta semana.';
+        
+      const actividadesText = ragCtx.activities && ragCtx.activities.length > 0
+        ? ragCtx.activities.map((act, i) => `${i + 1}. ${act}`).join('\n')
+        : 'Actividades específicas programadas para esta semana.';
+        
+      const prerequisitosText = ragCtx.prerequisites && ragCtx.prerequisites.length > 0
+        ? ragCtx.prerequisites.map(prereq => `• Semana ${prereq.weekId}: ${prereq.title}`).join('\n')
+        : 'Esta es una semana inicial sin prerequisitos específicos.';
+        
+      // MISIÓN 166: Construir texto de fuentes externas ARM
+      const fuentesExternasText = ragCtx.externalSources && ragCtx.externalSources.length > 0
+        ? ragCtx.externalSources.map((source, index) => {
+            const contentPreview = source.content ? source.content.substring(0, 500) + '...' : '';
+            return `${index + 1}. **${source.name}** (${source.type}):\n   Fuente: ${source.url}\n   Contenido relevante extraído: ${contentPreview}`;
+          }).join('\n\n')
+        : 'No hay fuentes externas disponibles para esta semana.';
+      
+      // PASO 4: Poblar plantilla RAG + ARM con contexto completo (reemplazo global)
+      enrichedPrompt = selectedPrompt
+        .replace(/{SEMANA_ID}/g, semanaId.toString())
+        .replace(/{TEMA_DE_LA_SEMANA}/g, ragCtx.weekTitle)
+        .replace(/{FASE_CURRICULAR}/g, `Fase ${ragCtx.phase}: ${ragCtx.phaseTitle}`)
+        .replace(/{MODULO_TITULO}/g, `Módulo ${ragCtx.module}: ${ragCtx.moduleTitle}`)
+        .replace(/{ENFOQUE_PEDAGOGICO}/g, ragCtx.pedagogicalApproach)
+        .replace(/{NIVEL_DIFICULTAD}/g, ragCtx.difficultyLevel)
+        .replace(/{PROPOSITO_DEL_POMODORO}/g, pomodoroContext.proposito)
+        .replace(/{OBJETIVOS_SEMANA}/g, objetivosText)
+        .replace(/{TEMATICA_DETALLADA}/g, ragCtx.mainTopic || ragCtx.weekTitle)
+        .replace(/{ACTIVIDADES_SEMANA}/g, actividadesText)
+        .replace(/{ENTREGABLES_SEMANA}/g, ragCtx.deliverables || 'Entregables específicos según currículum.')
+        .replace(/{PREREQUISITOS_CONTEXTO}/g, prerequisitosText)
+        .replace(/{FUENTES_EXTERNAS_ARM}/g, fuentesExternasText);
+        
+      console.log(`✅ [RAG] Prompt enriquecido con contexto curricular completo:`);
+      console.log(`   📚 Semana: ${ragCtx.weekTitle}`);
+      console.log(`   🎯 Enfoque: ${ragCtx.pedagogicalApproach}`);
+      console.log(`   📊 Nivel: ${ragCtx.difficultyLevel}`);
+      console.log(`   📋 Objetivos: ${ragCtx.objectives.length} específicos`);
+      console.log(`   🔗 Prerequisitos: ${ragCtx.prerequisites.length} previos`);
+      
+    } else {
+      // Fallback: usar información básica del curriculum legacy
+      console.warn(`⚠️ [RAG FALLBACK] Sin contexto RAG, usando información básica`);
+      enrichedPrompt = selectedPrompt
+        .replace(/{SEMANA_ID}/g, semanaId.toString())
+        .replace(/{TEMA_DE_LA_SEMANA}/g, curriculumInfo.tema)
+        .replace(/{FASE_CURRICULAR}/g, curriculumInfo.fase)
+        .replace(/{MODULO_TITULO}/g, 'Módulo específico del currículum')
+        .replace(/{ENFOQUE_PEDAGOGICO}/g, 'Enfoque pedagógico apropiado')
+        .replace(/{NIVEL_DIFICULTAD}/g, 'Nivel apropiado para la semana')
+        .replace(/{PROPOSITO_DEL_POMODORO}/g, pomodoroContext.proposito)
+        .replace(/{OBJETIVOS_SEMANA}/g, 'Objetivos específicos para esta semana')
+        .replace(/{TEMATICA_DETALLADA}/g, curriculumInfo.tema)
+        .replace(/{ACTIVIDADES_SEMANA}/g, 'Actividades específicas programadas')
+        .replace(/{ENTREGABLES_SEMANA}/g, 'Entregables específicos de la semana')
+        .replace(/{PREREQUISITOS_CONTEXTO}/g, 'Prerequisitos apropiados para la progresión')
+        .replace(/{FUENTES_EXTERNAS_ARM}/g, 'No hay fuentes externas disponibles.');
+    }
+    
+    console.log(`🔧 [RAG] Contexto pedagógico aplicado:`);
+    console.log(`   - Semana ${semanaId}: ${curriculumInfo.tema}`);
+    console.log(`   - Fase: ${curriculumInfo.fase}`);
+    console.log(`   - Pomodoro ${pomodoroIndex}: ${pomodoroContext.proposito}`);
+    console.log(`   - Tipo de prompt: ${pomodoroContext.tipo} (RAG-Enhanced)`);
+    
+    return enrichedPrompt;
+    
+  } catch (error) {
+    console.error(`❌ [RAG ERROR] Error generando prompt contextual:`, error.message);
+    
+    // Fallback completo: usar función legacy original
+    console.warn(`🔄 [COMPLETE FALLBACK] Usando generateContextualPromptLegacy`);
+    return generateContextualPromptLegacy(semanaId, pomodoroIndex, inputText);
+  }
+};
+
+// FUNCIÓN LEGACY PRESERVADA para casos de fallback
+const generateContextualPromptLegacy = (semanaId, pomodoroIndex, inputText) => {
+  console.warn(`⚠️ [LEGACY PROMPT] Generando prompt con curriculumMap estático`);
+  
+  const curriculumInfo = getCurriculumInfoLegacy(semanaId);
+  const pomodoroContext = getPomodoroContext(pomodoroIndex);
+  
+  // Meta-prompts originales (versiones básicas)
+  const META_PROMPT_TEORICO_BASIC = `
+Actúa como un mentor y arquitecto de sistemas senior del "Ecosistema 360".
+Tu tarea es generar el contenido para un micro-módulo de estudio.
+
+Tema Principal de la Semana: {TEMA_DE_LA_SEMANA}
+Objetivo Específico de este Bloque: {PROPOSITO_DEL_POMODORO}
+
+1. Genera el "Contenido de la Lección":
+- Profundidad: 500-700 palabras para 45 minutos de estudio.
+- Estructura: Subtítulos claros + explicaciones conceptuales.
+- Componentes: 2+ ejemplos prácticos + analogía obligatoria.
+
+2. Genera los "Ejercicios de Práctica":
+Quiz de 3 preguntas de opción múltiple para evaluación.
+
+Formato: content.lesson y content.quiz en JSON estructurado.
+`;
+
+  const META_PROMPT_EVALUATIVO_BASIC = `
+Actúa como un examinador que diseña evaluaciones para validar comprensión del "Ecosistema 360".
+
+Tema Principal de la Semana: {TEMA_DE_LA_SEMANA}
+Objetivo Específico de este Bloque: {PROPOSITO_DEL_POMODORO}
+
+Genera quiz de 3 preguntas con Taxonomía de Bloom:
+1. Pregunta de 'Recordar'
+2. Pregunta de 'Comprender'  
+3. Pregunta de 'Aplicar/Analizar' con escenario
+
+Formato: content.quiz y content.lesson (introducción breve) en JSON.
+`;
+
+  let selectedPrompt = pomodoroIndex === 0 || pomodoroIndex === 1 
+    ? META_PROMPT_TEORICO_BASIC 
+    : META_PROMPT_EVALUATIVO_BASIC;
+  
+  return selectedPrompt
+    .replace(/{TEMA_DE_LA_SEMANA}/g, curriculumInfo.tema)
+    .replace(/{PROPOSITO_DEL_POMODORO}/g, pomodoroContext.proposito);
+};
+
+// Función de validación mejorada para nueva estructura
+const validateExerciseStructure = (exercise) => {
+  return exercise && 
+         typeof exercise === 'object' && 
+         exercise.question && 
+         exercise.type === 'multiple_choice' && 
+         Array.isArray(exercise.options) && 
+         exercise.options.length === 4 &&
+         typeof exercise.correctAnswerIndex === 'number' &&
+         exercise.correctAnswerIndex >= 0 &&
+         exercise.correctAnswerIndex <= 3 &&
+         exercise.explanation;
+};
+
+// Handler principal
+async function handler(req, res) {
+  // Verificar método HTTP
+  if (req.method !== 'POST') {
+    return res.status(405).json({ 
+      error: 'Método no permitido',
+      message: 'Este endpoint solo acepta solicitudes POST' 
+    });
+  }
+
+  try {
+    const { text, semanaId, diaIndex, pomodoroIndex } = req.body;
+
+    // Validación de entrada básica
+    if (!text) {
+      return res.status(400).json({ 
+        error: 'Texto requerido',
+        message: 'El campo "text" es obligatorio' 
+      });
+    }
+
+    if (typeof text !== 'string') {
+      return res.status(400).json({ 
+        error: 'Formato inválido',
+        message: 'El campo "text" debe ser una cadena de texto' 
+      });
+    }
+
+    if (text.trim().length < 10) {
+      return res.status(400).json({ 
+        error: 'Texto muy corto',
+        message: 'El texto debe tener al menos 10 caracteres' 
+      });
+    }
+
+    if (text.length > 10000) {
+      return res.status(400).json({ 
+        error: 'Texto muy largo',
+        message: 'El texto no puede exceder 10,000 caracteres' 
+      });
+    }
+
+    // VALIDACIÓN: Parámetros de ubicación para persistencia y contexto
+    const hasLocationParams = semanaId !== undefined && diaIndex !== undefined && pomodoroIndex !== undefined;
+
+    if (hasLocationParams) {
+      // Si se proporcionan parámetros de ubicación, validarlos
+      if (!Number.isInteger(semanaId) || semanaId < 1) {
+        return res.status(400).json({
+          error: 'semanaId inválido',
+          message: 'semanaId debe ser un entero positivo'
+        });
+      }
+
+      if (!Number.isInteger(diaIndex) || diaIndex < 0 || diaIndex > 4) {
+        return res.status(400).json({
+          error: 'diaIndex inválido', 
+          message: 'diaIndex debe ser un entero entre 0 y 4'
+        });
+      }
+
+      if (!Number.isInteger(pomodoroIndex) || pomodoroIndex < 0 || pomodoroIndex > 3) {
+        return res.status(400).json({
+          error: 'pomodoroIndex inválido',
+          message: 'pomodoroIndex debe ser un entero entre 0 y 3'
+        });
+      }
+    }
+
+    // Verificar API key de Gemini
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      console.error('❌ API key de Gemini no configurada');
+      return res.status(500).json({ 
+        error: 'Configuración del servidor',
+        message: 'API de IA no configurada correctamente' 
+      });
+    }
+
+    const { isAuthenticated, userId } = req.authContext;
+
+    console.log(`🧪 Generando lección${hasLocationParams ? ` RAG-contextual para semana ${semanaId}, día ${diaIndex}, pomodoro ${pomodoroIndex}` : ''} (${text.length} caracteres)`);
+
+    // MISIÓN 154: GENERAR PROMPT CON MOTOR RAG INTEGRADO
+    let prompt;
+    if (hasLocationParams) {
+      // 🚀 NUEVA RUTA: Usar Motor RAG para prompt contextual enriquecido
+      console.log(`🚀 [RAG INTEGRATION] Iniciando generación con Motor RAG...`);
+      prompt = await generateContextualPromptRAG(semanaId, pomodoroIndex, text.trim());
+      console.log(`✅ [RAG] Usando prompt contextual RAG-Enhanced`);
+    } else {
+      // Fallback al prompt genérico para retrocompatibilidad
+      console.log(`⚠️ Sin parámetros de contexto, usando prompt genérico`);
+      prompt = `Actúa como un diseñador instruccional experto creando un micro-módulo de aprendizaje para un estudiante autodidacta a partir del siguiente texto. Tu respuesta debe ser estrictamente en formato JSON.
+
+TEXTO DEL USUARIO:
+"""
+${text.trim()}
+"""
+
+Basado en el texto anterior, genera el siguiente contenido estructurado en un objeto JSON con las claves "title", "lesson", y "exercises":
+
+1.  "title": Un título conciso y atractivo para la lección.
+2.  "lesson": Un resumen explicativo del texto en no más de 200 palabras, manteniendo un tono claro y didáctico.
+3.  "exercises": Un array de 3 objetos de ejercicio, donde cada objeto debe tener las siguientes claves:
+    * "question": Una pregunta que ponga a prueba la comprensión del texto.
+    * "type": El tipo de ejercicio. Debe ser 'multiple_choice'.
+    * "options": Un array de 4 strings con posibles respuestas (opciones A, B, C, D).
+    * "correctAnswerIndex": Un número entero (0, 1, 2, o 3) que indica el índice de la respuesta correcta en el array options.
+    * "explanation": Una breve explicación de por qué la respuesta es correcta.
+
+IMPORTANTE: 
+- Las opciones deben estar ordenadas lógicamente y ser plausibles
+- El correctAnswerIndex debe ser un número entero, NO un string
+- NO incluyas la palabra "correctAnswer" - solo usa "correctAnswerIndex"
+- Los ejercicios deben ser específicos al contenido del texto proporcionado
+
+Responde SOLO con el objeto JSON válido, sin texto adicional.`;
+    }
+
+    // 🚨 MISIÓN 154: LOGGING DEBUG RAG - Mostrar prompt RAG-enhanced antes de envío
+    console.log(`\n🔍 [DEBUG RAG INTEGRATION] PROMPT RAG-ENHANCED A ENVIAR A GEMINI:`);
+    console.log(`================== INICIO PROMPT RAG ==================`);
+    console.log(prompt);
+    console.log(`================== FIN PROMPT RAG ===================\n`);
+    
+    // Verificar que las variables RAG se reemplazaron correctamente
+    if (hasLocationParams && prompt.includes('{')) {
+      const unreplacedVars = prompt.match(/{[A-Z_]+}/g);
+      if (unreplacedVars) {
+        console.error(`❌ [RAG ERROR CRÍTICO] Variables RAG no reemplazadas:`, unreplacedVars);
+      } else {
+        console.log(`✅ [RAG] Todas las variables contextuales reemplazadas exitosamente`);
+      }
+    }
+
+    // Llamar a la API de Gemini con prompt RAG-enhanced
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{ text: prompt }]
+        }],
+        generationConfig: {
+          maxOutputTokens: 1500,
+          temperature: 0.4,
+          candidateCount: 1
+        }
+      })
+    });
+
+    // Verificar respuesta de Gemini
+    if (!response.ok) {
+      console.error(`❌ Error de Gemini API: ${response.status} ${response.statusText}`);
+      return res.status(500).json({ 
+        error: 'Error del servicio de IA',
+        message: `La API de IA respondió con estado ${response.status}` 
+      });
+    }
+
+    const geminiData = await response.json();
+
+    // Verificar estructura de respuesta
+    if (!geminiData.candidates || !geminiData.candidates[0] || !geminiData.candidates[0].content) {
+      console.error('❌ Respuesta inesperada de Gemini:', geminiData);
+      return res.status(500).json({ 
+        error: 'Respuesta inválida de IA',
+        message: 'El servicio de IA no devolvió el formato esperado' 
+      });
+    }
+
+    const generatedText = geminiData.candidates[0].content.parts[0].text;
+
+    // Intentar parsear JSON de la respuesta
+    let lessonData;
+    try {
+      // Limpiar la respuesta para extraer solo el JSON
+      const jsonMatch = generatedText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        lessonData = JSON.parse(jsonMatch[0]);
+      } else {
+        // Si no hay JSON válido, crear estructura básica
+        lessonData = {
+          title: "Lección Generada",
+          lesson: generatedText,
+          exercises: []
+        };
+      }
+    } catch (parseError) {
+      console.warn('⚠️ No se pudo parsear JSON de Gemini, usando texto plano:', parseError.message);
+      // Fallback: crear estructura con el texto generado
+      lessonData = {
+        title: "Lección Generada",
+        lesson: generatedText,
+        exercises: []
+      };
+    }
+
+    // Procesamiento mejorado para manejar estructura JSON
+    let extractedLesson, extractedExercises;
+    
+    if (lessonData.content) {
+      // Formato nuevo: content.lesson y content.quiz
+      extractedLesson = lessonData.content.lesson || lessonData.lesson || generatedText;
+      extractedExercises = lessonData.content.quiz || lessonData.exercises || [];
+      console.log('✨ [RAG] Procesando respuesta con formato content.lesson/content.quiz');
+    } else {
+      // Formato legacy: lesson y exercises
+      extractedLesson = lessonData.lesson || generatedText;
+      extractedExercises = lessonData.exercises || [];
+      console.log('🔄 [RAG] Procesando respuesta con formato legacy lesson/exercises');
+    }
+
+    // MISIÓN 154: Construir respuesta enriquecida con contexto RAG
+    const cleanedLesson = {
+      title: lessonData.title || "Lección Generada",
+      lesson: extractedLesson,
+      exercises: Array.isArray(extractedExercises) ? 
+        extractedExercises.filter(ex => {
+          // Usar función de validación
+          const isValid = validateExerciseStructure(ex);
+          if (!isValid) {
+            console.warn('⚠️ Ejercicio descartado por estructura incorrecta:', {
+              hasQuestion: !!ex?.question,
+              hasType: ex?.type === 'multiple_choice',
+              hasOptions: Array.isArray(ex?.options) && ex?.options?.length === 4,
+              hasCorrectAnswerIndex: typeof ex?.correctAnswerIndex === 'number',
+              correctAnswerIndexInRange: ex?.correctAnswerIndex >= 0 && ex?.correctAnswerIndex <= 3,
+              hasExplanation: !!ex?.explanation
+            });
+          }
+          return isValid;
+        }).map(ex => ({
+          ...ex,
+          type: 'multiple_choice' // Asegurar que siempre tenga el tipo correcto
+        })) : [],
+      generatedAt: new Date().toISOString(),
+      inputLength: text.length,
+      // MISIÓN 154: Metadatos RAG enriquecidos
+      ...(hasLocationParams && {
+        semanaId,
+        diaIndex, 
+        pomodoroIndex,
+        contextInfo: {
+          // Intentar obtener contexto RAG para metadatos
+          curriculum: await getCurriculumInfoRAG(semanaId).catch(() => getCurriculumInfoLegacy(semanaId)),
+          pomodoroContext: getPomodoroContext(pomodoroIndex),
+          promptType: pomodoroIndex === 0 || pomodoroIndex === 1 ? 'teorico' : 'evaluativo',
+          ragEnabled: true,
+          ragVersion: 'v5.0'
+        }
+      })
+    };
+
+    // Log de validación de ejercicios
+    if (extractedExercises && extractedExercises.length > 0) {
+      const originalCount = extractedExercises.length;
+      const validCount = cleanedLesson.exercises.length;
+      console.log(`📊 [RAG] Validación ejercicios: ${validCount}/${originalCount} válidos con correctAnswerIndex`);
+      
+      // Log detallado de ejercicios válidos
+      cleanedLesson.exercises.forEach((ex, index) => {
+        console.log(`✅ Ejercicio ${index + 1}: correctAnswerIndex=${ex.correctAnswerIndex} → "${ex.options[ex.correctAnswerIndex]}"`);
+      });
+    }
+
+    // Persistir en base de datos si el usuario está autenticado y se proporcionaron parámetros de ubicación
+    if (isAuthenticated && hasLocationParams) {
+      try {
+        console.log(`💾 [RAG] Persistiendo lección RAG-contextual para usuario ${userId} en BD...`);
+        
+        const authenticatedSupabase = getAuthenticatedSupabaseFromRequest(req);
+        
+        // Insertar en tabla generated_content
+        const { data: savedContent, error: saveError } = await authenticatedSupabase
+          .from('generated_content')
+          .insert({
+            user_id: userId,
+            semana_id: semanaId,
+            dia_index: diaIndex,
+            pomodoro_index: pomodoroIndex,
+            content: cleanedLesson
+          })
+          .select()
+          .single();
+
+        if (saveError) {
+          console.error('⚠️ Error guardando en BD (continuando con respuesta):', saveError);
+          // No devolver error, solo log - la generación fue exitosa
+        } else {
+          console.log(`✅ [RAG] Lección RAG-contextual persistida con ID: ${savedContent.id}`);
+          cleanedLesson.savedToDatabase = true;
+          cleanedLesson.contentId = savedContent.id;
+        }
+
+      } catch (persistError) {
+        console.error('⚠️ Error en persistencia (continuando con respuesta):', persistError);
+        // No devolver error, solo log - la generación fue exitosa
+      }
+    }
+
+    // MISIÓN 154: Log diferenciado con información RAG
+    const promptTypeUsed = cleanedLesson.contextInfo?.promptType || 'genérico';
+    const ragInfo = cleanedLesson.contextInfo?.ragEnabled ? ' (RAG-Enhanced)' : '';
+    const contextualInfo = cleanedLesson.contextInfo?.curriculum ? 
+      ` - ${cleanedLesson.contextInfo.curriculum.tema}` : '';
+    
+    console.log(`✅ [RAG SUCCESS] Lección generada con Motor RAG integrado:`);
+    console.log(`   🎯 Prompt: ${promptTypeUsed}${ragInfo}`);
+    console.log(`   📚 Título: "${cleanedLesson.title}"`);
+    console.log(`   📝 Ejercicios: ${cleanedLesson.exercises.length} interactivos`);
+    console.log(`   💾 Persistencia: ${cleanedLesson.savedToDatabase ? 'BD' : 'No'}${contextualInfo}`);
+
+    // Respuesta exitosa con contexto RAG
+    res.status(200).json(cleanedLesson);
+
+  } catch (error) {
+    console.error('❌ [RAG ERROR] Error interno generando lección:', error);
+    
+    // Determinar tipo de error para respuesta apropiada
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      return res.status(500).json({ 
+        error: 'Error de conectividad',
+        message: 'No se pudo conectar con el servicio de IA' 
+      });
+    }
+
+    res.status(500).json({ 
+      error: 'Error interno del servidor',
+      message: 'Ocurrió un error inesperado al generar la lección'
+    });
+  }
+}
+
+// Aplicar middleware de autenticación opcional
+export default withOptionalAuth(handler);

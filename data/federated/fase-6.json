@@ -1,0 +1,609 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:22:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 89-96"
+  },
+  "fase": {
+    "numero": 6,
+    "titulo": "Integración y Preparación Profesional",
+    "duracion": "2 meses",
+    "semanaInicio": 89,
+    "semanaFin": 96,
+    "totalSemanas": 8,
+    "proposito": "Consolidar todo el conocimiento adquirido en un proyecto a gran escala (Capstone) que demuestre la totalidad de las competencias, y preparar activamente la inserción en el mercado laboral.",
+    "competenciasClave": [
+      "Diseño de arquitectura de sistemas complejos",
+      "Gestión de un proyecto de software de principio a fin",
+      "Optimización de un portfolio técnico profesional",
+      "Resolución de desafíos de código y preguntas de diseño de sistemas",
+      "Preparación integral para entrevistas técnicas"
+    ],
+    "proyectoIntegrador": "Diseño, desarrollo, despliegue y documentación de una aplicación Full-Stack completa y de nivel profesional (ej. plataforma de e-commerce, sistema de reservas)."
+  },
+  "modulos": [
+    {
+      "numero": 11,
+      "titulo": "Proyecto Capstone Full-Stack",
+      "semanas": [
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "proposito": "Síntesis de todo el aprendizaje en un proyecto de gran escala de nivel profesional.",
+      "competencias": [
+        "Arquitectura de sistemas complejos",
+        "Gestión de proyectos de software",
+        "Integración Full-Stack completa",
+        "Testing y QA integral",
+        "Deployment y operación profesional"
+      ]
+    },
+    {
+      "numero": 12,
+      "titulo": "Optimización de Portfolio y Preparación para Entrevistas",
+      "semanas": [
+        95,
+        96
+      ],
+      "proposito": "Preparación específica para la inserción en el mercado laboral.",
+      "competencias": [
+        "Portfolio técnico profesional",
+        "Resolución de problemas algorítmicos",
+        "Design systems y arquitectura",
+        "Comunicación técnica efectiva",
+        "Estrategias de búsqueda de empleo"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 89,
+      "titulo": "Diseño de Arquitectura y Planificación del Capstone",
+      "modulo": 11,
+      "objetivos": [
+        "Definir el alcance del proyecto Capstone",
+        "Diseñar una arquitectura de sistema robusta y escalable"
+      ],
+      "tematica": "Requerimientos funcionales y no funcionales, diseño de arquitectura, modelado de datos avanzado, planificación de proyecto",
+      "actividades": [
+        "Escribir documento de especificaciones del proyecto",
+        "Crear diagramas de arquitectura (C4 model, diagramas de secuencia)",
+        "Diseñar el esquema completo de la base de datos",
+        "Configurar el entorno del proyecto (repositorios, CI/CD inicial)"
+      ],
+      "entregables": "Documento de diseño de arquitectura (ARCHITECTURE.md) y plan de proyecto detallado en el DDE. Repositorio del proyecto inicializado con pipeline de CI básico.",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Diseño de Arquitectura y Planificación",
+          "pomodoros": [
+            "Pomodoro 1: Escribir un documento de especificaciones del proyecto.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre diseño de arquitectura y planificación",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Crear diagramas de arquitectura (C4 model, diagramas de secuencia).",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un documento de diseño de arquitectura (ARCHITECTURE.md) y un plan de proyecto detallado en el DDE. Repositorio del proyecto inicializado con el pipeline de CI básico.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 90,
+      "titulo": "Setup del Proyecto y Arquitectura Base",
+      "modulo": 11,
+      "objetivos": [
+        "Establecer la base técnica del proyecto",
+        "Implementar la arquitectura diseñada"
+      ],
+      "tematica": "Setup de monorepo, configuración de desarrollo, arquitectura base",
+      "actividades": [
+        "Configurar entorno de desarrollo completo",
+        "Implementar estructura base del proyecto",
+        "Configurar herramientas de desarrollo y testing"
+      ],
+      "entregables": "Proyecto base configurado con arquitectura implementada y herramientas de desarrollo funcionando",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Configuración del Entorno de Desarrollo",
+          "pomodoros": [
+            "Pomodoro 1: Configurar entorno de desarrollo local completo.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre configuración del entorno de desarrollo",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Establecer estándares de código y documentación.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Entorno de desarrollo completamente configurado con documentación de setup para otros desarrolladores.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 91,
+      "titulo": "Implementación del Core Backend",
+      "modulo": 11,
+      "objetivos": [
+        "Desarrollar el núcleo de la funcionalidad del backend",
+        "Implementar la API principal y lógica de negocio"
+      ],
+      "tematica": "Implementación de la API siguiendo el diseño arquitectónico, lógica de negocio compleja, testing exhaustivo",
+      "actividades": [
+        "Construir los endpoints principales de la API",
+        "Implementar la lógica de autenticación y autorización",
+        "Escribir tests para todos los servicios y controladores"
+      ],
+      "entregables": "MVP (Producto Mínimo Viable) del backend, completamente testeado y funcional",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Implementación del Core y Backend",
+          "pomodoros": [
+            "Pomodoro 1: Construir los endpoints principales de la API.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre implementación del core y backend",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar la lógica de autenticación y autorización.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un MVP (Producto Mínimo Viable) del backend, completamente testeado y funcional.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 92,
+      "titulo": "Implementación del Frontend e Integración",
+      "modulo": 11,
+      "objetivos": [
+        "Construir la interfaz de usuario",
+        "Conectar frontend y backend de forma segura y eficiente"
+      ],
+      "tematica": "Desarrollo de componentes complejos, gestión de estado avanzada, integración Full-Stack",
+      "actividades": [
+        "Desarrollar las vistas principales de la aplicación",
+        "Conectar los componentes del frontend a la API del backend",
+        "Implementar un flujo de usuario completo"
+      ],
+      "entregables": "Aplicación Full-Stack funcional, donde el frontend y el backend están completamente integrados",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Backend Avanzado y Optimización",
+          "pomodoros": [
+            "Pomodoro 1: Implementar funcionalidades avanzadas del backend.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre backend avanzado y optimización",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Configurar caching y optimizaciones de performance.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Backend completo con funcionalidades avanzadas, optimizado y seguro.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 93,
+      "titulo": "Features Avanzadas y Optimización",
+      "modulo": 11,
+      "objetivos": [
+        "Implementar características avanzadas",
+        "Optimizar rendimiento y experiencia de usuario"
+      ],
+      "tematica": "Features avanzadas, optimización de performance, UX/UI refinamiento",
+      "actividades": [
+        "Implementar funcionalidades avanzadas específicas del dominio",
+        "Optimizar rendimiento frontend y backend",
+        "Refinar experiencia de usuario"
+      ],
+      "entregables": "Aplicación con características avanzadas implementadas y optimizada para producción",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Implementación del Frontend e Integración",
+          "pomodoros": [
+            "Pomodoro 1: Desarrollar las vistas principales de la aplicación.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre implementación del frontend e integración",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Conectar los componentes del frontend a la API del backend.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Una aplicación Full-Stack funcional, donde el frontend y el backend están completamente integrados.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 94,
+      "titulo": "Testing Integral y Deployment",
+      "modulo": 11,
+      "objetivos": [
+        "Completar testing comprehensive",
+        "Desplegar aplicación en producción"
+      ],
+      "tematica": "Testing E2E, deployment en producción, monitoring básico",
+      "actividades": [
+        "Implementar tests end-to-end completos",
+        "Configurar deployment automático",
+        "Establecer monitoring y logging básico"
+      ],
+      "entregables": "Aplicación Capstone completamente testeada, desplegada en producción y con documentación completa",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Frontend Avanzado y UX",
+          "pomodoros": [
+            "Pomodoro 1: Implementar funcionalidades avanzadas de UI.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre frontend avanzado y ux",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Optimizar performance del frontend.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Frontend completo con experiencia de usuario optimizada y funcionalidades avanzadas.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 95,
+      "titulo": "Optimización de Portfolio Técnico",
+      "modulo": 12,
+      "objetivos": [
+        "Crear un portfolio técnico de nivel profesional",
+        "Optimizar presentación de proyectos"
+      ],
+      "tematica": "Portfolio profesional, presentación de proyectos, documentación técnica, personal branding",
+      "actividades": [
+        "Optimizar portfolio web con todos los proyectos",
+        "Crear documentación profesional para cada proyecto",
+        "Preparar presentaciones técnicas de proyectos"
+      ],
+      "entregables": "Portfolio técnico profesional completo, optimizado y desplegado públicamente",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Pulido, Despliegue y Documentación",
+          "pomodoros": [
+            "Pomodoro 1: Realizar pruebas de carga y optimizar cuellos de botella.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre pulido, despliegue y documentación",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Desplegar la aplicación completa en un proveedor cloud.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: El proyecto Capstone desplegado en una URL pública. Documentación completa y profesional en el repositorio.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 96,
+      "titulo": "Preparación para Entrevistas Técnicas",
+      "modulo": 12,
+      "objetivos": [
+        "Prepararse para entrevistas técnicas",
+        "Dominar resolución de problemas algorítmicos"
+      ],
+      "tematica": "Algoritmos y estructuras de datos para entrevistas, design systems, behavioral interviews",
+      "actividades": [
+        "Resolver problemas tipo entrevista técnica",
+        "Practicar explicación de decisiones de diseño",
+        "Preparar respuestas para preguntas comportamentales"
+      ],
+      "entregables": "Proyecto Integrador de Fase 6: Portfolio profesional completo + Aplicación Capstone de nivel profesional + Preparación integral para entrevistas técnicas",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Optimización de Portfolio y Preparación para Entrevistas",
+          "pomodoros": [
+            "Pomodoro 1: Seleccionar y pulir los 3-5 mejores proyectos para tu portfolio.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre optimización de portfolio y preparación para entrevistas",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar simulacros de entrevistas técnicas.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto Final del Ecosistema 360: Un perfil profesional completo y listo para el mercado, que incluye un CV pulido, un perfil de LinkedIn optimizado y un portfolio en GitHub que demuestra de manera concluyente tus habilidades como desarrollador Full-Stack.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}

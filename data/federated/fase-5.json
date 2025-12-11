@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "version": "8.1.0",
+    "generatedAt": "2025-09-21T21:20:00.000Z",
+    "correctionNote": "Regenerado con distribución real de semanas 81-88"
+  },
+  "fase": {
+    "numero": 5,
+    "titulo": "Ciencia de Datos e Inteligencia Artificial",
+    "duracion": "2 meses",
+    "semanaInicio": 81,
+    "semanaFin": 88,
+    "totalSemanas": 8,
+    "proposito": "Introducir las competencias para extraer valor de los datos y aplicar modelos de Machine Learning para crear funcionalidades inteligentes dentro de las aplicaciones.",
+    "competenciasClave": [
+      "Manipulación y limpieza de grandes conjuntos de datos",
+      "Creación de visualizaciones para comunicar insights",
+      "Entrenamiento y evaluación de modelos de ML básicos",
+      "Integración de un modelo de ML en una aplicación a través de una API",
+      "Análisis exploratorio de datos y storytelling"
+    ],
+    "proyectoIntegrador": "Desarrollo de una aplicación web que consume un modelo de ML propio para ofrecer predicciones o recomendaciones."
+  },
+  "modulos": [
+    {
+      "numero": 9,
+      "titulo": "Análisis de Datos",
+      "semanas": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "proposito": "Dominar herramientas fundamentales para manipulación, análisis y visualización de datos.",
+      "competencias": [
+        "NumPy y Pandas para manipulación de datos",
+        "Análisis exploratorio de datos (EDA)",
+        "Visualización con Matplotlib y Seaborn",
+        "Limpieza y preparación de datasets",
+        "Storytelling con datos"
+      ]
+    },
+    {
+      "numero": 10,
+      "titulo": "Machine Learning",
+      "semanas": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "proposito": "Introducir conceptos de ML, entrenar modelos y integrarlos en aplicaciones.",
+      "competencias": [
+        "Fundamentos de Machine Learning",
+        "Scikit-learn para modelos supervisados",
+        "Evaluación y validación de modelos",
+        "Deployment de modelos ML",
+        "APIs para modelos de ML"
+      ]
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 81,
+      "titulo": "Python para Análisis de Datos - NumPy",
+      "modulo": 9,
+      "objetivos": [
+        "Dominar NumPy para computación numérica"
+      ],
+      "tematica": "NumPy arrays, operaciones vectorizadas, álgebra lineal básica",
+      "actividades": [
+        "Ejercicios de manipulación de arrays multidimensionales",
+        "Operaciones matemáticas y estadísticas con NumPy"
+      ],
+      "entregables": "Notebooks con ejercicios NumPy y análisis numérico básico",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Python para el Análisis de Datos",
+          "pomodoros": [
+            "Pomodoro 1: Realizar ejercicios de manipulación de DataFrames con un dataset del mundo real (ej. datos del Titanic, datos de ventas).",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre python para el análisis de datos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Limpiar y pre-procesar un dataset 'sucio'.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un Jupyter Notebook o script de Python que realice un análisis exploratorio de datos (EDA) completo sobre un dataset, incluyendo estadísticas descriptivas y limpieza de datos.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 82,
+      "titulo": "Python para Análisis de Datos - Pandas",
+      "modulo": 9,
+      "objetivos": [
+        "Dominar Pandas para manipulación de datos tabulares"
+      ],
+      "tematica": "DataFrames, Series, indexación, limpieza de datos, groupby",
+      "actividades": [
+        "Análisis exploratorio con dataset real (ej. Titanic)",
+        "Limpieza y pre-procesamiento de dataset 'sucio'"
+      ],
+      "entregables": "Jupyter Notebook con análisis exploratorio de datos (EDA) completo sobre dataset real",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Análisis de Datos Avanzado con Pandas",
+          "pomodoros": [
+            "Pomodoro 1: Realizar análisis de series temporales.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre análisis de datos avanzado con pandas",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Combinar múltiples datasets usando diferentes estrategias de join.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Análisis complejo que combine múltiples datasets y incluya análisis de series temporales.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 83,
+      "titulo": "Visualización de Datos - Matplotlib",
+      "modulo": 9,
+      "objetivos": [
+        "Crear visualizaciones básicas para explorar datos"
+      ],
+      "tematica": "Matplotlib para gráficos fundamentales, personalización de plots",
+      "actividades": [
+        "Crear diferentes tipos de gráficos (barras, líneas, dispersión)",
+        "Personalizar visualizaciones para comunicar insights"
+      ],
+      "entregables": "Colección de visualizaciones que exploren relaciones en dataset",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Visualización de Datos y Comunicación de Insights",
+          "pomodoros": [
+            "Pomodoro 1: Crear diferentes tipos de gráficos (barras, líneas, dispersión, histogramas) para explorar las relaciones en un dataset.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre visualización de datos y comunicación de insights",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Construir un pequeño dashboard de visualizaciones.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un informe de análisis (en formato notebook o markdown) que utilice al menos 5 tipos de visualizaciones diferentes para contar una historia o responder a una pregunta de negocio basada en un dataset.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 84,
+      "titulo": "Visualización Avanzada - Seaborn y Storytelling",
+      "modulo": 9,
+      "objetivos": [
+        "Crear visualizaciones atractivas y comunicar hallazgos"
+      ],
+      "tematica": "Seaborn para gráficos estadísticos, principios de storytelling con datos",
+      "actividades": [
+        "Construir dashboard de visualizaciones",
+        "Crear informe de análisis con narrative"
+      ],
+      "entregables": "Informe de análisis completo que utilice múltiples visualizaciones para contar una historia basada en datos",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Visualización Avanzada y Dashboards",
+          "pomodoros": [
+            "Pomodoro 1: Crear visualizaciones interactivas con Plotly.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre visualización avanzada y dashboards",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Desarrollar un dashboard interactivo con Streamlit.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Dashboard interactivo completo que permita explorar un dataset de manera dinámica.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 85,
+      "titulo": "Fundamentos de Machine Learning",
+      "modulo": 10,
+      "objetivos": [
+        "Comprender el flujo de trabajo del ML"
+      ],
+      "tematica": "Aprendizaje supervisado vs no supervisado, train/test split, métricas de evaluación",
+      "actividades": [
+        "Entrenar primer modelo de clasificación",
+        "Evaluar modelo con diferentes métricas"
+      ],
+      "entregables": "Modelo de ML básico entrenado y evaluado correctamente",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Fundamentos de Machine Learning",
+          "pomodoros": [
+            "Pomodoro 1: Entrenar un modelo de regresión para predecir el precio de una vivienda.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre fundamentos de machine learning",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Entrenar un modelo de clasificación para predecir la supervivencia en el Titanic.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Un Jupyter Notebook que documente el proceso completo de entrenamiento y evaluación de al menos un modelo de clasificación y uno de regresión.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 86,
+      "titulo": "Scikit-learn - Modelos Supervisados",
+      "modulo": 10,
+      "objetivos": [
+        "Entrenar modelos de clasificación y regresión"
+      ],
+      "tematica": "Scikit-learn, modelos lineales, árboles de decisión, ensemble methods",
+      "actividades": [
+        "Comparar diferentes algoritmos de ML",
+        "Optimizar hiperparámetros con cross-validation"
+      ],
+      "entregables": "Notebook comparando múltiples algoritmos de ML en dataset real",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Machine Learning Avanzado",
+          "pomodoros": [
+            "Pomodoro 1: Implementar feature engineering avanzado.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre machine learning avanzado",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Realizar hyperparameter tuning con GridSearch.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Pipeline de ML completo con feature engineering, tuning y ensemble methods.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 87,
+      "titulo": "Evaluación y Validación de Modelos",
+      "modulo": 10,
+      "objetivos": [
+        "Evaluar modelos de forma robusta"
+      ],
+      "tematica": "Cross-validation, métricas avanzadas, overfitting, feature selection",
+      "actividades": [
+        "Implementar validación cruzada robusta",
+        "Detectar y prevenir overfitting"
+      ],
+      "entregables": "Modelo ML optimizado con evaluación robusta y feature engineering",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Integración de Modelos en Aplicaciones",
+          "pomodoros": [
+            "Pomodoro 1: Guardar (serializar) un modelo entrenado.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre integración de modelos en aplicaciones",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Construir una API con un endpoint /predict que reciba datos y devuelva una predicción del modelo.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: API de ML funcional que sirva predicciones de un modelo entrenado, con documentación completa.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 88,
+      "titulo": "Deployment de Modelos ML y Proyecto Integrador",
+      "modulo": 10,
+      "objetivos": [
+        "Integrar modelo ML en aplicación web"
+      ],
+      "tematica": "Serialización de modelos, APIs para ML, deployment de modelos",
+      "actividades": [
+        "Crear API que sirva predicciones de modelo ML",
+        "Desarrollar aplicación web que consuma modelo"
+      ],
+      "entregables": "Proyecto Integrador de Fase 5: Aplicación web completa que consume modelo de ML propio para ofrecer predicciones o recomendaciones",
+      "esquemaDiario": [
+        {
+          "dia": 1,
+          "concepto": "Fundamentos de Proyecto Integrador de Fase e Integración de Modelos",
+          "pomodoros": [
+            "Pomodoro 1: Integrar el modelo de ML con la aplicación Full-Stack completa.",
+            "Pomodoro 2: Revisar materiales teóricos y recursos clave",
+            "Pomodoro 3: Tomar notas detalladas sobre proyecto integrador de fase e integración de modelos",
+            "Pomodoro 4: Crear mapa mental de conceptos principales"
+          ]
+        },
+        {
+          "dia": 2,
+          "concepto": "Exploración Práctica y Herramientas",
+          "pomodoros": [
+            "Pomodoro 1: Explorar herramientas y entorno de trabajo",
+            "Pomodoro 2: Implementar monitoreo básico del modelo.",
+            "Pomodoro 3: Practicar con ejemplos guiados paso a paso",
+            "Pomodoro 4: Documentar hallazgos y primeras impresiones"
+          ]
+        },
+        {
+          "dia": 3,
+          "concepto": "Aplicación Dirigida y Metodología",
+          "pomodoros": [
+            "Pomodoro 1: Aplicar metodología específica del tema",
+            "Pomodoro 2: Resolver problemas de complejidad intermedia",
+            "Pomodoro 3: Experimentar con técnicas avanzadas",
+            "Pomodoro 4: Optimizar y refinar soluciones encontradas"
+          ]
+        },
+        {
+          "dia": 4,
+          "concepto": "Proyecto Práctico y Integración",
+          "pomodoros": [
+            "Pomodoro 1: Planificar y diseñar proyecto semanal",
+            "Pomodoro 2: Implementar primera parte del proyecto",
+            "Pomodoro 3: Desarrollar funcionalidades principales",
+            "Pomodoro 4: Probar, depurar y documentar el proyecto"
+          ]
+        },
+        {
+          "dia": 5,
+          "concepto": "Consolidación y Reflexión Metacognitiva",
+          "pomodoros": [
+            "Pomodoro 1: Revisar y consolidar todo el aprendizaje de la semana",
+            "Pomodoro 2: Completar entregables: Proyecto Integrador de Fase 5: Una aplicación web funcional que permita al usuario introducir datos, enviarlos a una API de ML, y recibir y mostrar la predicción del modelo en la interfaz, desplegada y accesible públicamente.",
+            "Pomodoro 3: Reflexionar sobre proceso de aprendizaje y obstáculos",
+            "Pomodoro 4: Preparar resumen para DMA y planificar siguiente semana"
+          ]
+        }
+      ]
+    }
+  ]
+}
