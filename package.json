@@ -20,6 +20,7 @@
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
     "archiver": "^6.0.1",
+    "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.2.0",
     "chart.js": "^4.4.0",
     "cheerio": "^1.0.0-rc.12",
@@ -33,7 +34,8 @@
     "react": "^19.2.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^19.2.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.5",

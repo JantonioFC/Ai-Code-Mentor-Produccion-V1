@@ -1,9 +1,9 @@
 
-const db = require('./lib/db');
+const db = require('../lib/db');
 
 function initAuthTables() {
   console.log('Initializing Auth Tables...');
-  
+
   // Users Table
   db.run(`
     CREATE TABLE IF NOT EXISTS users (
