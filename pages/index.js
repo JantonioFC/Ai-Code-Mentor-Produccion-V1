@@ -1,7 +1,15 @@
 import Head from 'next/head';
+import Image from 'next/image'; // Optimización de Imágenes
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic'; // Code Splitting
 import { useAuth } from '../lib/auth/useAuth';
+
+// Carga perezosa del AuthModal (Code Splitting)
+const AuthModal = dynamic(() => import('../components/auth/AuthModal'), {
+  ssr: false, // El modal es interactivo puro, no necesita SSR
+  loading: () => <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"><div className="bg-white p-4 rounded shadow">Cargando formulario...</div></div>
+});
 
 export default function LandingPage() {
   const router = useRouter();
@@ -32,11 +40,6 @@ export default function LandingPage() {
     } else {
       setShowLoginModal(true);
     }
-  };
-
-  // CÓDIGO CORRECTO - Ejecuta lógica de autenticación
-  const handleLogin = () => {
-    setShowLoginModal(true);
   };
 
   const handleLoginSubmit = async (e) => {
@@ -98,7 +101,6 @@ export default function LandingPage() {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              // CRÍTICO: Incluir token de autorización
               'Authorization': `Bearer ${data.session?.access_token}`,
             },
             body: JSON.stringify({
@@ -111,7 +113,7 @@ export default function LandingPage() {
 
           if (!profileResult.success) {
             console.warn('Warning: Usuario creado en Auth pero error en perfil:', profileResult.error);
-            // RETRY: Intentar una vez más tras 2 segundos
+            // RETRY logic...
             await new Promise(resolve => setTimeout(resolve, 2000));
             const retryResponse = await fetch('/api/profile', {
               method: 'POST',
@@ -148,14 +150,12 @@ export default function LandingPage() {
   const handleQuickDemo = async () => {
     setIsLoading(true);
     try {
-      // Credenciales de demo para testing rápido
       const { data, error } = await signIn('demo@aicodementor.com', 'demo123');
 
       if (error) {
         alert(`Error de demo: ${error}`);
       } else {
         setShowLoginModal(false);
-        // CORRECCIÓN: Redirección directa a panel de control
         router.push('/panel-de-control');
       }
     } catch (err) {
@@ -172,345 +172,201 @@ export default function LandingPage() {
         <meta name="description" content="Plataforma completa de aprendizaje autogestionado basada en metodología Ecosistema 360. Simbiosis Crítica Humano-IA para desarrollo full stack." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="AI Code Mentor - Ecosistema 360 | Plataforma Educativa Completa" />
         <meta property="og:description" content="Metodología de Andamiaje Decreciente • Simbiosis Crítica Humano-IA • 24 meses de curriculum estructurado" />
-        <meta property="og:type" content="website" />
         <meta property="og:image" content="/ai-code-mentor-preview.png" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Code Mentor - Ecosistema 360" />
-        <meta name="twitter:description" content="Plataforma de aprendizaje completa con metodología educativa universitaria" />
-
-        {/* Fonts optimizados via next/font/google en _app.js */}
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        {/* Logo Topbar */}
-        <div className="w-full bg-gray-900">
-          <img
+      <main className="min-h-screen bg-[#0F1115] text-[#EDEDED] font-sans selection:bg-[#3B82F6] selection:text-white">
+        {/* Logo Topbar - Industrial: Border Bottom */}
+        <div className="w-full bg-[#161A23] border-b border-[#2D3748] relative h-24">
+          <Image
             src="/logo.jpg"
             alt="AI Code Mentor - Ecosistema 360"
-            className="w-full h-auto max-h-24 object-contain"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
+            className="opacity-90"
           />
         </div>
 
-        {/* Navigation Header */}
-        <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+        {/* Navigation Header - Industrial: Glass & Border */}
+        <nav className="bg-[#161A23]/90 backdrop-blur-md border-b border-[#2D3748] sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center space-x-3">
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  AI Code Mentor
+                <div className="text-xl font-mono font-bold text-[#3B82F6] tracking-tighter">
+                  AI_CODE_MENTOR
                 </div>
-                <div className="hidden sm:block text-sm text-gray-500">
-                  • Ecosistema 360
+                <div className="hidden sm:block text-xs font-mono text-[#4F6180] bg-[#1F2532] px-2 py-1 rounded">
+                  ECOSISTEMA_V360
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="text-sm text-gray-500">
-                  Zona Pública
+                <div className="text-xs font-mono text-[#94A3B8]">
+                  STATUS: ONLINE
                 </div>
               </div>
             </div>
           </div>
         </nav>
 
-        {/* Hero Section */}
+        {/* Hero Section - Industrial: High Contrast, No Gradients */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            {/* Main Title */}
-            <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                AI Code Mentor
-              </span>
+            {/* Main Title - Mono & Sharp */}
+            <h1 className="text-5xl md:text-7xl font-mono font-bold text-white mb-6 tracking-tight">
+              <span className="text-[#3B82F6]">{`>`}</span> SYSTEM_LEARNING
             </h1>
 
-            <div className="mb-8">
-              <p className="text-2xl md:text-3xl text-gray-600 mb-4 font-medium">
-                Plataforma de Aprendizaje Completa
+            <div className="mb-10">
+              <p className="text-xl md:text-2xl text-[#94A3B8] max-w-2xl mx-auto font-light leading-relaxed">
+                Plataforma de andamiaje decreciente para ingeniería de software.
+                <span className="block mt-2 text-[#4F6180] text-sm font-mono">
+                  [ Simbiosis Crítica Humano-IA establecida ]
+                </span>
               </p>
             </div>
 
-            {/* CTA Button - ÚNICO PUNTO DE ACCESO */}
-            <div className="flex flex-col items-center justify-center mb-12">
+            {/* CTA Button - Industrial: Sharp, Technical */}
+            <div className="flex flex-col items-center justify-center mb-16">
               <button
                 onClick={handleGetStarted}
                 disabled={isLoading}
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all shadow-lg disabled:opacity-50 disabled:transform-none"
+                className="group relative w-full sm:w-auto bg-[#3B82F6] text-white px-8 py-4 rounded-sm text-lg font-mono font-medium hover:bg-[#2563EB] transition-all disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
               >
+                <div className="absolute inset-0 w-full h-full bg-white/10 group-hover:translate-x-full transition-transform duration-300 transform -translate-x-full skew-x-12"></div>
                 {isLoading ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Accediendo a la plataforma...
+                    <span className="animate-pulse mr-2">█</span> INITIALIZING...
                   </span>
                 ) : (
-                  '🚀 Acceder a la Plataforma'
+                  <span className="flex items-center">
+                    INITIALIZE_PLATFORM <span className="ml-2">_</span>
+                  </span>
                 )}
               </button>
             </div>
           </div>
         </section>
 
-        {/* Curriculum Phases */}
-        <section className="py-16 px-4 bg-white/50">
+        {/* Curriculum Phases - Industrial: Grid & Technical Panels */}
+        <section className="py-16 px-4 bg-[#0F1115] border-t border-[#1F2532]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-              📚 Curriculum de 24 Meses (8 Fases)
+            <h2 className="text-3xl font-mono font-bold text-center text-white mb-12">
+              <span className="text-[#3B82F6]">./</span> CURRICULUM_ROADMAP
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { id: 0, name: 'Cimentación', duration: '3-4 meses', focus: 'IA Crítica + CS50', color: 'from-gray-500 to-slate-600', months: '0' },
-                { id: 1, name: 'Fundamentos', duration: '6 meses', focus: 'Python + Metodología', color: 'from-blue-500 to-cyan-500', months: '1-6' },
-                { id: 2, name: 'Frontend', duration: '5 meses', focus: 'HTML/CSS/JS/React', color: 'from-green-500 to-emerald-500', months: '7-11' },
-                { id: 3, name: 'Backend', duration: '5 meses', focus: 'APIs + Databases', color: 'from-purple-500 to-violet-500', months: '12-16' },
-                { id: 4, name: 'DevOps', duration: '4 meses', focus: 'Containers + CI/CD', color: 'from-orange-500 to-red-500', months: '17-20' },
-                { id: 5, name: 'IA/Data', duration: '2 meses', focus: 'ML + Analytics', color: 'from-pink-500 to-rose-500', months: '21-22' },
-                { id: 6, name: 'Especialización', duration: '2 meses', focus: 'Advanced Topics', color: 'from-teal-500 to-cyan-600', months: '23' },
-                { id: 7, name: 'Integración', duration: '2 meses', focus: 'Capstone + Portfolio', color: 'from-indigo-500 to-blue-600', months: '24' }
+                { id: 0, name: 'CIMENTACION', duration: '3-4 MO', focus: 'CRITICAL_THINKING', color: 'text-gray-400' },
+                { id: 1, name: 'FUNDAMENTOS', duration: '6 MO', focus: 'PYTHON_CORE', color: 'text-blue-400' },
+                { id: 2, name: 'FRONTEND', duration: '5 MO', focus: 'REACT_ECOSYSTEM', color: 'text-green-400' },
+                { id: 3, name: 'BACKEND', duration: '5 MO', focus: 'API_ARCHITECTURE', color: 'text-purple-400' },
+                { id: 4, name: 'DEVOPS', duration: '4 MO', focus: 'CI_CD_PIPELINES', color: 'text-orange-400' },
+                { id: 5, name: 'DATA_AI', duration: '2 MO', focus: 'ML_ANALYTICS', color: 'text-pink-400' },
+                { id: 6, name: 'SPECIALIZATION', duration: '2 MO', focus: 'ADVANCED_TOPICS', color: 'text-cyan-400' },
+                { id: 7, name: 'INTEGRATION', duration: '2 MO', focus: 'CAPSTONE_PROJECT', color: 'text-indigo-400' }
               ].map((phase) => (
-                <div key={phase.id} className="bg-white rounded-lg p-6 border border-gray-200 text-center hover:shadow-md transition-shadow">
-                  <div className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r ${phase.color} flex items-center justify-center text-white font-bold`}>
-                    F{phase.id}
+                <div key={phase.id} className="bg-[#161A23] border border-[#2D3748] p-6 hover:border-[#3B82F6] transition-colors group">
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="font-mono text-xs text-[#4F6180]">F0{phase.id}</span>
+                    <div className={`w-2 h-2 rounded-full ${phase.color.replace('text', 'bg')}`}></div>
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-2">{phase.name}</h3>
-                  <p className="text-sm text-gray-600 mb-1">{phase.duration}</p>
-                  <p className="text-sm text-blue-600 font-medium">{phase.focus}</p>
+                  <h3 className="font-mono font-bold text-white mb-2 tracking-wide">{phase.name}</h3>
+                  <div className="flex flex-col space-y-1">
+                    <code className="text-xs text-[#94A3B8]">{`>`} {phase.duration}</code>
+                    <code className={`text-xs ${phase.color}`}>{`>`} {phase.focus}</code>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Educational Value Proposition - SIN REDUNDANCIA */}
-        <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        {/* Educational Value Proposition - Industrial: Dark & Terminal Style */}
+        <section className="py-20 px-4 bg-[#0F1115] border-t border-[#1F2532]">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Metodología Educativa Profesional
+            <h2 className="text-3xl font-mono font-bold mb-8 text-white">
+              <span className="text-[#10B981]">{`>`}</span> CORE_PROTOCOL
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-lg mb-10 text-[#94A3B8] font-light">
               Ecosistema 360 • Simbiosis Crítica Humano-IA • Andamiaje Decreciente
             </p>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold mb-4">🎆 Sistema Completo Operativo
+            <div className="bg-[#161A23] border border-[#2D3748] rounded-sm p-8 max-w-2xl mx-auto text-left relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#3B82F6] to-[#10B981]"></div>
+              <h3 className="text-sm font-mono font-bold text-[#4F6180] mb-6 uppercase tracking-wider">
+                // SYSTEM_CAPABILITIES
               </h3>
-              <div className="text-sm text-blue-100 space-y-2">
-                <p>✅ <strong>Módulos:</strong> Carga .md → Lecciones IA + Base de datos</p>
-                <p>✅ <strong>Plantillas:</strong> DDE, PAS, HRC, IRP + Referencias cruzadas</p>
-                <p>✅ <strong>Portfolio:</strong> Export PDF/GitHub + Reset System + Archival</p>
-                <p>✅ <strong>Analytics:</strong> Progreso multidimensional + Visualización</p>
+              <div className="space-y-4 font-mono text-sm text-[#EDEDED]">
+                <p className="flex items-center"><span className="text-[#10B981] mr-3">✔</span> MODULES: .MD_LOADER {'->'} AI_LESSONS</p>
+                <p className="flex items-center"><span className="text-[#10B981] mr-3">✔</span> TEMPLATES: DDE, PAS, HRC, IRP</p>
+                <p className="flex items-center"><span className="text-[#10B981] mr-3">✔</span> PORTFOLIO: GITHUB_SYNC + PDF_EXPORT</p>
+                <p className="flex items-center"><span className="text-[#10B981] mr-3">✔</span> ANALYTICS: MULTIDIMENSIONAL_TRACKING</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-12 px-4 bg-gray-900 text-white">
+        {/* Footer - Industrial: Minimal & Clean */}
+        <footer className="py-12 px-4 bg-[#0F1115] border-t border-[#1F2532] text-[#94A3B8]">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div>
-                <h3 className="text-xl font-bold mb-4">AI Code Mentor</h3>
-                <p className="text-gray-400 text-sm">
-                  Plataforma completa de aprendizaje autogestionado con metodología Ecosistema 360
+                <h3 className="text-lg font-mono font-bold text-white mb-4">AI_CODE_MENTOR</h3>
+                <p className="text-sm font-light leading-relaxed max-w-xs">
+                  Plataforma completa de aprendizaje autogestionado con metodología Ecosistema 360.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-4">Metodología</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>• Simbiosis Crítica Humano-IA</li>
-                  <li>• Andamiaje Decreciente</li>
-                  <li>• Portfolio Basado en Evidencias</li>
-                  <li>• 6 Fases Curriculares</li>
+                <h4 className="text-xs font-mono font-bold text-[#4F6180] mb-4 uppercase">METHODOLOGY</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Simbiosis Crítica</li>
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Andamiaje Decreciente</li>
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Portfolio Based</li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-4">Sistema Completo</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>• Gestión de Módulos</li>
-                  <li>• Plantillas Educativas</li>
-                  <li>• Portfolio Management</li>
-                  <li>• Analytics y Progreso</li>
+                <h4 className="text-xs font-mono font-bold text-[#4F6180] mb-4 uppercase">SYSTEM</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Module Manager</li>
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Analytics Engine</li>
+                  <li className="hover:text-[#3B82F6] cursor-pointer transition-colors">Documentation</li>
                 </ul>
               </div>
             </div>
 
-            <div className="border-t border-gray-800 pt-8 text-center">
-              <p className="text-sm text-gray-400">
-                © 2025 AI Code Mentor - Herramienta Personal de Aprendizaje Autogestionado
+            <div className="border-t border-[#1F2532] pt-8 text-center font-mono text-xs text-[#4F6180]">
+              <p>
+                © 2026 AI_CODE_MENTOR [SYSTEM_V3.0]
               </p>
-              <p className="text-sm text-blue-400 mt-2">
-                🎯 <strong>ECOSISTEMA 360 COMPLETE:</strong> Metodología educativa • Portfolio profesional • Gestión de ciclos • 24 meses curriculum
+              <p className="mt-2 text-[#3B82F6]">
+                STATUS: OPTIMAL
               </p>
             </div>
           </div>
         </footer>
 
-        {/* Modal de Autenticación - CON REGISTRO COMPLETO */}
+        {/* Modal de Autenticación - Cargado dinámicamente */}
         {showLoginModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg p-8 max-w-md w-full relative">
-              <button
-                onClick={() => { setShowLoginModal(false); resetModal(); }}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ×
-              </button>
-
-              {/* Toggle entre Login/Signup */}
-              <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
-                <button
-                  onClick={() => setAuthMode('login')}
-                  className={`flex-1 py-2 px-4 rounded-md font-medium transition-all ${authMode === 'login'
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
-                    }`}
-                >
-                  Iniciar Sesión
-                </button>
-                <button
-                  onClick={() => setAuthMode('signup')}
-                  className={`flex-1 py-2 px-4 rounded-md font-medium transition-all ${authMode === 'signup'
-                    ? 'bg-white text-purple-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
-                    }`}
-                >
-                  Registrarse
-                </button>
-              </div>
-
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                {authMode === 'login' ? '🚀 Acceder a AI Code Mentor' : '✨ Crear Nueva Cuenta'}
-              </h2>
-
-              {/* FORMULARIO DE LOGIN */}
-              {authMode === 'login' && (
-                <form onSubmit={handleLoginSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={loginData.email}
-                      onChange={(e) => setLoginData(prev => ({ ...prev, email: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Contraseña
-                    </label>
-                    <input
-                      type="password"
-                      required
-                      value={loginData.password}
-                      onChange={(e) => setLoginData(prev => ({ ...prev, password: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tu contraseña"
-                    />
-                  </div>
-
-                  <div className="space-y-3 pt-4">
-                    <button
-                      type="submit"
-                      disabled={isLoading || authLoading}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-md font-semibold hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50"
-                    >
-                      {isLoading ? 'Iniciando sesión...' : '🔓 Iniciar Sesión'}
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={handleQuickDemo}
-                      disabled={isLoading || authLoading}
-                      className="w-full bg-green-600 text-white py-3 rounded-md font-semibold hover:bg-green-700 transition-all disabled:opacity-50"
-                    >
-                      {isLoading ? 'Cargando...' : '⚡ Acceso Demo Rápido'}
-                    </button>
-                  </div>
-
-                  <div className="text-center text-sm text-gray-600 mt-4">
-                    <p>🎯 <strong>Demo:</strong> demo@aicodementor.com / demo123</p>
-                  </div>
-                </form>
-              )}
-
-              {/* FORMULARIO DE REGISTRO */}
-              {authMode === 'signup' && (
-                <form onSubmit={handleSignupSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={signupData.email}
-                      onChange={(e) => setSignupData(prev => ({ ...prev, email: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Contraseña
-                    </label>
-                    <input
-                      type="password"
-                      required
-                      value={signupData.password}
-                      onChange={(e) => setSignupData(prev => ({ ...prev, password: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Mínimo 6 caracteres"
-                      minLength="6"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Confirmar Contraseña
-                    </label>
-                    <input
-                      type="password"
-                      required
-                      value={signupData.confirmPassword}
-                      onChange={(e) => setSignupData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Repite tu contraseña"
-                    />
-                  </div>
-
-                  <div className="pt-4">
-                    <button
-                      type="submit"
-                      disabled={isLoading || authLoading}
-                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-md font-semibold hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50"
-                    >
-                      {isLoading ? 'Creando cuenta...' : '✨ Crear Cuenta'}
-                    </button>
-                  </div>
-
-                  <div className="text-center text-sm text-gray-600 mt-4">
-                    <p>✅ Registro completo • ✅ Perfil automático • ✅ Acceso inmediato</p>
-                  </div>
-                </form>
-              )}
-            </div>
-          </div>
+          <AuthModal
+            authMode={authMode}
+            setAuthMode={setAuthMode}
+            loginData={loginData}
+            setLoginData={setLoginData}
+            signupData={signupData}
+            setSignupData={setSignupData}
+            handleLoginSubmit={handleLoginSubmit}
+            handleSignupSubmit={handleSignupSubmit}
+            handleQuickDemo={handleQuickDemo}
+            onClose={() => { setShowLoginModal(false); resetModal(); }}
+            isLoading={isLoading}
+            authLoading={authLoading}
+          />
         )}
       </main>
     </>

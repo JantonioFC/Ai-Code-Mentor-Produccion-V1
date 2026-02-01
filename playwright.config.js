@@ -52,9 +52,12 @@ module.exports = defineConfig({
     },
   ],
 
+  // webServer disabled to avoid lock conflicts with existing 'npm run dev'
+  /*
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: true,
   },
+  */
 });

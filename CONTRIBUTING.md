@@ -1,41 +1,59 @@
-# Contribuir a AI Code Mentor
 
-¡Gracias por tu interés en mejorar AI Code Mentor! 🎓
+# Contributing to AI Code Mentor
 
-## 🐛 Reportar Bugs
+Thank you for your interest in contributing! We follow strict coding standards to ensure quality, maintainability, and enterprise readiness.
 
-Si encuentras un error:
+## Code Quality Principles
 
-1. Verifica que no exista un [issue similar](https://github.com/JantonioFC/ai-code-mentor-beta-test/issues)
-2. Crea un nuevo issue usando la plantilla **🐛 Reporte de Bug**
-3. Incluye pasos para reproducir el error
-4. Agrega capturas de pantalla si es posible
+1.  **Readability First**: Clear variable/function names > comments.
+2.  **KISS**: Simplest solution that works.
+3.  **DRY**: Extract common logic.
+4.  **Immutability**: Avoid direct mutation. Use spread operators.
 
-## 💡 Sugerir Mejoras
+## TypeScript/JavaScript Standards
 
-Para proponer nuevas funcionalidades:
+### Variable Naming
+*   **Boolean**: `isUserAuthenticated`, `hasAccess`, `canEdit`.
+*   **Functions**: Verb-Noun (`fetchData`, `calculateTotal`).
+*   **Constants**: UPPER_SNAKE_CASE (`MAX_RETRIES`).
 
-1. Revisa los [issues existentes](https://github.com/JantonioFC/ai-code-mentor-beta-test/issues?q=label%3Aenhancement)
-2. Crea un issue usando la plantilla **💡 Sugerencia de Mejora**
-3. Describe claramente el problema que resuelve
+### Error Handling
+All internal services must return a standardized Result or throw detailed Errors.
+```typescript
+try {
+  // logic
+} catch (error) {
+  console.error('[Service] Action Failed:', error);
+  throw new AppError('Detailed Message', 500);
+}
+```
 
-## ❓ Preguntas
+### File Organization
+*   `components/` (PascalCase)
+*   `lib/` (camelCase)
+*   `hooks/` (camelCase, prefix `use`)
 
-Si tienes dudas sobre el proyecto:
+## React Best Practices
 
-1. Revisa la [documentación](docs/)
-2. Si no encuentras respuesta, crea un issue con la plantilla **❓ Pregunta**
+1.  **Component Structure**:
+    ```typescript
+    interface Props { ... }
+    export const Component = ({ ... }: Props) => { ... }
+    ```
+2.  **State**:
+    *   UI State -> `useState`
+    *   Server State -> `swr` or `react-query`
+    *   Global App State -> `zustand` (e.g. `useLessonStore`)
 
-## 📝 Guía de Estilo
+## Branching Strategy
+*   `main`: Production-ready code.
+*   `dev`: Integration branch.
+*   Feature branches: `feature/feature-name`
 
-- **Commits**: Usar formato convencional (`feat:`, `fix:`, `docs:`)
-- **Issues**: En español o inglés
-- **Código**: Mantener el estilo existente del proyecto
-
-## ⚠️ Importante
-
-Este es un proyecto en **beta**. Agradecemos tu paciencia y feedback constructivo.
+## UI/UX Guidelines
+*   **Accessibility**: All interactive elements must have `aria-label` if no text. High contrast (4.5:1).
+*   **Touch**: Minimum 44x44px targets.
+*   **Icons**: Use Lucide React (SVG). No Emojis as icons.
 
 ---
-
-**Contacto del Mantenedor:** [@JantonioFC](https://github.com/JantonioFC)
+*Happy Coding!*

@@ -1,68 +1,69 @@
-// Mock modules BEFORE requiring the SUT (System Under Test)
+
+// __tests__/lib/services/SmartLessonGenerator.test.js
+import { smartLessonGenerator } from '../../../lib/services/SmartLessonGenerator';
+import { queryExpander } from '../../../lib/rag/QueryExpander';
+import { contentRetriever } from '../../../lib/rag/ContentRetriever';
+import { lessonService } from '../../../lib/services/LessonService';
+
+// Mock dependencies
+jest.mock('../../../lib/rag/QueryExpander', () => ({
+    queryExpander: { expand: jest.fn().mockResolvedValue(['expanded query']) }
+}));
+jest.mock('../../../lib/rag/ContentRetriever', () => ({
+    contentRetriever: { retrieve: jest.fn() }
+}));
 jest.mock('../../../lib/services/LessonService', () => ({
     lessonService: {
-        generateLesson: jest.fn()
+        generateLesson: jest.fn().mockResolvedValue({
+            content: 'Mocked Lesson',
+            metadata: { attempts: 1 }
+        })
     }
 }));
+// Auto-mock ClarityGate class
+jest.mock('../../../lib/ai/ClarityGate');
 
-jest.mock('../../../lib/ai/ClarityGate', () => ({
-    clarityGate: {
-        evaluate: jest.fn()
-    }
-}));
+describe('SmartLessonGenerator (Agentic Logic)', () => {
 
-jest.mock('../../../lib/rag/ContentRetriever', () => ({
-    contentRetriever: {
-        buildPromptContext: jest.fn()
-    }
-}));
-
-// Now require the SUT
-const { smartLessonGenerator } = require('../../../lib/services/SmartLessonGenerator');
-const { clarityGate } = require('../../../lib/ai/ClarityGate');
-const { lessonService } = require('../../../lib/services/LessonService');
-
-describe('SmartLessonGenerator', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+        // Setup default mocks
+        queryExpander.expand.mockResolvedValue(['expanded query']);
+        contentRetriever.retrieve.mockResolvedValue([{ content: 'context data' }]);
+
+        // Mock the instance method directly
+        // smartLessonGenerator.gate is the instance of ClarityGate
+        smartLessonGenerator.gate.checkRelevance.mockResolvedValue({ isRelevant: true, score: 0.9 });
     });
 
-    test('should have retry logic configuration', () => {
-        expect(smartLessonGenerator.maxRetries).toBe(2);
+    test('should generate lesson successfully on first try', async () => {
+        await smartLessonGenerator.generateWithAutonomy({ topic: 'React' });
+
+        expect(contentRetriever.retrieve).toHaveBeenCalledTimes(1);
+        expect(smartLessonGenerator.gate.checkRelevance).toHaveBeenCalled();
     });
 
-    test('should success on first try if gate passes', async () => {
-        // Setup Mocks
-        clarityGate.evaluate.mockResolvedValue({ passed: true, score: 0.9 });
-        lessonService.generateLesson.mockResolvedValue({ content: 'Lesson' });
+    test('should retry when clarity check fails', async () => {
+        smartLessonGenerator.gate.checkRelevance
+            .mockRejectedValueOnce({ name: 'LowConfidenceError' })
+            .mockResolvedValueOnce({ isRelevant: true });
 
-        const context = { semanaId: 1, dia: 1, pomodoroIndex: 0 };
-        const result = await smartLessonGenerator.generateWithRetry(context);
+        await smartLessonGenerator.generateWithAutonomy({ topic: 'Unknown' });
 
-        expect(result.content).toBe('Lesson');
-        expect(lessonService.generateLesson).toHaveBeenCalledTimes(1);
+        // queryExpander called?
+        // We mocked queryExpander object.
+        // But smartLessonGenerator imports it.
+        // jest.mock above should handle it.
+        // Let's verify import usage.
+
+        expect(contentRetriever.retrieve).toHaveBeenCalledTimes(2);
     });
 
-    test('should retry if gate fails initially', async () => {
-        // First call fails gate, Second call passes gate (simulated logic flow)
-        // In real SUT, logic says: if gate fails -> expand options -> retry generation
-        // But the SUT calls generateLesson anyway after fixing options or retrying.
+    test('should proceed after max retries', async () => {
+        smartLessonGenerator.gate.checkRelevance.mockRejectedValue({ name: 'LowConfidenceError' });
 
-        // Let's verify SmartLessonGenerator retry loop behavior.
-        // It calls gate.evaluate -> if fail -> loop continue (retry)
+        await smartLessonGenerator.generateWithAutonomy({ topic: 'Impossible' });
 
-        clarityGate.evaluate
-            .mockResolvedValueOnce({ passed: false, score: 0.2, reasoning: 'bad' }) // Attempt 1
-            .mockResolvedValueOnce({ passed: true, score: 0.9 }); // Attempt 2
-
-        lessonService.generateLesson.mockResolvedValue({ content: 'Lesson Retry' });
-
-        const context = { semanaId: 1, dia: 1, pomodoroIndex: 0 };
-        const result = await smartLessonGenerator.generateWithRetry(context);
-
-        // Should have called generateLesson eventually
-        expect(lessonService.generateLesson).toHaveBeenCalled();
-        // Should have evaluated twice
-        expect(clarityGate.evaluate).toHaveBeenCalledTimes(2);
+        expect(smartLessonGenerator.gate.checkRelevance).toHaveBeenCalledTimes(2);
     });
 });

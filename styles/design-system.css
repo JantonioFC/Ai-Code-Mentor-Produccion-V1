@@ -1,0 +1,71 @@
+/* Industrial Refined Design System */
+/* Aesthetic: Precise, Mono-heavy, High Contrast, Technical */
+
+:root {
+  /* --- PALETTE: "Titanium & Signal" --- */
+  
+  /* Bases */
+  --bg-primary: #0F1115;      /* Almost Black */
+  --bg-secondary: #161A23;    /* Dark Gunmetal */
+  --bg-tertiary: #1F2532;     /* Panel Grey */
+
+  /* Text */
+  --text-primary: #EDEDED;
+  --text-secondary: #94A3B8;
+  --text-muted: #475569;
+
+  /* Accents - Focused & Sharp */
+  --accent-primary: #3B82F6;  /* Tech Blue */
+  --accent-glow: rgba(59, 130, 246, 0.15);
+  
+  /* Signals */
+  --signal-success: #10B981;
+  --signal-warning: #F59E0B;
+  --signal-error: #EF4444;
+
+  /* Borders */
+  --border-subtle: #2D3748;
+  --border-active: #4F6180;
+
+  /* --- TYPOGRAPHY: "Technical Documentation" --- */
+  
+  /* Fonts - Assume Inter & JetBrains Mono loaded via Next.js */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* --- SPACING & DEPTH --- */
+  --radius-sm: 2px; /* Sharp corners */
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --shadow-panel: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 15px var(--accent-glow);
+}
+
+/* Base Reset Overrides */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, code, pre {
+  font-family: var(--font-mono); /* Headlines in Mono for "Technical" feel */
+}
+
+/* Utilities for "Industrial" look */
+.technical-border {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.technical-panel {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-panel);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px var(--accent-glow);
+}

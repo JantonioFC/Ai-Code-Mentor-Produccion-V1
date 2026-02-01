@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/design-system.css' // 🎨 Industrial Refined Design System
 import { LessonProvider } from '../contexts/LessonContext'
 import { ProjectTrackingProvider } from '../contexts/ProjectTrackingContext'
 import { APITrackingProvider } from '../contexts/APITrackingContext'
@@ -41,7 +42,7 @@ export default function App({ Component, pageProps }) {
       {/* ⭐ MISIÓN 226.1: Renderizado condicional con importación dinámica */}
       {/* Para activar: agregar ?profile=true a la URL */}
       {shouldProfile && <DynamicPerformanceMonitor />}
-      
+
       <AuthProvider>
         {/* MISIÓN 221: Wrapper que muestra LoadingScreen durante verificación de sesión */}
         <AuthLoadingWrapper>
