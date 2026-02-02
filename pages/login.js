@@ -251,8 +251,8 @@ export default function LoginPage() {
               <button
                 onClick={() => setAuthMode('login')}
                 className={`flex-1 py-2 px-4 rounded-md font-medium transition-all ${authMode === 'login'
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-800'
                   }`}
               >
                 Iniciar Sesión
@@ -260,17 +260,22 @@ export default function LoginPage() {
               <button
                 onClick={() => setAuthMode('signup')}
                 className={`flex-1 py-2 px-4 rounded-md font-medium transition-all ${authMode === 'signup'
-                    ? 'bg-white text-purple-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
+                  ? 'bg-white text-purple-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-800'
                   }`}
               >
                 Registrarse
               </button>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-              {authMode === 'login' ? '🔐 Acceder a tu Cuenta' : '✨ Crear Nueva Cuenta'}
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">
+              {authMode === 'login' ? '🔐 Bienvenido de Vuelta' : '✨ Empieza Gratis'}
             </h2>
+            <p className="text-sm text-gray-500 text-center mb-6">
+              {authMode === 'login'
+                ? 'Continúa tu aprendizaje donde lo dejaste'
+                : 'Crea tu cuenta en 30 segundos • Sin tarjeta de crédito'}
+            </p>
 
             {/* FORMULARIO DE LOGIN */}
             {authMode === 'login' && (
@@ -374,18 +379,19 @@ export default function LoginPage() {
                   />
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-4 space-y-3">
                   <button
                     type="submit"
                     disabled={isLoading || authLoading}
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-md font-semibold hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50"
                   >
-                    {isLoading ? 'Creando cuenta...' : '✨ Crear Cuenta'}
+                    {isLoading ? 'Creando cuenta...' : '✨ Empezar Ahora'}
                   </button>
                 </div>
 
-                <div className="text-center text-sm text-gray-600 mt-4">
-                  <p>✅ Registro completo • ✅ Perfil automático • ✅ Acceso inmediato</p>
+                <div className="text-center text-xs text-gray-500 mt-4 space-y-1">
+                  <p>🔒 Tus datos están protegidos • Sin spam</p>
+                  <p className="text-gray-400">Al registrarte aceptas los Términos de Uso</p>
                 </div>
               </form>
             )}
