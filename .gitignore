@@ -88,5 +88,10 @@ data/cache.db
 data/cache.db-shm
 data/cache.db-wal
 
+# Documentación Privada de Negocio (no versionar)
+docs/MARKET_OPPORTUNITY.md
+docs/SEO_STRATEGY.md
+docs/THREAT_MODEL.md
+
 # Comunicación Local
 charla
