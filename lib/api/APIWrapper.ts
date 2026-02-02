@@ -84,7 +84,7 @@ function handleApiError(error: unknown, res: NextApiResponse) {
             success: false,
             data: null,
             error: 'Validation Error',
-            details: error.errors,
+            details: (error as any).errors || (error as any).issues,
             meta: { timestamp: new Date().toISOString() }
         } as ApiResponse<null>);
     }

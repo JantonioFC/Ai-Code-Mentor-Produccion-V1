@@ -11,6 +11,22 @@ const nextConfig = {
     GEMINI_API_KEY: process.env.GEMINI_API_KEY
   },
 
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+        ],
+      },
+    ];
+  },
+
   // AÑADIMOS la nueva directiva para Webpack aquí.
   webpack: (config, { isServer }) => {
     // Esta lógica se ejecuta durante la compilación.

@@ -6,10 +6,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useProjectTracking } from '../../contexts/ProjectTrackingContext';
-import SimpleInput from '../SimpleInput';
+import SimpleInput from '../ui/atoms/SimpleInput';
 
 const TemplateModal = () => {
-  const { 
+  const {
     selectedTemplate,
     templates,
     isModalOpen,
@@ -28,7 +28,7 @@ const TemplateModal = () => {
   useEffect(() => {
     if (selectedTemplate && templates[selectedTemplate]) {
       const template = templates[selectedTemplate];
-      
+
       // Generate content with today's date
       const today = new Date().toLocaleDateString('es-ES', {
         weekday: 'long',
@@ -40,9 +40,9 @@ const TemplateModal = () => {
       let templateContent = template.template;
       templateContent = templateContent.replace(/{date}/g, today);
       templateContent = templateContent.replace(/{week_number}/g, getWeekNumber());
-      
+
       setContent(templateContent);
-      
+
       // Initialize metadata with empty values instead of resetting completely
       if (template.metadata_fields) {
         const initialMetadata = {};
@@ -63,7 +63,7 @@ const TemplateModal = () => {
         setMetadata({});
       }
     }
-    
+
     // Error will be reset when modal opens (handled separately)
   }, [selectedTemplate]); // Fixed: removed resetError to prevent infinite loop
 
@@ -92,13 +92,13 @@ const TemplateModal = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!content.trim()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       await createEntry(selectedTemplate, content, metadata);
       closeModal();
@@ -113,10 +113,10 @@ const TemplateModal = () => {
     // Get the field type from template definition to preserve data types
     const template = templates[selectedTemplate];
     const fieldType = template?.metadata_fields?.[field];
-    
+
     // Convert value to appropriate type based on template definition
     let processedValue = value;
-    
+
     if (fieldType === 'array') {
       // For array fields, convert string input to array
       if (typeof value === 'string') {
@@ -132,7 +132,7 @@ const TemplateModal = () => {
       processedValue = Boolean(value);
     }
     // string type and others remain as-is
-    
+
     setMetadata(prev => {
       const newMetadata = {
         ...prev,
@@ -263,7 +263,7 @@ const TemplateModal = () => {
                 <div>
                   <h4 className="text-sm font-semibold text-blue-800">Metodología Ecosistema 360</h4>
                   <p className="text-xs text-blue-600">
-                    Esta plantilla implementa principios de <strong>Simbiosis Crítica Humano-IA</strong> y 
+                    Esta plantilla implementa principios de <strong>Simbiosis Crítica Humano-IA</strong> y
                     <strong> Andamiaje Decreciente</strong> para optimizar tu aprendizaje.
                   </p>
                 </div>
@@ -301,10 +301,10 @@ const TemplateModal = () => {
               <div className="text-sm text-gray-500">
                 <span className="font-medium">Ecosistema 360</span> • {
                   selectedTemplate === 'dde_entry' ? 'DDE (Diario de Decisiones)' :
-                  selectedTemplate === 'weekly_action_plan' ? 'PAS (Plan de Acción)' :
-                  selectedTemplate === 'unified_tracking_log' ? 'HRC (Hoja de Competencias)' :
-                  selectedTemplate === 'peer_review' ? 'IRP (Revisión por Pares)' :
-                  selectedTemplate.replace('_', ' ')
+                    selectedTemplate === 'weekly_action_plan' ? 'PAS (Plan de Acción)' :
+                      selectedTemplate === 'unified_tracking_log' ? 'HRC (Hoja de Competencias)' :
+                        selectedTemplate === 'peer_review' ? 'IRP (Revisión por Pares)' :
+                          selectedTemplate.replace('_', ' ')
                 }
               </div>
               <div className="flex space-x-3">
