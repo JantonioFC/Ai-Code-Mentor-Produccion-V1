@@ -27,8 +27,8 @@ const nextConfig = {
   output: 'standalone',
 
   env: {
-    // Se preserva tu configuración existente para la API Key.
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY
+    // SECURITY: API Keys should NOT be inlined here to avoid leaking to client bundle.
+    // They are accessed via process.env on the server side securely.
   },
 
   async headers() {
@@ -42,6 +42,24 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          {
+            key: 'Content-Security-Policy',
+            // Policy:
+            // - default-src 'self': Only allow same-origin by default
+            // - script-src: Allow self, unsafe-eval (for Dev/Next.js), unsafe-inline (Next.js scripts), Google/Meta/Vercel Analytics
+            // - style-src: Allow self, unsafe-inline (Tailwind/CSS-in-JS)
+            // - img-src: Allow self, data URIs, and external avatars (GitHub, Google, etc.) and Analytics pixels
+            // - connect-src: Allow self and Analytics endpoints
+            value: `
+              default-src 'self'; 
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.google.com https://*.googletagmanager.com https://connect.facebook.net https://va.vercel-scripts.com; 
+              style-src 'self' 'unsafe-inline'; 
+              img-src 'self' data: https:; 
+              font-src 'self' data:;
+              connect-src 'self' https://*.google-analytics.com https://*.google.com https://*.facebook.com https://*.doubleclick.net;
+              frame-src 'self' https://*.google.com;
+            `.replace(/\s{2,}/g, ' ').trim()
+          },
         ],
       },
       // Performance: Cache static assets aggressively

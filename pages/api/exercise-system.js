@@ -5,25 +5,32 @@
 
 const fs = require('fs');
 const path = require('path');
+import rateLimit from '../../lib/rate-limit'; // Anti-Abuse
 
 export default async function handler(req, res) {
   const { action } = req.query;
-  
+
+  try {
+    await rateLimit(req, res);
+  } catch (e) {
+    return;
+  }
+
   try {
     switch (action) {
       case 'execute-code':
         if (req.method !== 'POST') {
           return res.status(405).json({ error: 'Método no permitido' });
         }
-        
+
         const { code, language, exerciseId, lessonPath } = req.body;
-        
+
         if (!code || !language || !exerciseId) {
-          return res.status(400).json({ 
-            error: 'Parámetros requeridos: code, language, exerciseId' 
+          return res.status(400).json({
+            error: 'Parámetros requeridos: code, language, exerciseId'
           });
         }
-        
+
         // Execute code based on language
         let result;
         switch (language) {
@@ -39,7 +46,7 @@ export default async function handler(req, res) {
           default:
             throw new Error(`Lenguaje no soportado: ${language}`);
         }
-        
+
         // Auto-save exercise attempt
         await autoSaveExerciseAttempt({
           lessonPath,
@@ -49,54 +56,54 @@ export default async function handler(req, res) {
           result,
           timestamp: new Date().toISOString()
         });
-        
+
         res.json({
           success: true,
           result,
           message: 'Código ejecutado y guardado automáticamente'
         });
         break;
-        
+
       case 'check-solution':
         if (req.method !== 'POST') {
           return res.status(405).json({ error: 'Método no permitido' });
         }
-        
+
         const { userCode, exerciseDescription, language: lang } = req.body;
-        
+
         const feedback = await checkSolutionWithAI(userCode, exerciseDescription, lang);
-        
+
         res.json({
           success: true,
           feedback,
           timestamp: new Date().toISOString()
         });
         break;
-        
+
       case 'get-exercise-history':
         if (req.method !== 'GET') {
           return res.status(405).json({ error: 'Método no permitido' });
         }
-        
+
         const { lesson_path, exercise_id } = req.query;
         const history = getExerciseHistory(lesson_path, exercise_id);
-        
+
         res.json({
           success: true,
           history
         });
         break;
-        
+
       default:
-        res.status(400).json({ 
+        res.status(400).json({
           error: 'Acción no válida',
           availableActions: ['execute-code', 'check-solution', 'get-exercise-history']
         });
     }
-    
+
   } catch (error) {
     console.error('❌ Exercise system error:', error.message);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Error en sistema de ejercicios',
       details: error.message
     });
@@ -105,33 +112,48 @@ export default async function handler(req, res) {
 
 // Execute JavaScript code safely
 async function executeJavaScript(code) {
+  const vm = require('vm');
   try {
     // Create safe execution context
-    const safeCode = `
-      const console = {
+    const results = [];
+    const errors = [];
+
+    const sandbox = {
+      console: {
         log: (...args) => results.push(args.join(' ')),
         error: (...args) => errors.push(args.join(' '))
-      };
-      const results = [];
-      const errors = [];
-      
+      },
+      results,
+      errors
+    };
+
+    const context = vm.createContext(sandbox);
+
+    // Wrap user code to capture output
+    const wrappedCode = `
       try {
         ${code}
       } catch (e) {
         errors.push(e.message);
       }
-      
       JSON.stringify({ results, errors });
     `;
-    
-    // Execute in isolated context (simplified - in production use vm module)
-    const result = eval(`(function() { ${safeCode} })()`);
+
+    // Execute in isolated context with timeout (DoS Protection)
+    const result = vm.runInContext(wrappedCode, context, {
+      timeout: 1000, // 1 second max execution time
+      displayErrors: false
+    });
+
     return JSON.parse(result);
-    
+
   } catch (error) {
+    // Handle Timeouts and Syntax Errors
     return {
       results: [],
-      errors: [error.message]
+      errors: [error.message.includes('Script execution timed out')
+        ? 'Error: Execution timed out (Possible infinite loop)'
+        : error.message]
     };
   }
 }
@@ -143,21 +165,21 @@ async function executeReact(code) {
     const hasJSX = /<[^>]+>/.test(code);
     const hasProps = /props\./.test(code);
     const hasHooks = /(useState|useEffect)/.test(code);
-    
+
     const analysis = {
       hasJSX,
-      hasProps, 
+      hasProps,
       hasHooks,
       isValidComponent: /^(function|const)\s+\w+/.test(code.trim()),
       syntaxValid: true // Simplified validation
     };
-    
+
     return {
       analysis,
       message: analysis.isValidComponent ? 'Componente React válido' : 'Estructura de componente incompleta',
       results: [`Análisis completado: JSX=${hasJSX}, Props=${hasProps}, Hooks=${hasHooks}`]
     };
-    
+
   } catch (error) {
     return {
       results: [],
@@ -262,13 +284,13 @@ async function autoSaveExerciseAttempt(attemptData) {
     if (!fs.existsSync(exercisesDir)) {
       fs.mkdirSync(exercisesDir, { recursive: true });
     }
-    
+
     const filename = `${attemptData.lessonPath.replace(/\./g, '_')}_${attemptData.exerciseId}_${Date.now()}.json`;
     const filepath = path.join(exercisesDir, filename);
-    
+
     fs.writeFileSync(filepath, JSON.stringify(attemptData, null, 2), 'utf8');
     console.log(`💾 Exercise attempt auto-saved: ${filename}`);
-    
+
   } catch (error) {
     console.error('❌ Error auto-saving exercise:', error.message);
   }
@@ -281,10 +303,10 @@ function getExerciseHistory(lessonPath, exerciseId) {
     if (!fs.existsSync(exercisesDir)) {
       return [];
     }
-    
+
     const files = fs.readdirSync(exercisesDir);
     const pattern = `${lessonPath.replace(/\./g, '_')}_${exerciseId}_`;
-    
+
     return files
       .filter(file => file.startsWith(pattern))
       .map(file => {
@@ -296,7 +318,7 @@ function getExerciseHistory(lessonPath, exerciseId) {
         };
       })
       .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-      
+
   } catch (error) {
     console.error('❌ Error getting exercise history:', error.message);
     return [];

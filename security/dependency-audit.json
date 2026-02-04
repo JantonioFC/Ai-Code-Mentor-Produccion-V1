@@ -1,0 +1,104 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "jspdf": {
+      "name": "jspdf",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1112801,
+          "name": "jspdf",
+          "dependency": "jspdf",
+          "title": "jsPDF has PDF Injection in AcroFormChoiceField that allows Arbitrary JavaScript Execution",
+          "url": "https://github.com/advisories/GHSA-pqxr-3g65-p328",
+          "severity": "high",
+          "cwe": [
+            "CWE-116"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+          },
+          "range": "<=4.0.0"
+        },
+        {
+          "source": 1112802,
+          "name": "jspdf",
+          "dependency": "jspdf",
+          "title": "jsPDF Vulnerable to Denial of Service (DoS) via Unvalidated BMP Dimensions in BMPDecoder",
+          "url": "https://github.com/advisories/GHSA-95fx-jjr5-f39c",
+          "severity": "high",
+          "cwe": [
+            "CWE-20",
+            "CWE-400",
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=4.0.0"
+        },
+        {
+          "source": 1112803,
+          "name": "jspdf",
+          "dependency": "jspdf",
+          "title": "jsPDF Vulnerable to Stored XMP Metadata Injection (Spoofing & Integrity Violation)",
+          "url": "https://github.com/advisories/GHSA-vm32-vv63-w422",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-20",
+            "CWE-74"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=4.0.0"
+        },
+        {
+          "source": 1112804,
+          "name": "jspdf",
+          "dependency": "jspdf",
+          "title": "jsPDF has Shared State Race Condition in addJS Plugin",
+          "url": "https://github.com/advisories/GHSA-cjw8-79x6-5cj4",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-362"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=4.0.0"
+        }
+      ],
+      "effects": [],
+      "range": "<=4.0.0",
+      "nodes": [
+        "node_modules/jspdf"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 1,
+      "critical": 0,
+      "total": 1
+    },
+    "dependencies": {
+      "prod": 417,
+      "dev": 709,
+      "optional": 106,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1207
+    }
+  }
+}

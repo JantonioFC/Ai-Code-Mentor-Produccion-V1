@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /panel-de-control
+
+# Host
+Host: https://aicodementor.com
+
+# Sitemaps
+Sitemap: https://aicodementor.com/sitemap.xml

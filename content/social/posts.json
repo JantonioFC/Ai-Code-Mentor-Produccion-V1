@@ -1,0 +1,2912 @@
+[
+  {
+    "id": "week-1-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Teoría y Ética de IA\n\nEsta semana nos enfocamos en: Cursos Google Cloud Skills Boost: Introduction to Generative AI, Introduction to Large Language Models, Introduction to Responsible AI..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosdelaInteracciónconIA #Learning #AI"
+  },
+  {
+    "id": "week-2-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Práctica de Diseño de Prompts\n\nEsta semana nos enfocamos en: Curso 'Diseño de instrucciones en Vertex AI' con laboratorios prácticos y SDK de Python..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosdelaInteracciónconIA #Learning #AI"
+  },
+  {
+    "id": "week-3-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 0: Introducción\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 0: Scratch y pensamiento computacional..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-4-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 1: C\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 1: Lenguaje C, variables, funciones..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-5-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 2: Arrays\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 2: Arrays, strings, criptografía básica..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-6-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 3: Algoritmos\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 3: Algoritmos de búsqueda y ordenamiento, eficiencia..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-7-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 4: Memoria\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 4: Punteros, memoria dinámica, estructuras..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-8-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CS50 - Semana 5: Estructuras de Datos\n\nEsta semana nos enfocamos en: CS50's Introduction to Computer Science - Semana 5: Listas enlazadas, árboles, hash tables..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#PensamientoComputacionalyFundamentosdeProgramación #Learning #AI"
+  },
+  {
+    "id": "week-9-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Migración a Linux y Configuración del Laboratorio\n\nEsta semana nos enfocamos en: Montaje físico, instalación de Linux Mint XFCE, configuración completa del entorno de desarrollo según el Manifiesto de Software..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ConstruccióndelEntornodeDesarrollo'Génesis' #Learning #AI"
+  },
+  {
+    "id": "week-10-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Configuración del Entorno y Metodología\n\nEsta semana nos enfocamos en: Configuración de VS Code, Git/GitHub, Discord, y la herramienta de gestión de conocimiento (Notion/Obsidian)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturadelAprendizajeyMetodología #Learning #AI"
+  },
+  {
+    "id": "week-11-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Pensamiento Computacional y Git Básico\n\nEsta semana nos enfocamos en: Descomposición de problemas, abstracción, pseudocódigo. Comandos git init, add, commit, push, pull..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturadelAprendizajeyMetodología #Learning #AI"
+  },
+  {
+    "id": "week-12-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Alfabetización Crítica en Inteligencia Artificial\n\nEsta semana nos enfocamos en: Ingeniería de prompts, verificación de respuestas, principios de IA responsable..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturadelAprendizajeyMetodología #Learning #AI"
+  },
+  {
+    "id": "week-13-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Consolidación y Conexión\n\nEsta semana nos enfocamos en: Aplicación del flujo de trabajo completo: Planificación, pseudocódigo, versionado y documentación..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturadelAprendizajeyMetodología #Learning #AI"
+  },
+  {
+    "id": "week-14-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Python\n\nEsta semana nos enfocamos en: Variables, tipos (int, float, str, bool), operadores aritméticos y lógicos, entrada/salida (input(), print()), comentarios..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-15-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Python - Continuación\n\nEsta semana nos enfocamos en: Profundización en tipos de datos, operadores avanzados, formateo de strings..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-16-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Estructuras de Control\n\nEsta semana nos enfocamos en: if/elif/else, bucles for y while, break, continue..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-17-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Estructuras de Control - Práctica Avanzada\n\nEsta semana nos enfocamos en: Bucles anidados, lógica compleja con múltiples condiciones..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-18-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Funciones y Modularidad\n\nEsta semana nos enfocamos en: Definición de funciones (def), parámetros, argumentos, valores de retorno (return), scope (ámbito) de variables..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-19-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Funciones Avanzadas\n\nEsta semana nos enfocamos en: Funciones lambda, argumentos *args y **kwargs, decoradores básicos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-20-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Estructuras de Datos\n\nEsta semana nos enfocamos en: Listas, tuplas, diccionarios y sets. Métodos asociados, iteración y list/dict comprehensions..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-21-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Estructuras de Datos Avanzadas\n\nEsta semana nos enfocamos en: Comprehensions avanzadas, manipulación compleja de diccionarios anidados..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-22-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Manejo de Archivos y Excepciones\n\nEsta semana nos enfocamos en: Lectura y escritura de archivos (open, read, write, with). Bloques try/except/finally para el manejo de errores..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-23-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Manejo Avanzado de Archivos\n\nEsta semana nos enfocamos en: Trabajo con CSV, JSON, archivos binarios..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-24-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Programación Orientada a Objetos - Introducción\n\nEsta semana nos enfocamos en: Clases, objetos, atributos básicos, métodos simples..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-25-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Programación Orientada a Objetos - Conceptos Fundamentales\n\nEsta semana nos enfocamos en: Encapsulación, propiedades, métodos públicos y privados..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-26-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Programación Orientada a Objetos - Herencia\n\nEsta semana nos enfocamos en: Herencia, super(), sobreescritura de métodos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-27-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Programación Orientada a Objetos - Proyecto Integrador\n\nEsta semana nos enfocamos en: Diseño de sistemas orientados a objetos, patrones básicos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-28-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Módulos, Paquetes y Entornos Virtuales\n\nEsta semana nos enfocamos en: import, creación de módulos y paquetes (__init__.py). Uso de pip y venv..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-29-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Testing y Debugging\n\nEsta semana nos enfocamos en: Fundamentos de testing unitario con unittest o pytest. Técnicas de debugging con VS Code..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-30-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: APIs y Librería estándar\n\nEsta semana nos enfocamos en: datetime, os, sys, json, urllib, requests..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-31-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase - Planificación\n\nEsta semana nos enfocamos en: Análisis de requerimientos, diseño de arquitectura, planificación de desarrollo..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-32-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase - Desarrollo\n\nEsta semana nos enfocamos en: Implementación del proyecto planificado, aplicación de buenas prácticas..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProgramaciónFundamentalconPython #Learning #AI"
+  },
+  {
+    "id": "week-33-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: HTML5 Semántico y Accesibilidad\n\nEsta semana nos enfocamos en: Elementos semánticos (<main>, <nav>, <article>), formularios avanzados, multimedia, principios de accesibilidad (WCAG)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-34-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: HTML5 Semántico - Profundización\n\nEsta semana nos enfocamos en: Formularios avanzados, multimedia, microdata, WAI-ARIA..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-35-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CSS3 Avanzado - Layout y Modelo de Caja\n\nEsta semana nos enfocamos en: Modelo de caja (box model), position, display, Flexbox..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-36-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Diseño Responsivo y CSS Grid\n\nEsta semana nos enfocamos en: CSS Grid, media queries, enfoque Mobile-First..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-37-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: JavaScript Fundamental - Sintaxis y Conceptos Básicos\n\nEsta semana nos enfocamos en: Variables (let, const), tipos de datos, funciones, condicionales, bucles..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-38-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: JavaScript y Manipulación del DOM\n\nEsta semana nos enfocamos en: Selección de elementos del DOM, manipulación de clases y estilos, manejo de eventos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-39-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: JavaScript Avanzado - Asincronía y APIs\n\nEsta semana nos enfocamos en: Promises, async/await, fetch API, manejo de errores asincrónos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-40-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: JavaScript Moderno - ES6+ y Herramientas\n\nEsta semana nos enfocamos en: Arrow functions, destructuring, modules ES6, template literals, herramientas de build básicas..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FundamentosWeb #Learning #AI"
+  },
+  {
+    "id": "week-41-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Introducción a React - Componentes y JSX\n\nEsta semana nos enfocamos en: JSX, componentes funcionales, props básicas, estructura de proyectos React..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-42-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: React - Estado y Interactividad\n\nEsta semana nos enfocamos en: useState, manejo de eventos en React, formularios controlados..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-43-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: React - Hooks y Efectos\n\nEsta semana nos enfocamos en: useEffect, useContext, hooks personalizados..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-44-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: React - Gestión de Estado Avanzada\n\nEsta semana nos enfocamos en: useReducer, Context API, patrones de estado..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-45-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Routing y Frameworks de Estilos\n\nEsta semana nos enfocamos en: React Router, introducción a un framework de CSS como Tailwind CSS..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-46-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Optimización y Performance\n\nEsta semana nos enfocamos en: React.memo, useMemo, useCallback, code splitting, lazy loading..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-47-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Testing en React\n\nEsta semana nos enfocamos en: React Testing Library, Jest, testing de componentes, testing de hooks..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-48-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase y Next.js\n\nEsta semana nos enfocamos en: Introducción a Next.js, diseño de arquitectura Frontend, despliegue en plataformas como Vercel o Netlify..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#FrameworksModernos #Learning #AI"
+  },
+  {
+    "id": "week-49-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Node.js y Express\n\nEsta semana nos enfocamos en: El Event Loop, I/O no bloqueante, módulos de Node.js. Creación de un servidor con Express, manejo de rutas y middleware..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-50-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Node.js - Profundización\n\nEsta semana nos enfocamos en: Módulos personalizados, streams, buffers, middleware avanzado..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-51-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Bases de Datos Relacionales (SQL)\n\nEsta semana nos enfocamos en: Modelado de datos (entidades, relaciones, claves primarias/foráneas). Comandos SQL (SELECT, INSERT, UPDATE, DELETE). JOINs para combinar datos de múltiples tablas..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-52-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Consultas SQL Avanzadas\n\nEsta semana nos enfocamos en: JOINs avanzados, subconsultas, funciones de agregación, índices, optimización..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-53-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: APIs RESTful y Conexión a Base de Datos\n\nEsta semana nos enfocamos en: Principios REST. Conexión a PostgreSQL desde Node.js. Uso de un ORM (Object-Relational Mapper) como Prisma o Sequelize para abstraer las consultas SQL..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-54-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: APIs RESTful Avanzadas\n\nEsta semana nos enfocamos en: Relaciones entre entidades, paginación, filtrado, ordenamiento..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-55-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Autenticación y Autorización\n\nEsta semana nos enfocamos en: Hashing de contraseñas (bcrypt). Autenticación basada en tokens con JSON Web Tokens (JWT). Protección de rutas. Roles y permisos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-56-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Autenticación Avanzada y Seguridad\n\nEsta semana nos enfocamos en: OAuth 2.0, refresh tokens, rate limiting, sanitización de inputs..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#APIsyBasesdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-57-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Arquitectura de Software y Patrones de Diseño\n\nEsta semana nos enfocamos en: Patrones de diseño (ej. MVC - Modelo-Vista-Controlador, Repository). Principios SOLID. Inyección de dependencias..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-58-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Patrones de Diseño Avanzados\n\nEsta semana nos enfocamos en: Factory, Observer, Strategy, Decorator patterns aplicados a Node.js..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-59-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Testing de Backend\n\nEsta semana nos enfocamos en: Testing unitario, de integración y End-to-End (E2E). Frameworks como Jest y librerías como Supertest para probar endpoints HTTP. Mocking de dependencias..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-60-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Testing Avanzado y TDD\n\nEsta semana nos enfocamos en: TDD, mocking avanzado, tests de performance, tests de carga..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-61-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Seguridad Avanzada y Optimización\n\nEsta semana nos enfocamos en: OWASP Top 10 (XSS, Inyección SQL, etc.). Validación de entradas. CORS. Rate limiting. Estrategias de caché (caching) con herramientas como Redis..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-62-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Monitoreo y Observabilidad\n\nEsta semana nos enfocamos en: Logging estructurado, métricas de aplicación, health checks, alertas..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-63-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase - Planificación\n\nEsta semana nos enfocamos en: Diseño de arquitectura de sistemas, planificación de desarrollo, especificación de APIs..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-64-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase y Documentación\n\nEsta semana nos enfocamos en: Diseño de API desde cero. Documentación de API con herramientas como Swagger/OpenAPI..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ArquitecturaySeguridad #Learning #AI"
+  },
+  {
+    "id": "week-65-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Docker\n\nEsta semana nos enfocamos en: Imágenes vs. Contenedores, Dockerfile, Docker Hub, volúmenes para persistencia..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-66-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Docker Avanzado y Redes\n\nEsta semana nos enfocamos en: Docker networks, volumes avanzados, multi-stage builds optimizados, seguridad en contenedores..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-67-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Orquestación Local con Docker Compose\n\nEsta semana nos enfocamos en: docker-compose.yml, servicios, redes (networks), volúmenes (volumes)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-68-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Docker Compose Avanzado y Entornos\n\nEsta semana nos enfocamos en: Override files, variables de entorno, profiles, secrets management..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-69-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Integración Continua (CI) con GitHub Actions\n\nEsta semana nos enfocamos en: Conceptos de CI/CD. Creación de workflows en GitHub Actions. Ejecución de tests automatizados. Linters y formateo de código..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-70-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CI Avanzado y Quality Gates\n\nEsta semana nos enfocamos en: Coverage reports, code quality analysis, security scanning, artifact management..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-71-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Despliegue Continuo (CD) y Monitoreo Básico\n\nEsta semana nos enfocamos en: Secret management en GitHub Actions. Despliegue de contenedores a un registro (Docker Hub, GHCR). Estrategias de logging. Monitoreo de salud de la aplicación (health checks)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-72-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: CD Avanzado y Estrategias de Despliegue\n\nEsta semana nos enfocamos en: Blue-green deployments, canary releases, rollback strategies, deployment slots..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ContainerizaciónyCI/CD #Learning #AI"
+  },
+  {
+    "id": "week-73-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Kubernetes (K8s)\n\nEsta semana nos enfocamos en: Arquitectura de K8s. Objetos: Pods, Services, Deployments. kubectl..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-74-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Kubernetes Avanzado\n\nEsta semana nos enfocamos en: ConfigMaps, Secrets, Ingress, Persistent Volumes, StatefulSets..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-75-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Cloud Computing (AWS/GCP)\n\nEsta semana nos enfocamos en: Servicios IaaS, PaaS, SaaS. Cómputo (EC2/Compute Engine), Almacenamiento (S3/Cloud Storage), Bases de Datos gestionadas (RDS/Cloud SQL)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-76-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Cloud Services Avanzados\n\nEsta semana nos enfocamos en: Load balancers, CDN, auto-scaling, managed databases, monitoring services..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-77-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Arquitecturas Modernas: Serverless y Microservicios\n\nEsta semana nos enfocamos en: Funciones como Servicio (FaaS) con AWS Lambda o Google Cloud Functions. API Gateway. Patrones básicos de microservicios..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-78-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Microservicios y Service Mesh\n\nEsta semana nos enfocamos en: Patterns de microservicios, service discovery, circuit breakers, service mesh básico..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-79-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Infraestructura como Código (IaC)\n\nEsta semana nos enfocamos en: Terraform basics, providers, resources, state management..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-80-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase\n\nEsta semana nos enfocamos en: Infraestructura como Código (IaC) con Terraform (introducción). Pipeline GitOps (opcional)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OrquestaciónyCloud #Learning #AI"
+  },
+  {
+    "id": "week-81-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Python para el Análisis de Datos\n\nEsta semana nos enfocamos en: NumPy para operaciones con arrays multidimensionales. Pandas para la manipulación y análisis de datos tabulares (DataFrame, Series), incluyendo indexación, limpieza de datos, manejo de valores nulos y groupby..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#AnálisisdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-82-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Análisis de Datos Avanzado con Pandas\n\nEsta semana nos enfocamos en: GroupBy avanzado, merging y joining, time series analysis, datos categóricos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#AnálisisdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-83-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Visualización de Datos y Comunicación de Insights\n\nEsta semana nos enfocamos en: Matplotlib para la creación de gráficos fundamentales. Seaborn para la creación de gráficos estadísticos atractivos. Principios de storytelling con datos..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#AnálisisdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-84-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Visualización Avanzada y Dashboards\n\nEsta semana nos enfocamos en: Plotly para gráficos interactivos, Streamlit para dashboards, principios de design de visualizaciones..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#AnálisisdeDatos #Learning #AI"
+  },
+  {
+    "id": "week-85-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Fundamentos de Machine Learning\n\nEsta semana nos enfocamos en: Aprendizaje supervisado vs. no supervisado. Scikit-learn como framework principal. División de datos (train/test split), entrenamiento de modelos (.fit()), predicción (.predict()). Métricas de evaluación (accuracy, precision, recall, RMSE)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#MachineLearning #Learning #AI"
+  },
+  {
+    "id": "week-86-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Machine Learning Avanzado\n\nEsta semana nos enfocamos en: Feature engineering, cross-validation, hyperparameter tuning, ensemble methods..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#MachineLearning #Learning #AI"
+  },
+  {
+    "id": "week-87-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Integración de Modelos en Aplicaciones\n\nEsta semana nos enfocamos en: 'Servir' un modelo de ML a través de una API. Creación de una API simple con FastAPI o Flask para exponer el modelo. Integración con una interfaz de Frontend básica..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#MachineLearning #Learning #AI"
+  },
+  {
+    "id": "week-88-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Proyecto Integrador de Fase e Integración de Modelos\n\nEsta semana nos enfocamos en: Integración completa Frontend-Backend-ML, deployment de modelos, monitoreo básico de modelos en producción..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#MachineLearning #Learning #AI"
+  },
+  {
+    "id": "week-89-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Diseño de Arquitectura y Planificación\n\nEsta semana nos enfocamos en: Requerimientos funcionales y no funcionales. Diseño de arquitectura (monolito vs. microservicios). Modelado de datos avanzado. Elección del stack tecnológico. Planificación de proyecto (sprints, hitos)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-90-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Configuración del Entorno de Desarrollo\n\nEsta semana nos enfocamos en: Development environment setup, tooling configuration, team workflows, documentation standards..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-91-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Implementación del Core y Backend\n\nEsta semana nos enfocamos en: Implementación de la API siguiendo el diseño arquitectónico. Lógica de negocio compleja. Testing exhaustivo (unitario y de integración)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-92-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Backend Avanzado y Optimización\n\nEsta semana nos enfocamos en: Advanced backend features, caching strategies, security implementation, performance optimization..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-93-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Implementación del Frontend e Integración\n\nEsta semana nos enfocamos en: Desarrollo de componentes complejos en React/Next.js. Gestión de estado avanzada. Integración Full-Stack. Estrategias de manejo de errores..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-94-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Frontend Avanzado y UX\n\nEsta semana nos enfocamos en: Advanced React patterns, state management, performance optimization, responsive design, accessibility..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#ProyectoCapstoneFull-Stack #Learning #AI"
+  },
+  {
+    "id": "week-95-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Pulido, Despliegue y Documentación\n\nEsta semana nos enfocamos en: Optimización de rendimiento (frontend y backend). Despliegue en la nube (usando conocimientos de la Fase 4). Documentación para usuarios y desarrolladores..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OptimizaciónyPreparaciónProfesional #Learning #AI"
+  },
+  {
+    "id": "week-96-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Optimización de Portfolio y Preparación para Entrevistas\n\nEsta semana nos enfocamos en: Curación de portfolio en GitHub. Optimización de perfil de LinkedIn y CV. Práctica de desafíos de algoritmos (LeetCode/HackerRank). Preguntas de diseño de sistemas. Entrevistas conductuales (método STAR)..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#OptimizaciónyPreparaciónProfesional #Learning #AI"
+  },
+  {
+    "id": "week-97-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Gestión de Proyecto y Metodologías Ágiles Personales\n\nEsta semana nos enfocamos en: Metodologías ágiles (Kanban personal). Gestión de backlog, priorización de tareas. Retrospectivas y mejora continua..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#GestiónyOperacióndeProyectos #Learning #AI"
+  },
+  {
+    "id": "week-98-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Monitoreo Post-Despliegue y Ownership\n\nEsta semana nos enfocamos en: Monitoreo de disponibilidad (uptime). Centralización de logs. Métricas básicas de rendimiento de la aplicación (APM). Configuración de alertas..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#GestiónyOperacióndeProyectos #Learning #AI"
+  },
+  {
+    "id": "week-99-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Estrategias de Networking y Negociación\n\nEsta semana nos enfocamos en: Networking estratégico. Propuesta de valor personal. Investigación de mercado salarial. Técnicas de negociación..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#EstrategiadeCarrerayDesarrolloContinuo #Learning #AI"
+  },
+  {
+    "id": "week-100-kickoff",
+    "platform": "LinkedIn",
+    "type": "Kickoff",
+    "content": "🚀 Semana Nueva: Contribución Open Source y Crecimiento Continuo\n\nEsta semana nos enfocamos en: Identificación de proyectos open source. Proceso de contribución. Desarrollo de marca personal. Plan de aprendizaje continuo..\n\nComo parte del programa AI Code Mentor, profundizaremos en los fundamentos que separan a los codificadores junior de los ingenieros senior.\n\n¿Listo para el desafío? \n\n#EstrategiadeCarrerayDesarrolloContinuo #Learning #AI"
+  },
+  {
+    "id": "day-0-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Inteligencia Artificial Generativa\n\nEn el contexto de Teoría y Ética de IA, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-1-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Large Language Models - Arquitectura y Limitaciones\n\nEn el contexto de Teoría y Ética de IA, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-2-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Principios de IA Responsable\n\nEn el contexto de Teoría y Ética de IA, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-3-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación Teórica y Evaluación\n\nEn el contexto de Teoría y Ética de IA, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-4-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Reflexión Metacognitiva y Diseño del Tutor\n\nEn el contexto de Teoría y Ética de IA, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-5-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Prompt Engineering\n\nEn el contexto de Práctica de Diseño de Prompts, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-6-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Laboratorios Prácticos Guiados\n\nEn el contexto de Práctica de Diseño de Prompts, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-7-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Técnicas Avanzadas de Prompting\n\nEn el contexto de Práctica de Diseño de Prompts, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-8-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Introducción al SDK de Python\n\nEn el contexto de Práctica de Diseño de Prompts, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-9-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Transición GUI → Código y Diseño del Tutor\n\nEn el contexto de Práctica de Diseño de Prompts, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-10-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Introducción al Pensamiento Computacional\n\nEn el contexto de CS50 - Semana 0: Introducción, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-11-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Scratch - Interfaz y Conceptos\n\nEn el contexto de CS50 - Semana 0: Introducción, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-12-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Programación Visual - Lógica y Control\n\nEn el contexto de CS50 - Semana 0: Introducción, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-13-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Desarrollo del Problem Set 0\n\nEn el contexto de CS50 - Semana 0: Introducción, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-14-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Finalización y Reflexión Metacognitiva\n\nEn el contexto de CS50 - Semana 0: Introducción, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-15-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Introducción al Lenguaje C y Compilación\n\nEn el contexto de CS50 - Semana 1: C, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-16-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Variables, Tipos de Datos y E/S Básica\n\nEn el contexto de CS50 - Semana 1: C, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-17-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Funciones y Parámetros en C\n\nEn el contexto de CS50 - Semana 1: C, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-18-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Desarrollo del Problem Set 1\n\nEn el contexto de CS50 - Semana 1: C, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-19-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Completar Problem Set y Reflexión\n\nEn el contexto de CS50 - Semana 1: C, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-20-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Arrays en C\n\nEn el contexto de CS50 - Semana 2: Arrays, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-21-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Strings como Arrays de Caracteres\n\nEn el contexto de CS50 - Semana 2: Arrays, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-22-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Algoritmos de Procesamiento de Arrays\n\nEn el contexto de CS50 - Semana 2: Arrays, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-23-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Desarrollo del Problem Set 2\n\nEn el contexto de CS50 - Semana 2: Arrays, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-24-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Completar Criptografía y Reflexión\n\nEn el contexto de CS50 - Semana 2: Arrays, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-25-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Introducción a Algoritmos y Eficiencia\n\nEn el contexto de CS50 - Semana 3: Algoritmos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-26-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Algoritmos de Búsqueda\n\nEn el contexto de CS50 - Semana 3: Algoritmos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-27-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Algoritmos de Ordenamiento Básicos\n\nEn el contexto de CS50 - Semana 3: Algoritmos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-28-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Desarrollo del Problem Set 3\n\nEn el contexto de CS50 - Semana 3: Algoritmos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-29-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Optimización y Reflexión Algorítmica\n\nEn el contexto de CS50 - Semana 3: Algoritmos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-30-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Introducción a la Gestión de Memoria\n\nEn el contexto de CS50 - Semana 4: Memoria, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-31-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Punteros\n\nEn el contexto de CS50 - Semana 4: Memoria, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-32-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Memoria Dinámica y Malloc\n\nEn el contexto de CS50 - Semana 4: Memoria, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-33-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Desarrollo del Problem Set 4\n\nEn el contexto de CS50 - Semana 4: Memoria, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-34-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Recuperación de Datos y Reflexión\n\nEn el contexto de CS50 - Semana 4: Memoria, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-35-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Condicionales - if/elif/else\n\nEn el contexto de Estructuras de Control, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-36-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Bucles for - Iteración Controlada\n\nEn el contexto de Estructuras de Control, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-37-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Bucles while - Iteración Condicional\n\nEn el contexto de Estructuras de Control, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-38-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Bucles Anidados y Patrones Complejos\n\nEn el contexto de Estructuras de Control, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-39-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Integrador - Validador Avanzado\n\nEn el contexto de Estructuras de Control, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-40-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Encapsulación en POO\n\nEn el contexto de Programación Orientada a Objetos - Conceptos Fundamentales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-41-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Implementación de Getters y Setters\n\nEn el contexto de Programación Orientada a Objetos - Conceptos Fundamentales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-42-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Métodos Públicos vs Privados\n\nEn el contexto de Programación Orientada a Objetos - Conceptos Fundamentales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-43-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Refactorización de Clases Existentes\n\nEn el contexto de Programación Orientada a Objetos - Conceptos Fundamentales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-44-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Integrador - Sistema Encapsulado\n\nEn el contexto de Programación Orientada a Objetos - Conceptos Fundamentales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-45-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de HTML5 Semántico y Accesibilidad\n\nEn el contexto de HTML5 Semántico y Accesibilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-46-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de HTML5 Semántico y Accesibilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-47-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de HTML5 Semántico y Accesibilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-48-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de HTML5 Semántico y Accesibilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-49-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de HTML5 Semántico y Accesibilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-50-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de HTML5 Semántico - Profundización\n\nEn el contexto de HTML5 Semántico - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-51-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de HTML5 Semántico - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-52-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de HTML5 Semántico - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-53-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de HTML5 Semántico - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-54-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de HTML5 Semántico - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-55-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de CSS3 Avanzado - Layout y Modelo de Caja\n\nEn el contexto de CSS3 Avanzado - Layout y Modelo de Caja, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-56-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de CSS3 Avanzado - Layout y Modelo de Caja, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-57-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de CSS3 Avanzado - Layout y Modelo de Caja, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-58-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de CSS3 Avanzado - Layout y Modelo de Caja, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-59-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de CSS3 Avanzado - Layout y Modelo de Caja, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-60-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Diseño Responsivo y CSS Grid\n\nEn el contexto de Diseño Responsivo y CSS Grid, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-61-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Diseño Responsivo y CSS Grid, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-62-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Diseño Responsivo y CSS Grid, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-63-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Diseño Responsivo y CSS Grid, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-64-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Diseño Responsivo y CSS Grid, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-65-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de JavaScript Fundamental - Sintaxis y Conceptos Básicos\n\nEn el contexto de JavaScript Fundamental - Sintaxis y Conceptos Básicos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-66-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de JavaScript Fundamental - Sintaxis y Conceptos Básicos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-67-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de JavaScript Fundamental - Sintaxis y Conceptos Básicos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-68-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de JavaScript Fundamental - Sintaxis y Conceptos Básicos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-69-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de JavaScript Fundamental - Sintaxis y Conceptos Básicos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-70-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de JavaScript y Manipulación del DOM\n\nEn el contexto de JavaScript y Manipulación del DOM, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-71-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de JavaScript y Manipulación del DOM, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-72-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de JavaScript y Manipulación del DOM, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-73-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de JavaScript y Manipulación del DOM, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-74-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de JavaScript y Manipulación del DOM, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-75-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de JavaScript Avanzado - Asincronía y APIs\n\nEn el contexto de JavaScript Avanzado - Asincronía y APIs, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-76-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de JavaScript Avanzado - Asincronía y APIs, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-77-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de JavaScript Avanzado - Asincronía y APIs, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-78-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de JavaScript Avanzado - Asincronía y APIs, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-79-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de JavaScript Avanzado - Asincronía y APIs, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-80-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de JavaScript Moderno - ES6+ y Herramientas\n\nEn el contexto de JavaScript Moderno - ES6+ y Herramientas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-81-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de JavaScript Moderno - ES6+ y Herramientas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-82-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de JavaScript Moderno - ES6+ y Herramientas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-83-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de JavaScript Moderno - ES6+ y Herramientas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-84-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de JavaScript Moderno - ES6+ y Herramientas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-85-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Introducción a React - Componentes y JSX\n\nEn el contexto de Introducción a React - Componentes y JSX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-86-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Introducción a React - Componentes y JSX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-87-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Introducción a React - Componentes y JSX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-88-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Introducción a React - Componentes y JSX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-89-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Introducción a React - Componentes y JSX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-90-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de React - Estado y Interactividad\n\nEn el contexto de React - Estado y Interactividad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-91-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de React - Estado y Interactividad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-92-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de React - Estado y Interactividad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-93-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de React - Estado y Interactividad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-94-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de React - Estado y Interactividad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-95-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de React - Hooks y Efectos\n\nEn el contexto de React - Hooks y Efectos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-96-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de React - Hooks y Efectos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-97-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de React - Hooks y Efectos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-98-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de React - Hooks y Efectos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-99-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de React - Hooks y Efectos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-100-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de React - Gestión de Estado Avanzada\n\nEn el contexto de React - Gestión de Estado Avanzada, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-101-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de React - Gestión de Estado Avanzada, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-102-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de React - Gestión de Estado Avanzada, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-103-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de React - Gestión de Estado Avanzada, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-104-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de React - Gestión de Estado Avanzada, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-105-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Routing y Frameworks de Estilos\n\nEn el contexto de Routing y Frameworks de Estilos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-106-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Routing y Frameworks de Estilos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-107-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Routing y Frameworks de Estilos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-108-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Routing y Frameworks de Estilos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-109-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Routing y Frameworks de Estilos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-110-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Optimización y Performance\n\nEn el contexto de Optimización y Performance, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-111-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Optimización y Performance, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-112-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Optimización y Performance, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-113-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Optimización y Performance, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-114-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Optimización y Performance, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-115-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Testing en React\n\nEn el contexto de Testing en React, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-116-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Testing en React, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-117-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Testing en React, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-118-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Testing en React, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-119-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Testing en React, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-120-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Proyecto Integrador de Fase y Next.js\n\nEn el contexto de Proyecto Integrador de Fase y Next.js, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-121-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Proyecto Integrador de Fase y Next.js, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-122-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Proyecto Integrador de Fase y Next.js, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-123-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Proyecto Integrador de Fase y Next.js, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-124-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Proyecto Integrador de Fase y Next.js, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-125-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Node.js y Express\n\nEn el contexto de Fundamentos de Node.js y Express, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-126-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Node.js y Express, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-127-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Node.js y Express, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-128-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Node.js y Express, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-129-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Node.js y Express, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-130-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Node.js - Profundización\n\nEn el contexto de Fundamentos de Node.js - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-131-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Node.js - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-132-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Node.js - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-133-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Node.js - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-134-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Node.js - Profundización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-135-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Bases de Datos Relacionales (SQL)\n\nEn el contexto de Fundamentos de Bases de Datos Relacionales (SQL), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-136-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Bases de Datos Relacionales (SQL), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-137-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Bases de Datos Relacionales (SQL), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-138-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Bases de Datos Relacionales (SQL), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-139-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Bases de Datos Relacionales (SQL), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-140-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Consultas SQL Avanzadas\n\nEn el contexto de Consultas SQL Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-141-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Consultas SQL Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-142-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Consultas SQL Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-143-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Consultas SQL Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-144-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Consultas SQL Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-145-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de APIs RESTful y Conexión a Base de Datos\n\nEn el contexto de APIs RESTful y Conexión a Base de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-146-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de APIs RESTful y Conexión a Base de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-147-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de APIs RESTful y Conexión a Base de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-148-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de APIs RESTful y Conexión a Base de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-149-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de APIs RESTful y Conexión a Base de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-150-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de APIs RESTful Avanzadas\n\nEn el contexto de APIs RESTful Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-151-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de APIs RESTful Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-152-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de APIs RESTful Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-153-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de APIs RESTful Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-154-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de APIs RESTful Avanzadas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-155-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Autenticación y Autorización\n\nEn el contexto de Autenticación y Autorización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-156-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Autenticación y Autorización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-157-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Autenticación y Autorización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-158-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Autenticación y Autorización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-159-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Autenticación y Autorización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-160-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Autenticación Avanzada y Seguridad\n\nEn el contexto de Autenticación Avanzada y Seguridad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-161-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Autenticación Avanzada y Seguridad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-162-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Autenticación Avanzada y Seguridad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-163-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Autenticación Avanzada y Seguridad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-164-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Autenticación Avanzada y Seguridad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-165-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Arquitectura de Software y Patrones de Diseño\n\nEn el contexto de Arquitectura de Software y Patrones de Diseño, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-166-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Arquitectura de Software y Patrones de Diseño, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-167-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Arquitectura de Software y Patrones de Diseño, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-168-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Arquitectura de Software y Patrones de Diseño, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-169-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Arquitectura de Software y Patrones de Diseño, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-170-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Patrones de Diseño Avanzados\n\nEn el contexto de Patrones de Diseño Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-171-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Patrones de Diseño Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-172-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Patrones de Diseño Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-173-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Patrones de Diseño Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-174-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Patrones de Diseño Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-175-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Testing de Backend\n\nEn el contexto de Testing de Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-176-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Testing de Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-177-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Testing de Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-178-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Testing de Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-179-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Testing de Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-180-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Testing Avanzado y TDD\n\nEn el contexto de Testing Avanzado y TDD, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-181-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Testing Avanzado y TDD, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-182-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Testing Avanzado y TDD, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-183-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Testing Avanzado y TDD, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-184-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Testing Avanzado y TDD, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-185-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Seguridad Avanzada y Optimización\n\nEn el contexto de Seguridad Avanzada y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-186-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Seguridad Avanzada y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-187-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Seguridad Avanzada y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-188-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Seguridad Avanzada y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-189-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Seguridad Avanzada y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-190-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Monitoreo y Observabilidad\n\nEn el contexto de Monitoreo y Observabilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-191-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Monitoreo y Observabilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-192-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Monitoreo y Observabilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-193-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Monitoreo y Observabilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-194-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Monitoreo y Observabilidad, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-195-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Proyecto Integrador de Fase - Planificación\n\nEn el contexto de Proyecto Integrador de Fase - Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-196-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Proyecto Integrador de Fase - Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-197-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Proyecto Integrador de Fase - Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-198-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Proyecto Integrador de Fase - Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-199-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Proyecto Integrador de Fase - Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-200-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Proyecto Integrador de Fase y Documentación\n\nEn el contexto de Proyecto Integrador de Fase y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-201-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Proyecto Integrador de Fase y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-202-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Proyecto Integrador de Fase y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-203-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Proyecto Integrador de Fase y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-204-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Proyecto Integrador de Fase y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-205-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Docker\n\nEn el contexto de Fundamentos de Docker, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-206-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Docker, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-207-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Docker, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-208-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Docker, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-209-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Docker, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-210-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Docker Avanzado y Redes\n\nEn el contexto de Docker Avanzado y Redes, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-211-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Docker Avanzado y Redes, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-212-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Docker Avanzado y Redes, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-213-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Docker Avanzado y Redes, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-214-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Docker Avanzado y Redes, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-215-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Orquestación Local con Docker Compose\n\nEn el contexto de Orquestación Local con Docker Compose, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-216-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Orquestación Local con Docker Compose, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-217-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Orquestación Local con Docker Compose, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-218-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Orquestación Local con Docker Compose, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-219-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Orquestación Local con Docker Compose, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-220-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Docker Compose Avanzado y Entornos\n\nEn el contexto de Docker Compose Avanzado y Entornos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-221-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Docker Compose Avanzado y Entornos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-222-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Docker Compose Avanzado y Entornos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-223-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Docker Compose Avanzado y Entornos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-224-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Docker Compose Avanzado y Entornos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-225-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Integración Continua (CI) con GitHub Actions\n\nEn el contexto de Integración Continua (CI) con GitHub Actions, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-226-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Integración Continua (CI) con GitHub Actions, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-227-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Integración Continua (CI) con GitHub Actions, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-228-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Integración Continua (CI) con GitHub Actions, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-229-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Integración Continua (CI) con GitHub Actions, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-230-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de CI Avanzado y Quality Gates\n\nEn el contexto de CI Avanzado y Quality Gates, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-231-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de CI Avanzado y Quality Gates, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-232-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de CI Avanzado y Quality Gates, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-233-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de CI Avanzado y Quality Gates, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-234-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de CI Avanzado y Quality Gates, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-235-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Despliegue Continuo (CD) y Monitoreo Básico\n\nEn el contexto de Despliegue Continuo (CD) y Monitoreo Básico, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-236-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Despliegue Continuo (CD) y Monitoreo Básico, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-237-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Despliegue Continuo (CD) y Monitoreo Básico, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-238-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Despliegue Continuo (CD) y Monitoreo Básico, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-239-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Despliegue Continuo (CD) y Monitoreo Básico, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-240-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de CD Avanzado y Estrategias de Despliegue\n\nEn el contexto de CD Avanzado y Estrategias de Despliegue, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-241-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de CD Avanzado y Estrategias de Despliegue, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-242-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de CD Avanzado y Estrategias de Despliegue, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-243-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de CD Avanzado y Estrategias de Despliegue, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-244-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de CD Avanzado y Estrategias de Despliegue, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-245-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Kubernetes (K8s)\n\nEn el contexto de Fundamentos de Kubernetes (K8s), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-246-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Kubernetes (K8s), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-247-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Kubernetes (K8s), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-248-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Kubernetes (K8s), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-249-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Kubernetes (K8s), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-250-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Kubernetes Avanzado\n\nEn el contexto de Kubernetes Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-251-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Kubernetes Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-252-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Kubernetes Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-253-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Kubernetes Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-254-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Kubernetes Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-255-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Cloud Computing (AWS/GCP)\n\nEn el contexto de Fundamentos de Cloud Computing (AWS/GCP), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-256-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Cloud Computing (AWS/GCP), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-257-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Cloud Computing (AWS/GCP), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-258-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Cloud Computing (AWS/GCP), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-259-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Cloud Computing (AWS/GCP), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-260-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Cloud Services Avanzados\n\nEn el contexto de Cloud Services Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-261-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Cloud Services Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-262-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Cloud Services Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-263-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Cloud Services Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-264-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Cloud Services Avanzados, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-265-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Arquitecturas Modernas: Serverless y Microservicios\n\nEn el contexto de Arquitecturas Modernas: Serverless y Microservicios, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-266-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Arquitecturas Modernas: Serverless y Microservicios, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-267-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Arquitecturas Modernas: Serverless y Microservicios, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-268-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Arquitecturas Modernas: Serverless y Microservicios, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-269-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Arquitecturas Modernas: Serverless y Microservicios, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-270-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Microservicios y Service Mesh\n\nEn el contexto de Microservicios y Service Mesh, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-271-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Microservicios y Service Mesh, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-272-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Microservicios y Service Mesh, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-273-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Microservicios y Service Mesh, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-274-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Microservicios y Service Mesh, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-275-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Infraestructura como Código (IaC)\n\nEn el contexto de Infraestructura como Código (IaC), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-276-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Infraestructura como Código (IaC), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-277-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Infraestructura como Código (IaC), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-278-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Infraestructura como Código (IaC), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-279-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Infraestructura como Código (IaC), entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-280-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Proyecto Integrador de Fase\n\nEn el contexto de Proyecto Integrador de Fase, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-281-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Proyecto Integrador de Fase, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-282-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Proyecto Integrador de Fase, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-283-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Proyecto Integrador de Fase, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-284-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Proyecto Integrador de Fase, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-285-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Python para el Análisis de Datos\n\nEn el contexto de Python para el Análisis de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-286-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Python para el Análisis de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-287-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Python para el Análisis de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-288-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Python para el Análisis de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-289-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Python para el Análisis de Datos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-290-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Análisis de Datos Avanzado con Pandas\n\nEn el contexto de Análisis de Datos Avanzado con Pandas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-291-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Análisis de Datos Avanzado con Pandas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-292-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Análisis de Datos Avanzado con Pandas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-293-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Análisis de Datos Avanzado con Pandas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-294-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Análisis de Datos Avanzado con Pandas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-295-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Visualización de Datos y Comunicación de Insights\n\nEn el contexto de Visualización de Datos y Comunicación de Insights, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-296-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Visualización de Datos y Comunicación de Insights, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-297-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Visualización de Datos y Comunicación de Insights, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-298-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Visualización de Datos y Comunicación de Insights, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-299-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Visualización de Datos y Comunicación de Insights, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-300-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Visualización Avanzada y Dashboards\n\nEn el contexto de Visualización Avanzada y Dashboards, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-301-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Visualización Avanzada y Dashboards, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-302-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Visualización Avanzada y Dashboards, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-303-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Visualización Avanzada y Dashboards, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-304-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Visualización Avanzada y Dashboards, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-305-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Fundamentos de Machine Learning\n\nEn el contexto de Fundamentos de Machine Learning, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-306-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Fundamentos de Machine Learning, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-307-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Fundamentos de Machine Learning, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-308-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Fundamentos de Machine Learning, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-309-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Fundamentos de Machine Learning, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-310-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Machine Learning Avanzado\n\nEn el contexto de Machine Learning Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-311-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Machine Learning Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-312-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Machine Learning Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-313-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Machine Learning Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-314-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Machine Learning Avanzado, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-315-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Integración de Modelos en Aplicaciones\n\nEn el contexto de Integración de Modelos en Aplicaciones, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-316-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Integración de Modelos en Aplicaciones, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-317-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Integración de Modelos en Aplicaciones, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-318-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Integración de Modelos en Aplicaciones, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-319-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Integración de Modelos en Aplicaciones, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-320-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Proyecto Integrador de Fase e Integración de Modelos\n\nEn el contexto de Proyecto Integrador de Fase e Integración de Modelos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-321-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Proyecto Integrador de Fase e Integración de Modelos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-322-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Proyecto Integrador de Fase e Integración de Modelos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-323-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Proyecto Integrador de Fase e Integración de Modelos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-324-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Proyecto Integrador de Fase e Integración de Modelos, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-325-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Diseño de Arquitectura y Planificación\n\nEn el contexto de Diseño de Arquitectura y Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-326-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Diseño de Arquitectura y Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-327-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Diseño de Arquitectura y Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-328-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Diseño de Arquitectura y Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-329-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Diseño de Arquitectura y Planificación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-330-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Configuración del Entorno de Desarrollo\n\nEn el contexto de Configuración del Entorno de Desarrollo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-331-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Configuración del Entorno de Desarrollo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-332-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Configuración del Entorno de Desarrollo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-333-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Configuración del Entorno de Desarrollo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-334-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Configuración del Entorno de Desarrollo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-335-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Implementación del Core y Backend\n\nEn el contexto de Implementación del Core y Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-336-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Implementación del Core y Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-337-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Implementación del Core y Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-338-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Implementación del Core y Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-339-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Implementación del Core y Backend, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-340-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Backend Avanzado y Optimización\n\nEn el contexto de Backend Avanzado y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-341-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Backend Avanzado y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-342-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Backend Avanzado y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-343-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Backend Avanzado y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-344-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Backend Avanzado y Optimización, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-345-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Implementación del Frontend e Integración\n\nEn el contexto de Implementación del Frontend e Integración, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-346-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Implementación del Frontend e Integración, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-347-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Implementación del Frontend e Integración, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-348-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Implementación del Frontend e Integración, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-349-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Implementación del Frontend e Integración, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-350-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Frontend Avanzado y UX\n\nEn el contexto de Frontend Avanzado y UX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-351-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Frontend Avanzado y UX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-352-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Frontend Avanzado y UX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-353-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Frontend Avanzado y UX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-354-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Frontend Avanzado y UX, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-355-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Pulido, Despliegue y Documentación\n\nEn el contexto de Pulido, Despliegue y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-356-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Pulido, Despliegue y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-357-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Pulido, Despliegue y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-358-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Pulido, Despliegue y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-359-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Pulido, Despliegue y Documentación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-360-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Optimización de Portfolio y Preparación para Entrevistas\n\nEn el contexto de Optimización de Portfolio y Preparación para Entrevistas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-361-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Optimización de Portfolio y Preparación para Entrevistas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-362-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Optimización de Portfolio y Preparación para Entrevistas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-363-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Optimización de Portfolio y Preparación para Entrevistas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-364-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Optimización de Portfolio y Preparación para Entrevistas, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-365-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Gestión de Proyecto y Metodologías Ágiles Personales\n\nEn el contexto de Gestión de Proyecto y Metodologías Ágiles Personales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-366-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Gestión de Proyecto y Metodologías Ágiles Personales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-367-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Gestión de Proyecto y Metodologías Ágiles Personales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-368-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Gestión de Proyecto y Metodologías Ágiles Personales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-369-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Gestión de Proyecto y Metodologías Ágiles Personales, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-370-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Monitoreo Post-Despliegue y Ownership\n\nEn el contexto de Monitoreo Post-Despliegue y Ownership, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-371-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Monitoreo Post-Despliegue y Ownership, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-372-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Monitoreo Post-Despliegue y Ownership, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-373-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Monitoreo Post-Despliegue y Ownership, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-374-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Monitoreo Post-Despliegue y Ownership, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-375-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Estrategias de Networking y Negociación\n\nEn el contexto de Estrategias de Networking y Negociación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-376-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Estrategias de Networking y Negociación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-377-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Estrategias de Networking y Negociación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-378-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Estrategias de Networking y Negociación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-379-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Estrategias de Networking y Negociación, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-380-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Fundamentos de Contribución Open Source y Crecimiento Continuo\n\nEn el contexto de Contribución Open Source y Crecimiento Continuo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-381-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Exploración Práctica y Herramientas\n\nEn el contexto de Contribución Open Source y Crecimiento Continuo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-382-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Aplicación Dirigida y Metodología\n\nEn el contexto de Contribución Open Source y Crecimiento Continuo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-383-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Proyecto Práctico y Integración\n\nEn el contexto de Contribución Open Source y Crecimiento Continuo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  },
+  {
+    "id": "day-384-tip",
+    "platform": "Twitter",
+    "type": "Tip",
+    "content": "💡 Tip del Día: Consolidación y Reflexión Metacognitiva\n\nEn el contexto de Contribución Open Source y Crecimiento Continuo, entender este concepto es clave para dominar el flujo de trabajo moderno.\n\n#DevTips #CodeNewbie"
+  }
+]

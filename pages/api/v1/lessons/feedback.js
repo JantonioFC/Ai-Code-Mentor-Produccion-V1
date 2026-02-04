@@ -1,12 +1,13 @@
 import { z } from 'zod';
 import db from '../../../../lib/db';
 import { v4 as uuidv4 } from 'uuid';
-import { createApiHandler, sendSuccess } from '../../../../lib/api/APIWrapper';
+import { createApiHandler, sendSuccess, sendError } from '../../../../lib/api/APIWrapper';
 import { withValidation } from '../../../../lib/api/validate';
+import AuthLocal from '../../../../lib/auth-local';
+import rateLimit from '../../../../lib/rate-limit'; // Anti-Abuse
 
-// Esquema Zod para Feedback
+// Esquema Zod para Feedback (userId removido, se obtiene de la sesión)
 const feedbackSchema = z.object({
-    userId: z.string().min(1),
     lessonId: z.string().min(1),
     sessionId: z.string().optional().nullable(),
     rating: z.number().int().min(1).max(5),
@@ -16,7 +17,26 @@ const feedbackSchema = z.object({
 });
 
 async function handler(req, res) {
-    const { userId, lessonId, sessionId, rating, wasHelpful, difficulty, comment } = req.body;
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method not allowed' });
+    }
+
+    try {
+        await rateLimit(req, res); // 5 request / 15 min
+    } catch (e) {
+        return; // Response handled by middleware
+    }
+
+    // 1. Verify Authentication
+    const token = req.cookies['ai-code-mentor-auth'] || req.headers.authorization;
+    const auth = AuthLocal.verifyToken(token);
+
+    if (!auth.isValid) {
+        return sendError(res, 'Authentication required', 401);
+    }
+
+    const userId = auth.userId;
+    const { lessonId, sessionId, rating, wasHelpful, difficulty, comment } = req.body;
 
     // Insertar feedback
     const feedbackId = uuidv4();

@@ -7,6 +7,15 @@
 import db from '../../lib/db';
 import jsPDF from 'jspdf';
 import JSZip from 'jszip';
+import rateLimit from '../../lib/rate-limit'; // CPU Protection
+
+// Semaphore for CPU protection (Per-Instance)
+let activeExports = 0;
+const MAX_CONCURRENT_EXPORTS = 1;
+
+import AuthLocal from '../../lib/auth-local';
+
+// ... imports ...
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -16,18 +25,51 @@ export default async function handler(req, res) {
     });
   }
 
+  // 0. Security: Authenticate User
+  const token = req.cookies['ai-code-mentor-auth'] || req.headers.authorization;
+  const auth = AuthLocal.verifyToken(token);
+
+  if (!auth.isValid) {
+    return res.status(401).json({ success: false, error: 'Unauthorized' });
+  }
+
+  // 1. Rate Limit (User based)
+  try {
+    await rateLimit(req, res);
+  } catch (e) {
+    return;
+  }
+
+  // 2. Concurrency Limit (Server based)
+  if (activeExports >= MAX_CONCURRENT_EXPORTS) {
+    console.warn('⚠️ Export request rejected due to CPU load');
+    return res.status(503).json({
+      success: false,
+      error: 'Server busy generating another export. Please try again in 30 seconds.'
+    });
+  }
+
+  activeExports++;
+
   try {
     const { format, config } = req.body;
 
-    // Step 1: Collect portfolio data
-    const portfolioData = await collectPortfolioData();
+    // SECURITY: Sanitize Inputs (XSS Prevention)
+    const safeConfig = {
+      ...config,
+      studentName: (config.studentName || 'Student').replace(/[<>]/g, '') // Basic sanitization
+    };
+
+    // Step 1: Collect portfolio data (Scoped to User)
+    const portfolioData = await collectPortfolioData(auth.userId);
 
     // Step 2: Compile evidence
     const evidenceCompilation = await compileEvidence(portfolioData);
 
     // Step 3: Generate document
-    const document = await generatePortfolioDocument(evidenceCompilation, config);
+    const document = await generatePortfolioDocument(evidenceCompilation, safeConfig);
 
+    // ... switch format ...
     // Step 4: Process export based on format
     let result;
     switch (format) {
@@ -58,17 +100,19 @@ export default async function handler(req, res) {
       success: false,
       error: error.message || 'Internal server error during portfolio export'
     });
+  } finally {
+    activeExports--;
   }
 }
 
-// Real data collection function
-async function collectPortfolioData() {
+// Real data collection function (Scoped to User)
+async function collectPortfolioData(userId) {
   try {
-    // Get dashboard data
-    const countResult = db.get('SELECT COUNT(*) as count FROM portfolio_entries');
+    // Get dashboard data - SCOPED
+    const countResult = db.get('SELECT COUNT(*) as count FROM portfolio_entries WHERE user_id = ?', [userId]);
     const totalEntries = countResult ? countResult.count : 0;
 
-    const recentEntries = db.query('SELECT * FROM portfolio_entries ORDER BY created_at DESC LIMIT 5');
+    const recentEntries = db.query('SELECT * FROM portfolio_entries WHERE user_id = ? ORDER BY created_at DESC LIMIT 5', [userId]);
 
     const dashboardResult = {
       success: true,
@@ -76,10 +120,12 @@ async function collectPortfolioData() {
       recentEntries: recentEntries || []
     };
 
-    // Get all template entries
-    const templatesResult = db.query('SELECT * FROM portfolio_entries ORDER BY created_at DESC LIMIT 100');
+    // Get all template entries - SCOPED
+    const templatesResult = db.query('SELECT * FROM portfolio_entries WHERE user_id = ? ORDER BY created_at DESC LIMIT 100', [userId]);
 
-    // Get all modules
+    // Get all modules (Public/Shared content, so no user_id needed usually, unless tracking progress)
+    // Assuming modules are static curriculum content. If they track progress, they need scoping too.
+    // For now, assuming modules are catalogue.
     const modules = db.query('SELECT * FROM modules');
 
     return {
@@ -240,14 +286,15 @@ async function generatePDFExport(document) {
     });
 
     // Generate blob URL for download
-    const pdfBlob = pdf.output('blob');
-    const downloadUrl = URL.createObjectURL(pdfBlob);
+    const pdfOutput = pdf.output('arraybuffer');
+    const base64Data = Buffer.from(pdfOutput).toString('base64');
+    const downloadUrl = `data:application/pdf;base64,${base64Data}`;
 
     return {
       downloadUrl,
       metadata: {
         format: 'pdf',
-        size: pdfBlob.size,
+        size: pdfOutput.byteLength,
         pages: pdf.getNumberOfPages()
       }
     };
@@ -311,14 +358,14 @@ async function generateHTMLExport(document) {
 </html>`;
 
     // Create blob for download
-    const htmlBlob = new Blob([htmlContent], { type: 'text/html' });
-    const downloadUrl = URL.createObjectURL(htmlBlob);
+    const base64Data = Buffer.from(htmlContent).toString('base64');
+    const downloadUrl = `data:text/html;base64,${base64Data}`;
 
     return {
       downloadUrl,
       metadata: {
         format: 'html',
-        size: htmlBlob.size,
+        size: Buffer.byteLength(htmlContent),
         sections: document.sections.length
       }
     };
@@ -333,8 +380,12 @@ async function generateGitHubPagesExport(document) {
   try {
     const zip = new JSZip();
 
-    // Create index.html
-    const htmlContent = await generateHTMLExport(document);
+    // Create index.html (reuses logic but needs stripped content)
+    // NOTE: For ZIP, we just need string content, not the download URL from previous function
+    // Refactoring slightly to reuse HTML content gen if needed, but for now copying logic is safer than complex refactor
+    const htmlExport = await generateHTMLExport(document);
+    // decode base64 back to string 
+    const htmlContent = Buffer.from(htmlExport.downloadUrl.split(',')[1], 'base64').toString('utf-8');
 
     // Add files to ZIP
     zip.file("index.html", htmlContent);
@@ -342,14 +393,15 @@ async function generateGitHubPagesExport(document) {
     zip.file("_config.yml", `title: ${document.metadata.title}\ndescription: ${document.metadata.subtitle}`);
 
     // Generate ZIP blob
-    const zipBlob = await zip.generateAsync({ type: "blob" });
-    const downloadUrl = URL.createObjectURL(zipBlob);
+    const zipBuffer = await zip.generateAsync({ type: "nodebuffer" });
+    const base64Data = zipBuffer.toString('base64');
+    const downloadUrl = `data:application/zip;base64,${base64Data}`;
 
     return {
       downloadUrl,
       metadata: {
         format: 'github-pages',
-        size: zipBlob.size,
+        size: zipBuffer.length,
         files: ['index.html', 'README.md', '_config.yml']
       }
     };

@@ -68,10 +68,11 @@ export default async function handler(req, res) {
       'sb-access-token',
       'sb-refresh-token',
       'next-auth.session-token',
-      'supabase-auth-token'
+      'supabase-auth-token',
+      'ai-code-mentor-auth'
     ];
 
-    const clearedCookies = cookiesToClear.map(cookieName => 
+    const clearedCookies = cookiesToClear.map(cookieName =>
       `${cookieName}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Lax`
     );
 
@@ -81,7 +82,7 @@ export default async function handler(req, res) {
     // PASO 4: RESETEAR ESTADO EN MEMORIA (SI EXISTE)
     // Si el bypass AUTH-M249 mantiene estado en memoria, debe resetearse aquí
     // Esto es específico a la implementación del bypass y puede requerir ajustes
-    
+
     // Nota: Si hay un módulo de gestión de sesiones global, debe resetearse aquí
     // Ejemplo (ajustar según implementación real):
     // if (global.e2eAuthState) {

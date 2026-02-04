@@ -61,6 +61,23 @@ async function handler(req, res) {
         }
     }
 
+    // --- DELETE: Delete Account (GDPR) ---
+    if (req.method === 'DELETE') {
+        if (!isAuthenticated) {
+            return res.status(401).json({ error: 'Authentication required' });
+        }
+
+        try {
+            profileService.deleteUser(userId);
+            // Clear auth cookie header handled by client or subsequent logout
+            return sendSuccess(res, {
+                message: 'Cuenta eliminada permanentemente. Hasta luego.'
+            });
+        } catch (e) {
+            return sendError(res, e, 'Error eliminando cuenta');
+        }
+    }
+
     return res.status(405).json({ error: 'Method Not Allowed' });
 }
 

@@ -34,12 +34,16 @@ async function getAuthenticatedUser(req) {
 
   if (!token) return null;
 
-  // Permitir token de prueba para E2E
+  // Permitir token de prueba SOLO en modo E2E
   if (token === MOCK_TOKEN_FOR_E2E) {
+    if (process.env.NEXT_PUBLIC_E2E_TEST_MODE !== 'true') {
+      console.warn('[Security] Attempted use of MOCK_TOKEN in non-E2E environment.');
+      return null;
+    }
     return {
       id: 'e2e-test-user-id',
       email: 'test@example.com',
-      role: 'admin' // Asignar rol admin para pasar tests que lo requieran (como admin/stats)
+      role: 'admin'
     };
   }
 
@@ -102,6 +106,9 @@ export default async function handler(req, res) {
       }
 
       if (path === '/admin/stats') {
+        if (user.role !== 'admin') {
+          return res.status(403).json({ error: 'Access denied. Admin role required.' });
+        }
         const stats = await generateSystemStats();
         return res.status(200).json(stats);
       }

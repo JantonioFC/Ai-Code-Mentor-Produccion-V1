@@ -17,6 +17,7 @@ try {
 
 const requiredVars = [
     'GEMINI_API_KEY',
+    'JWT_SECRET',
     'NEXT_PUBLIC_SENTRY_DSN'
     // 'SUPABASE_URL', // Comentado por ahora si estamos moviéndonos a local
     // 'SUPABASE_ANON_KEY'

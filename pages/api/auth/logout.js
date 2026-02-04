@@ -9,7 +9,7 @@ export default async function logoutHandler(req, res) {
 
     try {
         // Clear the auth cookie
-        res.setHeader('Set-Cookie', serialize('auth_token', '', {
+        res.setHeader('Set-Cookie', serialize('ai-code-mentor-auth', '', {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',

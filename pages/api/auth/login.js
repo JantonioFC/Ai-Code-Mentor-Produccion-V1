@@ -1,7 +1,15 @@
 import AuthLocal from '../../../lib/auth-local';
 import { serialize } from 'cookie';
+import rateLimit from '../../../lib/rate-limit'; // Security: Rate Limiting
 
 export default async function handler(req, res) {
+    // 1. Rate Limiting Check
+    try {
+        await rateLimit(req, res);
+    } catch (e) {
+        return; // Response already handled by rateLimit
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -20,7 +28,7 @@ export default async function handler(req, res) {
         }
 
         // Set JWT Cookie
-        const cookie = serialize('token', result.token, {
+        const cookie = serialize('ai-code-mentor-auth', result.token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             maxAge: 60 * 60 * 24 * 7, // 1 week

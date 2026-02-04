@@ -1,5 +1,5 @@
 import db from '../../../lib/db';
-import { getSession } from '../../../lib/auth/session'; // Assuming standard NextAuth or custom session
+// import { getSession } from '../../../lib/auth/session'; // Removed: Legacy
 
 /**
  * POST /api/usage/record
@@ -76,8 +76,8 @@ async function getUserFromRequest(req) {
         // 2. Check Cookie
         if (req.headers.cookie) {
             const cookies = parse(req.headers.cookie);
-            if (cookies.token) {
-                const payload = AuthLocal.verifyToken(cookies.token);
+            if (cookies['ai-code-mentor-auth']) {
+                const payload = AuthLocal.verifyToken(cookies['ai-code-mentor-auth']);
                 if (payload) return payload;
             }
         }
