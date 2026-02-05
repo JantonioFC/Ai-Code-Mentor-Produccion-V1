@@ -34,13 +34,13 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [authMode, setAuthMode] = useState('login'); // 'login' o 'signup'
   const [loginData, setLoginData] = useState({ email: '', password: '' });
-  const [signupData, setSignupData] = useState({ email: '', password: '', confirmPassword: '' });
+  const [signupData, setSignupData] = useState({ email: '', password: '' });
   const { signIn, signUp, isAuthenticated, loading: authLoading } = useAuth();
 
   const resetForm = () => {
     setAuthMode('login');
     setLoginData({ email: '', password: '' });
-    setSignupData({ email: '', password: '', confirmPassword: '' });
+    setSignupData({ email: '', password: '' });
   };
 
   // Si ya está autenticado, redirigir al panel
@@ -91,12 +91,6 @@ export default function LoginPage() {
   // Handler para registro
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
-
-    // Validar que las contraseñas coincidan
-    if (signupData.password !== signupData.confirmPassword) {
-      alert('Las contraseñas no coinciden');
-      return;
-    }
 
     // Validar longitud mínima de contraseña
     if (signupData.password.length < 6) {
@@ -176,7 +170,7 @@ export default function LoginPage() {
       console.log('✅ [LOGIN] Registro exitoso');
       alert('¡Registro exitoso! Ya puedes iniciar sesión.');
       setAuthMode('login'); // Cambiar a modo login
-      setSignupData({ email: '', password: '', confirmPassword: '' });
+      setSignupData({ email: '', password: '' });
 
     } catch (err) {
       console.error('❌ [LOGIN] Error inesperado durante registro:', err);
@@ -365,19 +359,6 @@ export default function LoginPage() {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Confirmar Contraseña
-                  </label>
-                  <input
-                    type="password"
-                    required
-                    value={signupData.confirmPassword}
-                    onChange={(e) => setSignupData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Repite tu contraseña"
-                  />
-                </div>
 
                 <div className="pt-4 space-y-3">
                   <button

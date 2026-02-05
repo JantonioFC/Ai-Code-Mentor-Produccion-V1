@@ -11,14 +11,14 @@ import * as Dialog from '@radix-ui/react-dialog';
 // Deconstruct manually if needed, or use named imports if available.
 // NOTE: Radix primitives usually export named components. 
 // Using named imports to avoid "Root is not a function" error.
-import { 
-  Root as DialogRoot, 
-  Portal as DialogPortal, 
-  Overlay as DialogOverlay, 
-  Content as DialogContent, 
-  Title as DialogTitle, 
-  Description as DialogDescription, 
-  Close as DialogClose 
+import {
+  Root as DialogRoot,
+  Portal as DialogPortal,
+  Overlay as DialogOverlay,
+  Content as DialogContent,
+  Title as DialogTitle,
+  Description as DialogDescription,
+  Close as DialogClose
 } from '@radix-ui/react-dialog';
 
 const APIUsageCounter = ({ position = 'top-right', expanded = false }) => {
@@ -104,23 +104,23 @@ const APIUsageCounter = ({ position = 'top-right', expanded = false }) => {
     <div
       className={`
         ${getPositionClasses()}
-        ${alertStyles.bg} ${alertStyles.text} ${alertStyles.pulse}
-        rounded-lg shadow-lg border-2 ${alertStyles.border}
+        bg-blue-600 text-white
+        rounded-lg shadow-lg border-2 border-blue-400
         px-3 py-2 cursor-pointer transition-all duration-300
         hover:scale-105 hover:shadow-xl
         backdrop-blur-sm bg-opacity-95
       `}
       onClick={() => setIsExpanded(true)}
-      title={`${remainingCalls} llamadas restantes • Reset en ${timeUntilReset}`}
+      title={`Modelo: ${currentModel} • Uso Comunitario Responsable`}
     >
       <div className="flex items-center space-x-2">
-        <span className="text-lg">{alertStyles.icon}</span>
+        <span className="text-lg">💎</span>
         <div className="flex flex-col">
           <div className="font-bold text-sm leading-tight">
-            {mounted ? remainingCalls.toLocaleString() : remainingCalls}
+            Fair Use
           </div>
-          <div className="text-xs opacity-90 leading-tight">
-             / {mounted ? dailyLimit.toLocaleString() : dailyLimit}
+          <div className="text-xs opacity-90 leading-tight text-blue-100">
+            {currentModel.split('-').pop().toUpperCase()} Optimized
           </div>
         </div>
       </div>
@@ -138,57 +138,57 @@ const APIUsageCounter = ({ position = 'top-right', expanded = false }) => {
     >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
-          <span className="text-xl">{alertStyles.icon}</span>
-          <h3 className="font-semibold text-gray-900 dark:text-white">API Usage</h3>
+          <span className="text-xl">🚀</span>
+          <h3 className="font-semibold text-gray-900 dark:text-white">Motor de Inteligencia</h3>
         </div>
         <button onClick={() => setIsExpanded(false)} className="text-gray-500 hover:text-gray-700">
-           ✕
+          ✕
         </button>
       </div>
 
       <div className="mb-4">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium">Llamadas Restantes</span>
-          <span className="text-lg font-bold">
-            {mounted ? remainingCalls.toLocaleString() : remainingCalls} / {dailyLimit}
+          <span className="text-sm font-medium">Estado de Infraestructura</span>
+          <span className="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">
+            OPTIMIZADO - FREE TIER
           </span>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-2">
+        <div className="w-full bg-blue-100 dark:bg-gray-700 rounded-full h-3 mb-2">
           <div
-            className={`h-3 rounded-full transition-all duration-500 ${alertStyles.bg}`}
-            style={{ width: `${Math.max(0, 100 - usagePercentage)}%` }}
+            className="h-3 rounded-full bg-blue-500 transition-all duration-500"
+            style={{ width: '100%' }}
           />
         </div>
-        <div className="text-xs text-gray-500">
-          {usagePercentage.toFixed(1)}% usado • {callsToday} llamadas hoy
+        <div className="text-[10px] text-gray-500 leading-tight">
+          AI Code Mentor es 100% gratuito. Usamos el modelo más potente disponible de forma gratuita para maximizar el acceso a la educación.
         </div>
       </div>
 
-       <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 mb-4 text-xs">
-          <div className="flex justify-between mb-1">
-             <span>Modelo:</span> <span className="font-mono text-neon-blue">{currentModel}</span>
-          </div>
-          <div className="flex justify-between">
-             <span>Reset:</span> <span>{timeUntilReset}</span>
-          </div>
-       </div>
+      <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 mb-4 text-xs">
+        <div className="flex justify-between mb-1">
+          <span>Modelo Activo:</span> <span className="font-mono text-blue-600">{currentModel}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Política:</span> <span className="text-purple-600 font-semibold">Uso Comunitario Responsable</span>
+        </div>
+      </div>
 
-       <div className="flex justify-between text-xs">
-         <button onClick={() => setShowDetails(!showDetails)} className="text-blue-500 hover:underline">
-           {showDetails ? 'Ocultar historial' : 'Ver historial'}
-         </button>
-       </div>
+      <div className="flex justify-between text-xs">
+        <button onClick={() => setShowDetails(!showDetails)} className="text-blue-500 hover:underline">
+          {showDetails ? 'Ocultar historial de llamadas' : 'Ver actividad reciente'}
+        </button>
+      </div>
 
-       {showDetails && (
-         <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600 max-h-32 overflow-y-auto space-y-2">
-            {callHistory.slice(-5).reverse().map((call, i) => (
-               <div key={i} className="text-xs flex justify-between">
-                  <span>{call.operation}</span>
-                  <span className={call.success ? 'text-green-500' : 'text-red-500'}>{call.success ? 'OK' : 'ERR'}</span>
-               </div>
-            ))}
-         </div>
-       )}
+      {showDetails && (
+        <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600 max-h-32 overflow-y-auto space-y-2">
+          {callHistory.slice(-5).reverse().map((call, i) => (
+            <div key={i} className="text-[10px] flex justify-between text-gray-400">
+              <span>{call.operation}</span>
+              <span className={call.success ? 'text-green-500' : 'text-red-500'}>{call.success ? 'Activa' : 'Error'}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 
@@ -200,7 +200,7 @@ const APIUsageCounter = ({ position = 'top-right', expanded = false }) => {
       <DialogRoot open={showWarning} onOpenChange={(open) => !open && dismissWarning()}>
         <DialogPortal>
           <DialogOverlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] transition-opacity duration-300" />
-          <DialogContent 
+          <DialogContent
             className="
                fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[101]
                glass-panel bg-white/10 p-6 rounded-2xl w-[90vw] max-w-md
@@ -209,11 +209,11 @@ const APIUsageCounter = ({ position = 'top-right', expanded = false }) => {
           >
             <div className="flex flex-col items-center text-center">
               <div className="mb-4 text-4xl animate-bounce">⚠️</div>
-              
+
               <DialogTitle className="text-xl font-bold text-white mb-2">
                 Advertencia de Uso de API
               </DialogTitle>
-              
+
               <DialogDescription className="text-gray-300 mb-6 leading-relaxed">
                 {alertLevel === 'critical' ?
                   `Solo quedan ${remainingCalls} llamadas de tu límite diario.` :

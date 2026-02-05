@@ -19,13 +19,13 @@ export default function LandingPage() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [authMode, setAuthMode] = useState('login'); // 'login' o 'signup'
   const [loginData, setLoginData] = useState({ email: '', password: '' });
-  const [signupData, setSignupData] = useState({ email: '', password: '', confirmPassword: '' });
+  const [signupData, setSignupData] = useState({ email: '', password: '' });
   const { signIn, signUp, isAuthenticated, loading: authLoading } = useAuth();
 
   const resetModal = () => {
     setAuthMode('login');
     setLoginData({ email: '', password: '' });
-    setSignupData({ email: '', password: '', confirmPassword: '' });
+    setSignupData({ email: '', password: '' });
   };
 
   // Redireccionar si ya está autenticado
@@ -81,12 +81,6 @@ export default function LandingPage() {
 
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
-
-    // Validar contraseñas coincidan
-    if (signupData.password !== signupData.confirmPassword) {
-      alert('Las contraseñas no coinciden');
-      return;
-    }
 
     // Validar longitud mínima contraseña
     if (signupData.password.length < 6) {
@@ -158,7 +152,7 @@ export default function LandingPage() {
 
       alert('¡Registro exitoso! Ya puedes iniciar sesión.');
       setAuthMode('login'); // Cambiar a modo login
-      setSignupData({ email: '', password: '', confirmPassword: '' });
+      setSignupData({ email: '', password: '' });
 
     } catch (err) {
       alert(`Error: ${err.message}`);

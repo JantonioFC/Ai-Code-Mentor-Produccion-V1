@@ -1,0 +1,40 @@
+{
+    "name": "ai-code-mentor-satellite",
+    "displayName": "AI Code Mentor Satellite",
+    "description": "Satellite extension for AI Code Mentor - Open your code in the platform instantly.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "ai-code-mentor.openInWeb",
+                "title": "AI Mentor: Ask for Help"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "ai-code-mentor.openInWeb",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "@types/node": "18.x",
+        "typescript": "^5.1.3"
+    }
+}

@@ -143,7 +143,7 @@ export default function EnhancedProgressDashboard() {
       {/* Contenedor principal */}
       <div className="glass-subtle rounded-2xl p-6 stagger-1">
 
-        {/* Tarjetas de Resumen Premium */}
+        {/* Resumen del Progreso */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Card Semanas Completadas */}
           <div className="stat-card-subtle relative overflow-hidden rounded-xl p-5 gradient-border-teal stagger-2">
@@ -202,7 +202,7 @@ export default function EnhancedProgressDashboard() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Gráfico de Tendencia */}
-          <div className="glass-card rounded-xl p-4 hover-lift transition-premium">
+          <div className="glass-card rounded-xl p-4 hover-lift transition-smooth-ui">
             <TrendChart
               data={trendData}
               title="Tendencia de Progreso por Fase"
@@ -214,7 +214,7 @@ export default function EnhancedProgressDashboard() {
           </div>
 
           {/* Quality Gauge */}
-          <div className="glass-card rounded-xl p-4 hover-lift transition-premium">
+          <div className="glass-card rounded-xl p-4 hover-lift transition-smooth-ui">
             <QualityGauge
               score={summary.porcentajeTotalCompletado}
               title="Quality Score General"
@@ -223,7 +223,7 @@ export default function EnhancedProgressDashboard() {
           </div>
 
           {/* Comparación con Objetivo */}
-          <div className="glass-card rounded-xl p-4 hover-lift transition-premium">
+          <div className="glass-card rounded-xl p-4 hover-lift transition-smooth-ui">
             <ComparisonBar
               userValue={summary.porcentajeTotalCompletado}
               averageValue={100}
@@ -236,7 +236,7 @@ export default function EnhancedProgressDashboard() {
           </div>
 
           {/* Timeline de Actividad */}
-          <div className="glass-card rounded-xl p-4 hover-lift transition-premium">
+          <div className="glass-card rounded-xl p-4 hover-lift transition-smooth-ui">
             <TimelineChart
               data={timelineData}
               title="Semanas Completadas por Fase"

@@ -3,7 +3,7 @@
  * 
  * @description Componente que se muestra mientras el sistema está verificando
  *              la sesión de autenticación con Supabase. Muestra el logo animado
- *              de la aplicación para una experiencia visual premium.
+ *              de la aplicación para una experiencia visual profesional.
  * 
  * @author Mentor Coder
  * @version 2.0.0

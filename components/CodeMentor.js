@@ -9,6 +9,21 @@ export default function CodeMentor() {
   const [analysisInfo, setAnalysisInfo] = useState(null);
   const [lastRequestTime, setLastRequestTime] = useState(0);
 
+  // Check URL params for code (VS Code Satellite integration)
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const codeParam = params.get('code');
+      const langParam = params.get('lang');
+
+      if (codeParam) {
+        setCode(codeParam);
+        // Optional: Auto-analyze if coming from satellite? 
+        // setCode(codeParam) is enough for now, let user click to confirm cost/model.
+      }
+    }
+  }, []);
+
   const handleAnalyze = async () => {
     // Prevenir múltiples clicks rápidos (debouncing)
     const now = Date.now();
@@ -16,7 +31,7 @@ export default function CodeMentor() {
       console.log('Request bloqueado - muy pronto desde el anterior');
       return;
     }
-    
+
     if (!code.trim()) {
       setError('Por favor, ingresa código para analizar');
       return;
@@ -36,11 +51,24 @@ export default function CodeMentor() {
     setAnalysisInfo(null);
 
     try {
-      const response = await fetch('/api/analyze', {
+      // Leer configuración de IA (OpenRouter Support)
+      const provider = localStorage.getItem('ai_provider');
+      const apiKey = localStorage.getItem('openrouter_key');
+      const model = localStorage.getItem('openrouter_model');
+
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+
+      if (provider === 'openrouter' && apiKey) {
+        headers['x-ai-provider'] = 'openrouter';
+        headers['x-openrouter-key'] = apiKey;
+        if (model) headers['x-openrouter-model'] = model;
+      }
+
+      const response = await fetch('/api/v2/analyze', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify({ code, analysisType }),
       });
 
@@ -53,12 +81,14 @@ export default function CodeMentor() {
       }
 
       console.log('✅ Análisis completado exitosamente');
-      setAnalysis(data.analysis);
+      setAnalysis(data.analysis.feedback || data.analysis); // Handle object or string
+
+      // Adapt metadata from v2
       setAnalysisInfo({
-        provider: data.provider,
-        level: data.level,
-        cost: data.cost,
-        model: data.model
+        provider: data.metadata?.provider || 'gemini',
+        level: data.metadata?.phase || 'fase-1',
+        cost: 0, // Free or BYOK
+        model: data.metadata?.model || 'unknown'
       });
     } catch (err) {
       console.error('❌ Error en análisis:', err.message);
@@ -80,10 +110,10 @@ export default function CodeMentor() {
   const getProviderBadge = (level) => {
     const levelColors = {
       1: 'bg-green-100 text-green-800',
-      2: 'bg-blue-100 text-blue-800', 
+      2: 'bg-blue-100 text-blue-800',
       3: 'bg-purple-100 text-purple-800'
     };
-    
+
     const color = levelColors[level] || 'bg-gray-100 text-gray-800';
     return (
       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${color}`}>
@@ -173,11 +203,10 @@ export default function CodeMentor() {
           <button
             onClick={handleAnalyze}
             disabled={isLoading || !code.trim()}
-            className={`w-full py-3 px-6 rounded-md font-medium text-white transition-colors ${
-              isLoading || !code.trim()
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 active:scale-95'
-            }`}
+            className={`w-full py-3 px-6 rounded-md font-medium text-white transition-colors ${isLoading || !code.trim()
+              ? 'bg-gray-400 cursor-not-allowed'
+              : 'bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 active:scale-95'
+              }`}
             onDoubleClick={(e) => e.preventDefault()} // Prevenir double-click
           >
             {isLoading ? (
@@ -219,7 +248,7 @@ export default function CodeMentor() {
                 </div>
               )}
             </div>
-            
+
             <div className="h-96 p-4 border border-gray-300 rounded-md bg-gray-50 overflow-y-auto">
               {error && (
                 <div className="text-red-600 bg-red-50 p-3 rounded-md border border-red-200">
@@ -227,7 +256,7 @@ export default function CodeMentor() {
                   <p>{error}</p>
                 </div>
               )}
-              
+
               {analysis && (
                 <div className="prose prose-sm max-w-none">
                   <div className="whitespace-pre-wrap text-gray-800 leading-relaxed">
@@ -235,7 +264,7 @@ export default function CodeMentor() {
                   </div>
                 </div>
               )}
-              
+
               {!analysis && !error && !isLoading && (
                 <div className="text-gray-500 italic">
                   El análisis de tu código aparecerá aquí...
@@ -260,7 +289,7 @@ export default function CodeMentor() {
             <span>⚡ 100% Gratuito</span>
           </div>
         </div>
-        
+
         {/* Comparación competitiva */}
         <div className="mb-6">
           <h3 className="text-center text-sm font-medium text-gray-700 mb-4">¿Por qué AI Code Mentor es diferente?</h3>
@@ -285,7 +314,7 @@ export default function CodeMentor() {
             </div>
           </div>
         </div>
-        
+
         {/* Indicadores de sistema */}
         <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto">
           <div className="bg-green-50 p-3 rounded text-center">

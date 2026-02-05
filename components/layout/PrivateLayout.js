@@ -7,8 +7,10 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useAuth } from '../../lib/auth/useAuth';
 import { TemplateModal } from '../ProjectTracking';
+import ModelSettings from '../settings/ModelSettings';
 import APIUsageCounter from '../APIUsageCounter';
 
 // Dominios disponibles para el selector
@@ -219,7 +221,7 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
                   <button
                     key={item.href}
                     onClick={() => handleNavigation(item.href)}
-                    className={`w-full text-left flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-premium relative group ${isActive(item.href)
+                    className={`w-full text-left flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-smooth-ui relative group ${isActive(item.href)
                       ? 'bg-gradient-to-r from-blue-500/10 to-purple-600/10 text-blue-700 shadow-sm sidebar-active-indicator border-r-2 border-blue-600'
                       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 hover-lift'
                       }`}
