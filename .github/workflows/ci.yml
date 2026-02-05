@@ -29,6 +29,8 @@ jobs:
 
     - name: Build Application
       run: npm run build
+      env:
+        NEXT_PUBLIC_E2E_TEST_MODE: 'true'
 
     - name: Security Audit (Dependencies)
       run: npm audit --audit-level=high
@@ -47,3 +49,4 @@ jobs:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'mock-key' }}
         JWT_SECRET: ${{ secrets.JWT_SECRET || 'mock-secret' }}
         NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN || 'https://mock@sentry.io/1' }}
+        NEXT_PUBLIC_E2E_TEST_MODE: 'true'

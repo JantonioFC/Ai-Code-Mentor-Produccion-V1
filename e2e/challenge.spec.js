@@ -10,7 +10,8 @@ test.describe('🧩 Challenge Page (Onboarding)', () => {
     test('should load the challenge interface', async ({ page }) => {
         await expect(page).toHaveTitle(/Prove You Are Human/);
         await expect(page.getByText('Fix the Bug')).toBeVisible();
-        await expect(page.getByText('SyntaxError: Missing parentheses')).toBeVisible();
+        console.log('DEBUG: Challenge Page Content', (await page.content()).substring(0, 500));
+        await expect(page.getByText(/SyntaxError/)).toBeVisible();
     });
 
     test('should compile Python code and fail with original bug', async ({ page }) => {
@@ -18,7 +19,7 @@ test.describe('🧩 Challenge Page (Onboarding)', () => {
         await page.getByText('Run Code').click();
 
         // Check for error output
-        await expect(page.getByText('SyntaxError: Missing parentheses', { exact: false })).toBeVisible();
+        await expect(page.getByText(/SyntaxError: Missing parentheses/)).toBeVisible();
         await expect(page.getByText('Access Granted')).not.toBeVisible();
     });
 

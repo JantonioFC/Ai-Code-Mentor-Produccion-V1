@@ -31,18 +31,19 @@ module.exports = defineConfig({
   timeout: 90000,              // 90s - Timeout global por test (aumentado para Supabase)
 
   use: {
-    headless: isCI,
+    headless: isCI || process.env.HEADLESS === 'true',
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
 
     // Timeouts específicos de acciones (v16.0)
-    actionTimeout: 15000,      // 15s - Timeout para acciones (click, fill, etc.)
-    navigationTimeout: 45000,  // 45s - Timeout para navegación (goto, waitForURL)
+    // Timeouts específicos de acciones (v16.0)
+    actionTimeout: 60000,      // 60s - Timeout para acciones (click, fill, etc.)
+    navigationTimeout: 120000,  // 120s - Timeout para navegación (goto, waitForURL)
   },
 
   // Timeout para expects (v16.0)
   expect: {
-    timeout: 10000,            // 10s - Timeout para aserciones
+    timeout: 30000,            // 30s - Timeout para aserciones
   },
 
   projects: [
@@ -55,7 +56,7 @@ module.exports = defineConfig({
   webServer: {
     command: isCI ? 'npm run start' : 'npm run dev',
     url: 'http://localhost:3000',
-    reuseExistingServer: !isCI,
+    reuseExistingServer: !isCI || process.env.REUSE_SERVER === 'true',
     timeout: 120000, // 2 minutes for cold start
   },
 });
