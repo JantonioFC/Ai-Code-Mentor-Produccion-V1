@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../../lib/auth/useAuth';
 
 // HistoryPanel.js - Panel de historial de generaciones del Sandbox
@@ -33,7 +33,7 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     } else if (session?.access_token && !isValidJWT(session.access_token)) {
       console.warn('⚠️ [HISTORY] Token JWT malformado detectado, esperando token válido...');
     }
-  }, [session, session?.access_token]);
+  }, [session, session?.access_token, fetchHistory]);
 
   // Filtrar generaciones cuando cambie el query o las generaciones
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function HistoryPanel({ onRestoreGeneration }) {
   }, [searchQuery, generations]);
 
   // Función para obtener historial
-  const fetchHistory = async () => {
+  const fetchHistory = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
@@ -61,7 +61,7 @@ export default function HistoryPanel({ onRestoreGeneration }) {
       const response = await fetch('/api/v1/sandbox/history', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${session.access_token}`
+          'Authorization': `Bearer ${session?.access_token}`
         }
       });
 
@@ -89,7 +89,7 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [session?.access_token]);
 
   // Función para eliminar generación
   const handleDeleteGeneration = async (generationId, title) => {
