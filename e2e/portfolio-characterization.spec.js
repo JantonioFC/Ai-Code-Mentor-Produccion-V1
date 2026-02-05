@@ -67,11 +67,11 @@ test.describe('Portfolio - Renderizado y Navegación', () => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
 
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/, exact: false }))
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ }))
       .toBeVisible({ timeout: 30000 });
 
     // Verificar título del header de la página
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/, exact: false })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible();
 
     // Verificar título del componente PortfolioManagementSystem
     await expect(page.getByRole('heading', { name: /📊 Gestión de Portfolio y Ciclos/ })).toBeVisible();
@@ -84,7 +84,7 @@ test.describe('Portfolio - Renderizado y Navegación', () => {
   test('P2 - Debe permitir cambio entre tabs sin errores', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Tab Export Portfolio debe estar activo por defecto
     await expectTabToBeActive(page, 'Export Portfolio');
@@ -104,7 +104,7 @@ test.describe('Portfolio - Renderizado y Navegación', () => {
   test('P3 - Debe mostrar secciones principales en tab Export Portfolio', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar que estamos en el tab correcto
     await expectTabToBeActive(page, 'Export Portfolio');
@@ -116,7 +116,7 @@ test.describe('Portfolio - Renderizado y Navegación', () => {
   test('P4 - Debe mostrar secciones principales en tab Gestión de Ciclos', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     await switchToTab(page, 'Gestión de Ciclos');
 
@@ -152,7 +152,7 @@ test.describe('Portfolio - Estados del Sistema', () => {
   test('P6 - Debe manejar estado vacío (sin evidencias)', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar que el componente carga
     await expect(page.locator('text=Evidencias Disponibles')).toBeVisible();
@@ -165,7 +165,7 @@ test.describe('Portfolio - Estados del Sistema', () => {
   test('P7 - Debe mostrar métricas del sistema', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar métricas en el header
     await expect(page.locator('text=Evidencias Disponibles')).toBeVisible();
@@ -177,7 +177,7 @@ test.describe('Portfolio - Estados del Sistema', () => {
   test('P8 - Debe mostrar quick stats correctamente', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar las 4 quick stats cards
     await expect(page.locator('text=Portfolio Export').first()).toBeVisible();
@@ -189,7 +189,7 @@ test.describe('Portfolio - Estados del Sistema', () => {
   test('P9 - Debe mostrar guía de ayuda al final', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Scroll al final para ver la guía
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
@@ -202,7 +202,7 @@ test.describe('Portfolio - Estados del Sistema', () => {
   test('P10 - Debe manejar navegación completa sin errores', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Navegar entre tabs múltiples veces
     for (let i = 0; i < 3; i++) {
@@ -226,7 +226,7 @@ test.describe('Portfolio - Integración con Contexto', () => {
   test('P11 - Debe consumir entryCounts del contexto correctamente', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar que el contador de evidencias se muestra
     await expect(page.locator('text=Evidencias Disponibles')).toBeVisible();
@@ -238,7 +238,7 @@ test.describe('Portfolio - Integración con Contexto', () => {
   test('P12 - Debe mostrar warning cuando hay evidencias en reset tab', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Cambiar a tab de Gestión de Ciclos
     await switchToTab(page, 'Gestión de Ciclos');
@@ -250,7 +250,7 @@ test.describe('Portfolio - Integración con Contexto', () => {
   test('P13 - Debe renderizar PortfolioExportSystem en tab Export', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Asegurar que estamos en tab Export Portfolio
     await expectTabToBeActive(page, 'Export Portfolio');
@@ -262,7 +262,7 @@ test.describe('Portfolio - Integración con Contexto', () => {
   test('P14 - Debe renderizar ResetSystem en tab Gestión de Ciclos', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Cambiar a tab de Gestión de Ciclos
     await switchToTab(page, 'Gestión de Ciclos');
@@ -274,7 +274,7 @@ test.describe('Portfolio - Integración con Contexto', () => {
   test('P15 - Debe actualizar total de evidencias dinámicamente', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar que el total se muestra
     const evidenciasText = page.locator('text=Evidencias Disponibles');
@@ -298,7 +298,7 @@ test.describe('Portfolio - Navegación y UI', () => {
   test('P16 - Debe mostrar badge AVANZADO en tab Gestión de Ciclos', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar que el badge "AVANZADO" existe
     await expect(page.locator('text=AVANZADO')).toBeVisible();
@@ -307,7 +307,7 @@ test.describe('Portfolio - Navegación y UI', () => {
   test('P17 - Debe mostrar iconos correctos en tabs', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar emojis en tabs
     const exportTab = page.locator('button:has-text("Export Portfolio")').last();
@@ -322,7 +322,7 @@ test.describe('Portfolio - Navegación y UI', () => {
   test('P18 - Debe mostrar descripciones de tabs', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Verificar descripciones
     await expect(page.locator('text=Generar portfolio profesional')).toBeVisible();
@@ -332,7 +332,7 @@ test.describe('Portfolio - Navegación y UI', () => {
   test('P19 - Debe aplicar estilos correctos al tab activo', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Tab Export debe tener gradient
     const exportTab = page.locator('button:has-text("Export Portfolio")').last();
@@ -350,7 +350,7 @@ test.describe('Portfolio - Navegación y UI', () => {
   test('P20 - Debe mostrar sección de ayuda con metodología Ecosistema 360', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // Scroll al final
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
@@ -373,10 +373,10 @@ test.describe('Portfolio - Smoke Test Integral', () => {
   test('P-SMOKE - Flujo completo: Cargar, navegar, verificar elementos clave', async ({ page }) => {
     await page.goto('http://localhost:3000/portfolio');
     // ESPERA DETERMINÍSTICA (MISIÓN 225 - Sistémico)
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible({ timeout: 30000 });
 
     // 1. Verificar carga inicial
-    await expect(page.getByRole('heading', { name: /Gestión de Portfolio/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /^Gestión de Portfolio/ })).toBeVisible();
     await expect(page.getByRole('heading', { name: /📊 Gestión de Portfolio y Ciclos/ })).toBeVisible();
 
     // 2. Verificar métricas
