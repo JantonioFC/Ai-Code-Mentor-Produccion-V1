@@ -6,10 +6,12 @@ on:
   pull_request:
     branches: [ main, master ]
 
-# Cancel in-progress runs for the same branch
+# Concurrency control:
+# - For PRs: Cancel in-progress runs when new commits are pushed
+# - For main: Allow all runs to complete (don't cancel on rapid commits)
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build-and-test:
