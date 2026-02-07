@@ -1,3 +1,6 @@
+// Sentry client initialization (must be first import)
+import '../sentry.client.config';
+
 import '../styles/globals.css'
 import '../styles/design-system.css' // 🎨 Industrial Refined Design System
 import { LessonProvider } from '../contexts/LessonContext'

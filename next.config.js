@@ -68,7 +68,7 @@ const nextConfig = {
               style-src 'self' 'unsafe-inline'; 
               img-src 'self' data: https:; 
               font-src 'self' data:;
-              connect-src 'self' https://*.google-analytics.com https://*.google.com https://*.facebook.com https://*.doubleclick.net;
+              connect-src 'self' https://*.google-analytics.com https://*.google.com https://*.facebook.com https://*.doubleclick.net https://*.ingest.sentry.io https://*.sentry.io;
               frame-src 'self' https://*.google.com;
             `.replace(/\s{2,}/g, ' ').trim()
           },
@@ -110,25 +110,35 @@ const nextConfig = {
   },
 };
 
-// TEMPORARILY DISABLED: Sentry integration (Fast Refresh fix)
-// const { withSentryConfig } = require('@sentry/nextjs');
+// Sentry integration for Next.js 15
+const { withSentryConfig } = require('@sentry/nextjs');
 
-// module.exports = withSentryConfig(
-//   withBundleAnalyzer(nextConfig),
-//   {
-//     silent: true,
-//     org: "ai-code-mentor",
-//     project: "javascript-nextjs",
-//   },
-//   {
-//     widenClientFileUpload: true,
-//     transpileClientSDK: true,
-//     tunnelRoute: "/monitoring",
-//     hideSourceMaps: true,
-//     disableLogger: true,
-//     automaticVercelMonitors: true,
-//   }
-// );
+const sentryWebpackPluginOptions = {
+  // Suppress Sentry webpack plugin logs
+  silent: true,
 
-// Export without Sentry wrapper
-module.exports = withBundleAnalyzer(nextConfig);
+  // Upload source maps for better stack traces
+  hideSourceMaps: true,
+
+  // Disable Sentry telemetry
+  disableLogger: true,
+
+  // For Next.js 15: Use instrumentation hook instead of auto-wrapping
+  autoInstrumentServerFunctions: false,
+  autoInstrumentAppDirectory: false,
+
+  // Tunnel route to avoid ad blockers
+  tunnelRoute: "/monitoring",
+};
+
+// Export with Sentry wrapper (only if DSN is configured)
+const hasSentryDSN = process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN;
+
+if (hasSentryDSN) {
+  module.exports = withSentryConfig(withBundleAnalyzer(nextConfig), sentryWebpackPluginOptions);
+} else {
+  // No DSN configured - export without Sentry
+  console.log('[Sentry] Disabled - no NEXT_PUBLIC_SENTRY_DSN configured');
+  module.exports = withBundleAnalyzer(nextConfig);
+}
+
