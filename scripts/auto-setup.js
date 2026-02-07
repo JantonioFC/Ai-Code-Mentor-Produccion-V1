@@ -39,6 +39,11 @@ async function autoSetup() {
 
         // initDatabase maneja su propia lógica de "si existe no hago nada salvo --force"
         initDatabase();
+
+        // [Task 2.4/3.3] Ejecutar migraciones para asegurar esquema actualizado (ej: refresh_tokens)
+        log('🚀 [MIGRATIONS] Comprobando actualizaciones de esquema...', 'dim');
+        const migrate = require('../lib/db/migrate');
+        migrate();
     } catch (e) {
         log(`⚠️  Error inicializando SQLite o backup: ${e.message}`, 'yellow');
     }

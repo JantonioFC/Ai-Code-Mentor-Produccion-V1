@@ -1,6 +1,4 @@
-
-import { serialize } from 'cookie';
-import { logger } from '../../../lib/utils/logger';
+import AuthLocal from '../../../lib/auth-local';
 
 export default async function logoutHandler(req, res) {
     if (req.method !== 'POST') {
@@ -8,16 +6,26 @@ export default async function logoutHandler(req, res) {
     }
 
     try {
-        // Clear the auth cookie
-        res.setHeader('Set-Cookie', serialize('ai-code-mentor-auth', '', {
+        const refreshToken = req.cookies['ai-code-mentor-refresh'];
+        if (refreshToken) {
+            await AuthLocal.revokeRefreshToken(refreshToken);
+        }
+
+        // Clear both cookies
+        const options = {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
             maxAge: -1,
             path: '/'
-        }));
+        };
 
-        logger.info('[AUTH] Usuario cerró sesión correctamente');
+        res.setHeader('Set-Cookie', [
+            serialize('ai-code-mentor-auth', '', options),
+            serialize('ai-code-mentor-refresh', '', options)
+        ]);
+
+        logger.info('[AUTH] Usuario cerró sesión y revocó refresh token correctamente');
 
         return res.status(200).json({ success: true });
     } catch (error) {

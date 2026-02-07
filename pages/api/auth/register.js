@@ -19,21 +19,30 @@ export default async function handler(req, res) {
             return res.status(400).json(result);
         }
 
-        // Set JWT Cookie - matches login.js cookie name
-        const cookie = serialize('ai-code-mentor-auth', result.token, {
+        // Set Cookies (Access + Refresh) - matching login.js
+        const accessTokenCookie = serialize('ai-code-mentor-auth', result.token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            maxAge: 60 * 60 * 24 * 7, // 1 week
+            maxAge: 60 * 15, // 15 minutes
             sameSite: 'strict',
             path: '/'
         });
 
-        res.setHeader('Set-Cookie', cookie);
+        const refreshTokenCookie = serialize('ai-code-mentor-refresh', result.refreshToken, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            maxAge: 60 * 60 * 24 * 30, // 30 days
+            sameSite: 'strict',
+            path: '/'
+        });
+
+        res.setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie]);
 
         return res.status(200).json({
             user: result.user,
             session: {
                 access_token: result.token,
+                refresh_token: result.refreshToken,
                 token_type: 'bearer',
                 user: result.user
             }
