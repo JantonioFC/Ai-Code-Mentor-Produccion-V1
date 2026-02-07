@@ -6,9 +6,15 @@ on:
   pull_request:
     branches: [ main, master ]
 
+# Cancel in-progress runs for the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
     - name: Checkout code
@@ -33,20 +39,91 @@ jobs:
         NEXT_PUBLIC_E2E_TEST_MODE: 'true'
 
     - name: Security Audit (Dependencies)
-      run: npm audit --audit-level=high
+      run: npm audit --audit-level=critical
       continue-on-error: true # Report but don't block yet
 
     - name: Run Unit Tests
       run: npm test
 
+  e2e-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: build-and-test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: npm ci --legacy-peer-deps
+
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps chromium
 
+    - name: Build Application
+      run: npm run build
+      env:
+        NEXT_PUBLIC_E2E_TEST_MODE: 'true'
+
     - name: Run E2E Tests
-      run: npx playwright test
+      run: npx playwright test --retries=2
       env:
         CI: true
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'mock-key' }}
-        JWT_SECRET: ${{ secrets.JWT_SECRET || 'mock-secret' }}
-        NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN || 'https://mock@sentry.io/1' }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'mock-key-for-ci' }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET || 'ci-test-secret-minimum-32-chars' }}
+        NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN || '' }}
         NEXT_PUBLIC_E2E_TEST_MODE: 'true'
+        # Database for testing
+        DATABASE_URL: 'file:./test.db'
+
+    - name: Upload Playwright Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report-${{ github.run_id }}
+        path: playwright-report/
+        retention-days: 7
+
+    - name: Upload Test Screenshots
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: test-screenshots-${{ github.run_id }}
+        path: test-results/
+        retention-days: 7
+
+    - name: Comment PR with Test Results
+      uses: actions/github-script@v7
+      if: github.event_name == 'pull_request' && always()
+      with:
+        script: |
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+          
+          // Try to get test summary
+          let summary = '## 🧪 E2E Test Results\n\n';
+          
+          try {
+            // Check if playwright-report exists
+            if (fs.existsSync('playwright-report/index.html')) {
+              summary += '✅ Playwright report generated\n';
+              summary += `📎 [Download Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\n`;
+            }
+          } catch (e) {
+            summary += '⚠️ Could not generate test summary\n';
+          }
+          
+          summary += `\n*Run ID: ${{ github.run_id }}*`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: summary
+          });

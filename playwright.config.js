@@ -27,6 +27,15 @@ module.exports = defineConfig({
   retries: isCI ? 2 : 0,
   workers: isCI ? 1 : undefined,
 
+  // Reporter configuration
+  reporter: isCI
+    ? [
+      ['list'],
+      ['html', { outputFolder: 'playwright-report', open: 'never' }],
+      ['junit', { outputFile: 'playwright-results.xml' }]
+    ]
+    : [['list']],
+
   // Timeouts globales optimizados (v17.0 - M-XXX: Supabase cold-start)
   timeout: 90000,              // 90s - Timeout global por test (aumentado para Supabase)
 
