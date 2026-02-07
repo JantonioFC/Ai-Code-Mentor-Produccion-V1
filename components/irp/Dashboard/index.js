@@ -21,6 +21,6 @@ export { default as ReviewerMetrics } from './ReviewerMetrics';
 export { default as AuthorMetrics } from './AuthorMetrics';
 export { default as ReviewHistory } from './ReviewHistory';
 
-// Componentes de Gráficos - IMPORTADOS DESDE COMMON (MISIÓN 210.0)
-// Re-exportación para mantener compatibilidad con código existente
-export { TrendChart, QualityGauge, ComparisonBar, TimelineChart } from '../../common/charts';
+// Componentes de Gráficos - ELIMINADO DE ESTE BARRIL (Task 2.7)
+// Use importaciones directas o desde common/charts para mejor control de bundle
+

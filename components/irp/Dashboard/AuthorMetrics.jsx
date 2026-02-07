@@ -12,7 +12,8 @@
  */
 
 import React from 'react';
-import { TrendChart, TimelineChart } from './index';
+import TrendChart from '../../common/charts/TrendChart';
+import TimelineChart from '../../common/charts/TimelineChart';
 
 /**
  * Componente de tarjeta de métrica individual
@@ -45,7 +46,7 @@ function ImprovementTimeline({ averageRating, improvementTrend }) {
   // Generar datos simulados de progresión basados en tendencia
   const generateProgressionData = () => {
     const current = averageRating;
-    
+
     if (improvementTrend === 'positive') {
       // Tendencia positiva: mostrar mejora gradual
       return [
@@ -75,26 +76,25 @@ function ImprovementTimeline({ averageRating, improvementTrend }) {
 
   const data = generateProgressionData();
   const totalChange = data[3].value - data[0].value;
-  const changeColor = totalChange > 0.1 ? 'text-green-700' : 
-                      totalChange < -0.1 ? 'text-red-700' : 
-                      'text-gray-700';
+  const changeColor = totalChange > 0.1 ? 'text-green-700' :
+    totalChange < -0.1 ? 'text-red-700' :
+      'text-gray-700';
 
   return (
     <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg p-4 border-2 border-orange-200">
       <h3 className="text-sm font-medium text-gray-700 mb-3">
         Mejora en Revisiones Consecutivas
       </h3>
-      
+
       <div className="flex items-center justify-between">
         {data.map((point, index) => (
           <React.Fragment key={index}>
             <div className="text-center flex-1">
               <p className="text-xs text-gray-600 mb-1">{point.label}</p>
-              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full ${
-                index === data.length - 1 
-                  ? 'bg-orange-600 text-white font-bold' 
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full ${index === data.length - 1
+                  ? 'bg-orange-600 text-white font-bold'
                   : 'bg-white border-2 border-orange-300 text-orange-900'
-              }`}>
+                }`}>
                 <span className="text-sm">{point.value.toFixed(1)}</span>
               </div>
             </div>
@@ -105,14 +105,13 @@ function ImprovementTimeline({ averageRating, improvementTrend }) {
             )}
           </React.Fragment>
         ))}
-        
+
         <div className="text-center ml-4 min-w-[80px]">
           <p className="text-xs text-gray-600 mb-1">Cambio</p>
-          <div className={`inline-flex items-center justify-center px-3 py-2 rounded-lg bg-white border-2 ${
-            totalChange > 0.1 ? 'border-green-300' : 
-            totalChange < -0.1 ? 'border-red-300' : 
-            'border-gray-300'
-          }`}>
+          <div className={`inline-flex items-center justify-center px-3 py-2 rounded-lg bg-white border-2 ${totalChange > 0.1 ? 'border-green-300' :
+              totalChange < -0.1 ? 'border-red-300' :
+                'border-gray-300'
+            }`}>
             <span className={`text-lg font-bold ${changeColor}`}>
               {totalChange > 0 ? '+' : ''}{totalChange.toFixed(1)}
               {totalChange > 0.1 ? ' ↑' : totalChange < -0.1 ? ' ↓' : ' →'}
@@ -120,7 +119,7 @@ function ImprovementTimeline({ averageRating, improvementTrend }) {
           </div>
         </div>
       </div>
-      
+
       <p className="text-xs text-gray-500 mt-3 text-center">
         * Basado en últimas 4 revisiones recibidas
       </p>
@@ -190,21 +189,21 @@ export default function AuthorMetrics({ metrics, loading }) {
 
   // Configuración de tendencia
   const trendConfig = {
-    positive: { 
-      icon: '📈', 
-      color: 'green', 
+    positive: {
+      icon: '📈',
+      color: 'green',
       label: 'Mejorando',
       message: '¡Vas por buen camino! Tu calidad está aumentando.'
     },
-    negative: { 
-      icon: '📉', 
-      color: 'red', 
+    negative: {
+      icon: '📉',
+      color: 'red',
       label: 'Bajando',
       message: 'Revisa el feedback recibido para mejorar.'
     },
-    stable: { 
-      icon: '→', 
-      color: 'gray', 
+    stable: {
+      icon: '→',
+      color: 'gray',
       label: 'Estable',
       message: 'Tu calidad se mantiene consistente.'
     }
@@ -280,7 +279,7 @@ export default function AuthorMetrics({ metrics, loading }) {
       </div>
 
       {/* Timeline de mejora (mantener como referencia visual adicional) */}
-      <ImprovementTimeline 
+      <ImprovementTimeline
         averageRating={author_metrics.average_rating_received}
         improvementTrend={author_metrics.improvement_trend}
       />
@@ -300,7 +299,7 @@ export default function AuthorMetrics({ metrics, loading }) {
         {author_metrics.improvement_trend === 'negative' && (
           <div className="bg-orange-50 border-2 border-orange-200 rounded-lg p-3">
             <p className="text-sm text-orange-800">
-              <span className="font-medium">📚 Área de oportunidad:</span> Revisa detenidamente las sugerencias 
+              <span className="font-medium">📚 Área de oportunidad:</span> Revisa detenidamente las sugerencias
               de tus últimas revisiones. Considera pedir clarificaciones si algo no está claro.
             </p>
           </div>
@@ -310,7 +309,7 @@ export default function AuthorMetrics({ metrics, loading }) {
         {author_metrics.response_to_feedback_rate < 0.5 && (
           <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-3">
             <p className="text-sm text-yellow-800">
-              <span className="font-medium">💬 Mejora tu engagement:</span> Responde a más del 70% del feedback 
+              <span className="font-medium">💬 Mejora tu engagement:</span> Responde a más del 70% del feedback
               que recibes. Esto muestra profesionalismo y ayuda a mejorar más rápido.
             </p>
           </div>

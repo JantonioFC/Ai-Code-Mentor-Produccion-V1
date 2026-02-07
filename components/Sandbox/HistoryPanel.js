@@ -24,45 +24,17 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     return parts.length === 3 && parts.every(part => part.length > 0);
   };
 
-  // Cargar historial al montar o cuando cambie el token
-  useEffect(() => {
-    // 🆕 MISIÓN 218.0: Verificar session.access_token de Supabase
-    // 🆕 MISIÓN 219.0: Validar estructura JWT antes de hacer petición
-    if (session?.access_token && isValidJWT(session.access_token)) {
-      fetchHistory();
-    } else if (session?.access_token && !isValidJWT(session.access_token)) {
-      console.warn('⚠️ [HISTORY] Token JWT malformado detectado, esperando token válido...');
-    }
-  }, [session, session?.access_token, fetchHistory]);
-
-  // Filtrar generaciones cuando cambie el query o las generaciones
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      setFilteredGenerations(generations);
-    } else {
-      const query = searchQuery.toLowerCase().trim();
-      const filtered = generations.filter(gen =>
-        gen.title.toLowerCase().includes(query)
-      );
-      setFilteredGenerations(filtered);
-    }
-  }, [searchQuery, generations]);
-
-  // Función para obtener historial
-  const fetchHistory = useCallback(async () => {
+  // Función para obtener historial - Definida como function para hoisting
+  async function fetchHistory() {
     setIsLoading(true);
     setError(null);
 
     try {
       console.log('📜 [HISTORY] Cargando historial...');
 
-      // 🆕 MISIÓN 218.0: Usar token de Supabase (session.access_token)
-      // Este endpoint es del SISTEMA PRINCIPAL, NO del microservicio IRP
+      // 🆕 MISIÓN 218.0: Usar cookies de sesión (Auth Local)
       const response = await fetch('/api/v1/sandbox/history', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${session?.access_token}`
-        }
+        method: 'GET'
       });
 
       if (!response.ok) {
@@ -80,8 +52,8 @@ export default function HistoryPanel({ onRestoreGeneration }) {
       }
 
       const data = await response.json();
-      console.log('✅ [HISTORY] Historial cargado:', data.data.count, 'generaciones');
-      setGenerations(data.data.generations || []);
+      console.log('✅ [HISTORY] Historial cargado:', data.data?.count, 'generaciones');
+      setGenerations(data.data?.generations || []);
 
     } catch (error) {
       console.error('❌ [HISTORY] Error:', error);
@@ -89,7 +61,28 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     } finally {
       setIsLoading(false);
     }
-  }, [session?.access_token]);
+  }
+
+  // Cargar historial al montar o cuando cambie el usuario
+  useEffect(() => {
+    // 🆕 MISIÓN 218.0: Solo cargar si hay usuario autenticado
+    if (session) {
+      fetchHistory();
+    }
+  }, [session]);
+
+  // Filtrar generaciones cuando cambie el query o las generaciones
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setFilteredGenerations(generations);
+    } else {
+      const query = searchQuery.toLowerCase().trim();
+      const filtered = generations.filter(gen =>
+        gen.title.toLowerCase().includes(query)
+      );
+      setFilteredGenerations(filtered);
+    }
+  }, [searchQuery, generations]);
 
   // Función para eliminar generación
   const handleDeleteGeneration = async (generationId, title) => {

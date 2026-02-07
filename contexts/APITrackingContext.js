@@ -113,11 +113,16 @@ const APITrackingContext = createContext();
 export function APITrackingProvider({ children }) {
   const [state, dispatch] = useReducer(apiTrackingReducer, initialState);
 
+  const { isAuthenticated } = useAuth();
+
   // Fetch initial stats
   useEffect(() => {
     let mounted = true;
 
     const fetchStats = async () => {
+      // Only fetch if authenticated to avoid 401 errors
+      if (!isAuthenticated) return;
+
       try {
         const res = await fetch('/api/usage/stats');
         if (res.ok && mounted) {
@@ -137,7 +142,7 @@ export function APITrackingProvider({ children }) {
 
     fetchStats();
     return () => { mounted = false; };
-  }, []);
+  }, [isAuthenticated]);
 
   const recordAPICall = async (operation = 'generateIRP', success = true, responseTime = null) => {
     dispatch({

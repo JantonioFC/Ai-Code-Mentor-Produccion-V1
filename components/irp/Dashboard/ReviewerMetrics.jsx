@@ -12,7 +12,9 @@
  */
 
 import React from 'react';
-import { TrendChart, QualityGauge, ComparisonBar } from './index';
+import TrendChart from '../../common/charts/TrendChart';
+import QualityGauge from '../../common/charts/QualityGauge';
+import ComparisonBar from '../../common/charts/ComparisonBar';
 
 /**
  * Componente de tarjeta de métrica individual
@@ -47,7 +49,7 @@ function TrendChartPlaceholder({ qualityScore }) {
       <h3 className="text-sm font-medium text-gray-700 mb-3">
         Evolución de Quality Score
       </h3>
-      
+
       <div className="relative h-48">
         {/* Ejes del gráfico simulados */}
         <div className="absolute inset-0 flex items-end justify-between px-4 pb-4">
@@ -58,7 +60,7 @@ function TrendChartPlaceholder({ qualityScore }) {
               const isLast = index === 5;
               return (
                 <div key={index} className="flex-1 flex flex-col items-center justify-end">
-                  <div 
+                  <div
                     className={`w-full ${isLast ? 'bg-blue-600' : 'bg-blue-400'} rounded-t transition-all hover:opacity-80`}
                     style={{ height: `${height}%` }}
                   >
@@ -71,28 +73,28 @@ function TrendChartPlaceholder({ qualityScore }) {
                     </div>
                   </div>
                   <span className="text-xs text-gray-600 mt-1">
-                    {isLast ? 'Actual' : `M-${6-index}`}
+                    {isLast ? 'Actual' : `M-${6 - index}`}
                   </span>
                 </div>
               );
             })}
           </div>
         </div>
-        
+
         {/* Línea de referencia (4.0) */}
         <div className="absolute left-0 right-0" style={{ bottom: '80%' }}>
           <div className="border-t-2 border-dashed border-gray-400 opacity-30"></div>
           <span className="text-xs text-gray-500 absolute right-0 -top-4">4.0</span>
         </div>
       </div>
-      
+
       <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-600">
         <span className="inline-block w-3 h-3 bg-blue-400 rounded"></span>
         <span>Histórico</span>
         <span className="inline-block w-3 h-3 bg-blue-600 rounded ml-4"></span>
         <span>Actual</span>
       </div>
-      
+
       <p className="text-xs text-center text-gray-500 mt-3">
         💡 Gráfico interactivo se implementará en Fase 4 con Recharts
       </p>

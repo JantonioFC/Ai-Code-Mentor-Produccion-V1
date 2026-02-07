@@ -21,6 +21,7 @@
  * - Dashboard de revisiones pendientes y completadas
  */
 
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import ProtectedRoute from '../components/auth/ProtectedRoute';
@@ -31,8 +32,12 @@ import ReviewReportView from '../components/irp/ReviewReportView';
 import { useAuth } from '../lib/auth/useAuth';
 import { useUserMetrics } from '../hooks/useUserMetrics';
 
-// MISIÓN 210.0: Importar componentes de visualización desde common/charts
-import { TrendChart, QualityGauge, ComparisonBar, TimelineChart } from '../components/common/charts';
+// MISIÓN 210.0: Importar componentes de visualización de forma dinámica (ssr: false)
+// Esto mejora el performance al no cargar Chart.js en el bundle inicial del servidor
+const TrendChart = dynamic(() => import('../components/common/charts/TrendChart'), { ssr: false });
+const QualityGauge = dynamic(() => import('../components/common/charts/QualityGauge'), { ssr: false });
+const ComparisonBar = dynamic(() => import('../components/common/charts/ComparisonBar'), { ssr: false });
+const TimelineChart = dynamic(() => import('../components/common/charts/TimelineChart'), { ssr: false });
 
 /**
  * Componente principal de la página de Peer Review
@@ -166,8 +171,8 @@ export default function PeerReviewPage() {
       {/* Notificación si existe */}
       {notification && (
         <div className={`rounded-lg p-4 border ${notification.type === 'success'
-            ? 'bg-green-50 border-green-200'
-            : 'bg-red-50 border-red-200'
+          ? 'bg-green-50 border-green-200'
+          : 'bg-red-50 border-red-200'
           }`}>
           <div className="flex items-start">
             <div className="flex-shrink-0">

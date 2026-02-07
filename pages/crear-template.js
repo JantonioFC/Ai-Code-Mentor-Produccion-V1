@@ -13,6 +13,8 @@ export default function CreateTemplatePage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!router.isReady) return;
+
     if (type) {
       const templateData = getTemplate(type);
       if (templateData) {
@@ -23,19 +25,22 @@ export default function CreateTemplatePage() {
         placeholders.forEach(placeholder => {
           initialData[placeholder] = '';
         });
-        
+
         // Add current date for date fields
         initialData.date = new Date().toISOString().split('T')[0];
         initialData.week_number = getCurrentWeek();
         initialData.start_date = getWeekStart();
         initialData.end_date = getWeekEnd();
-        
+
         setFormData(initialData);
       } else {
         router.push('/plantillas');
       }
+    } else {
+      // Si no hay type, redirigir a plantillas después de que el router esté listo
+      router.push('/plantillas');
     }
-  }, [type, router]);
+  }, [type, router.isReady, router]);
 
   const extractPlaceholders = (templateText) => {
     const matches = templateText.match(/\{([^}]+)\}/g);
@@ -68,10 +73,10 @@ export default function CreateTemplatePage() {
     if (!template) return;
 
     setLoading(true);
-    
+
     try {
       let content = template.template;
-      
+
       // Replace all placeholders with form data
       Object.entries(formData).forEach(([key, value]) => {
         const placeholder = `{${key}}`;
@@ -152,13 +157,10 @@ export default function CreateTemplatePage() {
 
   if (!template) {
     return (
-      <ProtectedRoute>
-        <PrivateLayout title="Cargando Template...">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-          </div>
-        </PrivateLayout>
-      </ProtectedRoute>
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        <p className="ml-4 text-white">Preparando editor...</p>
+      </div>
     );
   }
 
@@ -252,7 +254,7 @@ export default function CreateTemplatePage() {
               {placeholders.map((placeholder) => {
                 const fieldType = getFieldType(placeholder);
                 const label = getFieldLabel(placeholder);
-                
+
                 return (
                   <div key={placeholder}>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -261,7 +263,7 @@ export default function CreateTemplatePage() {
                     {fieldType === 'textarea' ? (
                       <textarea
                         value={formData[placeholder] || ''}
-                        onChange={(e) => setFormData({...formData, [placeholder]: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, [placeholder]: e.target.value })}
                         className="w-full border border-gray-300 rounded-lg px-3 py-2 h-24"
                         placeholder={`Ingresa ${label.toLowerCase()}...`}
                       />
@@ -269,7 +271,7 @@ export default function CreateTemplatePage() {
                       <input
                         type={fieldType}
                         value={formData[placeholder] || ''}
-                        onChange={(e) => setFormData({...formData, [placeholder]: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, [placeholder]: e.target.value })}
                         className="w-full border border-gray-300 rounded-lg px-3 py-2"
                         placeholder={fieldType === 'date' ? '' : `Ingresa ${label.toLowerCase()}...`}
                       />

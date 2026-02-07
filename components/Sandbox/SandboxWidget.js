@@ -261,8 +261,8 @@ export default function SandboxWidget() {
 
   // MISIÓN 216.0: Función para guardar generación en historial
   const saveToHistory = async (customContent, generatedLesson) => {
-    // Solo intentar guardar si hay token de autenticación
-    if (!internalToken) {
+    // Solo intentar guardar si hay usuario autenticado
+    if (!session) {
       console.log('ℹ️ [SANDBOX-HISTORY] Usuario no autenticado, no se guarda en historial');
       return;
     }
