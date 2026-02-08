@@ -5,7 +5,6 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useAuth } from '../../lib/auth/useAuth';
@@ -22,11 +21,18 @@ const STUDY_DOMAINS = [
 ];
 
 const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecosistema 360 - Plataforma Educativa" }) => {
-  const router = useRouter();
   const { signOut } = useAuth();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [studyDomain, setStudyDomain] = useState('programming');
+  const [currentPath, setCurrentPath] = useState('');
+
+  // Sincronizar path actual de forma universal (browser-side)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
 
   // Cargar dominio guardado al montar
   useEffect(() => {
@@ -98,11 +104,13 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
   ];
 
   const isActive = (href) => {
-    return router.pathname === href;
+    return currentPath === href;
   };
 
   const handleNavigation = (href) => {
-    router.push(href);
+    if (typeof window !== 'undefined') {
+      window.location.href = href;
+    }
     setIsSidebarOpen(false); // Close mobile sidebar after navigation
   };
 
@@ -112,8 +120,9 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
 
     try {
       // MEJORA: Forzar redirección PRIMERO para evitar 401s durante la transición
-      // Las llamadas a APIs protegidas se cancelarán antes de ejecutarse
-      await router.push('/');
+      if (typeof window !== 'undefined') {
+        window.location.href = '/';
+      }
 
       // Luego cerrar la sesión de Supabase (las cookies se limpian)
       const { error } = await signOut();

@@ -23,48 +23,39 @@
  */
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import useAuth from './useAuth';
 import LoadingScreen from '../../components/auth/LoadingScreen';
 
 /**
  * Componente de orden superior para proteger rutas que requieren autenticación
- * 
- * @param {React.ReactNode} children - Contenido protegido a renderizar
- * @param {string} redirectTo - Ruta a la que redirigir si no está autenticado (default: '/login')
- * @param {boolean} showLoadingScreen - Si debe mostrar LoadingScreen o null durante loading (default: true)
- * 
- * @example
- * <ProtectedRoute>
- *   <DashboardContent />
- * </ProtectedRoute>
  */
-const ProtectedRoute = ({ 
-  children, 
+const ProtectedRoute = ({
+  children,
   redirectTo = '/login',
-  showLoadingScreen = true 
+  showLoadingScreen = true
 }) => {
   const { authState, user } = useAuth();
-  const router = useRouter();
 
   // MISIÓN 221: Redirección solo cuando authState es definitivamente 'unauthenticated'
   useEffect(() => {
     if (authState === 'unauthenticated') {
       console.log('🔒 [PROTECTED-ROUTE] Usuario no autenticado, redirigiendo a:', redirectTo);
-      router.push(redirectTo);
+      if (typeof window !== 'undefined') {
+        window.location.href = redirectTo;
+      }
     }
-  }, [authState, router, redirectTo]);
+  }, [authState, redirectTo]);
 
   // MISIÓN 221: Renderizado basado en authState triestatal
   switch (authState) {
     case 'loading':
       // Estado: Verificando sesión
       console.log('⏳ [PROTECTED-ROUTE] Verificando autenticación...');
-      
+
       if (showLoadingScreen) {
         return <LoadingScreen message="Verificando acceso..." />;
       }
-      
+
       // Alternativa: Spinner inline para casos específicos
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 to-purple-900">
@@ -78,7 +69,7 @@ const ProtectedRoute = ({
     case 'unauthenticated':
       // Estado: No autenticado - mostrar mensaje mientras redirige
       console.log('❌ [PROTECTED-ROUTE] Acceso denegado - No autenticado');
-      
+
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 to-orange-900">
           <div className="text-center">
@@ -124,15 +115,16 @@ export default ProtectedRoute;
  */
 export function useProtectedRoute(redirectTo = '/login') {
   const { user, authState, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
 
   useEffect(() => {
     // MISIÓN 221: Solo redirigir cuando definitivamente no autenticado
     if (authState === 'unauthenticated') {
       console.log('🔒 [USE-PROTECTED-ROUTE] Redirigiendo a:', redirectTo);
-      router.push(redirectTo);
+      if (typeof window !== 'undefined') {
+        window.location.href = redirectTo;
+      }
     }
-  }, [authState, router, redirectTo]);
+  }, [authState, redirectTo]);
 
   return {
     user,
@@ -156,10 +148,10 @@ export function useProtectedRoute(redirectTo = '/login') {
  *   <AdminPanel />
  * </RequireAuth>
  */
-export function RequireAuth({ 
-  children, 
+export function RequireAuth({
+  children,
   fallback = null,
-  useLoadingScreen = true 
+  useLoadingScreen = true
 }) {
   const { authState, user } = useAuth();
 
@@ -168,7 +160,7 @@ export function RequireAuth({
     if (useLoadingScreen) {
       return <LoadingScreen message="Verificando acceso..." />;
     }
-    
+
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 to-purple-900">
         <div className="animate-spin w-8 h-8 border-4 border-white border-t-transparent rounded-full"></div>
@@ -180,7 +172,7 @@ export function RequireAuth({
     if (fallback) {
       return fallback;
     }
-    
+
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
         <div className="text-center">

@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+}
+
+code,
+pre {
+  font-family: var(--font-fira-code, 'Fira Code', 'Consolas', 'Monaco', monospace);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* ============================================
+   VISUAL POLISH - PREMIUM STYLES
+   Panel de Control Glassmorphism & Animations
+   ============================================ */
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Gradient Borders */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #3b82f6, #8b5cf6) border-box;
+  border: 2px solid transparent;
+}
+
+.gradient-border-green {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #22c55e, #10b981) border-box;
+  border: 2px solid transparent;
+}
+
+.gradient-border-blue {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #3b82f6, #06b6d4) border-box;
+  border: 2px solid transparent;
+}
+
+/* Premium Hover Effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.hover-glow-green:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.hover-glow-blue:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.hover-glow-purple:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Premium Shadow Layers */
+.shadow-premium {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.02),
+    0 2px 4px rgba(0, 0, 0, 0.02),
+    0 4px 8px rgba(0, 0, 0, 0.02),
+    0 8px 16px rgba(0, 0, 0, 0.02),
+    0 16px 32px rgba(0, 0, 0, 0.02);
+}
+
+/* Tab Pill Indicator Animation */
+@keyframes tabSlide {
+  from {
+    transform: scaleX(0.8);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.tab-active {
+  animation: tabSlide 0.2s ease-out;
+}
+
+/* Pulse Glow for Icons */
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+  }
+}
+
+.icon-pulse {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Staggered Entry Animation */
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-1 {
+  animation: staggerFadeIn 0.4s ease-out 0.1s both;
+}
+
+.stagger-2 {
+  animation: staggerFadeIn 0.4s ease-out 0.2s both;
+}
+
+.stagger-3 {
+  animation: staggerFadeIn 0.4s ease-out 0.3s both;
+}
+
+.stagger-4 {
+  animation: staggerFadeIn 0.4s ease-out 0.4s both;
+}
+
+/* Shimmer Loading Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Active Sidebar Indicator */
+.sidebar-active-indicator {
+  position: relative;
+}
+
+.sidebar-active-indicator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Smooth Color Transitions */
+.transition-smooth-ui {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   VISUAL POLISH - SUBTLE CORPORATE STYLES
+   Paleta basada en logo: Verde/Turquesa + Oscuros
+   ============================================ */
+
+/* Brand Colors (from logo.jpg) */
+:root {
+  --brand-teal-50: #f0fdfa;
+  --brand-teal-100: #ccfbf1;
+  --brand-teal-200: #99f6e4;
+  --brand-teal-400: #2dd4bf;
+  --brand-teal-500: #14b8a6;
+  --brand-teal-600: #0d9488;
+  --brand-teal-700: #0f766e;
+  --brand-dark: #1e293b;
+  --brand-dark-light: #334155;
+}
+
+/* Glassmorphism Sutil (Corporativo) */
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.03),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.glass-subtle-teal {
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.9), rgba(204, 251, 241, 0.7));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(20, 184, 166, 0.15);
+  box-shadow:
+    0 4px 6px -1px rgba(20, 184, 166, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* Header Corporativo Sutil */
+.header-corporate {
+  background: linear-gradient(135deg,
+      rgba(240, 253, 250, 0.95) 0%,
+      rgba(204, 251, 241, 0.9) 50%,
+      rgba(153, 246, 228, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  box-shadow:
+    0 4px 15px -3px rgba(20, 184, 166, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Gradient Border Teal (Logo Colors) */
+.gradient-border-teal {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #14b8a6, #0d9488) border-box;
+  border: 2px solid transparent;
+}
+
+/* Hover Glow con Color Teal */
+.hover-glow-teal:hover {
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.25);
+}
+
+/* Chip Moderno Sutil */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.chip-teal {
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--brand-teal-700);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.chip-teal:hover {
+  background: rgba(20, 184, 166, 0.15);
+}
+
+.chip-dark {
+  background: rgba(30, 41, 59, 0.08);
+  color: var(--brand-dark);
+  border: 1px solid rgba(30, 41, 59, 0.15);
+}
+
+/* Tabs Corporativos */
+.tab-pill-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tab-pill-active {
+  background: linear-gradient(135deg, var(--brand-teal-500), var(--brand-teal-600));
+  color: white;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+}
+
+/* Stat Card Sutil */
+.stat-card-subtle {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card-subtle:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Container Premium */
+.icon-container-teal {
+  background: linear-gradient(135deg, var(--brand-teal-400), var(--brand-teal-500));
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.25);
+}
+
+.icon-container-dark {
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand-dark-light));
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.2);
+}
+
+/* Footer Info Sutil */
+.footer-info {
+  background: rgba(240, 253, 250, 0.5);
+  border: 1px solid rgba(20, 184, 166, 0.1);
+}
+
+/* ============================================
+   STITCH DESIGN SYSTEM - ROUND 3
+   Deep Space & Neon Tokens
+   ============================================ */
+
+:root {
+  /* Stitch Color Palette */
+  --stitch-bg-main: #0a0a0c; /* Deep Space */
+  --stitch-surface-glass: rgba(255, 255, 255, 0.05);
+  --stitch-border-glass: rgba(255, 255, 255, 0.1);
+  
+  --stitch-neon-blue: #00f0ff;
+  --stitch-neon-purple: #bd00ff;
+  --stitch-neon-green: #00ff9d;
+
+  /* Typography Override if needed */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Glass Panel Utility */
+.glass-panel {
+  background: var(--stitch-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--stitch-border-glass);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Neon Text Utilities */
+.text-neon-blue {
+  color: var(--stitch-neon-blue);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.text-neon-purple {
+  color: var(--stitch-neon-purple);
+  text-shadow: 0 0 10px rgba(189, 0, 255, 0.5);
+}
+
+/* Radix Tab Content Animation */
+.radix-tab-content {
+  animation: fadeIn 0.4s ease-out;
+}
