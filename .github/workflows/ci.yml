@@ -44,8 +44,9 @@ jobs:
       run: npm audit --audit-level=critical
       continue-on-error: true # Report but don't block yet
 
-    - name: Verify Build Output
-      run: ls -la .next || echo ".next missing"
+    - name: Security Audit (Dependencies)
+      run: npm audit --audit-level=critical
+      continue-on-error: true # Report but don't block yet
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
