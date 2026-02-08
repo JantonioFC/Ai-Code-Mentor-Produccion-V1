@@ -44,15 +44,19 @@ jobs:
       run: npm audit --audit-level=critical
       continue-on-error: true # Report but don't block yet
 
-    - name: Run Unit Tests
-      run: npm test
+    - name: Verify Build Output
+      run: ls -la .next || echo ".next missing"
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: next-build-${{ github.run_id }}
-        path: .next
+        path: .next/
+        include-hidden-files: true
         retention-days: 1
+
+    - name: Run Unit Tests
+      run: npm test
 
   e2e-tests:
     runs-on: ubuntu-latest
