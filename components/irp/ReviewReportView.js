@@ -437,9 +437,7 @@ export default function ReviewReportView({ reviewId, onClose }) {
           </div>
           <div className="relative z-10">
             <h3 className="text-indigo-100 text-sm font-bold uppercase tracking-wider mb-2">Comentario de tu Mentor IA</h3>
-            <p className="text-xl font-medium leading-relaxed italic">
-              "{review.mensaje_tutor}"
-            </p>
+            <p className="text-xl font-medium leading-relaxed italic">&quot;{review.mensaje_tutor}&quot;</p>
           </div>
         </div>
       )}

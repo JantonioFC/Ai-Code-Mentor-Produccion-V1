@@ -1,7 +1,7 @@
 import { createApiHandler, sendSuccess, sendError } from '../../../../lib/api/APIWrapper';
 import AuthLocal from '../../../../lib/auth-local';
 import exportService from '../../../../lib/services/exportService';
-import { irpService } from '../../../../lib/services/irp/irpService';
+import { getReviewDetails } from '../../../../lib/services/irp/reviewService';
 
 /**
  * Endpoint para exportar una revisión a Markdown
@@ -27,7 +27,7 @@ async function handler(req, res) {
 
     try {
         // 2. Fetch Review Details
-        const review = await irpService.getReviewDetails(reviewId);
+        const review = await getReviewDetails(reviewId);
 
         if (!review) {
             return sendError(res, 'Review not found', 404);
