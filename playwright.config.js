@@ -63,7 +63,7 @@ module.exports = defineConfig({
   ],
 
   webServer: {
-    command: isCI ? 'node .next/standalone/server.js' : 'npm run dev',
+    command: isCI ? 'npm run start' : 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !isCI || process.env.REUSE_SERVER === 'true',
     timeout: 120000, // 2 minutes for cold start
