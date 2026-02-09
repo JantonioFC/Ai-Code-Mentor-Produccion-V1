@@ -4,8 +4,20 @@ This is the official "Satellite" extension for **AI Code Mentor**, designed to b
 
 ## Features
 
-*   **Open in Web**: Select any code snippet in your editor and instantly open it in the AI Code Mentor web platform for analysis.
-*   **Context Preservation**: Automatically detecting language and context.
+### 🚀 Core
+*   **AI Mentor: Explain Selection**: Select any code snippet and get an instant AI-powered explanation with feedback, strengths, and improvements.
+
+### 💬 Interactive Chat
+*   **Conversational Interface**: Ask follow-up questions to the AI about your code (e.g., "How can I fix this error?").
+*   **Slash Commands**: Use shortcuts for common tasks:
+    *   `/refactor`: Refactor code for best practices.
+    *   `/fix`: Analyze and fix bugs.
+    *   `/test`: Generate unit tests.
+    *   `/docs`: Generate documentation (JSDoc/Docstrings).
+
+### 🛠️ Productivity
+*   **Apply Fix**: Insert generated code directly into your editor with a single click.
+*   **Save Analysis**: Export your conversation and analysis to a Markdown file (`.md`) for future reference.
 
 ## Installation & Development
 
@@ -24,8 +36,7 @@ This extension is currently in **Developer Preview**. To run it:
 3.  **Run in Debug Mode**:
     *   Open this folder (`vscode-extension`) in VS Code.
     *   Press **F5** to launch a new "Extension Development Host" window.
-    *   In the new window, select some code.
-    *   Open Command Palette (`Ctrl+Shift+P`) and run: `AI Mentor: Ask for Help`.
+    *   Select code and run command: `AI Mentor: Explain Selection`.
 
 4.  **Build .vsix (Optional)**:
     *   Install `vsce`: `npm install -g @vscode/vsce`

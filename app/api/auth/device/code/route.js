@@ -22,12 +22,10 @@ export async function POST(request) {
         const expires_at = new Date(Date.now() + expires_in * 1000).toISOString();
 
         // 2. Guardar en DB
-        const stmt = db.prepare(`
+        db.run(`
             INSERT INTO device_codes (device_code, code, expires_at, status)
             VALUES (?, ?, ?, 'pending')
-        `);
-
-        stmt.run(device_code, user_code, expires_at);
+        `, [device_code, user_code, expires_at]);
 
         // 3. Retornar respuesta estándar OAuth Device Flow
         return NextResponse.json({

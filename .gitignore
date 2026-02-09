@@ -102,3 +102,10 @@ charla
 
 # Private Documentation
 docs/private/
+comunicacion.md
+
+# VS Code Extension
+vscode-extension/node_modules/
+vscode-extension/out/
+vscode-extension/.vscode/
+vscode-extension/*.vsix

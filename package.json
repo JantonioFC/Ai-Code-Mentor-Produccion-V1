@@ -29,6 +29,7 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@sentry/nextjs": "^10.38.0",
     "archiver": "^6.0.1",
+    "axios": "^1.13.5",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.2.0",
     "chart.js": "^4.4.0",
