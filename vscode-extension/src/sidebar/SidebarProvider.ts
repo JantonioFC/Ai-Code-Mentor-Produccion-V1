@@ -137,10 +137,40 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
                     processedMessage = "Analyze and fix any potential bugs or errors in this code. Provide the corrected code.";
                     break;
                 case '/test':
-                    processedMessage = "Generate comprehensive unit tests for this code (Jest/PyTest depending on language).";
+                    // Language-specific test frameworks
+                    const editor = vscode.window.activeTextEditor;
+                    const lang = (editor?.document.languageId || 'javascript').toLowerCase();
+
+                    if (lang === 'python') {
+                        processedMessage = "Generate comprehensive unit tests for this code using `pytest`. Include fixtures if necessary.";
+                    } else if (lang === 'rust') {
+                        processedMessage = "Generate unit tests for this code inside a `#[cfg(test)]` module using standard `#[test]` attributes.";
+                    } else if (lang === 'go') {
+                        processedMessage = "Generate comprehensive unit tests for this code using the standard `testing` package.";
+                    } else if (lang === 'java') {
+                        processedMessage = "Generate comprehensive unit tests for this code using JUnit 5.";
+                    } else if (lang === 'csharp') {
+                        processedMessage = "Generate comprehensive unit tests for this code using NUnit or xUnit.";
+                    } else {
+                        processedMessage = "Generate comprehensive unit tests for this code (Jest/Vitest/Mocha for JS/TS, or appropriate framework).";
+                    }
                     break;
                 case '/docs':
-                    processedMessage = "Generate detailed JSDoc/Docstrings for this code, explaining parameters and return values.";
+                    // Language-specific doc styles
+                    const editorDocs = vscode.window.activeTextEditor;
+                    const langDocs = (editorDocs?.document.languageId || 'javascript').toLowerCase();
+
+                    if (langDocs === 'python') {
+                        processedMessage = "Generate Google-style Docstrings for this code, explaining parameters, returns, and raises.";
+                    } else if (langDocs === 'rust') {
+                        processedMessage = "Generate Rustdoc documentation using `///` comments for this code.";
+                    } else if (langDocs === 'go') {
+                        processedMessage = "Generate GoDoc comments for this code, following Go conventions.";
+                    } else if (langDocs === 'java') {
+                        processedMessage = "Generate Javadoc comments for this code.";
+                    } else {
+                        processedMessage = "Generate detailed JSDoc/Docstrings for this code, explaining parameters and return values.";
+                    }
                     break;
                 default:
                     // If unknown command, keep as is or maybe show a hint? 

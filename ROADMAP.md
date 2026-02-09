@@ -21,13 +21,13 @@ Priorización basada en **Impacto Educativo** y **Autonomía del Estudiante**.
 
 ### 2. Ecosistema Externo (Extensión VS Code)
 *   **Descripción**: Integrar el mentor directamente en el editor de código del estudiante.
-*   **Status**: 🚧 Next Up.
-*   **Features**: Autenticación vía CLI, envío de código a auditoría IRP.
+*   **Status**: ✅ Completed (Beta).
+*   **Features**: Autenticación vía CLI, envío de código a auditoría IRP, Chat Interactivo, Comandos, Apply Fix.
 
 ### 3. Soporte Multilenguaje (Expansion)
 *   **Descripción**: Expandir la capacidad del mentor más allá de JavaScript/React.
-*   **Status**: 📅 Planned.
-*   **Lenguajes**: Python, Rust, Go.
+*   **Status**: ✅ Completed (Initial Support).
+*   **Lenguajes**: Python, Rust, Go, Java, C# (via Slash Commands).
 
 ---
 *Nota: Este proyecto se desarrolla como un bien público digital, priorizando la privacidad y el funcionamiento offline.*

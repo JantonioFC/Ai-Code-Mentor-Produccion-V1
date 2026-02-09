@@ -35,6 +35,8 @@
 | 📄 **Exportar a PDF** | Descarga lecciones y reportes de progreso |
 | 🎨 **Multimodal** | Genera diagramas Mermaid e imágenes |
 | 🛡️ **Anti-Alucinación** | Clarity Gate para respuestas verificables |
+| 🧩 **Extensión VS Code** | Chat integrado, Comandos (/test, /fix) y Apply Fix |
+| 🌍 **Multilenguaje** | Soporte para Python, Rust, Go, Java, C# (via Extension) |
 
 ---
 
