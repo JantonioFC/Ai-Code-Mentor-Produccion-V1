@@ -97,9 +97,16 @@ function validateWikiStructure() {
     const relativeLinks = content.match(/\[.*?\]\(((?!http).*?\.md)\)/g) || [];
     relativeLinks.forEach(link => {
       const linkPath = link.match(/\((.*?)\)/)[1];
-      const targetPath = path.join(WIKI_DIR, linkPath.replace('../', ''));
       
-      if (!fs.existsSync(targetPath) && !linkPath.startsWith('../')) {
+      // Skip external relative links (those starting with ../)
+      if (linkPath.startsWith('../')) {
+        return;
+      }
+      
+      // Resolve the target path properly
+      const targetPath = path.resolve(WIKI_DIR, linkPath);
+      
+      if (!fs.existsSync(targetPath)) {
         log(`  ⚠️  Broken link in ${file}: ${linkPath}`, 'yellow');
       }
     });
