@@ -19,7 +19,10 @@
     "test:e2e:verify": "node e2e/verify-setup.js",
     "test:smoke": "playwright test e2e/smoke.spec.js",
     "create:demo-user": "node scripts/create-demo-user.js",
-    "db:backup": "node scripts/db-backup.js"
+    "db:backup": "node scripts/db-backup.js",
+    "wiki:list": "node scripts/wiki-manager.js list",
+    "wiki:validate": "node scripts/wiki-manager.js validate",
+    "wiki:index": "node scripts/wiki-manager.js index"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

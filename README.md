@@ -5,10 +5,13 @@
 [![Build Status](https://github.com/JantonioFC/ai-code-mentor-beta-test/actions/workflows/ci.yml/badge.svg)](https://github.com/JantonioFC/ai-code-mentor-beta-test/actions)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 
+> 📚 **Documentación Interactiva:** Explora el proyecto con IA en [DeepWiki](https://deepwiki.com/JantonioFC/ai-code-mentor-beta-test) | [Wiki del Proyecto](wiki/Home.md)
+
 ---
 
 ## 📋 Tabla de Contenidos
 
+- [Wiki del Proyecto](#-wiki-del-proyecto)
 - [Características](#-características)
 - [Tech Stack](#-tech-stack)
 - [Prerrequisitos](#-prerrequisitos)
@@ -21,6 +24,22 @@
 - [Deployment](#-deployment)
 - [Troubleshooting](#-troubleshooting)
 - [Contribuir](#-contribuir)
+
+---
+
+## 📚 Wiki del Proyecto
+
+Accede a la documentación completa del proyecto:
+
+- **[Wiki Local](wiki/Home.md)** - Documentación en el repositorio
+  - [Development Workflow](wiki/2.3-development-workflow.md) - Flujo de trabajo de desarrollo
+  - [Índice de Páginas](wiki/Index.md) - Todas las páginas disponibles
+
+- **[DeepWiki](https://deepwiki.com/JantonioFC/ai-code-mentor-beta-test)** - Documentación interactiva con IA
+  - Chat interactivo para hacer preguntas sobre el código
+  - Diagramas automáticos de arquitectura
+  - Navegación inteligente por el repositorio
+  - [Development Workflow en DeepWiki](https://deepwiki.com/JantonioFC/ai-code-mentor-beta-test/2.3-development-workflow)
 
 ---
 
