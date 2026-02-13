@@ -23,6 +23,7 @@ DeepWiki proporciona:
 
 ### Desarrollo
 - [2.3 Development Workflow](2.3-development-workflow.md) - Flujo de trabajo de desarrollo
+- [2.4 Test Audit Report](2.4-test-audit-report.md) - Informe de auditoría de pruebas (Feb 2026)
 
 ### Arquitectura
 - [Arquitectura General](../docs/ARCHITECTURE_DIAGRAMS.md)
