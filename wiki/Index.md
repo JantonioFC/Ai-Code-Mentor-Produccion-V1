@@ -10,7 +10,11 @@ Este documento describe el flujo de trabajo estándar para contribuir al proyect
 Bienvenido al wiki de AI Code Mentor, tu mentor de programación impulsado por IA....
 - 🔗 [Ver en DeepWiki](https://deepwiki.com/JantonioFC/ai-code-mentor-beta-test/home)
 
+### [Wiki Index](Index.md)
+Este documento describe el flujo de trabajo estándar para contribuir al proyecto AI Code Mentor.......
+- 🔗 [Ver en DeepWiki](https://deepwiki.com/JantonioFC/ai-code-mentor-beta-test/index)
+
 
 ---
 
-**Última actualización:** 13/2/2026
+**Última actualización:** 13/02/2026

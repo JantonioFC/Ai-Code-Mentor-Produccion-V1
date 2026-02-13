@@ -151,7 +151,9 @@ function generateWikiIndex() {
   });
 
   index += '\n---\n\n';
-  index += `**Última actualización:** ${new Date().toLocaleDateString('es-ES')}\n`;
+  const today = new Date();
+  const dateStr = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
+  index += `**Última actualización:** ${dateStr}\n`;
 
   const indexPath = path.join(WIKI_DIR, 'Index.md');
   fs.writeFileSync(indexPath, index);
