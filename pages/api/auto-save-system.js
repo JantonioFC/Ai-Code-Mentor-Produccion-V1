@@ -10,7 +10,7 @@ const path = require('path');
 // Auto-save directories structure
 const AUTO_SAVE_DIRS = {
   lessons: 'exports/lecciones',
-  exercises: 'exports/ejercicios', 
+  exercises: 'exports/ejercicios',
   progress: 'exports/progreso',
   corrections: 'exports/correcciones',
   sessions: 'exports/sesiones'
@@ -31,10 +31,10 @@ function ensureAutoSaveDirectories() {
 function autoSaveLesson(lesson, metadata = {}) {
   try {
     ensureAutoSaveDirectories();
-    
+
     const timestamp = new Date().toISOString().slice(0, 19).replace(/[:.]/g, '-');
     const filename = `${lesson.path.replace(/\./g, '_')}_${timestamp}`;
-    
+
     // Save JSON version for data processing
     const jsonData = {
       ...lesson,
@@ -43,23 +43,23 @@ function autoSaveLesson(lesson, metadata = {}) {
       save_type: 'automatic',
       version: '4.2'
     };
-    
+
     const jsonPath = path.join(process.cwd(), AUTO_SAVE_DIRS.lessons, `${filename}.json`);
     fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8');
-    
+
     // Save Markdown version for human reading
     const markdownContent = generateLessonMarkdown(lesson, metadata);
     const mdPath = path.join(process.cwd(), AUTO_SAVE_DIRS.lessons, `${filename}.md`);
     fs.writeFileSync(mdPath, markdownContent, 'utf8');
-    
+
     console.log(`💾 AUTO-SAVED: Lesson ${lesson.title} → ${filename}`);
-    
+
     return {
       json_file: `${filename}.json`,
       markdown_file: `${filename}.md`,
       saved_at: new Date().toISOString()
     };
-    
+
   } catch (error) {
     console.error('❌ Error auto-saving lesson:', error.message);
     return null;
@@ -91,8 +91,8 @@ ${lesson.content || 'Contenido no disponible'}
 
 ## 💡 EJERCICIOS PRÁCTICOS INTEGRADOS
 
-${lesson.exercises && lesson.exercises.length > 0 
-  ? lesson.exercises.map((exercise, index) => `### 🎯 Ejercicio ${index + 1}
+${lesson.exercises && lesson.exercises.length > 0
+      ? lesson.exercises.map((exercise, index) => `### 🎯 Ejercicio ${index + 1}
 
 ${exercise}
 
@@ -101,7 +101,7 @@ ${exercise}
 **Guardado:** Automático al completar
 
 ---`).join('\n')
-  : '⚠️ No se generaron ejercicios para esta lección.'}
+      : '⚠️ No se generaron ejercicios para esta lección.'}
 
 ---
 
@@ -140,23 +140,23 @@ Todas las actividades de aprendizaje se registran sin necesidad de intervención
 function autoSaveExerciseCompletion(exerciseData) {
   try {
     ensureAutoSaveDirectories();
-    
+
     const timestamp = new Date().toISOString().slice(0, 19).replace(/[:.]/g, '-');
     const filename = `${exerciseData.lessonPath.replace(/\./g, '_')}_exercise_${exerciseData.exerciseId}_${timestamp}.json`;
-    
+
     const completionData = {
       ...exerciseData,
       auto_saved_at: new Date().toISOString(),
       completion_type: 'automatic',
       version: '4.2'
     };
-    
+
     const filePath = path.join(process.cwd(), AUTO_SAVE_DIRS.exercises, filename);
     fs.writeFileSync(filePath, JSON.stringify(completionData, null, 2), 'utf8');
-    
+
     console.log(`💾 AUTO-SAVED: Exercise completion → ${filename}`);
     return filename;
-    
+
   } catch (error) {
     console.error('❌ Error auto-saving exercise:', error.message);
     return null;
@@ -167,10 +167,10 @@ function autoSaveExerciseCompletion(exerciseData) {
 function autoSaveSessionProgress(sessionData) {
   try {
     ensureAutoSaveDirectories();
-    
+
     const today = new Date().toISOString().slice(0, 10);
     const sessionId = `session_${today}_${Date.now()}`;
-    
+
     const progressData = {
       session_id: sessionId,
       date: new Date().toISOString(),
@@ -178,17 +178,17 @@ function autoSaveSessionProgress(sessionData) {
       auto_saved: true,
       version: '4.2'
     };
-    
+
     // Save session data
     const sessionPath = path.join(process.cwd(), AUTO_SAVE_DIRS.sessions, `${sessionId}.json`);
     fs.writeFileSync(sessionPath, JSON.stringify(progressData, null, 2), 'utf8');
-    
+
     // Update daily progress summary
     updateDailyProgressSummary(progressData);
-    
+
     console.log(`📊 AUTO-SAVED: Session progress → ${sessionId}`);
     return sessionId;
-    
+
   } catch (error) {
     console.error('❌ Error auto-saving session:', error.message);
     return null;
@@ -200,12 +200,12 @@ function updateDailyProgressSummary(sessionData) {
   try {
     const today = new Date().toISOString().slice(0, 10);
     const summaryPath = path.join(process.cwd(), AUTO_SAVE_DIRS.progress, `daily_progress_${today}.json`);
-    
+
     let dailyProgress = {};
     if (fs.existsSync(summaryPath)) {
       dailyProgress = JSON.parse(fs.readFileSync(summaryPath, 'utf8'));
     }
-    
+
     // Initialize if new day
     if (!dailyProgress.date) {
       dailyProgress = {
@@ -218,23 +218,23 @@ function updateDailyProgressSummary(sessionData) {
         version: '4.2'
       };
     }
-    
+
     // Add session
     dailyProgress.sessions.push(sessionData.session_id);
     dailyProgress.last_updated = new Date().toISOString();
-    
+
     // Add lesson if completed
     if (sessionData.lesson_completed) {
       dailyProgress.lessons_completed.push(sessionData.lesson_completed);
     }
-    
+
     // Add exercises if completed
     if (sessionData.exercises_completed) {
       dailyProgress.exercises_completed.push(...sessionData.exercises_completed);
     }
-    
+
     fs.writeFileSync(summaryPath, JSON.stringify(dailyProgress, null, 2), 'utf8');
-    
+
   } catch (error) {
     console.error('❌ Error updating daily progress:', error.message);
   }
@@ -244,7 +244,7 @@ function updateDailyProgressSummary(sessionData) {
 function getLearningStatistics() {
   try {
     ensureAutoSaveDirectories();
-    
+
     const stats = {
       total_lessons: 0,
       total_exercises: 0,
@@ -254,13 +254,13 @@ function getLearningStatistics() {
       recent_activity: [],
       generated_at: new Date().toISOString()
     };
-    
+
     // Analyze lessons
     const lessonsDir = path.join(process.cwd(), AUTO_SAVE_DIRS.lessons);
     if (fs.existsSync(lessonsDir)) {
       const lessonFiles = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.json'));
       stats.total_lessons = lessonFiles.length;
-      
+
       lessonFiles.forEach(file => {
         try {
           const lesson = JSON.parse(fs.readFileSync(path.join(lessonsDir, file), 'utf8'));
@@ -269,7 +269,7 @@ function getLearningStatistics() {
             stats.languages_studied.add(language);
           }
           if (lesson.difficulty) {
-            stats.difficulty_distribution[lesson.difficulty] = 
+            stats.difficulty_distribution[lesson.difficulty] =
               (stats.difficulty_distribution[lesson.difficulty] || 0) + 1;
           }
         } catch (e) {
@@ -277,24 +277,24 @@ function getLearningStatistics() {
         }
       });
     }
-    
+
     // Analyze exercises
     const exercisesDir = path.join(process.cwd(), AUTO_SAVE_DIRS.exercises);
     if (fs.existsSync(exercisesDir)) {
       stats.total_exercises = fs.readdirSync(exercisesDir).filter(f => f.endsWith('.json')).length;
     }
-    
+
     // Analyze sessions
     const sessionsDir = path.join(process.cwd(), AUTO_SAVE_DIRS.sessions);
     if (fs.existsSync(sessionsDir)) {
       stats.total_sessions = fs.readdirSync(sessionsDir).filter(f => f.endsWith('.json')).length;
     }
-    
+
     // Convert Set to Array for JSON
     stats.languages_studied = Array.from(stats.languages_studied);
-    
+
     return stats;
-    
+
   } catch (error) {
     console.error('❌ Error getting learning statistics:', error.message);
     return null;
@@ -310,50 +310,62 @@ module.exports = {
   ensureAutoSaveDirectories
 };
 
+import AuthLocal from '../../lib/auth-local';
+
 // API endpoint handler
 export default async function handler(req, res) {
   const { action } = req.query;
-  
+
+  const token = req.cookies['ai-code-mentor-auth'] || req.cookies.token;
+  if (!token) {
+    return res.status(401).json({ error: 'No autorizado: Token faltante' });
+  }
+
+  const authResult = AuthLocal.verifyToken(token);
+  if (!authResult.isValid) {
+    return res.status(401).json({ error: 'No autorizado: Token inválido' });
+  }
+
   try {
     switch (action) {
       case 'get-statistics':
         if (req.method !== 'GET') {
           return res.status(405).json({ error: 'Método no permitido' });
         }
-        
+
         const stats = getLearningStatistics();
-        
+
         res.json({
           success: true,
           statistics: stats,
           message: 'Estadísticas de aprendizaje obtenidas automáticamente'
         });
         break;
-        
+
       case 'save-session':
         if (req.method !== 'POST') {
           return res.status(405).json({ error: 'Método no permitido' });
         }
-        
+
         const sessionId = autoSaveSessionProgress(req.body);
-        
+
         res.json({
           success: true,
           session_id: sessionId,
           message: 'Sesión guardada automáticamente'
         });
         break;
-        
+
       default:
-        res.status(400).json({ 
+        res.status(400).json({
           error: 'Acción no válida',
           availableActions: ['get-statistics', 'save-session']
         });
     }
-    
+
   } catch (error) {
     console.error('❌ Auto-save system error:', error.message);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Error en sistema de auto-guardado',
       details: error.message
     });

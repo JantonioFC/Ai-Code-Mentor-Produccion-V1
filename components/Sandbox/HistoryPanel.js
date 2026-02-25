@@ -1,75 +1,56 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../../lib/auth/useAuth';
 
 // HistoryPanel.js - Panel de historial de generaciones del Sandbox
-// MISIÓN 216.0 FASE 3: Mostrar últimas 20 generaciones con capacidad de restauración
-// MISIÓN 217.0: Búsqueda client-side + Eliminación de generaciones
-// MISIÓN 218.0: FIX - Usar token de Supabase correcto (no token interno IRP)
+// Este componente se renderiza dentro de páginas autenticadas (AuthGate).
+// La auth se maneja server-side via cookies httpOnly — no necesita useAuth.
 
-export default function HistoryPanel({ onRestoreGeneration }) {
-  const { session } = useAuth(); // 🆕 MISIÓN 218.0: Usar session en vez de internalToken
+export default function HistoryPanel({ onRestoreGeneration, refreshTrigger = 0 }) {
   const [generations, setGenerations] = useState([]);
   const [filteredGenerations, setFilteredGenerations] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [expandedId, setExpandedId] = useState(null);
 
-  // MISIÓN 219.0: Validación de token JWT antes de cargar historial
-  // Previene race conditions durante autenticación en tests E2E
-  const isValidJWT = (token) => {
-    if (!token || typeof token !== 'string') return false;
-    // Un JWT válido tiene exactamente 3 segmentos separados por puntos
-    const parts = token.split('.');
-    return parts.length === 3 && parts.every(part => part.length > 0);
-  };
-
-  // Función para obtener historial - Definida como function para hoisting
-  async function fetchHistory() {
-    setIsLoading(true);
+  // Función para obtener historial — cookies se envían automáticamente
+  const fetchHistory = useCallback(async () => {
+    // Only show loading spinner on first load or if list is empty
+    if (generations.length === 0) setIsLoading(true);
     setError(null);
 
     try {
-      console.log('📜 [HISTORY] Cargando historial...');
-
-      // 🆕 MISIÓN 218.0: Usar cookies de sesión (Auth Local)
-      const response = await fetch('/api/v1/sandbox/history', {
-        method: 'GET'
-      });
+      const response = await fetch('/api/v1/sandbox/history');
 
       if (!response.ok) {
         let errorMessage = `Error ${response.status}: ${response.statusText}`;
         try {
           const errorData = await response.json();
           errorMessage = errorData.message || errorData.error || errorMessage;
-          if (errorData.details) {
-            console.error('❌ [HISTORY] Detalles del error:', errorData.details);
-          }
         } catch (e) {
-          // Si no es JSON, mantener el error original
+          // keep original error
+        }
+        if (response.status === 401) {
+          errorMessage = "Inicia sesión para ver tu historial";
         }
         throw new Error(errorMessage);
       }
 
       const data = await response.json();
-      console.log('✅ [HISTORY] Historial cargado:', data.data?.count, 'generaciones');
-      setGenerations(data.data?.generations || []);
+      const loaded = data.data?.generations || [];
+      setGenerations(loaded);
 
     } catch (error) {
-      console.error('❌ [HISTORY] Error:', error);
+      console.error('[HISTORY] Error:', error);
       setError(error.message);
     } finally {
       setIsLoading(false);
     }
-  }
+  }, [generations.length]); // Dependencies for internal logic, but triggered by effect below
 
-  // Cargar historial al montar o cuando cambie el usuario
+  // Cargar historial al montar y cuando cambie refreshTrigger
   useEffect(() => {
-    // 🆕 MISIÓN 218.0: Solo cargar si hay usuario autenticado
-    if (session) {
-      fetchHistory();
-    }
-  }, [session]);
+    fetchHistory();
+  }, [fetchHistory, refreshTrigger]);
 
   // Filtrar generaciones cuando cambie el query o las generaciones
   useEffect(() => {
@@ -98,12 +79,8 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     try {
       console.log('🗑️ [HISTORY] Eliminando generación:', generationId);
 
-      // 🆕 MISIÓN 218.0: Usar token de Supabase
       const response = await fetch(`/api/v1/sandbox/history/${generationId}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`
-        }
+        method: 'DELETE'
       });
 
       if (!response.ok) {
@@ -149,22 +126,6 @@ export default function HistoryPanel({ onRestoreGeneration }) {
     onRestoreGeneration(generation);
     setExpandedId(null); // Colapsar después de restaurar
   };
-
-  // 🆕 MISIÓN 218.0: Verificar session.access_token en vez de internalToken
-  if (!session?.access_token) {
-    return (
-      <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-2xl">📜</span>
-          <h3 className="text-lg font-bold text-gray-800">Historial</h3>
-        </div>
-        <div className="text-center py-8 text-gray-500 text-sm">
-          <div className="text-4xl mb-2">🔒</div>
-          <p>Inicia sesión para ver tu historial de generaciones</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 sticky top-4">

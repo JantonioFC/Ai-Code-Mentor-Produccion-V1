@@ -12,6 +12,11 @@ Priorización basada en **Impacto Educativo** y **Autonomía del Estudiante**.
 *   ✅ **Feedback Loop**: Auto-optimización de prompts basada en feedback.
 *   ✅ **Exportación Local**: Lecciones portables (Markdown/PDF).
 
+## Q1 2026: Hardening & Modernización API (In Progress)
+*   **Descripción**: Ejecución del PRD de Mejora para seguridad de endpoints y modernización hacia App Router.
+*   **Status**: ⏳ In Progress.
+*   **Logros**: Endpoints críticos asegurados con JWT y roles (Fase 1 completada); Higiene estructural aplicada (Fase 2 completada).
+
 ## Q1 2025: Modernización y Ecosistema (In Progress)
 
 ### 1. Migración a App Router & CI Hardening (Completed)

@@ -50,9 +50,10 @@ module.exports = defineConfig({
     navigationTimeout: 120000,  // 120s - Timeout para navegación (goto, waitForURL)
   },
 
-  // Timeout para expects (v16.0)
+  // Timeout para expects (v16.0) + Screenshot config (Fase 3)
   expect: {
     timeout: 30000,            // 30s - Timeout para aserciones
+    toHaveScreenshot: { maxDiffPixelRatio: 0.01 },
   },
 
   projects: [

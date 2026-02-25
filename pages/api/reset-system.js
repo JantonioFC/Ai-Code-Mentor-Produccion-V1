@@ -6,6 +6,7 @@
 
 import db from '../../lib/db';
 import JSZip from 'jszip';
+import AuthLocal from '../../lib/auth-local';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -13,6 +14,23 @@ export default async function handler(req, res) {
       success: false,
       error: 'Method not allowed. Use POST.'
     });
+  }
+
+  const token = req.cookies['ai-code-mentor-auth'] || req.cookies.token;
+  if (!token) {
+    console.warn('[API/reset-system] Unauthorized access attempt: No token');
+    return res.status(401).json({ success: false, error: 'No autorizado: Token faltante' });
+  }
+
+  const authResult = AuthLocal.verifyToken(token);
+  if (!authResult.isValid) {
+    console.warn('[API/reset-system] Unauthorized access attempt: Invalid token');
+    return res.status(401).json({ success: false, error: 'No autorizado: Token inválido' });
+  }
+
+  if (authResult.role !== 'admin') {
+    console.warn(`[API/reset-system] Forbidden access attempt by user: ${authResult.email}`);
+    return res.status(403).json({ success: false, error: 'Prohibido: Se requiere rol de administrador' });
   }
 
   try {

@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "TC001",
+    "title": "Landing page loads and key showcase content is visible",
+    "description": "Verifies the public landing page renders its primary feature showcase content and is accessible without login.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI Code Mentor\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"VS Code\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Gemini\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Scroll through landing page feature sections",
+    "description": "Verifies users can scroll through the landing page and see additional feature sections as they move down the page.",
+    "category": "Landing Page",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI Code Mentor\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the middle of the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"templates\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the bottom of the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Footer\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Call-to-action button routes user to the login page",
+    "description": "Verifies the primary call-to-action on the landing page takes the user to the /login page.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI Code Mentor\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the call-to-action button for \"Login\" or \"Sign in\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Login\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Top navigation link routes user to the login page",
+    "description": "Verifies the top navigation bar provides a working route from the landing page to /login.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Top navigation bar\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the top navigation link labeled \"Login\" or \"Iniciar sesión\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Login\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Landing page remains usable when returning from login",
+    "description": "Verifies a user can return to the landing page via available UI navigation and the landing content still renders.",
+    "category": "Landing Page",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the top navigation link labeled \"Login\" or \"Iniciar sesión\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "action",
+        "description": "Click on the link labeled \"Home\" or \"Inicio\" (or the product logo) to return to the landing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI Code Mentor\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Logout control is available on the dashboard navigation",
+    "description": "Verifies the dashboard provides a visible logout control for authenticated users.",
+    "category": "User Logout",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Cerrar Sesion\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Access dashboard after login and see Dashboard Unificado with phase progress",
+    "description": "Verifies an authenticated user can reach /panel-de-control and see the Dashboard Unificado tab with curriculum phase progress visible.",
+    "category": "Dashboard Analytics",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Dashboard Unificado\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"F0\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"F7\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Competency framework visualization is visible on Dashboard Unificado",
+    "description": "Verifies the dashboard shows a competency visualization section on the unified dashboard view.",
+    "category": "Dashboard Analytics",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Dashboard Unificado\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Competencias\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Competency framework\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Recent entries and module statistics are shown on the dashboard",
+    "description": "Verifies the dashboard displays recent activity entries and module statistics sections with visible content.",
+    "category": "Dashboard Analytics",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the \"Actividad reciente\" section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Actividad reciente\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Estadísticas\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Switch from Dashboard Unificado to Sandbox tab",
+    "description": "Verifies the user can switch tabs from the unified dashboard view to the Sandbox tab and sees Sandbox content.",
+    "category": "Dashboard Analytics",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sandbox\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Sandbox input\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Switch between Dashboard, Sandbox and Sistema tabs without losing the dashboard page",
+    "description": "Verifies the tab navigation works across Dashboard, Sandbox, and Sistema and stays within the control panel route.",
+    "category": "Dashboard Analytics",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sistema\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sistema\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Dashboard\" or \"Dashboard Unificado\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Dashboard Unificado\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Dashboard shows a loading state while fetching analytics",
+    "description": "Verifies the dashboard presents a visible loading indicator/state while waiting for analytics data to render.",
+    "category": "Dashboard Analytics",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Cargando\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard content to appear"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Dashboard Unificado\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Generate a lesson and see streaming response plus code examples",
+    "description": "Verifies a user can generate an AI lesson from the Sandbox and see a streaming response that results in a final lesson with code examples.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Generar Leccion\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Generando\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Verify streaming output appears during generation",
+    "description": "Verifies the Sandbox shows visible streaming/partial output while the AI lesson is being generated.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Generar Leccion\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Select language and category before generating a lesson",
+    "description": "Verifies a user can select a language and a category in the Sandbox prior to generating a lesson.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Select \"JavaScript\" from the language dropdown"
+      },
+      {
+        "type": "action",
+        "description": "Select \"Fundamentals\" from the category dropdown"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Select a lesson topic and generate successfully",
+    "description": "Verifies a user can pick a lesson topic and generate a completed lesson output.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Select \"Variables\" from the lesson topic dropdown"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Generar Leccion\" button"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Verify final lesson content is visible after generation completes",
+    "description": "Verifies the generated lesson area shows a completed lesson output once streaming finishes.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Generar Leccion\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Ejemplo\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Prevent generation when required selections are missing",
+    "description": "Verifies the Sandbox blocks generation (or prompts the user) if language/category/topic selections are not provided.",
+    "category": "AI Lesson Generation (Sandbox)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the username or email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" or \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sandbox\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Generar Leccion\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Selecciona\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Access Templates after login and view templates page",
+    "description": "Verifies an authenticated user can reach the Educational Templates page and see the templates list area.",
+    "category": "Educational Templates",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/plantillas\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Plantillas\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Browse available templates list",
+    "description": "Verifies the templates list can be browsed and template entries are visible.",
+    "category": "Educational Templates",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the templates list section is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the templates list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify at least one template item is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Preview a template from the list",
+    "description": "Verifies selecting a template opens its preview with visible content.",
+    "category": "Educational Templates",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on the first visible template item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the template preview panel or dialog is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify template preview content text is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "Use a template for documentation from preview",
+    "description": "Verifies a user can apply a template from its preview and sees confirmation or the applied template content area.",
+    "category": "Educational Templates",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on the first visible template item"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Use template\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Template applied\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC023",
+    "title": "Cancel out of template preview without applying",
+    "description": "Verifies the user can close the preview and return to the templates list without applying a template.",
+    "category": "Educational Templates",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on the first visible template item"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Close\" button in the template preview"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the templates list section is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC024",
+    "title": "Apply template keeps user on templates flow and shows applied content area",
+    "description": "Verifies after using a template the user remains in a valid post-apply UI state (either still on templates page or an editor panel is shown).",
+    "category": "Educational Templates",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Plantillas\" (Templates) in the app navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on the first visible template item"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Use template\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/plantillas\""
+      }
+    ]
+  },
+  {
+    "id": "TC025",
+    "title": "Authorize VS Code extension via device flow (happy path)",
+    "description": "Verifies a user can complete the device authorization flow from /connect and land on the dashboard after success.",
+    "category": "VS Code Extension Device Flow (Connect)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Connect\" navigation item or button to open the connect page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/connect\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"device code\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC026",
+    "title": "Connect page shows device flow instructions and a device code",
+    "description": "Verifies the /connect page provides clear instructions and displays a device code the user can enter in VS Code.",
+    "category": "VS Code Extension Device Flow (Connect)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Connect\" navigation item or button to open the connect page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"instructions\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Device code\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC027",
+    "title": "Authorize button is present and usable on connect page",
+    "description": "Verifies the user can see an Authorize action on /connect that progresses the flow.",
+    "category": "VS Code Extension Device Flow (Connect)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Connect\" navigation item or button to open the connect page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Authorize\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Authorize\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"success\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC028",
+    "title": "Successful authorization redirects to dashboard with confirmation",
+    "description": "Verifies that after authorizing, the UI confirms success and redirects the user to /panel-de-control.",
+    "category": "VS Code Extension Device Flow (Connect)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Connect\" navigation item or button to open the connect page"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Authorize\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Authorization successful\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/panel-de-control\""
+      }
+    ]
+  }
+]

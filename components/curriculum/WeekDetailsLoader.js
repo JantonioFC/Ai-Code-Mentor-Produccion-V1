@@ -11,7 +11,7 @@
  * @version v2.0 - Incluye soporte para Guía de Estudio
  */
 
-import WeekDetails from './WeekDetails';
+import WeekDetails from './WeekDetailsComponent';
 import GuiaEstudio from './GuiaEstudio';
 import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 
@@ -87,7 +87,7 @@ export default function WeekDetailsLoader({
   // Estado con datos completos - MISIÓN 185.3: Lógica condicional para Guía de Estudio
   if (weekDetailsData) {
     // Determinar si la semana tiene guía de estudio estratégico
-    const hasGuiaEstudio = weekDetailsData.guiaEstudio && 
+    const hasGuiaEstudio = weekDetailsData.guiaEstudio &&
       typeof weekDetailsData.guiaEstudio === 'object' &&
       Object.keys(weekDetailsData.guiaEstudio).length > 0;
 
@@ -116,7 +116,7 @@ export default function WeekDetailsLoader({
             </div>
           </div>
         </div>
-        
+
         {/* Renderizado condicional basado en presencia de guía de estudio */}
         {hasGuiaEstudio ? (
           <GuiaEstudio weekData={weekDetailsData} />

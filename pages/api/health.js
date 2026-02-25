@@ -15,8 +15,9 @@
  */
 
 export default function handler(req, res) {
-  res.status(200).json({ 
-    status: 'ok', 
+  console.warn('[DEPRECATION] pages/api/health.js is deprecated. Please use /api/v2/health instead.');
+  res.status(200).json({
+    status: 'ok',
     timestamp: new Date().toISOString(),
     service: 'main-app',
     version: '1.0.0',

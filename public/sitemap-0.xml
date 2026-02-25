@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://aicodementor.com/analiticas</loc><lastmod>2026-02-08T03:31:53.957Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/challenge</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/codigo</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/crear-template</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/index.backup</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/login.backup</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/modulos</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/panel-de-control-optimized</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/panel-de-control.backup</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/peer-review</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/plantillas</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/portfolio</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com/login</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://aicodementor.com</loc><lastmod>2026-02-08T03:31:53.958Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/analiticas</loc><lastmod>2026-02-16T04:02:58.271Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/challenge</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/codigo</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/crear-template</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/index.backup</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/login.backup</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/modulos</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/panel-de-control-optimized</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/panel-de-control.backup</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/peer-review</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/plantillas.backup</loc><lastmod>2026-02-16T04:02:58.273Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/portfolio</loc><lastmod>2026-02-16T04:02:58.274Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/login</loc><lastmod>2026-02-16T04:02:58.274Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com</loc><lastmod>2026-02-16T04:02:58.274Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://aicodementor.com/plantillas</loc><lastmod>2026-02-16T04:02:58.274Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

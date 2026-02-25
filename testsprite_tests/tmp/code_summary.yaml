@@ -1,0 +1,174 @@
+version: "2"
+type: frontend
+tech_stack:
+  - JavaScript/TypeScript
+  - Next.js 15.4 (App Router + Pages Router)
+  - React 18.3 + TailwindCSS 3.3 + Radix UI
+  - SQLite (better-sqlite3) + JWT Auth + Gemini AI
+routes:
+  - path: /
+    file: app/page.js
+    auth_required: false
+    description: Landing page with features showcase and call-to-action
+  - path: /login
+    file: app/login/page.js
+    auth_required: false
+    description: User login and registration page
+  - path: /connect
+    file: app/connect/page.js
+    auth_required: true
+    description: VS Code extension device flow authorization
+  - path: /panel-de-control
+    file: app/panel-de-control/page.js
+    auth_required: true
+    description: Main dashboard with unified analytics, sandbox and system tabs
+  - path: /plantillas
+    file: app/plantillas/page.js
+    auth_required: true
+    description: Educational templates center with 10 template types
+features:
+  - name: User Registration
+    description: Create a new account with email, password and display name
+    files:
+      - app/login/page.js
+      - pages/api/auth/register.js
+      - lib/auth-local.js
+      - lib/auth/useAuth.js
+    entry_route: /login
+    user_interactions:
+      - Navigate to /login page
+      - Click on register tab or toggle
+      - Fill email input field
+      - Fill password input field
+      - Fill display name input field
+      - Click Registrarse button to submit
+      - See success message and redirect to dashboard
+      - See error message on invalid or duplicate email
+    api_calls:
+      - method: POST
+        endpoint: /api/auth/register
+    auth_required: false
+  - name: User Login
+    description: Login with email and password credentials
+    files:
+      - app/login/page.js
+      - pages/api/auth/login.js
+      - lib/auth-local.js
+      - lib/auth/useAuth.js
+    entry_route: /login
+    user_interactions:
+      - Navigate to /login page
+      - Fill email input field
+      - Fill password input field
+      - Click Iniciar Sesion button to submit
+      - See redirect to /panel-de-control on success
+      - See error message on invalid credentials
+    api_calls:
+      - method: POST
+        endpoint: /api/auth/login
+    auth_required: false
+  - name: Quick Demo Access
+    description: One-click access to the platform for demo purposes
+    files:
+      - app/login/page.js
+    entry_route: /login
+    user_interactions:
+      - Click Acceso Demo Rapido button
+      - Auto-login with demo credentials
+      - Redirect to /panel-de-control
+    api_calls:
+      - method: POST
+        endpoint: /api/auth/login
+    auth_required: false
+  - name: User Logout
+    description: Log out of the application and clear session
+    files:
+      - lib/auth/useAuth.js
+      - pages/api/auth/logout.js
+    entry_route: /panel-de-control
+    user_interactions:
+      - Click Cerrar Sesion button in navigation
+      - Session cookies cleared
+      - Redirect to /login page
+    api_calls:
+      - method: POST
+        endpoint: /api/auth/logout
+    auth_required: true
+  - name: Dashboard Analytics
+    description: Unified dashboard showing progress across curriculum phases F0-F7
+    files:
+      - app/panel-de-control/page.js
+      - app/panel-de-control/DashboardClient.js
+      - components/ProjectTracking/EnhancedUnifiedDashboard.js
+      - contexts/ProjectTrackingContext.js
+      - pages/api/get-dashboard.js
+    entry_route: /panel-de-control
+    user_interactions:
+      - Navigate to /panel-de-control after login
+      - View Dashboard Unificado tab with phase progress
+      - See competency framework visualization
+      - View recent entries and module statistics
+      - Switch between Dashboard, Sandbox and Sistema tabs
+    api_calls:
+      - method: GET
+        endpoint: /api/get-dashboard
+      - method: GET
+        endpoint: /api/v1/analytics/overview
+    auth_required: true
+  - name: AI Lesson Generation
+    description: AI-powered lesson generator using Gemini with streaming responses
+    files:
+      - components/Sandbox/SandboxWidget.js
+      - pages/api/v1/lessons/generate.js
+      - pages/api/v1/lessons/stream.js
+      - lib/services/SmartLessonGenerator.js
+    entry_route: /panel-de-control
+    user_interactions:
+      - Navigate to Dashboard Sandbox tab
+      - Select language and category
+      - Select lesson topic
+      - Click Generar Leccion button
+      - View streaming AI response in real-time
+      - See generated lesson with code examples
+    api_calls:
+      - method: POST
+        endpoint: /api/v1/lessons/generate
+      - method: POST
+        endpoint: /api/v1/lessons/stream
+    auth_required: true
+  - name: Educational Templates
+    description: Pre-built templates for educational documentation
+    files:
+      - app/plantillas/page.js
+      - app/plantillas/TemplatesClient.js
+      - components/ProjectTracking/TemplateSelector.js
+    entry_route: /plantillas
+    user_interactions:
+      - Navigate to /plantillas
+      - Browse available templates
+      - Click template to preview
+      - Use template for documentation
+    api_calls: []
+    auth_required: true
+  - name: Landing Page
+    description: Public landing page with feature showcase and navigation to login
+    files:
+      - app/page.js
+    entry_route: /
+    user_interactions:
+      - View landing page with features
+      - Scroll through feature sections
+      - Click call-to-action button to go to login
+      - Navigate via top navigation bar
+    api_calls: []
+    auth_required: false
+known_limitations:
+  - issue: AI lesson generation can take 5-30 seconds due to Gemini API latency
+    location: lib/services/SmartLessonGenerator.js
+    impact: User must wait for streaming response
+  - issue: SQLite not suitable for high concurrency production use
+    location: lib/db.js
+    impact: Performance degrades with many concurrent users
+  - issue: Dashboard UI not fully optimized for mobile
+    location: components/ProjectTracking/EnhancedUnifiedDashboard.js
+    impact: Some features may not render well on small screens

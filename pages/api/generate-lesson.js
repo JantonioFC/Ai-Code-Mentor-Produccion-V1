@@ -1,20 +1,19 @@
 /**
  * API Endpoint: POST /api/generate-lesson
- * Genera una lección personalizada usando Gemini AI (non-streaming version)
- * 
- * @param {number} semanaId - ID de la semana
- * @param {number} dia - Número del día (1-5)
- * @param {number} pomodoroIndex - Índice del pomodoro (0-3)
- * @returns {Object} Lección generada con contenido estructurado
+ * Genera una lección personalizada usando Gemini AI y la guarda en BD
  */
 
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const { weekRepository } = require('../../lib/repositories/WeekRepository');
 const { contentRetriever } = require('../../lib/rag/ContentRetriever');
 const { TEMPLATE_PROMPT_UNIVERSAL, SYSTEM_PROMPT } = require('../../lib/prompts/LessonPrompts');
+
+// Imports for persistence
+import { withOptionalAuth } from '../../utils/authMiddleware';
+import db from '../../lib/db';
 import rateLimit from '../../lib/rate-limit';
 
-export default async function handler(req, res) {
+async function handler(req, res) {
     // Rate limiting: AI profile (10 req/5min)
     try {
         await rateLimit(req, res, 'ai');
@@ -35,6 +34,15 @@ export default async function handler(req, res) {
         return res.status(501).json({
             error: 'Service Not Configured',
             message: 'La generación de lecciones con IA requiere configurar GEMINI_API_KEY en .env.local'
+        });
+    }
+
+    // AUTH CHECK: Ensure user is logged in to save content
+    const { isAuthenticated, userId } = req.authContext;
+    if (!isAuthenticated || !userId) {
+        return res.status(401).json({
+            error: 'Unauthorized',
+            message: 'Debe iniciar sesión para generar y guardar lecciones'
         });
     }
 
@@ -120,11 +128,9 @@ export default async function handler(req, res) {
 
         console.log('✅ [LESSON-GEN] Lesson generated successfully');
 
-        // Return format that matches frontend expectations
-        // Frontend expects: { lesson: "string content", title: "...", exercises: [...] }
-        return res.status(200).json({
-            success: true,
-            ...lessonData,  // Spread lesson data directly (title, lesson, exercises, etc.)
+        // PERSISTENCE: Save generated content to database
+        const contentToSave = {
+            ...lessonData,
             metadata: {
                 weekId: semanaId,
                 dayNumber: dia,
@@ -132,6 +138,47 @@ export default async function handler(req, res) {
                 generatedAt: new Date().toISOString(),
                 model: primaryModel.name
             }
+        };
+
+        const diaIndex = parseInt(dia) - 1; // Convert 1-based day to 0-based index
+
+        let savedToDatabase = false;
+        let dbErrorDebug = null;
+
+        try {
+            // Validate user_id matches schema (integer?)
+            // If Supabase uses UUID, this might fail if column is INTEGER
+            // But let's try to save anyway
+
+            const insertResult = db.transaction(() => {
+                // Delete existing if any
+                db.prepare(`
+                    DELETE FROM generated_content 
+                    WHERE user_id = ? AND semana_id = ? AND dia_index = ? AND pomodoro_index = ?
+                `).run(userId, semanaId, diaIndex, pomodoroIndex);
+
+                return db.prepare(`
+                    INSERT INTO generated_content (user_id, semana_id, dia_index, pomodoro_index, content)
+                    VALUES (?, ?, ?, ?, ?)
+                `).run(userId, semanaId, diaIndex, pomodoroIndex, JSON.stringify(contentToSave));
+            })();
+
+            console.log('💾 [LESSON-GEN] Lesson saved to DB with ID:', insertResult.lastInsertRowid);
+            savedToDatabase = true;
+        } catch (dbError) {
+            console.error('❌ [LESSON-GEN] Error saving to DB:', dbError);
+            dbErrorDebug = dbError.message;
+            // Continue execution, return generated content even if save failed
+        }
+
+        // Return format that matches frontend expectations
+        // Frontend expects: { lesson: "string content", title: "...", exercises: [...] }
+        return res.status(200).json({
+            success: true,
+            ...lessonData,  // Spread lesson data directly (title, lesson, exercises, etc.)
+            savedToDatabase: savedToDatabase,
+            metadata: contentToSave.metadata,
+            debug: { dbError: dbErrorDebug }
         });
 
     } catch (error) {
@@ -191,3 +238,6 @@ function buildPrompt(contexto, ragContext) {
 
     return `${ragContext}\n\n---\n\n${basePrompt}`;
 }
+
+// Apply authentication middleware
+export default withOptionalAuth(handler);

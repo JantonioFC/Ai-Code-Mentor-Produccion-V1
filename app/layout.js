@@ -1,8 +1,6 @@
 import './globals.css';
 import '../styles/design-system.css';
 import { Providers } from './providers';
-import { PixelLoader } from '../components/analytics/PixelLoader';
-import CookieBanner from '../components/compliance/CookieBanner';
 
 export const metadata = {
     title: 'AI Code Mentor | Domina la Ingeniería de Software con IA',
@@ -36,8 +34,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="es" suppressHydrationWarning>
             <body className="font-sans antialiased bg-[#0F1115] text-[#EDEDED]">
-                <PixelLoader />
-                <CookieBanner />
                 <Providers>
                     {children}
                 </Providers>

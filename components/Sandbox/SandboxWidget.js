@@ -1,132 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../lib/auth/useAuth';
 import { useAPITracking } from '../../contexts/APITrackingContext';
 import Quiz from './Quiz';
 import HistoryPanel from './HistoryPanel';
 import ExportButton from './ExportButton';
+import LessonRenderer from './LessonRenderer';
 
-// SandboxWidget.js - Generación y renderizado de lecciones con Meta-Prompt v1
-// MISIÓN 132.1: Widget Sandbox implementado
-// MISIÓN 133.2: Meta-Prompt Pedagógico v1 integrado
-// MISIÓN 133.3: Renderizado estructurado de ejercicios multiple choice
-// MISIÓN 134.0: Componente Quiz interactivo desacoplado
-// MISIÓN 189 COMPLETADA: Refactorizado para usar endpoint dedicado /api/sandbox/generate
-// MISIÓN 188 COMPLETADA: Pulido visual con parseo correcto de JSON y renderizado profesional
-// MISIÓN 216.0 FASE 3: Integración de Historial de Generaciones + Exportación
-
-// Función utilitaria para formatear texto como markdown básico mejorado
-const formatMarkdownContent = (text) => {
-  if (!text || typeof text !== 'string') return <span></span>;
-
-  // Dividir texto en líneas para procesamiento
-  const lines = text.split('\n');
-  const formattedElements = [];
-  let currentParagraph = [];
-  let inCodeBlock = false;
-  let codeBlockContent = [];
-
-  lines.forEach((line, index) => {
-    // Manejar bloques de código
-    if (line.trim().startsWith('```')) {
-      if (inCodeBlock) {
-        // Cerrar bloque de código
-        formattedElements.push(
-          <pre key={`code-${index}`} className="bg-gray-900 text-green-400 p-4 rounded-lg text-sm font-mono overflow-x-auto my-4 border border-gray-700">
-            <code>{codeBlockContent.join('\n')}</code>
-          </pre>
-        );
-        codeBlockContent = [];
-        inCodeBlock = false;
-      } else {
-        // Abrir bloque de código
-        if (currentParagraph.length > 0) {
-          formattedElements.push(
-            <p key={`p-${index}`} className="mb-4 leading-relaxed">
-              {currentParagraph.join(' ')}
-            </p>
-          );
-          currentParagraph = [];
-        }
-        inCodeBlock = true;
-      }
-      return;
-    }
-
-    if (inCodeBlock) {
-      codeBlockContent.push(line);
-      return;
-    }
-
-    // Manejar títulos
-    if (line.startsWith('### ')) {
-      if (currentParagraph.length > 0) {
-        formattedElements.push(
-          <p key={`p-${index}`} className="mb-4 leading-relaxed">
-            {currentParagraph.join(' ')}
-          </p>
-        );
-        currentParagraph = [];
-      }
-      formattedElements.push(
-        <h3 key={`h3-${index}`} className="text-lg font-semibold text-gray-800 mt-6 mb-3 border-l-4 border-blue-500 pl-3">
-          {line.replace('### ', '')}
-        </h3>
-      );
-    } else if (line.startsWith('## ')) {
-      if (currentParagraph.length > 0) {
-        formattedElements.push(
-          <p key={`p-${index}`} className="mb-4 leading-relaxed">
-            {currentParagraph.join(' ')}
-          </p>
-        );
-        currentParagraph = [];
-      }
-      formattedElements.push(
-        <h2 key={`h2-${index}`} className="text-xl font-bold text-gray-900 mt-8 mb-4 border-l-4 border-green-600 pl-3">
-          {line.replace('## ', '')}
-        </h2>
-      );
-    } else if (line.startsWith('# ')) {
-      if (currentParagraph.length > 0) {
-        formattedElements.push(
-          <p key={`p-${index}`} className="mb-4 leading-relaxed">
-            {currentParagraph.join(' ')}
-          </p>
-        );
-        currentParagraph = [];
-      }
-      formattedElements.push(
-        <h1 key={`h1-${index}`} className="text-2xl font-bold text-gray-900 mt-8 mb-4 border-l-4 border-purple-600 pl-3">
-          {line.replace('# ', '')}
-        </h1>
-      );
-    } else if (line.trim() === '') {
-      // Línea vacía - cerrar párrafo actual si existe
-      if (currentParagraph.length > 0) {
-        formattedElements.push(
-          <p key={`p-${index}`} className="mb-4 leading-relaxed">
-            {processInlineFormatting(currentParagraph.join(' '))}
-          </p>
-        );
-        currentParagraph = [];
-      }
-    } else {
-      // Línea de texto normal
-      currentParagraph.push(line);
-    }
-  });
-
-  // Agregar último párrafo si existe
-  if (currentParagraph.length > 0) {
-    formattedElements.push(
-      <p key="final-p" className="mb-4 leading-relaxed">
-        {processInlineFormatting(currentParagraph.join(' '))}
-      </p>
-    );
-  }
-
-  return <div className="space-y-2">{formattedElements}</div>;
-};
+// Dominios disponibles para el selector (moved outside component to avoid recreation each render)
+const STUDY_DOMAINS = [
+  { value: 'programming', label: '🖥️ Programación', description: 'Código y desarrollo' },
+  { value: 'logic', label: '🧠 Lógica', description: 'Lógica proposicional' },
+  { value: 'databases', label: '🗄️ Bases de Datos', description: 'SQL y modelo ER' },
+  { value: 'math', label: '📐 Matemáticas', description: 'Álgebra y cálculo' }
+];
 
 // Función para procesar formato inline (negrita, cursiva, código)
 const processInlineFormatting = (text) => {
@@ -137,13 +23,202 @@ const processInlineFormatting = (text) => {
       return <strong key={index} className="font-semibold text-gray-900">{part.slice(2, -2)}</strong>;
     }
     if (part.startsWith('*') && part.endsWith('*')) {
-      return <em key={index} className="italic text-gray-800">{part.slice(1, -1)}</em>;
+      return <em key={index} className="italic text-gray-700">{part.slice(1, -1)}</em>;
     }
     if (part.startsWith('`') && part.endsWith('`')) {
-      return <code key={index} className="bg-gray-100 text-red-600 px-1 rounded font-mono text-sm">{part.slice(1, -1)}</code>;
+      return <code key={index} className="bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded font-mono text-sm border border-indigo-200">{part.slice(1, -1)}</code>;
     }
     return part;
   });
+};
+
+// Función utilitaria para formatear texto como markdown estructurado
+const formatMarkdownContent = (text) => {
+  if (!text || typeof text !== 'string') return <span></span>;
+
+  const lines = text.split('\n');
+  const formattedElements = [];
+  let currentParagraph = [];
+  let inCodeBlock = false;
+  let codeBlockContent = [];
+  let codeBlockLang = '';
+  let inList = false;
+  let listItems = [];
+  let listType = 'ul'; // 'ul' or 'ol'
+
+  const flushParagraph = (key) => {
+    if (currentParagraph.length > 0) {
+      formattedElements.push(
+        <p key={key} className="mb-4 text-gray-700 leading-relaxed text-[15px]">
+          {processInlineFormatting(currentParagraph.join(' '))}
+        </p>
+      );
+      currentParagraph = [];
+    }
+  };
+
+  const flushList = (key) => {
+    if (listItems.length > 0) {
+      const ListTag = listType === 'ol' ? 'ol' : 'ul';
+      const listClass = listType === 'ol'
+        ? 'list-decimal list-inside space-y-2 mb-5 ml-2'
+        : 'list-disc list-inside space-y-2 mb-5 ml-2';
+      formattedElements.push(
+        <ListTag key={key} className={listClass}>
+          {listItems.map((item, i) => (
+            <li key={i} className="text-gray-700 text-[15px] leading-relaxed pl-1">
+              {processInlineFormatting(item)}
+            </li>
+          ))}
+        </ListTag>
+      );
+      listItems = [];
+      inList = false;
+    }
+  };
+
+  lines.forEach((line, index) => {
+    // Code blocks
+    if (line.trim().startsWith('```')) {
+      if (inCodeBlock) {
+        flushList(`list-pre-code-${index}`);
+        formattedElements.push(
+          <div key={`code-${index}`} className="my-5 rounded-lg overflow-hidden border border-gray-700 shadow-sm">
+            {codeBlockLang && (
+              <div className="bg-gray-800 text-gray-400 text-xs px-4 py-1.5 border-b border-gray-700 font-mono uppercase tracking-wider">
+                {codeBlockLang}
+              </div>
+            )}
+            <pre className="bg-gray-900 text-green-400 p-4 text-sm font-mono overflow-x-auto leading-relaxed">
+              <code>{codeBlockContent.join('\n')}</code>
+            </pre>
+          </div>
+        );
+        codeBlockContent = [];
+        codeBlockLang = '';
+        inCodeBlock = false;
+      } else {
+        flushParagraph(`p-pre-code-${index}`);
+        flushList(`list-pre-code-${index}`);
+        codeBlockLang = line.trim().replace('```', '').trim();
+        inCodeBlock = true;
+      }
+      return;
+    }
+
+    if (inCodeBlock) {
+      codeBlockContent.push(line);
+      return;
+    }
+
+    // Horizontal rule
+    if (line.trim().match(/^(-{3,}|\*{3,}|_{3,})$/)) {
+      flushParagraph(`p-hr-${index}`);
+      flushList(`list-hr-${index}`);
+      formattedElements.push(
+        <hr key={`hr-${index}`} className="my-6 border-gray-200" />
+      );
+      return;
+    }
+
+    // Headings
+    if (line.startsWith('#### ')) {
+      flushParagraph(`p-h4-${index}`);
+      flushList(`list-h4-${index}`);
+      formattedElements.push(
+        <h4 key={`h4-${index}`} className="text-base font-semibold text-gray-800 mt-5 mb-2 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+          {processInlineFormatting(line.replace('#### ', ''))}
+        </h4>
+      );
+      return;
+    }
+    if (line.startsWith('### ')) {
+      flushParagraph(`p-h3-${index}`);
+      flushList(`list-h3-${index}`);
+      formattedElements.push(
+        <h3 key={`h3-${index}`} className="text-lg font-semibold text-gray-800 mt-6 mb-3 pl-3 border-l-4 border-blue-500">
+          {processInlineFormatting(line.replace('### ', ''))}
+        </h3>
+      );
+      return;
+    }
+    if (line.startsWith('## ')) {
+      flushParagraph(`p-h2-${index}`);
+      flushList(`list-h2-${index}`);
+      formattedElements.push(
+        <h2 key={`h2-${index}`} className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b border-gray-200">
+          {processInlineFormatting(line.replace('## ', ''))}
+        </h2>
+      );
+      return;
+    }
+    if (line.startsWith('# ')) {
+      flushParagraph(`p-h1-${index}`);
+      flushList(`list-h1-${index}`);
+      formattedElements.push(
+        <h1 key={`h1-${index}`} className="text-2xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-indigo-500">
+          {processInlineFormatting(line.replace('# ', ''))}
+        </h1>
+      );
+      return;
+    }
+
+    // Blockquote
+    if (line.startsWith('> ')) {
+      flushParagraph(`p-bq-${index}`);
+      flushList(`list-bq-${index}`);
+      formattedElements.push(
+        <blockquote key={`bq-${index}`} className="my-4 pl-4 py-2 border-l-4 border-indigo-300 bg-indigo-50 rounded-r-lg text-gray-700 italic text-[15px]">
+          {processInlineFormatting(line.replace('> ', ''))}
+        </blockquote>
+      );
+      return;
+    }
+
+    // Unordered list items
+    const ulMatch = line.match(/^(\s*)[-*+]\s+(.*)/);
+    if (ulMatch) {
+      flushParagraph(`p-ul-${index}`);
+      if (!inList || listType !== 'ul') {
+        flushList(`list-switch-${index}`);
+        listType = 'ul';
+      }
+      inList = true;
+      listItems.push(ulMatch[2]);
+      return;
+    }
+
+    // Ordered list items
+    const olMatch = line.match(/^(\s*)\d+\.\s+(.*)/);
+    if (olMatch) {
+      flushParagraph(`p-ol-${index}`);
+      if (!inList || listType !== 'ol') {
+        flushList(`list-switch-${index}`);
+        listType = 'ol';
+      }
+      inList = true;
+      listItems.push(olMatch[2]);
+      return;
+    }
+
+    // Empty line
+    if (line.trim() === '') {
+      flushParagraph(`p-empty-${index}`);
+      flushList(`list-empty-${index}`);
+      return;
+    }
+
+    // Regular text
+    flushList(`list-text-${index}`);
+    currentParagraph.push(line);
+  });
+
+  // Flush remaining
+  flushParagraph('final-p');
+  flushList('final-list');
+
+  return <div className="space-y-1">{formattedElements}</div>;
 };
 
 // Función para procesar respuesta del API y asegurar estructura correcta
@@ -208,11 +283,14 @@ const processAPIResponse = (rawResponse) => {
 };
 
 export default function SandboxWidget() {
-  // Hook de autenticación para obtener token
-  const { internalToken } = useAuth();
+  // Hook de autenticación
+  const { user, isAuthenticated } = useAuth();
 
   // Hook de tracking de API para sincronizar contador
   const { recordAPICall } = useAPITracking();
+
+  // Ref for scrolling to results
+  const resultRef = useRef(null);
 
   // Estado del componente
   const [inputText, setInputText] = useState('');
@@ -220,14 +298,7 @@ export default function SandboxWidget() {
   const [generatedContent, setGeneratedContent] = useState(null);
   const [error, setError] = useState(null);
   const [isSavingHistory, setIsSavingHistory] = useState(false);
-
-  // Dominios disponibles para el selector
-  const STUDY_DOMAINS = [
-    { value: 'programming', label: '🖥️ Programación', description: 'Código y desarrollo' },
-    { value: 'logic', label: '🧠 Lógica', description: 'Lógica proposicional' },
-    { value: 'databases', label: '🗄️ Bases de Datos', description: 'SQL y modelo ER' },
-    { value: 'math', label: '📐 Matemáticas', description: 'Álgebra y cálculo' }
-  ];
+  const [historyRefreshTrigger, setHistoryRefreshTrigger] = useState(0);
 
   // MISIÓN DOMINIO: Estado para el dominio de estudio seleccionado
   const [currentDomain, setCurrentDomain] = useState('programming');
@@ -262,8 +333,8 @@ export default function SandboxWidget() {
   // MISIÓN 216.0: Función para guardar generación en historial
   const saveToHistory = async (customContent, generatedLesson) => {
     // Solo intentar guardar si hay usuario autenticado
-    if (!session) {
-      console.log('ℹ️ [SANDBOX-HISTORY] Usuario no autenticado, no se guarda en historial');
+    if (!isAuthenticated) {
+      console.log('[SANDBOX-HISTORY] Usuario no autenticado, no se guarda en historial');
       return;
     }
 
@@ -290,6 +361,8 @@ export default function SandboxWidget() {
       if (response.ok) {
         const data = await response.json();
         console.log('✅ [SANDBOX-HISTORY] Generación guardada:', data.data.id);
+        // Trigger history refresh
+        setHistoryRefreshTrigger(prev => prev + 1);
       } else {
         console.error('⚠️ [SANDBOX-HISTORY] Error guardando:', response.status);
       }
@@ -316,10 +389,7 @@ export default function SandboxWidget() {
 
     // Scroll al contenido generado
     setTimeout(() => {
-      const resultElement = document.getElementById('sandbox-result');
-      if (resultElement) {
-        resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   };
 
@@ -422,7 +492,7 @@ export default function SandboxWidget() {
                   value={currentDomain}
                   onChange={handleDomainChange}
                   disabled={isLoading}
-                  className="text-sm border border-gray-300 rounded-md px-3 py-1.5 bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer disabled:opacity-50"
+                  className="text-sm font-medium text-gray-900 border border-gray-300 rounded-md px-3 py-1.5 bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer disabled:opacity-50"
                   title="Selecciona el dominio para personalizar las lecciones"
                 >
                   {STUDY_DOMAINS.map((domain) => (
@@ -432,7 +502,7 @@ export default function SandboxWidget() {
                   ))}
                 </select>
               </div>
-              <span className="text-xs text-gray-500">
+              <span className="text-xs text-gray-600 font-medium">
                 {STUDY_DOMAINS.find(d => d.value === currentDomain)?.description}
               </span>
             </div>
@@ -447,9 +517,9 @@ export default function SandboxWidget() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 disabled={isLoading}
-                placeholder="Pega aquí cualquier contenido educativo: documentación técnica, artículos, conceptos, código, teorías, explicaciones...\n\nEjemplo: 'Los arrays en JavaScript son estructuras de datos que permiten almacenar múltiples valores...'"
-                className={`w-full h-40 p-4 border-2 rounded-lg resize-vertical transition-all duration-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${isLoading
-                  ? 'bg-gray-100 cursor-not-allowed border-gray-200'
+                placeholder="Pega aquí cualquier contenido educativo: documentación técnica, artículos, conceptos, código, teorías, explicaciones...&#10;&#10;Ejemplo: 'Los arrays en JavaScript son estructuras de datos que permiten almacenar múltiples valores...'"
+                className={`w-full h-40 p-4 border-2 rounded-lg resize-vertical transition-all duration-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 ${isLoading
+                  ? 'bg-gray-100 cursor-not-allowed border-gray-200 text-gray-500'
                   : 'bg-white border-gray-300 hover:border-blue-400'
                   }`}
                 rows={6}
@@ -546,7 +616,7 @@ export default function SandboxWidget() {
 
           {/* Área de Resultado */}
           {generatedContent && !error && (
-            <div id="sandbox-result" className="mt-8 space-y-6">
+            <div ref={resultRef} className="mt-8 space-y-6">
               {/* Encabezado de la Lección */}
               <div className="border-t-2 border-gradient-to-r from-green-400 to-blue-500 pt-6">
                 <div className="flex items-center justify-between mb-4">
@@ -582,14 +652,22 @@ export default function SandboxWidget() {
 
                 {/* Contenido de la Lección */}
                 {generatedContent.lesson && (
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm mb-6">
-                    <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-t-xl">
-                      <h5 className="font-semibold text-lg flex items-center gap-2">
-                        📖 Contenido de la Lección
-                      </h5>
+                  <div className="bg-white rounded-2xl border border-gray-200/80 shadow-sm mb-6 overflow-hidden">
+                    <div className="px-8 pt-7 pb-1">
+                      <LessonRenderer content={generatedContent.lesson} />
                     </div>
-                    <div className="p-6 prose prose-lg max-w-none text-gray-800">
-                      {formatMarkdownContent(generatedContent.lesson)}
+                    <div className="px-8 pb-5">
+                      <div className="flex items-center gap-3 pt-4 mt-2 border-t border-gray-100 text-xs text-gray-400">
+                        <span>Generado con IA</span>
+                        <span>·</span>
+                        <span>{generatedContent.lesson?.length || 0} caracteres</span>
+                        {generatedContent.metadata?.model && (
+                          <>
+                            <span>·</span>
+                            <span className="font-mono">{generatedContent.metadata.model}</span>
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -652,7 +730,10 @@ export default function SandboxWidget() {
 
       {/* MISIÓN 216.0: Panel de Historial - 1/4 del ancho */}
       <div className="lg:col-span-1">
-        <HistoryPanel onRestoreGeneration={handleRestoreGeneration} />
+        <HistoryPanel
+          onRestoreGeneration={handleRestoreGeneration}
+          refreshTrigger={historyRefreshTrigger}
+        />
       </div>
     </div>
   );

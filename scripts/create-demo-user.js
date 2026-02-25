@@ -1,66 +1,46 @@
 /**
  * SCRIPT: CREATE DEMO USER FOR E2E TESTS (LOCAL SQLITE)
- * 
+ *
  * Purpose: Register demo@aicodementor.com
  * STRATEGY: DESTROY AND RECREATE (Clean Slate).
  */
 
 const db = require('../lib/db');
 const bcrypt = require('bcryptjs');
-const { v4: uuidv4 } = require('uuid');
 
 const DEMO_EMAIL = 'demo@aicodementor.com';
 const DEMO_PASSWORD = 'demo123';
 const DEMO_NAME = 'Usuario Demo';
+const BCRYPT_SALT_ROUNDS = 12;
 
 async function createDemoUser() {
-  console.log('🚀 Creating Demo User (Clean Slate)...');
+  console.log('Creating Demo User (Upsert)...');
 
   try {
-    // 1. DELETE EXISTING (Cleanup Mismatches) uses raw SQL via db.run
-    console.log('🧹 Cleaning up old data...');
+    const hashedPassword = await bcrypt.hash(DEMO_PASSWORD, BCRYPT_SALT_ROUNDS);
+    const userId = '00000000-0000-0000-0000-000000000001';
+    const now = new Date().toISOString();
 
-    // SQLite doesn't support cascading deletes by default unless enabled, so we delete from both.
-    // Order matters if foreign keys are enforced, but we'll try profile first.
+    // Upsert user profile with password_hash
     try {
-      db.run('DELETE FROM user_profiles WHERE email = ?', [DEMO_EMAIL]);
-      db.run('DELETE FROM users WHERE email = ?', [DEMO_EMAIL]);
-      console.log('✅ Old data removed.');
+      db.run(
+        `INSERT INTO user_profiles (id, email, password_hash, display_name, role, created_at, updated_at)
+         VALUES (?, ?, ?, ?, 'authenticated', ?, ?)
+         ON CONFLICT(email) DO UPDATE SET
+           password_hash = excluded.password_hash,
+           display_name = excluded.display_name,
+           updated_at = excluded.updated_at`,
+        [userId, DEMO_EMAIL, hashedPassword, DEMO_NAME, now, now]
+      );
+      console.log('User profile upserted in user_profiles table.');
     } catch (e) {
-      console.warn('⚠️ Warning during cleanup:', e.message);
+      console.warn('user_profiles table:', e.message);
     }
 
-    // 2. Create user (Fresh)
-    const hashedPassword = await bcrypt.hash(DEMO_PASSWORD, 10);
-    //  Use consistent UUID for E2E testing
-    const userId = '00000000-0000-0000-0000-000000000001';
-
-    console.log('🆕 Creating new user...');
-    db.transaction(() => {
-      // User Auth
-      db.insert('users', {
-        id: userId,
-        email: DEMO_EMAIL,
-        password_hash: hashedPassword,
-        full_name: DEMO_NAME,
-        avatar_url: '',
-        created_at: new Date().toISOString()
-      });
-
-      // User Profile (REQUIRED by /api/auth/user)
-      db.insert('user_profiles', {
-        id: userId,
-        email: DEMO_EMAIL,
-        display_name: DEMO_NAME,
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
-      });
-    })();
-
-    console.log(`✅ User and Profile created! ID: ${userId}`);
+    console.log(`Demo user ready! ID: ${userId}, Email: ${DEMO_EMAIL}, Password: ${DEMO_PASSWORD}`);
 
   } catch (err) {
-    console.error('❌ Error creating demo user:', err);
+    console.error('Error creating demo user:', err);
     process.exit(1);
   }
 }

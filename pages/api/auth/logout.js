@@ -1,4 +1,6 @@
+import { serialize } from 'cookie';
 import AuthLocal from '../../../lib/auth-local';
+import { logger } from '../../../lib/utils/logger';
 
 export default async function logoutHandler(req, res) {
     if (req.method !== 'POST') {
@@ -16,7 +18,7 @@ export default async function logoutHandler(req, res) {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
-            maxAge: -1,
+            maxAge: 0,
             path: '/'
         };
 

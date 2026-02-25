@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-09T04:02:10.651Z",
+  "lastUpdated": "2026-02-17T11:54:31.058Z",
   "models": [
     {
       "name": "gemini-2.5-flash",
@@ -14,7 +14,7 @@
         "batchGenerateContent"
       ],
       "priority": 1,
-      "discoveredAt": "2026-02-09T04:02:10.650Z"
+      "discoveredAt": "2026-02-17T11:54:31.057Z"
     },
     {
       "name": "gemini-2.5-flash-preview-09-2025",
@@ -29,7 +29,7 @@
         "batchGenerateContent"
       ],
       "priority": 1,
-      "discoveredAt": "2026-02-09T04:02:10.650Z"
+      "discoveredAt": "2026-02-17T11:54:31.057Z"
     },
     {
       "name": "gemini-2.5-pro",
@@ -44,7 +44,7 @@
         "batchGenerateContent"
       ],
       "priority": 2,
-      "discoveredAt": "2026-02-09T04:02:10.650Z"
+      "discoveredAt": "2026-02-17T11:54:31.057Z"
     },
     {
       "name": "gemini-2.0-flash",
@@ -59,7 +59,7 @@
         "batchGenerateContent"
       ],
       "priority": 3,
-      "discoveredAt": "2026-02-09T04:02:10.650Z"
+      "discoveredAt": "2026-02-17T11:54:31.057Z"
     },
     {
       "name": "gemini-2.0-flash-001",
@@ -74,8 +74,8 @@
         "batchGenerateContent"
       ],
       "priority": 3,
-      "discoveredAt": "2026-02-09T04:02:10.650Z"
+      "discoveredAt": "2026-02-17T11:54:31.057Z"
     }
   ],
-  "cacheValidUntil": "2026-02-10T04:02:10.651Z"
+  "cacheValidUntil": "2026-02-18T11:54:31.058Z"
 }

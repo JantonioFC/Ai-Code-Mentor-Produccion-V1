@@ -28,13 +28,13 @@ export default function LandingClient() {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [authMode, setAuthMode] = useState('login');
     const [loginData, setLoginData] = useState({ email: '', password: '' });
-    const [signupData, setSignupData] = useState({ email: '', password: '' });
+    const [signupData, setSignupData] = useState({ email: '', password: '', confirmPassword: '' });
     const { signIn, signUp, isAuthenticated, loading: authLoading } = useAuth();
 
     const resetModal = () => {
         setAuthMode('login');
         setLoginData({ email: '', password: '' });
-        setSignupData({ email: '', password: '' });
+        setSignupData({ email: '', password: '', confirmPassword: '' });
     };
 
     useEffect(() => {
@@ -108,7 +108,7 @@ export default function LandingClient() {
 
             alert('¡Registro exitoso! Ya puedes iniciar sesión.');
             setAuthMode('login');
-            setSignupData({ email: '', password: '' });
+            setSignupData({ email: '', password: '', confirmPassword: '' });
         } catch (err) {
             alert(`Error: ${err.message}`);
         } finally {

@@ -30,53 +30,45 @@ const TEST_CONFIG = {
 
 /**
  * AUTENTICACIÓN SIMPLIFICADA (AUTO-LOGIN / UI LOGIN)
- * 
+ *
+ * FASE 2 FIX: Navegar siempre a /login primero para evitar race condition
+ * donde el client-side redirect tarda más que el wait de estabilización.
+ *
  * @param {Page} page - Instancia de Playwright
  * @param {string} targetPath - Ruta destino (default: /panel-de-control)
  */
 async function authenticateDemo(page, targetPath = '/panel-de-control') {
   console.log('🔐 [AUTH-LOCAL] Verificando login...');
 
-  // 1. Navegar a la ruta destino
-  try {
-    await page.goto(targetPath, {
-      waitUntil: 'domcontentloaded',
-      timeout: 30000 // Aumentado a 30s
-    });
-  } catch (e) {
-    console.log('⚠️ [AUTH-LOCAL] Navigation timeout, checking if we landed somewhere safe...');
-  }
+  // FASE 2: Navegar a /login directamente para evitar race condition
+  // El problema anterior: navegar a /panel-de-control, esperar 2s, y verificar URL
+  // no era suficiente porque el client-side auth check tarda >2s en redirigir.
+  await page.goto('/login', {
+    waitUntil: 'domcontentloaded',
+    timeout: 30000
+  });
 
-  // 1b. Esperar estabilización (Redirects client-side)
-  await page.waitForTimeout(2000);
+  // Esperar a que el formulario sea visible
+  await page.waitForSelector('form', { state: 'visible', timeout: 15000 });
+  console.log('🔒 [AUTH-LOCAL] Página de login cargada. Iniciando sesión...');
 
-  // 2. Verificar si hemos sido redirigidos a /login
-  if (page.url().includes('/login')) {
-    console.log('🔒 [AUTH-LOCAL] Redirigido a Login. Iniciando sesión...');
+  // Llenar formulario
+  await page.fill('input[type="email"]', TEST_CONFIG.DEMO_EMAIL);
+  await page.fill('input[type="password"]', 'demo123');
 
-    // Esperar a que el formulario sea visible
-    await page.waitForSelector('form', { state: 'visible', timeout: 10000 });
+  // Click en botón de login
+  await page.click('button[type="submit"]');
 
-    // Llenar formulario
-    await page.fill('input[type="email"]', TEST_CONFIG.DEMO_EMAIL);
-    await page.fill('input[type="password"]', 'demo123'); // Password hardcoded for now, or use config
+  // Esperar navegación al dashboard
+  console.log('🔒 [AUTH-LOCAL] Formulario enviado. Esperando redirección...');
 
-    // Click en botón de login (buscar por texto o tipo submit)
-    await page.click('button[type="submit"]');
+  // FASE 2 FIX: Esperar solo por URL change o h1 del panel (NO "Bienvenido" que también
+  // aparece en la página de login como "Bienvenido de Vuelta")
+  await page.waitForURL(/panel-de-control/, { timeout: 45000, waitUntil: 'domcontentloaded' });
 
-    // Esperar navegación o feedback
-    console.log('🔒 [AUTH-LOCAL] Formulario enviado. Esperando redirección...');
+  // Esperar a que el panel se estabilice
+  await page.waitForLoadState('load', { timeout: 15000 }).catch(() => {});
 
-    // MEJORA V6.1: Esperar a que la URL cambie O que aparezca un elemento del dashboard
-    // Esto es más robusto que solo waitForURL que a veces falla en SPAs lentas
-    await Promise.race([
-      page.waitForURL(/panel-de-control/, { timeout: 45000, waitUntil: 'domcontentloaded' }),
-      page.waitForSelector('h1:has-text("Panel de Control")', { timeout: 45000 }),
-      page.waitForSelector('text=Bienvenido', { timeout: 45000 })
-    ]);
-  }
-
-  // 3. Verificar que estamos en la página correcta (o panel)
   console.log('✅ [AUTH-LOCAL] Navegación completada. URL:', page.url());
 }
 

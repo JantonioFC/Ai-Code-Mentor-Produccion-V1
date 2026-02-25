@@ -17,6 +17,7 @@
 import { spawn } from 'child_process';
 import path from 'path';
 import fs from 'fs';
+import { withRequiredAuth } from '../../../utils/authMiddleware';
 
 // CONFIGURACIÓN DE SEGURIDAD CRÍTICA - TIMEOUTS INDIVIDUALES
 const SECURITY_CONFIG = {
@@ -130,14 +131,20 @@ function executeSecureCommand(commandKey) {
       return;
     }
     
+    // Only pass safe env vars to child process (no secrets)
+    const safeEnv = {
+      PATH: process.env.PATH,
+      HOME: process.env.HOME,
+      NODE_ENV: 'test',
+      FORCE_COLOR: '0',
+      CI: process.env.CI || '',
+      PLAYWRIGHT_BROWSERS_PATH: process.env.PLAYWRIGHT_BROWSERS_PATH || '',
+    };
+
     const childProcess = spawn(executablePath, executableArgs, {
       cwd: process.cwd(),
       stdio: ['ignore', 'pipe', 'pipe'],
-      env: {
-        ...process.env,
-        NODE_ENV: 'test',
-        FORCE_COLOR: '0' // Evitar caracteres de color en output
-      },
+      env: safeEnv,
       detached: false,
       shell: false
     });
@@ -267,59 +274,71 @@ function parsePlaywrightResults(stdout, stderr, exitCode) {
  */
 function tryParseJSON(stdout) {
   try {
-    // Buscar JSON válido en la salida
-    const lines = stdout.split('\n').filter(line => line.trim());
-    
-    for (const line of lines) {
+    // ESTRATEGIA A: Parsear stdout completo como JSON (Playwright JSON reporter produce un objeto multilínea)
+    const trimmedStdout = stdout.trim();
+    if (trimmedStdout.startsWith('{')) {
       try {
-        const trimmed = line.trim();
-        if (trimmed.startsWith('{') && trimmed.includes('"stats"')) {
-          const jsonData = JSON.parse(trimmed);
-          
-          if (jsonData.stats) {
-            console.log('🎯 [JSON-PARSER] Encontrado objeto stats válido');
-            
-            const failures = [];
-            if (jsonData.suites) {
-              // Extraer failures de suites
-              extractFailuresFromSuites(jsonData.suites, failures);
-            }
-            
-            return {
-              success: true,
-              data: {
-                summary: {
-                  stats: {
-                    total: jsonData.stats.total || 0,
-                    passed: jsonData.stats.passed || 0,
-                    failed: jsonData.stats.failed || 0,
-                    skipped: jsonData.stats.skipped || 0,
-                    duration: jsonData.stats.duration || 0
-                  },
-                  success: (jsonData.stats.failed || 0) === 0,
-                  timestamp: new Date().toISOString(),
-                  exitCode: (jsonData.stats.failed || 0) === 0 ? 0 : 1
-                },
-                failures,
-                rawOutput: {
-                  stdout: stdout.length > 2000 ? stdout.substring(0, 2000) + '...' : stdout,
-                  stderr: ''
-                }
-              }
-            };
-          }
+        const jsonData = JSON.parse(trimmedStdout);
+        if (jsonData.stats) {
+          console.log('🎯 [JSON-PARSER] Parseado stdout completo como JSON válido');
+          return buildJsonResult(jsonData, stdout);
         }
-      } catch (lineError) {
-        // Continuar con la siguiente línea
-        continue;
+      } catch (fullParseError) {
+        // stdout completo no es JSON válido, probar extracción
       }
     }
-    
+
+    // ESTRATEGIA B: Extraer JSON embebido (si hay texto antes/después del JSON)
+    const jsonStart = trimmedStdout.indexOf('{');
+    const jsonEnd = trimmedStdout.lastIndexOf('}');
+    if (jsonStart !== -1 && jsonEnd > jsonStart) {
+      try {
+        const jsonSlice = trimmedStdout.substring(jsonStart, jsonEnd + 1);
+        const jsonData = JSON.parse(jsonSlice);
+        if (jsonData.stats) {
+          console.log('🎯 [JSON-PARSER] Extraído JSON embebido con stats');
+          return buildJsonResult(jsonData, stdout);
+        }
+      } catch (sliceError) {
+        // No se pudo extraer JSON embebido
+      }
+    }
+
     return { success: false, error: 'No JSON válido encontrado' };
-    
+
   } catch (error) {
     return { success: false, error: error.message };
   }
+}
+
+function buildJsonResult(jsonData, stdout) {
+  const failures = [];
+  if (jsonData.suites) {
+    extractFailuresFromSuites(jsonData.suites, failures);
+  }
+
+  return {
+    success: true,
+    data: {
+      summary: {
+        stats: {
+          total: jsonData.stats.total || 0,
+          passed: jsonData.stats.passed || 0,
+          failed: jsonData.stats.failed || 0,
+          skipped: jsonData.stats.skipped || 0,
+          duration: jsonData.stats.duration || 0
+        },
+        success: (jsonData.stats.failed || 0) === 0,
+        timestamp: new Date().toISOString(),
+        exitCode: (jsonData.stats.failed || 0) === 0 ? 0 : 1
+      },
+      failures,
+      rawOutput: {
+        stdout: stdout.length > 2000 ? stdout.substring(0, 2000) + '...' : stdout,
+        stderr: ''
+      }
+    }
+  };
 }
 
 /**
@@ -500,11 +519,19 @@ function buildFallbackResult(stdout, stderr, exitCode, error) {
 /**
  * HANDLER PRINCIPAL CORREGIDO
  */
-export default async function handler(req, res) {
+async function handler(req, res) {
+  // Restrict to development/test environments only
+  if (process.env.NODE_ENV === 'production') {
+    return res.status(403).json({
+      success: false,
+      error: 'Test execution is not available in production'
+    });
+  }
+
   const startTime = Date.now();
-  const clientId = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
+  const clientId = req.socket?.remoteAddress || 'unknown';
   
-  console.log(`🚨 [SECURITY-FIXED] Solicitud de ejecución de pruebas - Cliente: ${clientId}`);
+  console.log(`[SECURITY] Test execution request - Client: ${clientId}`);
   
   try {
     // VALIDACIÓN DE SEGURIDAD
@@ -599,3 +626,5 @@ export default async function handler(req, res) {
     });
   }
 }
+
+export default withRequiredAuth(handler);

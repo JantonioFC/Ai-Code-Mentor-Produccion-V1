@@ -8,6 +8,8 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useAuth } from '../../lib/auth/useAuth';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { TemplateModal } from '../ProjectTracking';
 import ModelSettings from '../settings/ModelSettings';
 import APIUsageCounter from '../APIUsageCounter';
@@ -22,17 +24,10 @@ const STUDY_DOMAINS = [
 
 const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecosistema 360 - Plataforma Educativa" }) => {
   const { signOut } = useAuth();
+  const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [studyDomain, setStudyDomain] = useState('programming');
-  const [currentPath, setCurrentPath] = useState('');
-
-  // Sincronizar path actual de forma universal (browser-side)
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setCurrentPath(window.location.pathname);
-    }
-  }, []);
 
   // Cargar dominio guardado al montar
   useEffect(() => {
@@ -104,14 +99,7 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
   ];
 
   const isActive = (href) => {
-    return currentPath === href;
-  };
-
-  const handleNavigation = (href) => {
-    if (typeof window !== 'undefined') {
-      window.location.href = href;
-    }
-    setIsSidebarOpen(false); // Close mobile sidebar after navigation
+    return router.pathname === href;
   };
 
   // MISIÓN 182.4: Función controladora de logout CON TRANSICIÓN MEJORADA
@@ -229,9 +217,10 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
 
               <div className="space-y-2">
                 {navigation.map((item) => (
-                  <button
+                  <Link
                     key={item.href}
-                    onClick={() => handleNavigation(item.href)}
+                    href={item.href}
+                    onClick={() => setIsSidebarOpen(false)}
                     className={`w-full text-left flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-smooth-ui relative group ${isActive(item.href)
                       ? 'bg-gradient-to-r from-blue-500/10 to-purple-600/10 text-blue-700 shadow-sm sidebar-active-indicator border-r-2 border-blue-600'
                       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 hover-lift'
@@ -251,7 +240,7 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
                         {item.description}
                       </div>
                     </div>
-                  </button>
+                  </Link>
                 ))}
               </div>
 
@@ -298,9 +287,10 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
 
                   <div className="space-y-2">
                     {navigation.map((item) => (
-                      <button
+                      <Link
                         key={item.href}
-                        onClick={() => handleNavigation(item.href)}
+                        href={item.href}
+                        onClick={() => setIsSidebarOpen(false)}
                         className={`w-full text-left flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all ${isActive(item.href)
                           ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md'
                           : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
@@ -314,7 +304,7 @@ const PrivateLayout = ({ children, title = "AI Code Mentor", description = "Ecos
                             {item.description}
                           </div>
                         </div>
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </div>

@@ -109,3 +109,9 @@ vscode-extension/node_modules/
 vscode-extension/out/
 vscode-extension/.vscode/
 vscode-extension/*.vsix
+
+# Legacy and temporary artifacts
+*.backup
+*.bak
+*.disabled
+\ntestsprite_tests/.venv/

@@ -2,10 +2,28 @@
 // FASE 2: Elimina un módulo y todo su contenido asociado
 
 const db = require('../../lib/db');
+import AuthLocal from '../../lib/auth-local';
 
 export default async function handler(req, res) {
   if (req.method !== 'DELETE') {
     return res.status(405).json({ error: 'Método no permitido' });
+  }
+
+  const token = req.cookies['ai-code-mentor-auth'] || req.cookies.token;
+  if (!token) {
+    console.warn('[API/delete-module] Unauthorized access attempt: No token');
+    return res.status(401).json({ error: 'No autorizado' });
+  }
+
+  const authResult = AuthLocal.verifyToken(token);
+  if (!authResult.isValid) {
+    console.warn('[API/delete-module] Unauthorized access attempt: Invalid token');
+    return res.status(401).json({ error: 'No autorizado: Token inválido' });
+  }
+
+  if (authResult.role !== 'admin') {
+    console.warn(`[API/delete-module] Forbidden access attempt by: ${authResult.email}`);
+    return res.status(403).json({ error: 'Prohibido: Se requiere rol de administrador' });
   }
 
   try {

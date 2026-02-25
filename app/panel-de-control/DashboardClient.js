@@ -1,7 +1,7 @@
 'use client';
 
 import { lazy, Suspense } from 'react';
-import ProtectedRoute from '../../lib/auth/ProtectedRoute';
+import ProtectedRoute from '../../lib/auth/ProtectedRouteApp';
 import PrivateLayout from '../../components/layout/PrivateLayout';
 import {
     Root as TabsRoot,

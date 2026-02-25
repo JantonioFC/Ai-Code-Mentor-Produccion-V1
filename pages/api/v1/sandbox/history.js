@@ -111,14 +111,7 @@ async function sandboxHistoryHandler(req, res) {
           count: generations.length,
           total,
           hasMore: total > (offset + limit)
-        },
-        data: generations // Legacy compat: some clients expect array directly in data or inside data.data? 
-        // Previous implementation wrapper: { success: true, data: { generations... } }
-        // BUT wait, previous implementation had `return res.status(200).json({ success: true, data });` where data was array?
-        // NO, previous implementation used supabase .range()... returning { data: generations, count } object?
-        // Actually, Supabase client returns { data: [], count: N }.
-        // Let's stick to the previous structured response format I see in the file validation above:
-        // { success: true, data: { generations, count, total... } } 
+        }
       });
     }
 
