@@ -20,6 +20,9 @@ const nextConfig = {
     ],
   },
 
+  // Turbopack: Empty config to allow custom webpack config in Next.js 16
+  turbopack: {},
+
   // Performance: Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],
