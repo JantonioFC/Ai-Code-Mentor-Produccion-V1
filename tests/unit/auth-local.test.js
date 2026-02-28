@@ -182,7 +182,7 @@ describe('AuthLocal', () => {
   // ==================== registerUser ====================
   describe('registerUser', () => {
     it('returns error when user already exists', async () => {
-      db.findOne.mockReturnValue({ id: 'existing', email: 'a@b.com' });
+      db.findOne.mockReturnValue({ id: 'existing', email: 'a@b.com', password_hash: 'hashed_pw' });
 
       const result = await AuthLocal.registerUser('a@b.com', 'pass123');
       expect(result.error).toBe('El usuario ya existe');
