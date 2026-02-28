@@ -44,12 +44,14 @@ jobs:
       run: npm audit --audit-level=critical
       continue-on-error: true # Report but don't block yet
 
+    - name: Zip Build Artifacts
+      run: zip -r next-build.zip .next/
+
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: next-build-${{ github.run_id }}
-        path: .next/
-        include-hidden-files: true
+        path: next-build.zip
         retention-days: 1
 
     - name: Run Unit Tests
@@ -84,7 +86,10 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: next-build-${{ github.run_id }}
-        path: .next
+        path: .
+
+    - name: Unzip Build Artifacts
+      run: unzip next-build.zip && rm next-build.zip
 
     - name: Run E2E Tests
       run: npx playwright test --retries=2
