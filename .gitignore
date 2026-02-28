@@ -114,4 +114,4 @@ vscode-extension/*.vsix
 *.backup
 *.bak
 *.disabled
-\ntestsprite_tests/.venv/
+testsprite_tests/

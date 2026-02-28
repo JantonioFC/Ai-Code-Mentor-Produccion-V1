@@ -18,53 +18,46 @@ export function ProjectTrackingProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Mock data for development
-  const mockDashboardData = React.useMemo(() => ({
-    totalProjects: 0,
-    activeProjects: 0,
-    completedProjects: 0,
-    totalHours: 0
-  }), []);
-
-  const mockEntryCounts = React.useMemo(() => ({
-    dde_entry: 0,
-    weekly_action_plan: 0,
-    unified_tracking_log: 0,
-    peer_review: 0,
-    project_reflection: 0
-  }), []);
-
-  const mockRecentEntries = React.useMemo(() => [], []);
-
-  // Initialize with mock data
+  // Fetch real entry counts from the database on mount
   useEffect(() => {
-    setDashboardData(mockDashboardData);
-    setEntryCounts(mockEntryCounts);
-    setRecentEntries(mockRecentEntries);
-  }, [mockDashboardData, mockEntryCounts, mockRecentEntries]);
+    let cancelled = false;
+    async function loadCounts() {
+      try {
+        const res = await fetch('/api/entries/counts');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!cancelled && data.success) {
+          setEntryCounts(data.entryCounts || {});
+        }
+      } catch (e) {
+        console.warn('[PROJECT_TRACKING] No se pudieron cargar los conteos reales:', e.message);
+      }
+    }
+    loadCounts();
+    return () => { cancelled = true; };
+  }, []);
 
-  // Load dashboard data function - MVP implementation
+  // Load dashboard data - fetches real entry counts from DB
   const loadDashboardData = useCallback(async () => {
     setLoading(true);
     setError(null);
 
     try {
-      // In a real implementation, this would make API calls
-      // For now, we just set the mock data
-      await new Promise(resolve => setTimeout(resolve, 100)); // Simulate loading
-
-      setDashboardData(mockDashboardData);
-      setEntryCounts(mockEntryCounts);
-      setRecentEntries(mockRecentEntries);
-
-      console.log('📊 [PROJECT_TRACKING] Dashboard data loaded (MVP mode)');
+      const res = await fetch('/api/entries/counts');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setEntryCounts(data.entryCounts || {});
+          console.log('📊 [PROJECT_TRACKING] Conteos reales cargados:', data.entryCounts);
+        }
+      }
     } catch (err) {
       console.error('❌ [PROJECT_TRACKING] Error loading dashboard data:', err);
       setError(err.message);
     } finally {
       setLoading(false);
     }
-  }, [mockDashboardData, mockEntryCounts, mockRecentEntries]);
+  }, []);
 
   // Add new entry function - MVP implementation
   const addEntry = async (entryType, entryData) => {

@@ -30,6 +30,7 @@ export default function WeeklyLessonSchedule({ weekData }) {
     content: null,
     error: null
   });
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // MISIÓN 157 FASE 3: Función mejorada con persistencia automática
   const handleCheckboxToggle = async (itemName) => {
@@ -246,31 +247,41 @@ export default function WeeklyLessonSchedule({ weekData }) {
   };
 
   // Función: Normalizar ejercicios para compatibilidad (MISIÓN 147)
+  // Maneja formatos en español (Gemini) e inglés (legacy)
   const normalizeExercises = (exercises) => {
     if (!exercises || !Array.isArray(exercises)) return [];
 
     return exercises.map((exercise, index) => {
-      if (typeof exercise.correctAnswerIndex === 'number') {
-        return exercise;
+      // Normalizar campos de español a inglés
+      const q = {
+        question: exercise.question || exercise.pregunta || `Pregunta ${index + 1}`,
+        options: exercise.options || exercise.opciones || [],
+        explanation: exercise.explanation || exercise.explicacion || exercise.explicación || '',
+        correctAnswerIndex: exercise.correctAnswerIndex,
+        correctAnswer: exercise.correctAnswer || exercise.respuesta_correcta,
+      };
+
+      // Si ya tiene índice numérico, listo
+      if (typeof q.correctAnswerIndex === 'number') return q;
+
+      // Si respuesta_correcta es una letra ("A", "B", "C", "D")
+      if (typeof q.correctAnswer === 'string' && q.correctAnswer.match(/^[A-Da-d]$/)) {
+        const idx = q.correctAnswer.toUpperCase().charCodeAt(0) - 65; // 'A'→0, 'B'→1...
+        console.log(`🔄 Ejercicio ${index + 1}: respuesta_correcta="${q.correctAnswer}" → correctAnswerIndex=${idx}`);
+        return { ...q, correctAnswerIndex: idx };
       }
 
-      if (exercise.correctAnswer && exercise.options) {
-        const correctAnswerIndex = exercise.options.findIndex(option => option === exercise.correctAnswer);
-
+      // Si correctAnswer es el texto completo de la opción
+      if (q.correctAnswer && q.options.length > 0) {
+        const correctAnswerIndex = q.options.findIndex(o => o === q.correctAnswer);
         if (correctAnswerIndex >= 0) {
-          console.log(`🔄 Ejercicio ${index + 1}: Convertido formato legacy correctAnswer → correctAnswerIndex=${correctAnswerIndex}`);
-          return {
-            ...exercise,
-            correctAnswerIndex: correctAnswerIndex
-          };
+          console.log(`🔄 Ejercicio ${index + 1}: Convertido texto → correctAnswerIndex=${correctAnswerIndex}`);
+          return { ...q, correctAnswerIndex };
         }
       }
 
       console.warn(`⚠️ Ejercicio ${index + 1}: No se pudo determinar respuesta correcta, usando índice 0`);
-      return {
-        ...exercise,
-        correctAnswerIndex: 0
-      };
+      return { ...q, correctAnswerIndex: 0 };
     });
   };
 
@@ -513,23 +524,50 @@ export default function WeeklyLessonSchedule({ weekData }) {
 
         {/* MODAL DE LECCIONES - UI STANDARDIZED (SANDBOX STYLE) */}
         {modalState.isOpen && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+          <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 ${isFullscreen ? 'p-0' : 'p-4'}`}>
+            <div className={`bg-white shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${isFullscreen
+                ? 'w-full h-full rounded-none'
+                : 'rounded-xl w-full max-w-4xl max-h-[90vh]'
+              }`}>
               {/* Header del modal */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white z-10">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white z-10 flex-shrink-0">
                 <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
                   <span className="text-xl">🎓</span>
                   {modalState.loading ? 'Generando Contenido...' : 'Lección Interactiva'}
                 </h3>
-                <button
-                  onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 hover:bg-gray-100 p-2 rounded-full transition-all"
-                  aria-label="Cerrar modal"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+                <div className="flex items-center gap-2">
+                  {/* Botón Pantalla Completa */}
+                  <button
+                    onClick={() => setIsFullscreen(f => !f)}
+                    className="text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 p-2 rounded-full transition-all"
+                    aria-label={isFullscreen ? 'Salir de pantalla completa' : 'Pantalla completa'}
+                    title={isFullscreen ? 'Salir de pantalla completa' : 'Pantalla completa'}
+                  >
+                    {isFullscreen ? (
+                      // Icono comprimir
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9h4.5M15 9V4.5M15 9l5.25-5.25M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 15h4.5M15 15v4.5M15 15l5.25 5.25" />
+                      </svg>
+                    ) : (
+                      // Icono expandir
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15" />
+                      </svg>
+                    )}
+                  </button>
+                  {/* Botón Cerrar */}
+                  <button
+                    onClick={closeModal}
+                    className="text-gray-400 hover:text-gray-600 hover:bg-gray-100 p-2 rounded-full transition-all"
+                    aria-label="Cerrar modal"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
               {/* Contenido Scrollable */}
@@ -606,73 +644,103 @@ export default function WeeklyLessonSchedule({ weekData }) {
                     <div className="bg-white rounded-2xl border border-gray-200/80 shadow-sm overflow-hidden">
                       <div className="px-8 py-8">
                         {(() => {
-                          // Helper to process content similar to SandboxWidget logic
+                          // Extrae el markdown limpio de la lección desde cualquier formato de la IA
                           const processContent = (rawContent) => {
-                            console.log('🔍 [DEBUG] processContent received:', typeof rawContent, rawContent);
                             if (!rawContent) return '';
 
-                            let processed = rawContent;
-
-                            if (typeof processed === 'string') {
-                              const trimmed = processed.trim();
-
-                              // 1. Try to extract from markdown code blocks (json, text, or no language)
-                              // Regex relaxed to find the block ANYWHERE in the text
-                              const codeBlockRegex = /```(?:json|text)?\s*([\s\S]*?)\s*```/i;
-                              const match = trimmed.match(codeBlockRegex);
-
-                              if (match) {
-                                try {
-                                  const parsed = JSON.parse(match[1]);
-                                  return processContent(parsed); // Recurse with parsed object
-                                } catch (e) {
-                                  // If parse fails, it might be just text inside a block, return inner text
-                                  // But if it looks like JSON, we might want to try to fix it? 
-                                  // For now, let's treat it as the content string if it fails to parse as JSON
-                                  return match[1];
-                                }
+                            // Nivel 1: Si es un objeto JSON, extraer fields conocidos
+                            if (typeof rawContent === 'object' && rawContent !== null) {
+                              // Intentar extraer .lesson, .contenido, .content en ese orden
+                              for (const key of ['lesson', 'contenido', 'content', 'texto']) {
+                                if (rawContent[key]) return processContent(rawContent[key]);
                               }
-
-                              // 2. Try to parse specific JSON-like strings that are not valid JSON but look like it
-                              // (e.g. if the API returns a string that IS a JSON but without code blocks)
-                              if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
-                                try {
-                                  const parsed = JSON.parse(trimmed);
-                                  return processContent(parsed);
-                                } catch (e) {
-                                  // Not valid JSON, return as text
-                                  return processed;
-                                }
-                              }
-
-                              return processed;
-                            } else if (typeof processed === 'object') {
-                              // Extract known fields if object
-                              // If 'lesson' exists, use it. If 'contenido' exists, use it.
-                              const extracted = processed.lesson || processed.contenido || processed.content;
-
-                              if (extracted) {
-                                // [DEBUG] Special handling for 'contenido' which might be markdown
-                                if (processed.contenido && typeof processed.contenido === 'string') {
-                                  return processContent(processed.contenido);
-                                }
-                                // If the extracted content is complex (object or array), stringify it
-                                // UNLESS we are specifically looking for text content
-                                if (typeof extracted === 'object') {
-                                  return JSON.stringify(extracted, null, 2);
-                                }
-                                // Recurse in case the extracted string is also a code block
-                                return processContent(extracted);
-                              }
-
-                              // If no known fields, dump the whole object
-                              return JSON.stringify(processed, null, 2);
+                              return JSON.stringify(rawContent, null, 2);
                             }
-                            return String(processed);
+
+                            // Nivel 2: Si es string
+                            if (typeof rawContent === 'string') {
+                              const s = rawContent.trim();
+
+                              // CASO A: Bloque markdown completo con JSON parseado (```json ... ```)
+                              const fullBlockMatch = s.match(/```(?:json)?\s*\{[\s\S]*\}\s*```/);
+                              if (fullBlockMatch) {
+                                const inner = fullBlockMatch[0].replace(/```(?:json)?/g, '').replace(/```/g, '').trim();
+                                try {
+                                  const parsed = JSON.parse(inner);
+                                  return processContent(parsed);
+                                } catch (_) { }
+                              }
+
+                              // CASO B: JSON truncado dentro de un bloque markdown (sin cierre ```)
+                              // Extraer el valor de "contenido" localizando la primera comilla NO escapada
+                              // que cierra el valor JSON (para no incluir quiz/exercises al final)
+                              const CLAVES = ['"contenido": "', '"lesson": "', '"content": "'];
+                              for (const CLAVE of CLAVES) {
+                                const clavIdx = s.indexOf(CLAVE);
+                                if (clavIdx !== -1) {
+                                  const start = clavIdx + CLAVE.length;
+                                  // Avanzar hasta la primera comilla NO precedida por \
+                                  let end = start;
+                                  while (end < s.length) {
+                                    if (s[end] === '"' && s[end - 1] !== '\\') break;
+                                    end++;
+                                  }
+                                  // El substring entre start y end es el valor JSON del campo
+                                  const raw = s.slice(start, end);
+                                  if (raw.length > 50) { // Ignorar extracciones triviales
+                                    return raw
+                                      .replace(/\\n/g, '\n')
+                                      .replace(/\\t/g, '\t')
+                                      .replace(/\\"/g, '"')
+                                      .trimEnd();
+                                  }
+                                }
+                              }
+
+                              // CASO C: JSON completo (parseable)
+                              if ((s.startsWith('{') && s.endsWith('}')) || (s.startsWith('[') && s.endsWith(']'))) {
+                                try {
+                                  const parsed = JSON.parse(s);
+                                  return processContent(parsed);
+                                } catch (_) { }
+                              }
+
+                              // Fallback: devolver el string tal cual (puede ser markdown directo)
+                              // LIMPIEZA FINAL: eliminar bloques JSON de quiz/ejercicios que la IA concatena al final
+                              // Cubre ambos casos: con y sin bloque ```json
+                              let cleaned = rawContent;
+                              // Caso con bloque markdown
+                              cleaned = cleaned.replace(/\n```(?:json)?\s*\{[\s\S]*$/i, '');
+                              // Caso sin bloque markdown: el JSON empieza después del último párrafo de texto
+                              // Patron: texto normal y luego "\n{ \n  \"quiz\"" o "\n{\n  \"ejercicios\""
+                              cleaned = cleaned.replace(/\n\s*\{\s*\n\s*"(?:quiz|exercises|ejercicios|quiz_preguntas)[\s\S]*$/i, '');
+                              // Caso: ",\n  \"quiz\": [" al final del string
+                              cleaned = cleaned.replace(/,?\s*"(?:quiz|exercises|ejercicios)":\s*\[[\s\S]*$/i, '');
+                              return cleaned.trimEnd();
+                            }
+
+                            return String(rawContent);
                           };
 
                           const finalContent = processContent(modalState.content);
-                          return <LessonRenderer content={finalContent} />;
+
+                          return (
+                            <div className="relative">
+                              <LessonRenderer content={finalContent} />
+
+                              {/* Debug Tool - Solo visible al final si se necesita */}
+                              <div className="mt-12 pt-8 border-t border-gray-100 flex justify-center">
+                                <details className="text-[10px] text-gray-300 opacity-30 hover:opacity-100 transition-opacity w-full">
+                                  <summary className="cursor-pointer hover:text-gray-500 text-center list-none font-mono">
+                                    [DEBUG INFO: {finalContent?.length || 0} chars] Click para ver datos crudos
+                                  </summary>
+                                  <pre className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-100 overflow-auto max-h-96 text-[11px] font-mono text-gray-500 whitespace-pre-wrap">
+                                    {finalContent}
+                                  </pre>
+                                </details>
+                              </div>
+                            </div>
+                          );
                         })()}
                       </div>
 

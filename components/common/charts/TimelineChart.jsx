@@ -45,20 +45,7 @@ export default function TimelineChart({
   color = '#8b5cf6',
   loading = false
 }) {
-  /**
-   * Generar datos mock si no hay datos reales
-   */
-  const generateMockData = () => {
-    const weeks = ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'];
-    return weeks.map((week, index) => ({
-      period: week,
-      count: Math.floor(Math.random() * 5) + 1,
-      label: week
-    }));
-  };
-
-  const chartData = data.length > 0 ? data : generateMockData();
-
+  const chartData = data;
   const chartJsData = {
     labels: chartData.map(item => item.label || item.period),
     datasets: [
@@ -98,7 +85,7 @@ export default function TimelineChart({
         borderColor: color,
         borderWidth: 1,
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             const item = chartData[context.dataIndex];
             const labels = [
               `Completadas: ${context.parsed.x}`
@@ -116,7 +103,7 @@ export default function TimelineChart({
         beginAtZero: true,
         ticks: {
           stepSize: 1,
-          callback: function(value) {
+          callback: function (value) {
             return Number.isInteger(value) ? value : '';
           },
           font: {
@@ -201,7 +188,7 @@ export default function TimelineChart({
       {/* Footer */}
       <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between text-sm">
         <span className="text-gray-600">
-          {data.length > 0 ? 'Datos reales' : 'Datos de ejemplo'}
+          Actividad registrada
         </span>
         <span className="text-gray-500">
           {chartData.length} períodos mostrados

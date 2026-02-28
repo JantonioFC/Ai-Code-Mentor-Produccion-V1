@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T11:54:31.058Z",
+  "lastUpdated": "2026-02-28T04:33:46.594Z",
   "models": [
     {
       "name": "gemini-2.5-flash",
@@ -14,22 +14,7 @@
         "batchGenerateContent"
       ],
       "priority": 1,
-      "discoveredAt": "2026-02-17T11:54:31.057Z"
-    },
-    {
-      "name": "gemini-2.5-flash-preview-09-2025",
-      "displayName": "Gemini 2.5 Flash Preview Sep 2025",
-      "description": "Gemini 2.5 Flash Preview Sep 2025",
-      "inputTokenLimit": 1048576,
-      "outputTokenLimit": 65536,
-      "supportedGenerationMethods": [
-        "generateContent",
-        "countTokens",
-        "createCachedContent",
-        "batchGenerateContent"
-      ],
-      "priority": 1,
-      "discoveredAt": "2026-02-17T11:54:31.057Z"
+      "discoveredAt": "2026-02-28T04:33:46.593Z"
     },
     {
       "name": "gemini-2.5-pro",
@@ -44,7 +29,7 @@
         "batchGenerateContent"
       ],
       "priority": 2,
-      "discoveredAt": "2026-02-17T11:54:31.057Z"
+      "discoveredAt": "2026-02-28T04:33:46.593Z"
     },
     {
       "name": "gemini-2.0-flash",
@@ -59,7 +44,7 @@
         "batchGenerateContent"
       ],
       "priority": 3,
-      "discoveredAt": "2026-02-17T11:54:31.057Z"
+      "discoveredAt": "2026-02-28T04:33:46.593Z"
     },
     {
       "name": "gemini-2.0-flash-001",
@@ -74,8 +59,23 @@
         "batchGenerateContent"
       ],
       "priority": 3,
-      "discoveredAt": "2026-02-17T11:54:31.057Z"
+      "discoveredAt": "2026-02-28T04:33:46.593Z"
+    },
+    {
+      "name": "gemini-pro-latest",
+      "displayName": "Gemini Pro Latest",
+      "description": "Latest release of Gemini Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "priority": 5,
+      "discoveredAt": "2026-02-28T04:33:46.593Z"
     }
   ],
-  "cacheValidUntil": "2026-02-18T11:54:31.058Z"
+  "cacheValidUntil": "2026-03-01T04:33:46.594Z"
 }

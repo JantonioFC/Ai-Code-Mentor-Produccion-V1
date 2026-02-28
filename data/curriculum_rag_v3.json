@@ -526,7 +526,58 @@
               ],
               "entregables": "Octava entrada del DMA documentando el proceso de implementar estructuras de datos complejas. Análisis de cómo esta experiencia debe informar las fases posteriores del programa.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a CS50 - Semana 5: Estructuras de Datos",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de CS50 - Semana 5: Estructuras de Datos.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -551,7 +602,58 @@
               ],
               "entregables": "Entrada final del DMA de Fase 0: 'Proyecto Génesis: Construcción del Laboratorio de Desarrollo Linux', documentando cada paso, problema, solución y lección aprendida durante el proceso completo.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Migración a Linux y Configuración del Laboratorio",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Migración a Linux y Configuración del Laboratorio.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -582,7 +684,58 @@
               ],
               "entregables": "Repositorio Ecosistema360 inicializado en GitHub. Entorno de desarrollo completamente configurado y documentado en la primera entrada del DMA.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción al Flujo de Trabajo",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos semanales y metodología 5x4.",
+                    "Pomodoro 2: Instalación de VS Code y extensiones esenciales.",
+                    "Pomodoro 3: Configuración de terminal y herramientas de línea de comandos.",
+                    "Pomodoro 4: Primeras pruebas de entorno 'Hola Mundo'."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Ecosistema de Versionado (GitHub)",
+                  "pomodoros": [
+                    "Pomodoro 1: Creación de cuenta en GitHub y configuración SSH.",
+                    "Pomodoro 2: Inicialización del repositorio Ecosistema360.",
+                    "Pomodoro 3: Flujo básico de Git: add, commit, push.",
+                    "Pomodoro 4: Gestión de ramas y buenas prácticas de mensaje de commit."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Herramientas de Productividad",
+                  "pomodoros": [
+                    "Pomodoro 1: Configuración de Notion/Obsidian para gestión de conocimiento.",
+                    "Pomodoro 2: Integración de herramientas de IA en el flujo de trabajo.",
+                    "Pomodoro 3: Configuración del DMA (Diario de Misión Automático).",
+                    "Pomodoro 4: Simulación de flujo de trabajo diario real."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Implementación del Mini-Proyecto",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificación detallada del mini-proyecto de calculadora.",
+                    "Pomodoro 2: Escritura de pseudocódigo y lógica base.",
+                    "Pomodoro 3: Documentación inicial en el DDE.",
+                    "Pomodoro 4: Primer 'push' formal del proyecto documentado."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Entrega",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión final de la configuración del entorno.",
+                    "Pomodoro 2: Completar primera entrada formal del DMA.",
+                    "Pomodoro 3: Verificación de entregables en GitHub.",
+                    "Pomodoro 4: Reflexión sobre obstáculos encontrados y plan para Semana 11."
+                  ]
+                }
+              ]
             },
             {
               "semana": 11,
@@ -599,7 +752,58 @@
               ],
               "entregables": "Serie de ejercicios de pseudocódigo versionados en GitHub. Estructura de proyecto documentada en el README.md.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Pensamiento Computacional y Git Básico",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Pensamiento Computacional y Git Básico.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 12,
@@ -615,7 +819,58 @@
               ],
               "entregables": "Un documento IA_PROTOCOLO.md en el repositorio, definiendo tus propias mejores prácticas para interactuar con el Tutor IA, basado en los principios aprendidos.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Alfabetización Crítica en Inteligencia Artificial",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Alfabetización Crítica en Inteligencia Artificial.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 13,
@@ -632,7 +887,58 @@
               ],
               "entregables": "Mini-proyecto de calculadora (en pseudocódigo) completamente documentado y versionado en GitHub. Primera entrada formal del DDE.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Consolidación y Conexión",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Consolidación y Conexión.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -653,7 +959,58 @@
               ],
               "entregables": "Un mínimo de 10 ejercicios de código resueltos y subidos al repositorio, cada uno en su propio archivo.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Fundamentos de Python",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Fundamentos de Python.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 15,
@@ -669,7 +1026,58 @@
               ],
               "entregables": "Conjunto adicional de 10 ejercicios resueltos, demostrando dominio sólido de los fundamentos.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Fundamentos de Python - Continuación",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Fundamentos de Python - Continuación.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 16,
@@ -751,7 +1159,58 @@
               ],
               "entregables": "Conjunto de programas que demuestren manejo avanzado de estructuras de control.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Estructuras de Control - Práctica Avanzada",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Estructuras de Control - Práctica Avanzada.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 18,
@@ -766,7 +1225,58 @@
               ],
               "entregables": "Una biblioteca personal (utils.py) con al menos 5 funciones bien documentadas (usando docstrings).",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Funciones y Modularidad",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Funciones y Modularidad.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 19,
@@ -781,7 +1291,58 @@
               ],
               "entregables": "Biblioteca de funciones expandida con ejemplos de uso de conceptos avanzados.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Funciones Avanzadas",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Funciones Avanzadas.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 20,
@@ -796,7 +1357,58 @@
               ],
               "entregables": "Un proyecto de gestor de tareas en la terminal que permita agregar, eliminar y listar tareas.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Estructuras de Datos",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Estructuras de Datos.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 21,
@@ -812,7 +1424,58 @@
               ],
               "entregables": "Proyecto avanzado que demuestre dominio de estructuras de datos complejas.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Estructuras de Datos Avanzadas",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Estructuras de Datos Avanzadas.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 22,
@@ -828,7 +1491,58 @@
               ],
               "entregables": "Versión mejorada del gestor de tareas con persistencia de datos y manejo de excepciones.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Manejo de Archivos y Excepciones",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Manejo de Archivos y Excepciones.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 23,
@@ -844,7 +1558,58 @@
               ],
               "entregables": "Sistema de gestión de datos con soporte para múltiples formatos.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Manejo Avanzado de Archivos",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Manejo Avanzado de Archivos.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 24,
@@ -860,7 +1625,58 @@
               ],
               "entregables": "Conjunto de clases básicas con documentación de uso.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Programación Orientada a Objetos - Introducción",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Programación Orientada a Objetos - Introducción.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 25,
@@ -943,7 +1759,58 @@
               ],
               "entregables": "Sistema de clases con herencia funcional.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Programación Orientada a Objetos - Herencia",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Programación Orientada a Objetos - Herencia.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 27,
@@ -959,7 +1826,58 @@
               ],
               "entregables": "Proyecto POO completo que demuestre dominio de todos los conceptos.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Programación Orientada a Objetos - Proyecto Integrador",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Programación Orientada a Objetos - Proyecto Integrador.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 28,
@@ -975,7 +1893,58 @@
               ],
               "entregables": "Proyecto de POO refactorizado como un paquete instalable con un archivo requirements.txt.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Módulos, Paquetes y Entornos Virtuales",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Módulos, Paquetes y Entornos Virtuales.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 29,
@@ -991,7 +1960,58 @@
               ],
               "entregables": "Suite de tests completa para el proyecto principal.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Testing y Debugging",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Testing y Debugging.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 30,
@@ -1007,7 +2027,58 @@
               ],
               "entregables": "Aplicación que integre múltiples módulos de la librería estándar y consuma una API externa.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a APIs y Librería estándar",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de APIs y Librería estándar.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 31,
@@ -1023,7 +2094,58 @@
               ],
               "entregables": "Documento de especificación técnica y plan de desarrollo detallado.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Proyecto Integrador de Fase - Planificación",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Proyecto Integrador de Fase - Planificación.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             },
             {
               "semana": 32,
@@ -1039,7 +2161,58 @@
               ],
               "entregables": "Proyecto Integrador de Fase 1: Una aplicación de línea de comandos (CLI) robusta y con tests completos que demuestre dominio de Python y metodología de desarrollo.",
               "official_sources": [],
-              "esquemaDiario": []
+              "esquemaDiario": [
+                {
+                  "dia": 1,
+                  "concepto": "Introducción a Proyecto Integrador de Fase - Desarrollo",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisar objetivos fundamentales de Proyecto Integrador de Fase - Desarrollo.",
+                    "Pomodoro 2: Estudiar conceptos clave y base teórica.",
+                    "Pomodoro 3: Analizar documentación y recursos oficiales.",
+                    "Pomodoro 4: Primeras pruebas prácticas de concepto."
+                  ]
+                },
+                {
+                  "dia": 2,
+                  "concepto": "Exploración y Profundización",
+                  "pomodoros": [
+                    "Pomodoro 1: Implementación de ejemplos básicos guiados.",
+                    "Pomodoro 2: Exploración de sintaxis o lógica avanzada del tema.",
+                    "Pomodoro 3: Resolución de problemas de complejidad baja-media.",
+                    "Pomodoro 4: Refactorización y documentación de los ejercicios realizados."
+                  ]
+                },
+                {
+                  "dia": 3,
+                  "concepto": "Práctica Intensiva e Integración",
+                  "pomodoros": [
+                    "Pomodoro 1: Aplicar metodología específica del tema en ejercicios prácticos.",
+                    "Pomodoro 2: Resolver desafíos técnicos de complejidad intermedia.",
+                    "Pomodoro 3: Experimentar con variantes y casos de borde.",
+                    "Pomodoro 4: Optimizar soluciones y asegurar comprensión profunda."
+                  ]
+                },
+                {
+                  "dia": 4,
+                  "concepto": "Mini-Proyecto y Aplicación Real",
+                  "pomodoros": [
+                    "Pomodoro 1: Planificar y diseñar proyecto semanal vinculado al tema.",
+                    "Pomodoro 2: Implementación de la lógica principal del proyecto.",
+                    "Pomodoro 3: Desarrollo de funcionalidades secundarias e integración.",
+                    "Pomodoro 4: Pruebas integrales, depuración y documentación final."
+                  ]
+                },
+                {
+                  "dia": 5,
+                  "concepto": "Consolidación y Metacognición",
+                  "pomodoros": [
+                    "Pomodoro 1: Revisión general y cierre de todos los conceptos semanales.",
+                    "Pomodoro 2: Finalización de entregables y carga en repositorio.",
+                    "Pomodoro 3: Reflexión sobre el proceso de aprendizaje y resolución de dudas.",
+                    "Pomodoro 4: Preparación del resumen para el DMA y planificación de la siguiente fase."
+                  ]
+                }
+              ]
             }
           ]
         }

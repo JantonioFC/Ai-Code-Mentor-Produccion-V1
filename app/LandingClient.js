@@ -140,12 +140,12 @@ export default function LandingClient() {
     return (
         <main className="min-h-screen bg-[#0F1115] text-[#EDEDED] font-sans selection:bg-[#3B82F6] selection:text-white">
             {/* Logo Topbar */}
-            <div className="w-full bg-[#161A23] border-b border-[#2D3748] relative h-24">
+            <div className="w-full bg-[#161A23] border-b border-[#2D3748] relative h-24 xl:h-32">
                 <Image
-                    src="/logo.jpg"
-                    alt="AI Code Mentor - Ecosistema 360"
+                    src="/logo.png"
+                    alt="URU/IA.LABS - AI Code Mentor"
                     fill
-                    style={{ objectFit: 'contain' }}
+                    style={{ objectFit: 'cover' }}
                     priority
                     className="opacity-90"
                 />

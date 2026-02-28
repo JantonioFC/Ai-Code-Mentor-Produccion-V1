@@ -26,10 +26,10 @@ async function getAuthenticatedUser(req) {
   const authHeader = req.headers['authorization'];
   let token = null;
 
-  if (authHeader && authHeader.startsWith('Bearer ')) {
+  if (authHeader && authHeader.startsWith('Bearer ') && !authHeader.includes('cookie-auth-active')) {
     token = authHeader.substring(7);
-  } else if (req.cookies && req.cookies.token) {
-    token = req.cookies.token;
+  } else if (req.cookies && (req.cookies['ai-code-mentor-auth'] || req.cookies.token)) {
+    token = req.cookies['ai-code-mentor-auth'] || req.cookies.token;
   }
 
   if (!token) return null;
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
         return res.status(200).json(metrics);
       }
 
-      if (path.match(/^\/reviews\/[0-9a-f-]+$/)) {
+      if (path.match(/^\/reviews\/[A-Za-z0-9_-]+$/)) {
         const segments = path.split('/');
         const reviewId = segments[2];
         const details = await getReviewDetails(reviewId);

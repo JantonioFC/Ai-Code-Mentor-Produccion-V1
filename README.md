@@ -179,6 +179,14 @@ Usuario → Next.js Page → API Route → LessonService → GeminiRouter → Ge
                               SQLite ← RAG Pipeline ← Memory System
 ```
 
+### 📦 Código Aislado (Backup Activo)
+
+El proyecto contiene módulos, utilidades y librerías que **no están siendo importados** actualmente en el flujo principal para no afectar la compilación ni el rendimiento (Tree Shaking de Next.js), pero se mantienen como backup inactivo listos para futuras integraciones:
+
+- **Componentes Históricos:** `QuizInteraction.js`, `ProjectSandbox.js`.
+- **RAG y AI Experimental (Fase 3):** Clases subyacentes en `lib/ai/discovery`, `lib/rag/`, `lib/prompts/factory`.
+- **Dependencias latentes:** `pg` (cliente local previo a SQLite), `canvas-confetti`.
+
 ---
 
 ## 📡 API Endpoints

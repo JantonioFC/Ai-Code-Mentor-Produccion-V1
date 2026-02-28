@@ -50,7 +50,7 @@ ChartJS.register(
  * @returns {JSX.Element}
  */
 export default function TrendChart({ data = [], metric = 'quality_score', loading = false }) {
-  
+
   /**
    * Configuración de métricas disponibles
    */
@@ -77,24 +77,7 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
 
   const config = metricConfig[metric];
 
-  /**
-   * Generar datos mock si no hay datos reales
-   * TODO: Remover cuando el backend provea datos reales
-   */
-  const generateMockData = () => {
-    const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'];
-    return months.map((month, index) => ({
-      period: month,
-      value: metric === 'quality_score' 
-        ? 3.0 + (index * 0.3) 
-        : metric === 'reviews_completed'
-        ? index * 2
-        : 3.5 + (index * 0.2)
-    }));
-  };
-
-  const chartData = data.length > 0 ? data : generateMockData();
-
+  const chartData = data;
   /**
    * Configuración de datos para Chart.js
    */
@@ -148,7 +131,7 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
         borderWidth: 1,
         displayColors: false,
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             let label = context.dataset.label || '';
             if (label) {
               label += ': ';
@@ -187,7 +170,7 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
             size: 12
           },
           color: '#6B7280',
-          callback: function(value) {
+          callback: function (value) {
             return metric === 'reviews_completed'
               ? value.toFixed(0)
               : value.toFixed(1);
@@ -224,12 +207,12 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
             Últimos 6 períodos
           </p>
         </div>
-        
+
         {/* Indicador de valor actual */}
         <div className="text-right">
           <p className="text-sm text-gray-500">Actual</p>
           <p className="text-2xl font-bold" style={{ color: config.color }}>
-            {chartData.length > 0 
+            {chartData.length > 0
               ? (metric === 'reviews_completed'
                 ? chartData[chartData.length - 1].value.toFixed(0)
                 : chartData[chartData.length - 1].value.toFixed(1))
@@ -248,21 +231,20 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
       <div className="mt-4 pt-4 border-t border-gray-200">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-600">
-            {data.length > 0 ? 'Datos reales' : 'Datos de ejemplo'}
+            Métricas de rendimiento
           </span>
           {chartData.length >= 2 && (
-            <span className={`font-medium ${
-              chartData[chartData.length - 1].value > chartData[chartData.length - 2].value
+            <span className={`font-medium ${chartData[chartData.length - 1].value > chartData[chartData.length - 2].value
                 ? 'text-green-600'
                 : chartData[chartData.length - 1].value < chartData[chartData.length - 2].value
-                ? 'text-red-600'
-                : 'text-gray-600'
-            }`}>
+                  ? 'text-red-600'
+                  : 'text-gray-600'
+              }`}>
               {chartData[chartData.length - 1].value > chartData[chartData.length - 2].value
                 ? '↑ Tendencia positiva'
                 : chartData[chartData.length - 1].value < chartData[chartData.length - 2].value
-                ? '↓ Tendencia negativa'
-                : '→ Estable'
+                  ? '↓ Tendencia negativa'
+                  : '→ Estable'
               }
             </span>
           )}

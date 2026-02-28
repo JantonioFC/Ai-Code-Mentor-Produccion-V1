@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ProtectedRoute from '../../lib/auth/ProtectedRoute';
-import PrivateLayout from '../../components/layout/PrivateLayout';
+import ProtectedRoute from '../../lib/auth/ProtectedRouteApp';
+import PrivateLayout from '../../components/layout/PrivateLayoutApp';
 import { TemplateSelector } from '../../components/ProjectTracking';
 
 /**

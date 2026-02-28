@@ -4,6 +4,69 @@
 
 html {
   font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+  color: #1e293b;
+  /* slate-800 — base text color to prevent system-default near-invisible gray */
+}
+
+body {
+  color: #1e293b;
+}
+
+/* ============================================
+   CONTRASTE GLOBAL DE INPUTS
+   Corrige el texto imperceptible en inputs de fecha, texto, select, textareas
+   ============================================ */
+
+input,
+textarea,
+select {
+  color: #1e293b !important;
+  /* slate-800 — forzar texto oscuro legible */
+  background-color: #ffffff;
+  font-family: inherit;
+  color-scheme: light;
+  /* Previene que el OS dark-mode invierta los colores del input */
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  color: #1e293b !important;
+  color-scheme: light;
+  /* Fuerza color scheme claro para el date picker del browser */
+  -webkit-text-fill-color: #1e293b;
+  /* Safari/Chrome override adicional */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+  /* slate-400 — placeholder gris visible pero sutil */
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #6366f1;
+  /* ring indigo cuando con focus */
+  outline-offset: 1px;
+}
+
+/* Corrección específica para Tailwind que pone placeholder gris muy claro */
+.placeholder-gray-300::placeholder,
+.placeholder-gray-200::placeholder {
+  color: #94a3b8 !important;
+  /* forzar slate-400 mínimo */
+}
+
+/* Texto en todos los inputs Tailwind con clases text-gray-* muy claras */
+.text-gray-200,
+.text-gray-100,
+.text-gray-50 {
+  color: #1e293b !important;
 }
 
 code,
@@ -406,10 +469,11 @@ pre {
 
 :root {
   /* Stitch Color Palette */
-  --stitch-bg-main: #0a0a0c; /* Deep Space */
+  --stitch-bg-main: #0a0a0c;
+  /* Deep Space */
   --stitch-surface-glass: rgba(255, 255, 255, 0.05);
   --stitch-border-glass: rgba(255, 255, 255, 0.1);
-  
+
   --stitch-neon-blue: #00f0ff;
   --stitch-neon-purple: #bd00ff;
   --stitch-neon-green: #00ff9d;

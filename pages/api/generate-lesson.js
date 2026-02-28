@@ -96,7 +96,7 @@ async function handler(req, res) {
             generationConfig: {
                 temperature: 0.7,
                 topP: 0.9,
-                maxOutputTokens: 4096,
+                maxOutputTokens: 8192,  // Aumentado para evitar truncamiento de lecciones largas
             }
         });
 
@@ -106,24 +106,100 @@ async function handler(req, res) {
         // 5. Parsear respuesta JSON (Gemini retorna JSON en markdown)
         let lessonData;
         try {
-            // Intentar extraer JSON de markdown code block
-            const jsonMatch = generatedText.match(/```json\n?([\s\S]*?)\n?```/);
-            if (jsonMatch) {
-                lessonData = JSON.parse(jsonMatch[1]);
+            // ESTRATEGIA A: bloque markdown con JSON completo (regex greedy)
+            const jsonMatchGreedy = generatedText.match(/```(?:json)?\s*(\{[\s\S]*\})\s*```/i);
+            if (jsonMatchGreedy) {
+                lessonData = JSON.parse(jsonMatchGreedy[1]);
+                console.log('✅ [LESSON-GEN] JSON extraído via bloque markdown (greedy)');
             } else {
-                // Si no está en code block, intentar parsear directamente
-                lessonData = JSON.parse(generatedText);
+                // ESTRATEGIA B: JSON sin bloque markdown, bien formado
+                const firstBrace = generatedText.indexOf('{');
+                const lastBrace = generatedText.lastIndexOf('}');
+                if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+                    lessonData = JSON.parse(generatedText.substring(firstBrace, lastBrace + 1));
+                    console.log('✅ [LESSON-GEN] JSON extraído via búsqueda de llaves');
+                } else {
+                    throw new Error('No se encontró estructura JSON en la respuesta');
+                }
             }
+
+            // Si el JSON parseado tiene campo 'contenido', extraerlo y normalizar
+            // para que el frontend reciba siempre { title, lesson (markdown puro), exercises }
+            if (lessonData.contenido && !lessonData.lesson) {
+                console.log('🔄 [LESSON-GEN] Normalizando estructura: contenido → lesson');
+                lessonData = {
+                    title: lessonData.titulo || `Lección: Semana ${semanaId}, Día ${dia}, Pomodoro ${pomodoroIndex}`,
+                    lesson: lessonData.contenido,
+                    exercises: lessonData.ejercicios || lessonData.exercises || [],
+                    metadata: lessonData.metadata || {}
+                };
+            }
+
         } catch (parseError) {
-            console.error('❌ [LESSON-GEN] Failed to parse Gemini response as JSON:', parseError);
-            console.error('❌ [LESSON-GEN] First 200 chars:', generatedText.substring(0, 200));
-            // Fallback: convertir a formato compatible con frontend
-            lessonData = {
-                title: `Lección: Semana ${semanaId}, Día ${dia}, Pomodoro ${pomodoroIndex}`,
-                lesson: generatedText,  // Frontend espera esto como string
-                exercises: [],
-                note: 'Contenido generado sin formato JSON estructurado'
-            };
+            console.error('❌ [LESSON-GEN] Failed to parse Gemini response as JSON:', parseError.message);
+            console.error('❌ [LESSON-GEN] Response length:', generatedText.length);
+            console.error('❌ [LESSON-GEN] First 300 chars:', generatedText.substring(0, 300));
+
+            // ESTRATEGIA C (fallback robusto): extraer campo 'contenido' por búsqueda de comilla no escapada
+            // funciona incluso con JSON truncado y NO incluye el JSON de ejercicios al final
+            const CLAVES_C = ['"contenido": "', '"lesson": "', '"content": "'];
+            let extractedFromPosition = null;
+            for (const CLAVE of CLAVES_C) {
+                const clavIdx = generatedText.indexOf(CLAVE);
+                if (clavIdx !== -1) {
+                    const start = clavIdx + CLAVE.length;
+                    // Avanzar hasta la primera comilla NO precedida por \
+                    let end = start;
+                    while (end < generatedText.length) {
+                        if (generatedText[end] === '"' && generatedText[end - 1] !== '\\') break;
+                        end++;
+                    }
+                    const raw = generatedText.slice(start, end);
+                    if (raw.length > 50) {
+                        extractedFromPosition = raw
+                            .replace(/\\n/g, '\n')
+                            .replace(/\\t/g, '\t')
+                            .replace(/\\"/g, '"')
+                            .trimEnd();
+                        break;
+                    }
+                }
+            }
+
+            if (extractedFromPosition) {
+                console.log('🔄 [LESSON-GEN] Extrayendo contenido por posición (JSON truncado), chars:', extractedFromPosition.length);
+
+                // Intentar extraer también el array de quiz/ejercicios del texto crudo
+                // (puede estar al final del JSON truncado como "quiz": [...])
+                let extractedExercises = [];
+                try {
+                    const quizMatch = generatedText.match(/"(?:quiz|ejercicios|exercises)":\s*(\[[\s\S]*?\]\s*[},\]])/i);
+                    if (quizMatch) {
+                        const arr = JSON.parse(quizMatch[1]);
+                        if (Array.isArray(arr) && arr.length > 0) {
+                            extractedExercises = arr;
+                            console.log('✅ [LESSON-GEN] Ejercicios extraídos del JSON truncado:', arr.length);
+                        }
+                    }
+                } catch (_) {
+                    console.log('⚠️ [LESSON-GEN] No se pudieron extraer ejercicios del JSON truncado');
+                }
+
+                lessonData = {
+                    title: `Lección: Semana ${semanaId}, Día ${dia}, Pomodoro ${pomodoroIndex}`,
+                    lesson: extractedFromPosition,
+                    exercises: extractedExercises,
+                    note: 'Contenido extraído de JSON truncado por límite de tokens'
+                };
+            } else {
+                // Fallback final: guardar texto crudo — el frontend lo mostrará tal cual
+                lessonData = {
+                    title: `Lección: Semana ${semanaId}, Día ${dia}, Pomodoro ${pomodoroIndex}`,
+                    lesson: generatedText,
+                    exercises: [],
+                    note: 'Contenido generado sin formato JSON estructurado'
+                };
+            }
         }
 
         console.log('✅ [LESSON-GEN] Lesson generated successfully');

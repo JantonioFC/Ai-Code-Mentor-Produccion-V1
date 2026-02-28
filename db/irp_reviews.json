@@ -1,0 +1,164 @@
+{
+  "requests": [
+    {
+      "id": "req_1772250702090_bc8md",
+      "created_at": "2026-02-28T03:51:42.091Z",
+      "author_user_id": "4ce4ece9-e638-475c-bdfd-4630f6813f8d",
+      "project_name": "calendario",
+      "github_repo_url": "https://github.com/JantonioFC/calendar-2026-premium",
+      "pull_request_url": null,
+      "code_content": null,
+      "phase": 1,
+      "week": 1,
+      "description": "Calendario interactivo",
+      "learning_objectives": [
+        "cleancode",
+        "optimizacion"
+      ],
+      "specific_focus": [
+        "sigue las mejores practicas?"
+      ],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "req_1772264654293_1ed6k",
+      "created_at": "2026-02-28T07:44:14.293Z",
+      "author_user_id": "4ce4ece9-e638-475c-bdfd-4630f6813f8d",
+      "project_name": "Ai code mentor gamma",
+      "github_repo_url": "https://github.com/JantonioFC/ai-code-mentor-gamma",
+      "pull_request_url": null,
+      "code_content": null,
+      "phase": 4,
+      "week": 50,
+      "description": "Funcionalidad y buenas practicas",
+      "learning_objectives": [
+        "Optimizacion"
+      ],
+      "specific_focus": [
+        "evaluacion"
+      ],
+      "status": "COMPLETED"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1772250715126_exkhn",
+      "review_request_id": "req_1772250702090_bc8md",
+      "reviewer_user_id": "4ce4ece9-e638-475c-bdfd-4630f6813f8d",
+      "puntos_fuertes": [
+        {
+          "categoria": "Estructura Básica",
+          "descripcion": "El código demuestra una comprensión básica de la definición y ejecución de funciones en JavaScript. La función `main` es un punto de entrada convencional y claro para un programa simple, lo que facilita la lectura inicial y la identificación del flujo principal.",
+          "archivo_referencia": "codigo_auditar.js",
+          "linea_referencia": 4
+        },
+        {
+          "categoria": "Claridad (Inicial)",
+          "descripcion": "El mensaje en `console.log` es explícito sobre su propósito actual ('Sample code from repository'), lo que indica que el estudiante es consciente de que este es un punto de partida y no la implementación final. Esto es un buen comienzo para la auto-documentación y la comunicación del estado del código.",
+          "archivo_referencia": "codigo_auditar.js",
+          "linea_referencia": 5
+        }
+      ],
+      "sugerencias_mejora": [
+        {
+          "categoria": "Funcionalidad del Proyecto",
+          "descripcion": "El objetivo de la Fase 1, Semana 1, es construir un 'Calendario interactivo'. El código actual es una plantilla y no implementa ninguna de las funcionalidades requeridas para un calendario (generación de fechas, visualización, interacción). Es crucial empezar a construir la lógica del calendario. Por ejemplo, se esperaría ver funciones para `generarDiasDelMes()`, `mostrarCalendarioUI()`, `manejarEventoClickDia()`, etc.",
+          "archivo_referencia": "codigo_auditar.js",
+          "linea_referencia": 1,
+          "prioridad": "alta"
+        },
+        {
+          "categoria": "Clean Code & Modularidad",
+          "descripcion": "Aunque el código es mínimo, para un proyecto de 'Calendario interactivo', la arquitectura deberá crecer. Piensa en separar responsabilidades: una función para generar los datos del calendario, otra para renderizar la interfaz de usuario, y otra para manejar la interactividad. Esto es fundamental para las 'mejores prácticas' y el 'cleancode'.\n\nEjemplo conceptual:\njavascript\n// calendarData.js\nfunction getDaysInMonth(year, month) { /* ... */ }\n\n// calendarUI.js\nfunction renderCalendar(data) { /* ... */ }\n\n// main.js\nfunction initializeCalendar() {\n  const data = getDaysInMonth(2026, 1);\n  renderCalendar(data);\n  attachEventListeners();\n}\ninitializeCalendar();\n",
+          "archivo_referencia": "codigo_auditar.js",
+          "linea_referencia": 4,
+          "prioridad": "alta"
+        },
+        {
+          "categoria": "Optimización (Preparación)",
+          "descripcion": "Actualmente no hay lógica que optimizar, pero a medida que construyas tu calendario, considera cómo las operaciones repetitivas (ej. renderizar muchos elementos DOM) pueden impactar el rendimiento. Por ejemplo, agrupar actualizaciones del DOM o usar algoritmos eficientes para la manipulación de fechas. Esto es un área clave en la que las 'mejores prácticas' se cruzan con la 'optimización'.",
+          "archivo_referencia": "codigo_auditar.js",
+          "linea_referencia": 1,
+          "prioridad": "media"
+        }
+      ],
+      "preguntas_reflexion": [
+        {
+          "pregunta": "¿Cuál es el primer paso concreto que darías para transformar este 'código de muestra' en un 'calendario interactivo' funcional, considerando los requisitos de 'cleancode' desde el inicio?",
+          "contexto": "Pensar en el primer paso te ayudará a desglosar el problema y a empezar a aplicar los principios de diseño desde las etapas más tempranas, evitando refactorizaciones mayores en el futuro."
+        },
+        {
+          "pregunta": "¿Cómo planearías la estructura de archivos y funciones para tu calendario, de modo que cada parte tenga una única responsabilidad clara (Single Responsibility Principle) y sea fácil de mantener a medida que crezca en complejidad?",
+          "contexto": "La modularidad y la separación de preocupaciones son pilares del 'cleancode' y las 'mejores prácticas'. Reflexionar sobre esto ahora te preparará para escribir código más robusto y escalable."
+        }
+      ],
+      "calificacion_general": {
+        "claridad_codigo": 5,
+        "arquitectura": 1,
+        "testing": 1,
+        "documentacion": 2,
+        "total": 2.25
+      },
+      "tiempo_revision_horas": 0.1,
+      "recomendacion": "MAJOR_REVISION_NEEDED",
+      "mensaje_tutor": "¡Hola! Veo que has iniciado tu repositorio con una estructura básica, lo cual es un buen punto de partida para cualquier proyecto. Sin embargo, para cumplir con los objetivos de la Fase 1 y la tarea de construir un 'Calendario interactivo', el código necesita una revisión importante para incorporar la funcionalidad principal. Te animo a que empieces a desglosar el problema del calendario en componentes más pequeños y a aplicar los principios de 'cleancode' y 'optimización' desde el principio. Piensa en cómo organizarías las funciones para generar las fechas, renderizar la interfaz y manejar la interacción del usuario. ¡Estoy aquí para guiarte en este proceso! ¡Ánimo, la parte emocionante de construir está por comenzar!",
+      "submitted_at": "2026-02-28T03:51:55.126Z"
+    },
+    {
+      "id": "rev_1772264667197_v4idh",
+      "review_request_id": "req_1772264654293_1ed6k",
+      "reviewer_user_id": "4ce4ece9-e638-475c-bdfd-4630f6813f8d",
+      "puntos_fuertes": [
+        {
+          "categoria": "Clean Code",
+          "descripcion": "El código es sintácticamente correcto y extremadamente conciso. La función `main` está bien nombrada y su propósito es inmediatamente claro, lo cual es una base sólida para la legibilidad.",
+          "archivo_referencia": "código_auditar",
+          "linea_referencia": 4
+        },
+        {
+          "categoria": "Funcionalidad Básica",
+          "descripcion": "El código cumple su propósito declarado de ejecutar y mostrar un mensaje en consola sin errores, demostrando una comprensión básica de la ejecución de scripts JavaScript.",
+          "archivo_referencia": "código_auditar",
+          "linea_referencia": 5
+        }
+      ],
+      "sugerencias_mejora": [
+        {
+          "categoria": "Cobertura de Objetivos / Optimización",
+          "descripcion": "El código proporcionado es excesivamente minimalista y no presenta una lógica o estructura de datos que permita demostrar o aplicar los principios de optimización, que son el foco principal de esta fase avanzada del curso (Fase 4, Semana 50). Para poder evaluar tu comprensión y aplicación de la optimización, es fundamental que incluyas algoritmos, manejo de colecciones de datos, operaciones de I/O, o cualquier lógica que pueda tener un impacto en el rendimiento y que, por lo tanto, sea susceptible de ser optimizada. \n\n**Ejemplo de lo que se esperaría:**\njavascript\nfunction procesarDatos(datosGrandes) {\n  // Implementación que podría involucrar bucles anidados, recursión,\n  // operaciones con objetos/arrays grandes, etc., susceptible de optimización.\n  let resultado = [];\n  for (let i = 0; i < datosGrandes.length; i++) {\n    for (let j = 0; j < datosGrandes.length; j++) {\n      // Operación costosa para ilustrar un punto de optimización\n      resultado.push(datosGrandes[i] * datosGrandes[j]);\n    }\n  }\n  return resultado;\n}\n\n// Luego, se analizaría cómo optimizar 'procesarDatos'\n",
+          "archivo_referencia": "código_auditar",
+          "linea_referencia": 1,
+          "prioridad": "alta"
+        },
+        {
+          "categoria": "Documentación",
+          "descripcion": "Aunque el código es simple, en un proyecto real y en esta fase del curso, se esperaría alguna documentación interna (comentarios) que explique el 'por qué' de ciertas decisiones, especialmente si se introdujeran complejidades o algoritmos específicos. El comentario actual solo hace referencia al repositorio, lo cual es útil para la localización, pero no para la comprensión interna del código.",
+          "archivo_referencia": "código_auditar",
+          "linea_referencia": 1,
+          "prioridad": "baja"
+        }
+      ],
+      "preguntas_reflexion": [
+        {
+          "pregunta": "¿Qué tipo de escenarios o estructuras de código consideras que son los más adecuados para aplicar y demostrar técnicas de optimización en JavaScript, teniendo en cuenta proyectos de la escala de 'Ai code mentor gamma'?",
+          "contexto": "Esta pregunta busca que reflexiones sobre la aplicación práctica de la optimización más allá de ejemplos triviales, en el contexto de un proyecto real y complejo."
+        },
+        {
+          "pregunta": "Si este fuera solo una parte muy pequeña de un sistema más grande, ¿cómo identificarías los 'cuellos de botella' o las secciones de código donde la optimización tendría el mayor impacto, antes de empezar a escribir código optimizado?",
+          "contexto": "La optimización efectiva no siempre se trata de 'hacer todo más rápido', sino de identificar dónde los esfuerzos de optimización generarán el mayor retorno. Esto invita a pensar en profiling y análisis de rendimiento."
+        }
+      ],
+      "calificacion_general": {
+        "claridad_codigo": 5,
+        "arquitectura": 1,
+        "testing": 1,
+        "documentacion": 2,
+        "total": 2.25
+      },
+      "tiempo_revision_horas": 0.1,
+      "recomendacion": "MAJOR_REVISION_NEEDED",
+      "mensaje_tutor": "¡Hola! Como tu AI Code Mentor, he revisado el fragmento de código que has enviado. Es fundamental entender que, aunque el código es impecable en su simplicidad y cumple con los estándares básicos de claridad, no me permite evaluar tu comprensión y aplicación del objetivo clave de esta fase: la **optimización**. \n\nEn la Fase 4 (Semana 50), las expectativas sobre la complejidad y la demostración de habilidades avanzadas son altas. Necesito ver un código que presente desafíos reales de rendimiento para poder ofrecerte una retroalimentación significativa sobre tus técnicas de optimización. Considera este un punto de partida para un desafío más robusto. ¡Estoy deseando ver cómo aplicas tus conocimientos en un escenario más complejo! Ánimo, tienes la base, ahora construye sobre ella.",
+      "submitted_at": "2026-02-28T07:44:27.197Z"
+    }
+  ]
+}

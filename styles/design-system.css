@@ -3,11 +3,14 @@
 
 :root {
   /* --- PALETTE: "Titanium & Signal" --- */
-  
+
   /* Bases */
-  --bg-primary: #0F1115;      /* Almost Black */
-  --bg-secondary: #161A23;    /* Dark Gunmetal */
-  --bg-tertiary: #1F2532;     /* Panel Grey */
+  --bg-primary: #0F1115;
+  /* Almost Black */
+  --bg-secondary: #161A23;
+  /* Dark Gunmetal */
+  --bg-tertiary: #1F2532;
+  /* Panel Grey */
 
   /* Text */
   --text-primary: #EDEDED;
@@ -15,9 +18,10 @@
   --text-muted: #475569;
 
   /* Accents - Focused & Sharp */
-  --accent-primary: #3B82F6;  /* Tech Blue */
+  --accent-primary: #3B82F6;
+  /* Tech Blue */
   --accent-glow: rgba(59, 130, 246, 0.15);
-  
+
   /* Signals */
   --signal-success: #10B981;
   --signal-warning: #F59E0B;
@@ -28,13 +32,14 @@
   --border-active: #4F6180;
 
   /* --- TYPOGRAPHY: "Technical Documentation" --- */
-  
+
   /* Fonts - Assume Inter & JetBrains Mono loaded via Next.js */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* --- SPACING & DEPTH --- */
-  --radius-sm: 2px; /* Sharp corners */
+  --radius-sm: 2px;
+  /* Sharp corners */
   --radius-md: 4px;
   --radius-lg: 8px;
 
@@ -43,15 +48,24 @@
 }
 
 /* Base Reset Overrides */
+/* NOTE: Dark theme body values are intentionally NOT applied globally here.
+   The app uses a light theme (white/gray backgrounds). Components that need
+   dark-theme styling should use the CSS variables directly (e.g. var(--text-primary))
+   rather than relying on body inheritance. */
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  /* color and background-color are managed by globals.css */
 }
 
-h1, h2, h3, h4, code, pre {
-  font-family: var(--font-mono); /* Headlines in Mono for "Technical" feel */
+h1,
+h2,
+h3,
+h4,
+code,
+pre {
+  font-family: var(--font-mono);
+  /* Headlines in Mono for "Technical" feel */
 }
 
 /* Utilities for "Industrial" look */

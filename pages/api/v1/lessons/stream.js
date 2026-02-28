@@ -9,9 +9,7 @@ import { weekRepository } from '../../../../lib/repositories/WeekRepository';
 import { contentRetriever } from '../../../../lib/rag/ContentRetriever';
 import { TEMPLATE_PROMPT_UNIVERSAL, SYSTEM_PROMPT } from '../../../../lib/prompts/LessonPrompts';
 
-export const config = {
-    runtime: 'edge', // Use edge runtime for streaming
-};
+// Eliminada config de edge runtime para soporte completo de dependencias Node.js
 
 export default async function handler(req) {
     if (req.method !== 'POST') {
@@ -41,7 +39,7 @@ export default async function handler(req) {
             generationConfig: {
                 temperature: 0.7,
                 topP: 0.9,
-                maxOutputTokens: 4096,
+                maxOutputTokens: 8192,
             }
         });
 

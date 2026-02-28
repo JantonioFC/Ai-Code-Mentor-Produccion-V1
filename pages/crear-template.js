@@ -11,6 +11,8 @@ export default function CreateTemplatePage() {
   const [formData, setFormData] = useState({});
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [editableContent, setEditableContent] = useState('');
+  const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -41,6 +43,13 @@ export default function CreateTemplatePage() {
       router.push('/plantillas');
     }
   }, [type, router.isReady, router]);
+
+  // Sincronizar editableContent cuando se genera un resultado
+  useEffect(() => {
+    if (result) {
+      setEditableContent(result.content);
+    }
+  }, [result]);
 
   const extractPlaceholders = (templateText) => {
     const matches = templateText.match(/\{([^}]+)\}/g);
@@ -165,6 +174,58 @@ export default function CreateTemplatePage() {
   }
 
   if (result) {
+    const handleSave = async () => {
+      setSaved('saving');
+      try {
+        const res = await fetch('/api/save-template', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            templateType: type,
+            templateName: template.name,
+            content: editableContent,
+            metadata: result.metadata,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          setSaved('ok');
+          setTimeout(() => setSaved(false), 2500);
+        } else {
+          console.error('[Guardar] Error API:', data.error);
+          setSaved('error');
+          setTimeout(() => setSaved(false), 3000);
+        }
+      } catch (err) {
+        console.error('[Guardar] Error de red:', err);
+        setSaved('error');
+        setTimeout(() => setSaved(false), 3000);
+      }
+    };
+
+    const handleCopy = async () => {
+      try {
+        await navigator.clipboard.writeText(editableContent);
+        alert('Contenido copiado al portapapeles');
+      } catch (err) {
+        console.error('Error copiando:', err);
+      }
+    };
+
+    const handleDownload = () => {
+      const blob = new Blob([editableContent], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = result.filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
     return (
       <ProtectedRoute>
         <PrivateLayout title={`${template.name} - Generado`}>
@@ -179,13 +240,30 @@ export default function CreateTemplatePage() {
                 </div>
                 <div className="flex gap-2">
                   <button
-                    onClick={copyToClipboard}
+                    onClick={handleSave}
+                    disabled={saved === 'saving'}
+                    className={`px-4 py-2 rounded-lg font-semibold transition-all duration-200 disabled:cursor-not-allowed ${saved === 'ok'
+                        ? 'bg-emerald-500 text-white'
+                        : saved === 'error'
+                          ? 'bg-red-500 text-white'
+                          : saved === 'saving'
+                            ? 'bg-gray-400 text-white'
+                            : 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-md hover:shadow-lg'
+                      }`}
+                  >
+                    {saved === 'saving' ? '⏳ Guardando…'
+                      : saved === 'ok' ? '✓ Guardado en DB'
+                        : saved === 'error' ? '✗ Error al guardar'
+                          : '💾 Guardar'}
+                  </button>
+                  <button
+                    onClick={handleCopy}
                     className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
                   >
                     Copiar
                   </button>
                   <button
-                    onClick={downloadMarkdown}
+                    onClick={handleDownload}
                     className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
                   >
                     Descargar
@@ -194,7 +272,7 @@ export default function CreateTemplatePage() {
                     onClick={() => setResult(null)}
                     className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
                   >
-                    Editar
+                    Editar Campos
                   </button>
                   <button
                     onClick={() => router.push('/plantillas')}
@@ -207,7 +285,7 @@ export default function CreateTemplatePage() {
 
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <h3 className="font-semibold text-gray-800 mb-2">Metadatos</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
                   <div><strong>Generado:</strong> {new Date(result.metadata.generatedAt).toLocaleString()}</div>
                   <div><strong>Plantilla:</strong> {result.metadata.templateName}</div>
                   <div><strong>Campos completados:</strong> {result.metadata.placeholdersUsed}</div>
@@ -215,10 +293,17 @@ export default function CreateTemplatePage() {
               </div>
 
               <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="font-semibold text-gray-800 mb-4">Vista Previa del Contenido</h3>
-                <div className="bg-white border rounded-lg p-4 font-mono text-sm whitespace-pre-wrap overflow-auto max-h-96">
-                  {result.content}
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-semibold text-gray-800">Contenido (editable)</h3>
+                  <span className="text-xs text-gray-400 italic">Puedes editar el markdown directamente aquí</span>
                 </div>
+                <textarea
+                  value={editableContent}
+                  onChange={(e) => setEditableContent(e.target.value)}
+                  className="w-full border border-gray-200 rounded-lg p-4 font-mono text-sm text-gray-900 bg-white resize-y focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  style={{ minHeight: '400px', color: '#111827', backgroundColor: '#ffffff' }}
+                  spellCheck={false}
+                />
               </div>
             </div>
           </div>
@@ -226,6 +311,7 @@ export default function CreateTemplatePage() {
       </ProtectedRoute>
     );
   }
+
 
   const placeholders = extractPlaceholders(template.template);
 
@@ -257,23 +343,25 @@ export default function CreateTemplatePage() {
 
                 return (
                   <div key={placeholder}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-800 mb-1">
                       {label}
                     </label>
                     {fieldType === 'textarea' ? (
                       <textarea
                         value={formData[placeholder] || ''}
                         onChange={(e) => setFormData({ ...formData, [placeholder]: e.target.value })}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2 h-24"
+                        className="w-full border border-gray-300 rounded-lg px-3 py-2 h-24 text-gray-900 bg-white placeholder-gray-400"
                         placeholder={`Ingresa ${label.toLowerCase()}...`}
+                        style={{ color: '#111827', backgroundColor: '#ffffff' }}
                       />
                     ) : (
                       <input
                         type={fieldType}
                         value={formData[placeholder] || ''}
                         onChange={(e) => setFormData({ ...formData, [placeholder]: e.target.value })}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2"
+                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white placeholder-gray-400"
                         placeholder={fieldType === 'date' ? '' : `Ingresa ${label.toLowerCase()}...`}
+                        style={{ color: '#111827', backgroundColor: '#ffffff' }}
                       />
                     )}
                   </div>

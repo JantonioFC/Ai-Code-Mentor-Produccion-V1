@@ -108,38 +108,74 @@ export default async function handler(req, res) {
 // Real data collection function (Scoped to User)
 async function collectPortfolioData(userId) {
   try {
-    // Get dashboard data - SCOPED
-    const countResult = db.get('SELECT COUNT(*) as count FROM portfolio_entries WHERE user_id = ?', [userId]);
-    const totalEntries = countResult ? countResult.count : 0;
+    const safeUserId = String(userId);
 
-    const recentEntries = db.query('SELECT * FROM portfolio_entries WHERE user_id = ? ORDER BY created_at DESC LIMIT 5', [userId]);
+    // Ensure user_templates table exists
+    try {
+      db.exec(`
+        CREATE TABLE IF NOT EXISTS user_templates (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          user_id TEXT NOT NULL,
+          template_type TEXT NOT NULL,
+          template_name TEXT NOT NULL,
+          content TEXT NOT NULL,
+          metadata TEXT,
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+          updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+        CREATE INDEX IF NOT EXISTS idx_user_templates_user ON user_templates(user_id);
+      `);
+    } catch (e) { /* table already exists */ }
 
-    const dashboardResult = {
-      success: true,
-      entryCounts: { total: totalEntries },
-      recentEntries: recentEntries || []
-    };
+    // Get saved templates from user_templates
+    const templateRows = db.query(
+      `SELECT *, template_type as entry_type, created_at as date FROM user_templates
+       WHERE user_id = ? ORDER BY created_at DESC LIMIT 100`,
+      [safeUserId]
+    ) || [];
 
-    // Get all template entries - SCOPED
-    const templatesResult = db.query('SELECT * FROM portfolio_entries WHERE user_id = ? ORDER BY created_at DESC LIMIT 100', [userId]);
+    // Get AI-generated lessons from generated_content (if table exists)
+    let generatedRows = [];
+    try {
+      generatedRows = db.query(
+        `SELECT id, user_id, topic as template_name, content, created_at as date,
+                'generated_lesson' as entry_type, 'generated_lesson' as template_type
+         FROM generated_content WHERE user_id = ? ORDER BY created_at DESC LIMIT 50`,
+        [safeUserId]
+      ) || [];
+    } catch (e) {
+      console.warn('[export-portfolio] generated_content table not found:', e.message);
+    }
 
-    // Get all modules (Public/Shared content, so no user_id needed usually, unless tracking progress)
-    // Assuming modules are static curriculum content. If they track progress, they need scoping too.
-    // For now, assuming modules are catalogue.
-    const modules = db.query('SELECT * FROM modules');
+    // Combine all as evidence entries
+    const allTemplates = [...templateRows, ...generatedRows];
+    const totalEntries = allTemplates.length;
+
+    // Get modules safely
+    let modules = [];
+    try {
+      modules = db.query('SELECT * FROM modules') || [];
+    } catch (e) {
+      console.warn('[export-portfolio] modules table not found:', e.message);
+    }
 
     return {
-      dashboard: dashboardResult,
-      templates: templatesResult || [],
-      modules: modules || [],
+      dashboard: {
+        success: true,
+        entryCounts: { total: totalEntries },
+        recentEntries: allTemplates.slice(0, 5)
+      },
+      templates: allTemplates,
+      modules,
       timestamp: new Date().toISOString(),
-      totalEntries: templatesResult?.length || 0
+      totalEntries
     };
   } catch (error) {
     console.error('Error collecting portfolio data:', error);
     throw new Error('Failed to collect portfolio data');
   }
 }
+
 
 // Real evidence compilation function
 async function compileEvidence(data) {

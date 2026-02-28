@@ -10,7 +10,7 @@
  * ENDPOINT: GET /api/v1/irp/reviews/history
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../lib/auth/useAuth';
 
@@ -448,8 +448,8 @@ export default function ReviewHistoryList({ onViewDetails }) {
               onClick={handlePreviousPage}
               disabled={!pagination.hasPrev}
               className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${pagination.hasPrev
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                 }`}
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -466,8 +466,8 @@ export default function ReviewHistoryList({ onViewDetails }) {
               onClick={handleNextPage}
               disabled={!pagination.hasNext}
               className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${pagination.hasNext
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                 }`}
             >
               Siguiente

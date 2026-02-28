@@ -2,8 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   MODO CLARO FORZADO — Brave / Firefox / Chrome
+   Previene auto dark-mode y forced-colors del browser
+   ============================================ */
+:root {
+  color-scheme: only light;
+  forced-color-adjust: none;
+}
+
 html {
   font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+  color: #1e293b;
+  color-scheme: only light;
+  forced-color-adjust: none;
+  /* slate-800 — base text color to prevent system-default near-invisible gray */
+}
+
+body {
+  color: #1e293b;
+  background-color: #ffffff;
+  color-scheme: only light;
+}
+
+
+/* ============================================
+   CONTRASTE GLOBAL DE INPUTS
+   Corrige el texto imperceptible en inputs de fecha, texto, select, textareas
+   ============================================ */
+
+input,
+textarea,
+select {
+  color: #1e293b !important;
+  /* slate-800 — forzar texto oscuro legible */
+  background-color: #ffffff !important;
+  font-family: inherit;
+  color-scheme: only light;
+  forced-color-adjust: none;
+  /* Previene que Brave/Firefox/OS dark-mode inviertan los colores */
+  -webkit-text-fill-color: #1e293b !important;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  color: #1e293b !important;
+  color-scheme: only light;
+  forced-color-adjust: none;
+  /* Fuerza color scheme claro para el date picker del browser */
+  -webkit-text-fill-color: #1e293b !important;
+  /* Safari/Chrome/Brave override adicional */
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+  /* slate-400 — placeholder gris visible pero sutil */
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #6366f1;
+  /* ring indigo con focus */
+  outline-offset: 1px;
+}
+
+/* Corrección para placeholders Tailwind muy claros */
+.placeholder-gray-300::placeholder,
+.placeholder-gray-200::placeholder {
+  color: #94a3b8 !important;
 }
 
 code,
@@ -406,10 +479,11 @@ pre {
 
 :root {
   /* Stitch Color Palette */
-  --stitch-bg-main: #0a0a0c; /* Deep Space */
+  --stitch-bg-main: #0a0a0c;
+  /* Deep Space */
   --stitch-surface-glass: rgba(255, 255, 255, 0.05);
   --stitch-border-glass: rgba(255, 255, 255, 0.1);
-  
+
   --stitch-neon-blue: #00f0ff;
   --stitch-neon-purple: #bd00ff;
   --stitch-neon-green: #00ff9d;
@@ -448,3 +522,18 @@ pre {
 .radix-tab-content {
   animation: fadeIn 0.4s ease-out;
 }
+/*-------------------------------------------------------------------------
+ * MERMAID - ERROR GLOBALS (FIX PARA BUG VISUAL)
+ * Ocultar el cuadro de "Syntax Error in Graph" que Mermaid inyecta globalmente
+ * cuando falla el parseo, evitando que rompa el layout de la app.
+ *------------------------------------------------------------------------*/
+svg[id^="mermaid-"][class*="error"] {
+  display: none !important;
+}
+
+.mermaid-error,
+#d3-mermaid-error,
+svg[id^="d3-mermaid-error"] {
+  display: none !important;
+}
+

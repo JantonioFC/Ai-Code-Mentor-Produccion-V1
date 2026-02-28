@@ -30,8 +30,8 @@ const nextConfig = {
   // Performance: Enable compression
   compress: true,
 
-  // Docker Optimization
-  output: 'standalone',
+  // Docker Optimization (Disabled for Local Dev)
+  // output: 'standalone',
 
   env: {
     // SECURITY: API Keys should NOT be inlined here to avoid leaking to client bundle.

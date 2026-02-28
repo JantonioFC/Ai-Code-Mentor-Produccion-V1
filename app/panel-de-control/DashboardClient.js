@@ -2,7 +2,7 @@
 
 import { lazy, Suspense } from 'react';
 import ProtectedRoute from '../../lib/auth/ProtectedRouteApp';
-import PrivateLayout from '../../components/layout/PrivateLayout';
+import PrivateLayout from '../../components/layout/PrivateLayoutApp';
 import {
     Root as TabsRoot,
     List as TabsList,

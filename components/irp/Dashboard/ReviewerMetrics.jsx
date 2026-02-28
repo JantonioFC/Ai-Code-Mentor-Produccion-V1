@@ -12,9 +12,9 @@
  */
 
 import React from 'react';
-import TrendChart from '../../common/charts/TrendChart';
 import QualityGauge from '../../common/charts/QualityGauge';
 import ComparisonBar from '../../common/charts/ComparisonBar';
+
 
 /**
  * Componente de tarjeta de métrica individual
@@ -196,14 +196,10 @@ export default function ReviewerMetrics({ metrics, loading }) {
         />
       </div>
 
-      {/* Tendencia Temporal */}
-      {/* TODO: Pasar datos reales de tendencia */}
-      <div className="mb-6">
-        <TrendChart
-          data={[]}
-          metric="quality_score"
-          loading={loading}
-        />
+      {/* Tendencia Temporal - sin datos disponibles aún */}
+      <div className="mb-6 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200 p-6 text-center text-gray-500">
+        <p className="text-sm font-medium text-gray-600">📈 Tendencia de Quality Score</p>
+        <p className="text-xs mt-1">Disponible después de completar más revisiones</p>
       </div>
 
       {/* Métricas detalladas */}
