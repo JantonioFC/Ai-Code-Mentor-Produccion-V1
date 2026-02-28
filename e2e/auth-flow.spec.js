@@ -15,7 +15,7 @@ const DEMO_PASSWORD = 'demo123';
  * Helper: wait for login page to be fully loaded (client-side hydration complete)
  */
 async function waitForLoginPage(page) {
-  await page.goto('/login', { waitUntil: 'networkidle' });
+  await page.goto('/login');
   // Wait for the client-side React hydration - the email input appears when ready
   await page.waitForSelector('input[type="email"]', { timeout: 60000 });
 }

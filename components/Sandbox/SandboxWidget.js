@@ -616,7 +616,7 @@ export default function SandboxWidget() {
 
           {/* Área de Resultado */}
           {generatedContent && !error && (
-            <div ref={resultRef} className="mt-8 space-y-6">
+            <div ref={resultRef} id="sandbox-result" className="mt-8 space-y-6">
               {/* Encabezado de la Lección */}
               <div className="border-t-2 border-gradient-to-r from-green-400 to-blue-500 pt-6">
                 <div className="flex items-center justify-between mb-4">
