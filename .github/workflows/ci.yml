@@ -95,9 +95,9 @@ jobs:
       run: npx playwright test --retries=2
       env:
         CI: true
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'mock-key-for-ci' }}
-        JWT_SECRET: ${{ secrets.JWT_SECRET || 'ci-test-secret-minimum-32-chars' }}
-        NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN || '' }}
+        GEMINI_API_KEY: 'mock-key-for-ci'
+        JWT_SECRET: 'ci-test-secret-minimum-32-chars'
+        NEXT_PUBLIC_SENTRY_DSN: ''
         NEXT_PUBLIC_E2E_TEST_MODE: 'true'
         E2E_TEST_MODE: 'true'
         # Database for testing

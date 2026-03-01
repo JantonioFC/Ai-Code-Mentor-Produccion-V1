@@ -53,7 +53,7 @@ module.exports = defineConfig({
   // Timeout para expects (v16.0) + Screenshot config (Fase 3)
   expect: {
     timeout: 30000,            // 30s - Timeout para aserciones
-    toHaveScreenshot: { maxDiffPixelRatio: 0.01 },
+    toHaveScreenshot: { maxDiffPixelRatio: 0.08 }, // Tolerancia aumentada a 8% para CI (font/OS rendering diffs)
   },
 
   projects: [
