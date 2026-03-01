@@ -99,10 +99,14 @@ test.describe('📸 REGRESIÓN VISUAL - Páginas Protegidas', () => {
 
   test('VR-005: Modules page screenshot', async ({ page }) => {
     await page.goto('/modulos');
-    await page.waitForLoadState('load');
+    // FASE 3 FIX: Wait for network idle to ensure all dynamic user progress or lesson cards are fully loaded
+    await page.waitForLoadState('networkidle');
     await dismissCookieBanner(page);
 
     await expect(page.locator('h1').first()).toBeVisible({ timeout: 20000 });
+
+    // Stabilize animations and layouts with a short implicit wait
+    await page.waitForTimeout(1000);
 
     await expect(page).toHaveScreenshot('modules-page.png', {
       fullPage: true,
@@ -111,11 +115,15 @@ test.describe('📸 REGRESIÓN VISUAL - Páginas Protegidas', () => {
 
   test('VR-006: Sandbox page screenshot', async ({ page }) => {
     await page.goto('/codigo');
-    await page.waitForLoadState('load');
+    // FASE 3 FIX: Wait for network idle to prevent loading spinners in history list from being caught
+    await page.waitForLoadState('networkidle');
     await dismissCookieBanner(page);
 
     // Esperar a que el widget sandbox cargue (dynamic import)
     await expect(page.locator('#sandbox-input')).toBeVisible({ timeout: 30000 });
+
+    // Stabilize animations and layouts with a short implicit wait
+    await page.waitForTimeout(1000);
 
     await expect(page).toHaveScreenshot('sandbox-page.png', {
       fullPage: true,
