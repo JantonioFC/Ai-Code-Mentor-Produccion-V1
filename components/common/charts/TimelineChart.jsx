@@ -182,7 +182,7 @@ export default function TimelineChart({
 
       {/* Gráfico */}
       <div className="h-64">
-        <Bar data={chartJsData} options={options} />
+        <Bar aria-label="Gráfico de línea de tiempo" data={chartJsData} options={options} />
       </div>
 
       {/* Footer */}

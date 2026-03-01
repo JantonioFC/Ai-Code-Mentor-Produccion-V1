@@ -17,7 +17,7 @@ test.describe('API v2 - Sistema IA Resiliente', () => {
         const data = await response.json();
 
         expect(data.status).toBe('healthy');
-        expect(data.version).toBe('2.0.0');
+        expect(data.version).toBe('2.0.0-app-router');
         expect(data.router).toBeDefined();
         expect(data.models).toBeDefined();
         expect(data.models.available).toBeGreaterThan(0);

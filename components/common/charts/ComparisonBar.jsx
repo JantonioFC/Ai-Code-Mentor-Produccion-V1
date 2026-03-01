@@ -158,7 +158,7 @@ export default function ComparisonBar({
 
       {/* Gráfico */}
       <div className="h-56">
-        <Bar data={chartData} options={options} />
+        <Bar aria-label="Gráfico de barras comparativo" data={chartData} options={options} />
       </div>
 
       {/* Footer con análisis */}

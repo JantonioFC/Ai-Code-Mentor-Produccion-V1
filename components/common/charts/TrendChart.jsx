@@ -224,7 +224,7 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
 
       {/* Gráfico */}
       <div className="h-64">
-        <Line data={chartJsData} options={options} />
+        <Line aria-label="Gráfico de líneas de tendencia" data={chartJsData} options={options} />
       </div>
 
       {/* Footer con insights */}
@@ -235,10 +235,10 @@ export default function TrendChart({ data = [], metric = 'quality_score', loadin
           </span>
           {chartData.length >= 2 && (
             <span className={`font-medium ${chartData[chartData.length - 1].value > chartData[chartData.length - 2].value
-                ? 'text-green-600'
-                : chartData[chartData.length - 1].value < chartData[chartData.length - 2].value
-                  ? 'text-red-600'
-                  : 'text-gray-600'
+              ? 'text-green-600'
+              : chartData[chartData.length - 1].value < chartData[chartData.length - 2].value
+                ? 'text-red-600'
+                : 'text-gray-600'
               }`}>
               {chartData[chartData.length - 1].value > chartData[chartData.length - 2].value
                 ? '↑ Tendencia positiva'

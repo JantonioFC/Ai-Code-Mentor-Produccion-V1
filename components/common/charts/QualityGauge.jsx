@@ -73,22 +73,22 @@ export default function QualityGauge({ score = 0, maxScore = 5.0, title = 'Quali
   // Plugin personalizado para mostrar el score en el centro
   const centerTextPlugin = {
     id: 'centerText',
-    beforeDraw: function(chart) {
+    beforeDraw: function (chart) {
       const { width, height, ctx } = chart;
       ctx.restore();
-      
+
       // Score principal
       const fontSize = (height / 100).toFixed(2);
       ctx.font = `bold ${fontSize * 24}px sans-serif`;
       ctx.textBaseline = 'middle';
       ctx.fillStyle = color;
-      
+
       const scoreText = score.toFixed(1);
       const textX = Math.round((width - ctx.measureText(scoreText).width) / 2);
       const textY = height / 1.5;
-      
+
       ctx.fillText(scoreText, textX, textY);
-      
+
       // Max score (pequeño)
       ctx.font = `${fontSize * 12}px sans-serif`;
       ctx.fillStyle = '#9ca3af';
@@ -96,7 +96,7 @@ export default function QualityGauge({ score = 0, maxScore = 5.0, title = 'Quali
       const maxX = Math.round((width - ctx.measureText(maxText).width) / 2);
       const maxY = textY + (fontSize * 20);
       ctx.fillText(maxText, maxX, maxY);
-      
+
       ctx.save();
     }
   };
@@ -124,14 +124,14 @@ export default function QualityGauge({ score = 0, maxScore = 5.0, title = 'Quali
 
       {/* Gauge */}
       <div className="relative h-48">
-        <Doughnut data={chartData} options={options} plugins={[centerTextPlugin]} />
+        <Doughnut aria-label="Gráfico circular de nivel de calidad" data={chartData} options={options} plugins={[centerTextPlugin]} />
       </div>
 
       {/* Footer con etiquetas */}
       <div className="mt-6 flex justify-between items-center text-sm">
         <span className="text-gray-500">0.0</span>
         <div className="text-center">
-          <div 
+          <div
             className="inline-block px-4 py-2 rounded-full font-semibold text-white"
             style={{ backgroundColor: color }}
           >

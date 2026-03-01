@@ -36,7 +36,15 @@ export function withRequiredAuth(handler, allowedRoles = []) {
       const verification = extractAndVerifyToken(req);
 
       if (!verification.isValid) {
-        return res.status(401).json({ error: 'Authentication required' });
+        return res.status(401).json({
+          error: 'Authentication required',
+          code: 'AUTHENTICATION_REQUIRED',
+          success: false,
+          details: {
+            authError: verification.error,
+            hint: 'Authentication tokens can be provided via Authorization Bearer header or ai-code-mentor-auth cookies.'
+          }
+        });
       }
 
       // Load user from DB
