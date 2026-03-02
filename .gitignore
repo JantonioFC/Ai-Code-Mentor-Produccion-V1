@@ -115,3 +115,4 @@ vscode-extension/*.vsix
 *.bak
 *.disabled
 testsprite_tests/
+_archive/
