@@ -1,0 +1,22 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="20.267253">
+<testsuite name="visual-regression.spec.js" timestamp="2026-03-01T01:41:40.585Z" hostname="chromium" tests="2" failures="0" skipped="0" time="12.78" errors="0">
+<testcase name="📸 REGRESIÓN VISUAL - Páginas Protegidas › VR-005: Modules page screenshot" classname="visual-regression.spec.js" time="6.611">
+<system-out>
+<![CDATA[🔐 [AUTH-LOCAL] Verificando login...
+🔒 [AUTH-LOCAL] Página de login cargada. Iniciando sesión...
+🔒 [AUTH-LOCAL] Formulario enviado. Esperando redirección...
+✅ [AUTH-LOCAL] Navegación completada. URL: http://localhost:3000/panel-de-control
+]]>
+</system-out>
+</testcase>
+<testcase name="📸 REGRESIÓN VISUAL - Páginas Protegidas › VR-006: Sandbox page screenshot" classname="visual-regression.spec.js" time="6.169">
+<system-out>
+<![CDATA[🔐 [AUTH-LOCAL] Verificando login...
+🔒 [AUTH-LOCAL] Página de login cargada. Iniciando sesión...
+🔒 [AUTH-LOCAL] Formulario enviado. Esperando redirección...
+✅ [AUTH-LOCAL] Navegación completada. URL: http://localhost:3000/panel-de-control
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
